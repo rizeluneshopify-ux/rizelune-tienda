@@ -1,0 +1,207 @@
+{
+  "sections": {
+    "historia": {
+      "type": "rz-imagen-texto",
+      "settings": {
+        "imagen": "shopify://shop_images/Rincon_calido_con_aceite_capilar_de_romero.png",
+        "imagen_respaldo": "rz-bodegon.jpg",
+        "proporcion": "4/5",
+        "flotante_num": "",
+        "flotante_texto": "",
+        "eyebrow": "Nuestra historia",
+        "titulo": "Nace de un problema que <em>vimos de cerca</em>",
+        "texto": "Estrés, prisas, plancha, secador, tintes, cambios de estación… Cada vez más personas sienten que su pelo ha perdido fuerza y brillo. Y casi todas lo cuidan igual: de medios a puntas, olvidando el lugar donde empieza todo, la raíz.\n\nEn casa lo vivimos de la misma forma. Probamos mascarillas, champús y la famosa mezcla de aceite de romero que se hizo viral en redes: aceite esencial puro, proporciones a ojo y recetas que cambiaban cada semana. Lo que tenía que ser un cuidado acababa siendo un lío, y a veces una irritación.\n\nAsí nació Rizelune, con un objetivo claro: que cuidar el cuero cabelludo sea fácil, seguro y agradable.",
+        "lista_titulo": "",
+        "lista": "",
+        "boton": "",
+        "heading_size": 46,
+        "padding_top": 96,
+        "padding_bottom": 72
+      }
+    },
+    "valores": {
+      "type": "rz-garantias",
+      "settings": {
+        "eyebrow": "Lo que nos importa",
+        "titulo": "Nuestros <em>valores</em>",
+        "texto": "",
+        "columnas": 4,
+        "padding_top": 64,
+        "padding_bottom": 64
+      },
+      "blocks": {
+        "v1": {
+          "type": "garantia",
+          "settings": {
+            "icono": "hoja",
+            "titulo": "Ingredientes naturales",
+            "texto": "Fórmulas con ingredientes de origen natural"
+          }
+        },
+        "v2": {
+          "type": "garantia",
+          "settings": {
+            "icono": "escudo",
+            "titulo": "Certificado ecológico",
+            "texto": "El sérum y el aceite facial: COSMOS Organic de Ecocert"
+          }
+        },
+        "v3": {
+          "type": "garantia",
+          "settings": {
+            "icono": "eu",
+            "titulo": "Fabricado en la UE",
+            "texto": "En un laboratorio certificado"
+          }
+        },
+        "v4": {
+          "type": "garantia",
+          "settings": {
+            "icono": "corazon",
+            "titulo": "Hecho bajo pedido",
+            "texto": "Cada producto se prepara cuando lo pides"
+          }
+        }
+      },
+      "block_order": [
+        "v1",
+        "v2",
+        "v3",
+        "v4"
+      ]
+    },
+    "como": {
+      "type": "rz-imagen-texto",
+      "settings": {
+        "imagen": "shopify://shop_images/rizelune-unboxing-caja-relleno.jpg",
+        "imagen_respaldo": "rz-hero.jpg",
+        "proporcion": "1/1",
+        "invertir": true,
+        "flotante_num": "",
+        "flotante_texto": "",
+        "eyebrow": "Cómo trabajamos",
+        "titulo": "Poco, bien hecho y <em>contado con claridad</em>",
+        "texto": "Somos un proyecto pequeño e independiente, y queremos que se note en el trato y en cada detalle.",
+        "lista_titulo": "Así lo hacemos",
+        "lista": "Fabricamos bajo pedido, en un laboratorio certificado de la Unión Europea: sin stock acumulado ni desperdicio\nEl sérum y el aceite facial tienen certificado COSMOS Organic de Ecocert\nTe explicamos cómo usar cada producto y qué puedes esperar de él\nTe respondemos personalmente, por email o por WhatsApp",
+        "boton": "Escríbenos",
+        "boton_url": "/pages/contact",
+        "heading_size": 44,
+        "padding_top": 72,
+        "padding_bottom": 96
+      }
+    },
+    "compra": {
+      "type": "rz-compra",
+      "settings": {
+        "producto": "rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo",
+        "imagen": "shopify://shop_images/rizelune-serum-romero-menta-vela-calida.jpg",
+        "texto": "Tu ritual empieza esta noche: nutre tu cuero cabelludo y deja tu pelo suave y con brillo en solo 15 minutos.",
+        "lista": "Frasco cuentagotas de 30 ml\nSérum de romero y menta con aceites vegetales\nFórmula natural y vegana, fabricada en la UE\nEnvío gratis con 2 frascos o más",
+        "eyebrow": "Rizelune",
+        "titulo": "",
+        "etiqueta": "¡Oferta!",
+        "boton": "Añadir al carrito",
+        "ver_mas": "Ver todos los detalles"
+      },
+      "disabled": true
+    },
+    "problema": {
+      "type": "rz-imagen-texto",
+      "settings": {
+        "imagen": "shopify://shop_images/rizelune-ritual-noche-frasco-vela.jpg",
+        "imagen_respaldo": "rz-bodegon.jpg",
+        "proporcion": "4/5",
+        "invertir": true,
+        "flotante_num": "",
+        "flotante_texto": "",
+        "eyebrow": "Lo que queríamos cambiar",
+        "titulo": "Menos recetas caseras, <em>más ritual</em>",
+        "texto": "Buscábamos algo que no encontrábamos: un producto con ingredientes que se entendieran, listo para usar y que de verdad apeteciera mantener en el tiempo. Como no existía tal y como lo imaginábamos, decidimos crearlo.",
+        "lista_titulo": "Lo que nos propusimos",
+        "lista": "Romero y menta ya diluidos en aceites vegetales: nada de aceite esencial puro sobre la piel\nUn gotero para poner la cantidad justa, raya a raya\nUna rutina realista: 15 minutos, dos noches por semana\nIngredientes de origen natural y certificado ecológico COSMOS Organic\nSin promesas milagrosas ni fotos de antes y después",
+        "boton": "",
+        "heading_size": 44,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "cifras": {
+      "type": "rz-beneficios",
+      "settings": {
+        "eyebrow": "El ritual en cifras",
+        "titulo": "Sencillo de <em>mantener</em>",
+        "texto": ""
+      },
+      "blocks": {
+        "c1": {
+          "type": "cifra",
+          "settings": {
+            "numero": 15,
+            "sufijo": "min",
+            "etiqueta": "antes del lavado"
+          }
+        },
+        "c2": {
+          "type": "cifra",
+          "settings": {
+            "numero": 2,
+            "sufijo": "",
+            "etiqueta": "noches por semana"
+          }
+        },
+        "c3": {
+          "type": "cifra",
+          "settings": {
+            "numero": 100,
+            "sufijo": "%",
+            "etiqueta": "de origen natural (sérum)"
+          }
+        },
+        "c4": {
+          "type": "cifra",
+          "settings": {
+            "numero": 69,
+            "sufijo": "%",
+            "etiqueta": "de ingredientes ecológicos (sérum)"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ]
+    },
+    "nombre": {
+      "type": "rz-imagen-texto",
+      "settings": {
+        "imagen": "shopify://shop_images/rizelune-ritual-completo-noche.jpg",
+        "imagen_respaldo": "rz-hero.jpg",
+        "proporcion": "4/5",
+        "flotante_num": "",
+        "flotante_texto": "",
+        "eyebrow": "El nombre",
+        "titulo": "¿Por qué <em>Rizelune</em>?",
+        "texto": "Rizelune une dos palabras: «rizo» y «lune», luna en francés. El rizo representa el pelo; la luna, el momento en que lo cuidamos. La noche es cuando por fin paramos, y un buen ritual necesita calma. Por eso nuestro símbolo es una luna creciente.\n\nEmpezamos con el sérum de romero y menta y, después, añadimos lo que lo completa: un exfoliante para el cuero cabelludo y un aceite facial para la noche.",
+        "lista_titulo": "",
+        "lista": "",
+        "boton": "Descubre el ritual",
+        "boton_url": "/#rz-elige",
+        "heading_size": 44,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": [
+    "historia",
+    "problema",
+    "cifras",
+    "nombre",
+    "valores",
+    "como",
+    "compra"
+  ]
+}

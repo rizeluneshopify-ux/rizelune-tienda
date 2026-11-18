@@ -1,0 +1,296 @@
+{{ 'rz-styles.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'rz-scripts.js' | asset_url }}" defer="defer"></script>
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg }};
+    color: {{ section.settings.fg }};
+  }
+  #shopify-section-{{ section.id }} .rz-h1,
+  #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size }}px; }
+  #shopify-section-{{ section.id }} .rz-body { font-size: {{ section.settings.body_size }}px; }
+  #shopify-section-{{ section.id }} .rz-head { text-align: {{ section.settings.text_align }}; }
+  #shopify-section-{{ section.id }} .rz-head .rz-eyebrow { justify-content: {% case section.settings.text_align %}{% when 'center' %}center{% when 'right' %}flex-end{% else %}flex-start{% endcase %}; }
+  @media (max-width: 749px) {
+    #shopify-section-{{ section.id }} { padding-top: {{ section.settings.padding_top | times: 0.65 | round }}px; padding-bottom: {{ section.settings.padding_bottom | times: 0.65 | round }}px; }
+    #shopify-section-{{ section.id }} .rz-h1,
+    #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size | times: 0.68 | round }}px; }
+  }
+  
+{%- endstyle -%}
+<section class="rz-section rz-contact">
+  <div class="rz-container">
+    <div class="rz-head rz-reveal">
+      {%- if section.settings.eyebrow != blank -%}<span class="rz-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+      {%- if section.settings.titulo != blank -%}<h2 class="rz-h2">{{ section.settings.titulo }}</h2>{%- endif -%}
+      {%- if section.settings.texto != blank -%}<p class="rz-body">{{ section.settings.texto | newline_to_br }}</p>{%- endif -%}
+    </div>
+    <div class="rz-contact__grid">
+      <div class="rz-contact__form rz-reveal">
+        {%- if section.settings.form_titulo != blank -%}<h3 class="rz-contact__h">{{ section.settings.form_titulo }}</h3>{%- endif -%}
+        {%- form 'contact', id: 'ContactForm' -%}
+          {%- if form.posted_successfully? -%}
+            <p class="rz-contact__ok" tabindex="-1" autofocus>{% render 'rz-icon', name: 'check' %}<span>{{ 'templates.contact.form.post_success' | t }}</span></p>
+          {%- elsif form.errors -%}
+            <p class="rz-contact__err" role="alert">{{ 'templates.contact.form.error_heading' | t }} {{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}</p>
+          {%- endif -%}
+          <div class="rz-contact__row">
+            <label class="rz-field"><span>{{ 'templates.contact.form.name' | t }}</span>
+              <input type="text" autocomplete="name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"></label>
+            <label class="rz-field"><span>{{ 'templates.contact.form.email' | t }} *</span>
+              <input type="email" autocomplete="email" name="contact[email]" required spellcheck="false" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"></label>
+          </div>
+          <label class="rz-field"><span>{{ 'templates.contact.form.phone' | t }}</span>
+            <input type="tel" autocomplete="tel" name="contact[{{ 'templates.contact.form.phone' | t }}]" value="{{ form.phone }}"></label>
+          <label class="rz-field"><span>{{ 'templates.contact.form.comment' | t }}</span>
+            <textarea rows="6" name="contact[{{ 'templates.contact.form.comment' | t }}]">{{ form.body }}</textarea></label>
+          <button type="submit" class="rz-btn">{{ 'templates.contact.form.send' | t }} {% render 'rz-icon', name: 'flecha' %}</button>
+          {%- if section.settings.form_nota != blank -%}<p class="rz-contact__note">{{ section.settings.form_nota }}</p>{%- endif -%}
+        {%- endform -%}
+      </div>
+      <aside class="rz-contact__info rz-reveal" style="--rz-delay: 120ms">
+        {%- if section.settings.info_titulo != blank -%}<h3 class="rz-contact__h">{{ section.settings.info_titulo }}</h3>{%- endif -%}
+        {%- if section.settings.info_texto != blank -%}<p class="rz-contact__intro">{{ section.settings.info_texto }}</p>{%- endif -%}
+        <ul class="rz-contact__list">
+          {%- for block in section.blocks -%}
+            <li {{ block.shopify_attributes }}>
+              <span class="rz-contact__icon">{% render 'rz-icon', name: block.settings.icono %}</span>
+              <span class="rz-contact__txt">
+                <small>{{ block.settings.titulo }}</small>
+                {%- if block.settings.enlace != blank -%}
+                  <a href="{{ block.settings.enlace }}"{% if block.settings.enlace contains 'http' %} target="_blank" rel="noopener"{% endif %}>{{ block.settings.texto }}</a>
+                {%- else -%}
+                  <strong>{{ block.settings.texto }}</strong>
+                {%- endif -%}
+              </span>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Rizelune · Contacto",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Encabezado"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo (texto pequeño)",
+      "default": "Contacto"
+    },
+    {
+      "type": "text",
+      "id": "titulo",
+      "label": "Título",
+      "default": "¿Tienes alguna <em>duda</em>?",
+      "info": "Pon una palabra entre <em> y </em> para destacarla en cursiva."
+    },
+    {
+      "type": "textarea",
+      "id": "texto",
+      "label": "Texto",
+      "default": "Escríbenos con el formulario o por el medio que prefieras. Estaremos encantados de ayudarte."
+    },
+    {
+      "type": "header",
+      "content": "Formulario"
+    },
+    {
+      "type": "text",
+      "id": "form_titulo",
+      "label": "Título del formulario",
+      "default": "Escríbenos"
+    },
+    {
+      "type": "text",
+      "id": "form_nota",
+      "label": "Nota bajo el botón",
+      "default": "Te responderemos por email lo antes posible."
+    },
+    {
+      "type": "header",
+      "content": "Datos de contacto"
+    },
+    {
+      "type": "text",
+      "id": "info_titulo",
+      "label": "Título",
+      "default": "Otras formas de contactar"
+    },
+    {
+      "type": "textarea",
+      "id": "info_texto",
+      "label": "Texto"
+    },
+    {
+      "type": "header",
+      "content": "Colores"
+    },
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Color de fondo",
+      "default": "#F5EFE6"
+    },
+    {
+      "type": "color",
+      "id": "fg",
+      "label": "Color del texto",
+      "default": "#2F3B2E"
+    },
+    {
+      "type": "header",
+      "content": "Tipografía"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Alineación del encabezado",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Tamaño del título",
+      "min": 24,
+      "max": 88,
+      "step": 2,
+      "default": 44,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "Tamaño del texto",
+      "min": 13,
+      "max": 26,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Espaciado"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espacio superior",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 72,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espacio inferior",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 96,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dato",
+      "name": "Dato de contacto",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icono",
+          "label": "Icono",
+          "options": [
+            {
+              "value": "email",
+              "label": "Email"
+            },
+            {
+              "value": "telefono",
+              "label": "Teléfono"
+            },
+            {
+              "value": "whatsapp",
+              "label": "WhatsApp"
+            },
+            {
+              "value": "reloj",
+              "label": "Reloj / horario"
+            },
+            {
+              "value": "ubicacion",
+              "label": "Ubicación"
+            },
+            {
+              "value": "documento",
+              "label": "Documento"
+            },
+            {
+              "value": "mensaje",
+              "label": "Mensaje"
+            }
+          ],
+          "default": "email"
+        },
+        {
+          "type": "text",
+          "id": "titulo",
+          "label": "Título",
+          "default": "Email"
+        },
+        {
+          "type": "text",
+          "id": "texto",
+          "label": "Texto",
+          "default": "hola@tutienda.com"
+        },
+        {
+          "type": "text",
+          "id": "enlace",
+          "label": "Enlace (opcional)",
+          "info": "Ej.: mailto:hola@tutienda.com · tel:+34600000000 · https://wa.me/34600000000"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "Rizelune · Contacto",
+      "blocks": [
+        {
+          "type": "dato"
+        },
+        {
+          "type": "dato"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

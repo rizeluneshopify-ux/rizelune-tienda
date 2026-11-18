@@ -1,0 +1,159 @@
+{%- comment -%}
+  Tarjeta de pack para la sección «Packs».
+  Parámetros: tipo ('ritual' o 'cantidad'), n (ritual: 1 a 3 · cantidad: 2 o 3), uid, aviso (enlace del botón «Avísame»), estilo ('producto' = tarjeta clara de catálogo)
+  Ritual: productos y precios en Configuración del tema → Rizelune · Packs de rutina. Si falta algún producto, sale como «Muy pronto».
+  Cantidad: producto y precios en Rizelune · Packs. Textos: rizelune.packs_* y rizelune.ritual*_*.
+{%- endcomment -%}
+{%- assign en_venta = false -%}
+{%- assign mostrar = false -%}
+{%- assign es_bf = false -%}
+{%- capture bf_on -%}{%- render 'rz-bf-on' -%}{%- endcapture -%}
+{%- assign sin_rebaja = false -%}
+{%- assign con_c = false -%}
+{%- if tipo == 'ritual' -%}
+  {%- capture pre %}rz_ritual{{ n }}_{% endcapture -%}
+  {%- assign k_on = pre | append: 'activo' -%}
+  {%- assign k_a = pre | append: 'a' -%}
+  {%- assign k_b = pre | append: 'b' -%}
+  {%- assign k_c = pre | append: 'c' -%}
+  {%- assign k_fc = pre | append: 'forma_c' -%}
+  {%- assign k_f = pre | append: 'forma' -%}
+  {%- assign k_col = pre | append: 'color' -%}
+  {%- assign k_colc = pre | append: 'color_c' -%}
+  {%- assign k_p = pre | append: 'precio' -%}
+  {%- assign k_s = pre | append: 'separado' -%}
+  {%- assign k_sr = pre | append: 'sin_rebaja' -%}
+  {%- assign pa = settings[k_a] -%}
+  {%- assign pb = settings[k_b] -%}
+  {%- assign pc = settings[k_c] -%}
+  {%- if pc != blank or settings[k_fc] != 'ninguno' -%}{%- assign con_c = true -%}{%- endif -%}
+  {%- if settings[k_on] and pa != blank and pa.available -%}
+    {%- assign mostrar = true -%}
+    {%- assign sin_rebaja = settings[k_sr] -%}
+    {%- assign va = pa.selected_or_first_available_variant -%}
+    {%- assign precio = settings[k_p] | default: '0' | replace: ',', '.' | strip | times: 100 | round -%}
+    {%- assign b_ok = false -%}{%- if pb != blank and pb.available -%}{%- assign b_ok = true -%}{%- assign vb = pb.selected_or_first_available_variant -%}{%- endif -%}
+    {%- assign c_ok = true -%}
+    {%- if con_c -%}
+      {%- assign c_ok = false -%}{%- if pc != blank and pc.available -%}{%- assign c_ok = true -%}{%- assign vc = pc.selected_or_first_available_variant -%}{%- endif -%}
+    {%- endif -%}
+    {%- if b_ok and c_ok -%}
+      {%- assign en_venta = true -%}
+      {%- assign separado = va.price | plus: vb.price -%}
+      {%- if con_c -%}{%- assign separado = separado | plus: vc.price -%}{%- endif -%}
+    {%- else -%}
+      {%- assign separado = settings[k_s] | default: '0' | replace: ',', '.' | strip | times: 100 | round -%}
+    {%- endif -%}
+    {%- assign k_bf = pre | append: 'precio_bf' -%}
+    {%- if bf_on == '1' and en_venta and settings[k_bf] != blank -%}
+      {%- assign precio_bf = settings[k_bf] | replace: ',', '.' | strip | times: 100 | round -%}
+      {%- if precio > 0 and precio_bf > 0 and precio_bf < precio -%}
+        {%- assign es_bf = true -%}
+        {%- assign separado_total = separado -%}
+        {%- assign separado = precio -%}
+        {%- assign precio = precio_bf -%}
+      {%- endif -%}
+    {%- endif -%}
+    {%- capture nombre %}rizelune.ritual{{ n }}_name{% endcapture -%}
+    {%- capture texto %}rizelune.ritual{{ n }}_text{% endcapture -%}
+  {%- endif -%}
+{%- else -%}
+  {%- assign pa = settings.rz_pack_producto -%}
+  {%- if settings.rz_packs_activo and pa != blank and pa.available -%}
+    {%- assign mostrar = true -%}
+    {%- assign en_venta = true -%}
+    {%- assign va = pa.selected_or_first_available_variant -%}
+    {%- if n == 3 -%}
+      {%- assign precio = settings.rz_pack3_precio | default: '66,99' | replace: ',', '.' | strip | times: 100 | round -%}
+      {%- assign nombre = 'rizelune.packs_trio_name' -%}{%- assign texto = 'rizelune.packs_trio_text' -%}
+    {%- else -%}
+      {%- assign precio = settings.rz_pack2_precio | default: '49,99' | replace: ',', '.' | strip | times: 100 | round -%}
+      {%- assign nombre = 'rizelune.packs_duo_name' -%}{%- assign texto = 'rizelune.packs_duo_text' -%}
+    {%- endif -%}
+    {%- assign separado = va.price | times: n -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- if mostrar -%}
+  {%- if precio <= 0 or separado > 0 and precio > separado -%}{%- assign precio = separado -%}{%- endif -%}
+  {%- assign ahorro = separado | minus: precio -%}
+  {%- if sin_rebaja and es_bf == false -%}{%- assign ahorro = 0 -%}{%- endif -%}
+  {%- assign ahorro_m = ahorro | money_without_trailing_zeros -%}
+  <article class="rz-packcard rz-packcard--{{ tipo }}{% if estilo == 'producto' %} rz-packcard--prod{% endif %}{% if con_c %} rz-packcard--trio{% endif %}{% unless en_venta %} is-soon{% endunless %}">
+    <div class="rz-packcard__media">
+      {%- capture k_img %}rz_ritual{{ n }}_imagen{% endcapture -%}
+      {%- if tipo == 'ritual' and en_venta and settings[k_img] != blank -%}
+        <span class="rz-packcard__single rz-packcard__single--ritual">
+          {{ settings[k_img] | image_url: width: 1000 | image_tag: loading: 'lazy', alt: settings[k_img].alt, class: 'rz-packcard__img', widths: '400,600,800,1000', sizes: '(min-width: 990px) 400px, 90vw' }}
+        </span>
+      {%- elsif tipo == 'ritual' -%}
+        <span class="rz-packcard__duo">
+          {%- if pa.featured_image -%}{{ pa.featured_image | image_url: width: 400 | image_tag: loading: 'lazy', alt: '', class: 'rz-packcard__img' }}{%- endif -%}
+          <b aria-hidden="true">+</b>
+          {%- if b_ok and pb.featured_image -%}
+            {{ pb.featured_image | image_url: width: 400 | image_tag: loading: 'lazy', alt: '', class: 'rz-packcard__img' }}
+          {%- else -%}
+            {%- assign uid_b = uid | append: 'b' -%}
+            <span class="rz-packcard__art">{% render 'rz-soon-art', forma: settings[k_f], color: settings[k_col], uid: uid_b %}</span>
+          {%- endif -%}
+          {%- if con_c -%}
+            <b aria-hidden="true">+</b>
+            {%- if c_ok and pc.featured_image -%}
+              {{ pc.featured_image | image_url: width: 400 | image_tag: loading: 'lazy', alt: '', class: 'rz-packcard__img' }}
+            {%- else -%}
+              {%- assign uid_c = uid | append: 'c' -%}
+              <span class="rz-packcard__art">{% render 'rz-soon-art', forma: settings[k_fc], color: settings[k_colc], uid: uid_c %}</span>
+            {%- endif -%}
+          {%- endif -%}
+        </span>
+      {%- else -%}
+        <span class="rz-packcard__single">
+          {%- assign pack_img = settings.rz_pack_imagen | default: pa.featured_image -%}
+          {%- if pack_img -%}{{ pack_img | image_url: width: 1000 | image_tag: loading: 'lazy', alt: '', class: 'rz-packcard__img', widths: '400,600,800,1000', sizes: '(min-width: 990px) 360px, 50vw' }}{%- endif -%}
+          <b class="rz-packcard__qty">×{{ n }}</b>
+        </span>
+      {%- endif -%}
+      <span class="rz-packcard__badges">
+        {%- if tipo == 'ritual' -%}
+          {%- if es_bf -%}<em class="rz-packcard__badge rz-packcard__badge--bf">{{ settings.rz_bf_etiqueta | default: 'Black Week' }}</em>{%- else -%}<em class="rz-packcard__badge rz-packcard__badge--new">{% if en_venta %}{{ 'rizelune.packs_new' | t }}{% else %}{{ 'rizelune.packs_soon' | t }}{% endif %}</em>{%- endif -%}
+        {%- elsif n == 3 -%}
+          <em class="rz-packcard__badge">{{ 'rizelune.pack_best' | t }}</em>
+        {%- endif -%}
+        {%- if ahorro > 0 -%}<em class="rz-packcard__badge rz-packcard__badge--save">{{ 'rizelune.packs_save_badge' | t: amount: ahorro_m }}</em>{%- endif -%}
+      </span>
+    </div>
+    <div class="rz-packcard__body">
+      <h3 class="rz-packcard__name">{{ nombre | t }}</h3>
+      <p class="rz-packcard__text">{{ texto | t }}</p>
+      <p class="rz-packcard__price"><b>{{ precio | money }}</b>{%- if ahorro > 0 -%}<s>{{ separado | money }}</s>{%- endif -%}</p>
+      {%- if es_bf -%}
+        {%- assign sep_m = separado_total | money -%}
+        <p class="rz-packcard__bf">{% if separado_total > separado %}<span>{{ 'rizelune.bf_separado' | t: amount: sep_m }}</span>{% endif %}<span class="rz-bf-count" data-rz-bf-count data-end="{{ settings.rz_bf_fin | strip }}T23:59:59+01:00" data-label="{{ 'rizelune.bf_ends' | t | escape }}"></span></p>
+      {%- endif -%}
+      {%- if tipo == 'ritual' -%}
+        <details class="rz-packcard__how">
+          <summary>{{ 'rizelune.packs_howto' | t }}</summary>
+          <ol>
+            {%- for s in (1..3) -%}
+              {%- capture k_step %}rizelune.ritual{{ n }}_s{{ s }}{% endcapture -%}
+              <li>{{ k_step | t }}</li>
+            {%- endfor -%}
+          </ol>
+        </details>
+      {%- endif -%}
+      <div class="rz-packcard__cta">
+        {%- if en_venta -%}
+          {%- if tipo == 'ritual' -%}
+            {%- capture items -%}[{"id":{{ va.id }},"quantity":1},{"id":{{ vb.id }},"quantity":1}{% if con_c %},{"id":{{ vc.id }},"quantity":1}{% endif %}]{%- endcapture -%}
+          {%- else -%}
+            {%- capture items -%}[{"id":{{ va.id }},"quantity":{{ n }}}]{%- endcapture -%}
+          {%- endif -%}
+          <button type="button" class="rz-btn rz-btn--full" data-rz-ritual data-items='{{ items }}'>{{ 'rizelune.ritual_btn' | t }}</button>
+          <p class="rz-ritual__err" data-rz-ritual-err hidden>{{ 'rizelune.ritual_error' | t }}</p>
+        {%- else -%}
+          <a class="rz-btn rz-btn--full rz-btn--line" href="{{ aviso | default: '#rz-packs-form' }}"><span class="rz-packcard__lbl-l">{{ 'rizelune.packs_notify' | t }}</span><span class="rz-packcard__lbl-s">{{ 'rizelune.packs_notify_short' | t }}</span></a>
+        {%- endif -%}
+      </div>
+    </div>
+  </article>
+{%- endif -%}

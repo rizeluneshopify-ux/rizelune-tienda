@@ -1,0 +1,143 @@
+{
+  "sections": {
+    "historia": {
+      "type": "rz-imagen-texto",
+      "settings": {
+        "imagen": "shopify://shop_images/rizelune-nosotros-album.jpg",
+        "imagen_respaldo": "rz-bodegon.jpg",
+        "proporcion": "3/2",
+        "invertir": false,
+        "flotante_num": "",
+        "flotante_texto": "",
+        "eyebrow": "Sobre nosotros",
+        "titulo": "En casa siempre hubo <em>romero</em>",
+        "texto": "Rizelune no empezó en una oficina, sino en casa. En esas noches en las que, después de un día largo, alguien te peina con calma y el resto del mundo puede esperar.\n\nCrecimos viendo cómo en casa se cuidaba el pelo con lo que había a mano: unas ramitas de romero, un poco de aceite y mucha paciencia. No era un tratamiento; era un rato juntos, de esos que se recuerdan.\n\nCon los años, la vida se llenó de prisas. Y vimos que a mucha gente le pasaba lo mismo: el pelo, y uno mismo, siempre quedaban para el final.",
+        "lista_titulo": "",
+        "lista": "",
+        "boton": "",
+        "heading_size": 44,
+        "padding_top": 96,
+        "padding_bottom": 72
+      }
+    },
+    "noche": {
+      "type": "rz-imagen-texto",
+      "settings": {
+        "imagen": "shopify://shop_images/rizelune-nosotros-noche.jpg",
+        "imagen_respaldo": "rz-hero.jpg",
+        "proporcion": "3/2",
+        "invertir": true,
+        "flotante_num": "",
+        "flotante_texto": "",
+        "eyebrow": "Lo que queremos",
+        "titulo": "Recuperar <em>ese rato</em>",
+        "texto": "Rizelune nace para devolver a las noches un pequeño momento de cuidado. Sin prisas, sin complicaciones, sin pantallas. Solo tú, unos minutos y la sensación de estar en casa.\n\nNos gusta pensar que no hacemos solo productos, sino una excusa para parar: para cuidarte a ti, o para cuidar de quien más quieres.",
+        "lista_titulo": "",
+        "lista": "",
+        "boton": "",
+        "heading_size": 44,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "luna": {
+      "type": "rz-imagen-texto",
+      "settings": {
+        "imagen": "shopify://shop_images/rizelune-nosotros-luna.jpg",
+        "imagen_respaldo": "rz-hero.jpg",
+        "proporcion": "3/2",
+        "invertir": false,
+        "flotante_num": "",
+        "flotante_texto": "",
+        "eyebrow": "Nuestro nombre",
+        "titulo": "¿Por qué <em>una luna</em>?",
+        "texto": "Rizelune une dos palabras: «rizo» y «lune», luna en francés. El rizo es el pelo; la luna, la noche, cuando por fin bajamos el ritmo y hay tiempo para los nuestros.\n\nElegimos una luna creciente porque nos recuerda que las cosas bonitas se hacen poco a poco, noche a noche.",
+        "lista_titulo": "",
+        "lista": "",
+        "boton": "",
+        "heading_size": 44,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "valores": {
+      "type": "rz-garantias",
+      "settings": {
+        "eyebrow": "Lo que nos importa",
+        "titulo": "Como en <em>casa</em>",
+        "texto": "",
+        "columnas": 4,
+        "padding_top": 64,
+        "padding_bottom": 64
+      },
+      "blocks": {
+        "v1": {
+          "type": "garantia",
+          "settings": {
+            "icono": "corazon",
+            "titulo": "Con cariño",
+            "texto": "Te tratamos como a alguien de casa: con cercanía y sin prisas."
+          }
+        },
+        "v2": {
+          "type": "garantia",
+          "settings": {
+            "icono": "mensaje",
+            "titulo": "Cerca de ti",
+            "texto": "Te responde una persona, por email o por WhatsApp."
+          }
+        },
+        "v3": {
+          "type": "garantia",
+          "settings": {
+            "icono": "hoja",
+            "titulo": "Sencillo",
+            "texto": "Ingredientes de origen natural y gestos fáciles de mantener."
+          }
+        },
+        "v4": {
+          "type": "garantia",
+          "settings": {
+            "icono": "luna",
+            "titulo": "Poco a poco",
+            "texto": "Creemos en los pequeños gestos que se repiten, no en los milagros."
+          }
+        }
+      },
+      "block_order": [
+        "v1",
+        "v2",
+        "v3",
+        "v4"
+      ]
+    },
+    "gracias": {
+      "type": "rz-imagen-texto",
+      "settings": {
+        "imagen": "shopify://shop_images/rizelune-nosotros-manos.jpg",
+        "imagen_respaldo": "rz-bodegon.jpg",
+        "proporcion": "3/2",
+        "invertir": true,
+        "flotante_num": "",
+        "flotante_texto": "",
+        "eyebrow": "Gracias",
+        "titulo": "Gracias por <em>estar aquí</em>",
+        "texto": "Detrás de Rizelune hay un proyecto pequeño, hecho con ilusión y con mucho cariño. Cada mensaje, cada pedido y cada consejo que nos dais nos ayuda a seguir adelante.\n\nSi quieres contarnos algo, preguntarnos o simplemente saludar, aquí estamos. Nos encanta leerte.\n\nCon cariño,\nRizelune",
+        "lista_titulo": "",
+        "lista": "",
+        "boton": "Escríbenos",
+        "heading_size": 44,
+        "padding_top": 72,
+        "padding_bottom": 96,
+        "boton_url": "/pages/contact"
+      }
+    }
+  },
+  "order": [
+    "historia",
+    "noche",
+    "luna",
+    "valores",
+    "gracias"
+  ]
+}

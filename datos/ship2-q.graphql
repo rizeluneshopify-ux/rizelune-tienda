@@ -1,0 +1,7 @@
+query {
+  carrierServices(first: 10) { nodes { id name active callbackUrl } }
+  deliveryProfiles(first: 10) { nodes { id name default productVariantsCount { count }
+    profileLocationGroups { locationGroup { id } locationGroupZones(first: 20) { nodes { zone { id name countries { code { countryCode } } }
+      methodDefinitions(first: 20) { nodes { id name active rateProvider { __typename ... on DeliveryRateDefinition { price { amount } } ... on DeliveryParticipant { carrierService { name } } } methodConditions { field operator conditionCriteria { ... on MoneyV2 { amount } } } } } } } } } }
+  markets(first: 10) { nodes { name delivery { shipping { isEnabled optionDefinitions(first: 10) { nodes { __typename isActive ... on DeliveryFlatRateOptionDefinition { name } ... on DeliveryValueBasedOptionDefinition { name } ... on DeliveryCarrierCalculatedOptionDefinition { id } } } } } } }
+}

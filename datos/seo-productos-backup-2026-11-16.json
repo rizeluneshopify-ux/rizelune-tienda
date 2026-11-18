@@ -1,0 +1,73 @@
+{
+ "gid://shopify/Product/16124464922954": {
+  "title": "Sérum de Romero y Menta",
+  "tags": [
+   "All skin types (Skin type)",
+   "Dehydrated skin (Concern)",
+   "Dry ends (Concern)",
+   "Gives shine and healthy glow",
+   "Hair salon / Barbershop (Curated for )",
+   "hair-care",
+   "Lack of volume (Concern)",
+   "Nourishes hair and scalp",
+   "Rosemary Oil (Active ingredients)",
+   "Spa / Massage centre (Curated for )"
+  ],
+  "seo": {
+   "title": "Sérum de Romero y Menta · Aceite de romero para el pelo | Rizelune",
+   "description": "Sérum capilar de romero y menta con cuentagotas (30 ml). Un ritual de 15 minutos antes del lavado para un pelo suave y con brillo. Vegano, COSMOS Organic."
+  },
+  "media": {
+   "nodes": [
+    {
+     "id": "gid://shopify/MediaImage/72779314889034",
+     "alt": "Sérum de Romero y Menta Rizelune de 30 ml con luz natural sobre una bandeja de madera"
+    }
+   ]
+  }
+ },
+ "gid://shopify/Product/16152349638986": {
+  "title": "Exfoliante Capilar de Romero y Menta",
+  "tags": [
+   "cuero cabelludo",
+   "exfoliante",
+   "menta",
+   "ritual-raiz",
+   "romero"
+  ],
+  "seo": {
+   "title": "Exfoliante Capilar de Romero y Menta para el cuero cabelludo | Rizelune",
+   "description": "Exfoliante cremoso para el cuero cabelludo con arcilla caolín, hueso de cereza y aceites de romero y menta. Limpia la raíz y refresca. Tarro de 170 ml."
+  },
+  "media": {
+   "nodes": [
+    {
+     "id": "gid://shopify/MediaImage/73140539457866",
+     "alt": "Exfoliante Capilar de Romero y Menta Rizelune en tarro de 170 ml sobre piedra natural con romero y menta frescos"
+    }
+   ]
+  }
+ },
+ "gid://shopify/Product/16152368742730": {
+  "title": "Aceite Facial con Bakuchiol",
+  "tags": [
+   "aceite facial",
+   "bakuchiol",
+   "pelo-y-piel",
+   "rosa mosqueta",
+   "vegano"
+  ],
+  "seo": {
+   "title": "Aceite Facial con Bakuchiol y Rosa Mosqueta | Rizelune",
+   "description": "Aceite facial de noche con bakuchiol, la alternativa vegetal al retinol, y rosa mosqueta. Vegano y COSMOS ORGANIC. Frasco de 30 ml con cuentagotas."
+  },
+  "media": {
+   "nodes": [
+    {
+     "id": "gid://shopify/MediaImage/72783122202954",
+     "alt": "Aceite Facial con Bakuchiol Rizelune y su caja sobre una bandeja de madera con una ramita de romero"
+    }
+   ]
+  }
+ }
+}

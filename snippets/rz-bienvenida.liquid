@@ -1,0 +1,48 @@
+{%- comment -%}
+  Ventana de bienvenida: 10 % a cambio del email. Se abre con el botón del regalo de la esquina y, una vez, al añadir al carrito (se guarda como cliente con la etiqueta indicada).
+  Ajustes: Configuración del tema → Rizelune · Ventana de bienvenida. Textos: rizelune.pop_*.
+{%- endcomment -%}
+{%- if settings.rz_pop_activo and customer == blank and request.design_mode == false -%}
+  {%- assign codigo = settings.rz_pop_codigo | default: 'BIENVENIDA10' -%}
+  {%- assign img = settings.rz_pop_imagen | default: settings.rz_pack_producto.featured_image -%}
+  {%- if settings.rz_pop_boton -%}
+    <button type="button" class="rz-pop-teaser" data-rz-pop-open hidden aria-label="{{ 'rizelune.pop_teaser_label' | t | escape }}">
+      <span class="rz-pop-teaser__emoji" aria-hidden="true">{% render 'rz-icon', name: 'regalo' %}</span><span class="rz-pop-teaser__txt">{{ 'rizelune.pop_teaser' | t }}</span>
+    </button>
+  {%- endif -%}
+  <div class="rz-pop" data-rz-pop data-after-cart="{{ settings.rz_pop_tras_carrito }}" hidden>
+    <div class="rz-pop__veil" data-rz-pop-close></div>
+    <div class="rz-pop__box" role="dialog" aria-modal="true" aria-labelledby="rz-pop-title">
+      <button type="button" class="rz-pop__x" data-rz-pop-close aria-label="{{ 'accessibility.close' | t }}">×</button>
+      {%- if img != blank -%}
+        <div class="rz-pop__media">{{ img | image_url: width: 700 | image_tag: loading: 'lazy', alt: '', sizes: '(min-width: 750px) 320px, 100vw' }}</div>
+      {%- endif -%}
+      <div class="rz-pop__body">
+        <div data-rz-pop-step="form">
+          <span class="rz-pop__eyebrow">{{ 'rizelune.pop_eyebrow' | t }}</span>
+          <h2 class="rz-pop__title" id="rz-pop-title">{{ 'rizelune.pop_title' | t }}</h2>
+          <p class="rz-pop__text">{{ 'rizelune.pop_text' | t }}</p>
+          {%- form 'customer', id: 'rz-pop-form', class: 'rz-pop__form' -%}
+            <input type="hidden" name="contact[tags]" value="{{ settings.rz_pop_etiqueta | default: 'bienvenida' | escape }}, newsletter">
+            <label class="visually-hidden" for="rz-pop-email">{{ 'rizelune.pop_placeholder' | t }}</label>
+            <input id="rz-pop-email" type="email" name="contact[email]" required autocomplete="email" placeholder="{{ 'rizelune.pop_placeholder' | t | escape }}">
+            <button type="submit" class="rz-btn rz-btn--full">{{ 'rizelune.pop_btn' | t }}</button>
+            <p class="rz-pop__err" data-rz-pop-err hidden>{{ 'rizelune.pop_error' | t }}</p>
+            {%- if form.errors -%}<span data-rz-pop-has-error hidden></span>{%- endif -%}
+          {%- endform -%}
+          <button type="button" class="rz-pop__no" data-rz-pop-close>{{ 'rizelune.pop_no' | t }}</button>
+          <p class="rz-pop__legal">{{ 'rizelune.pop_legal' | t }} <a href="{{ routes.root_url | append: '/policies/privacy-policy' | replace: '//', '/' }}">{{ 'rizelune.privacy' | t }}</a></p>
+        </div>
+        <div data-rz-pop-step="ok" hidden>
+          <span class="rz-pop__eyebrow">{{ 'rizelune.pop_ok_eyebrow' | t }}</span>
+          <h2 class="rz-pop__title">{{ 'rizelune.pop_ok_title' | t }}</h2>
+          <p class="rz-pop__text">{{ 'rizelune.pop_ok_text' | t }}</p>
+          <button type="button" class="rz-pop__code" data-rz-copy="{{ codigo | escape }}" data-copied="{{ 'rizelune.pop_copied' | t | escape }}">
+            <span>{{ codigo }}</span><small data-rz-copy-label>{{ 'rizelune.pop_copy' | t }}</small>
+          </button>
+          <a class="rz-btn rz-btn--full" href="{{ routes.root_url | append: '/discount/' | replace: '//', '/' }}{{ codigo | url_encode }}?redirect={{ request.path | url_encode }}">{{ 'rizelune.pop_ok_btn' | t }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}

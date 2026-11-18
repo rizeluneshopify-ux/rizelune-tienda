@@ -1,0 +1,1 @@
+mutation C($page: PageCreateInput!) { pageCreate(page: $page) { page { id handle title templateSuffix isPublished } userErrors { field message code } } }

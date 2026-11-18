@@ -1,0 +1,4 @@
+query { a: __type(name: "MarketUpdateInput") { inputFields { name type { name kind ofType { name } } } }
+ b: __type(name: "MarketConditionsUpdateInput") { inputFields { name type { name kind ofType { name } } } }
+ c: __type(name: "MarketConditionsDeleteInput") { inputFields { name type { name kind ofType { name } } } }
+ d: __type(name: "MarketConditionsRegionsInput") { inputFields { name type { name kind ofType { name } } } } }

@@ -1,0 +1,537 @@
+<claude-code-hint v="1" type="plugin" value="shopify-ai-toolkit@claude-plugins-official" />
+Loading stored store auth ...
+[2K[1A[2K[G
+Executing GraphQL operation ...
+[2K[1A[2K[G
+╭─ success ────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  Operation succeeded.                                                        │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+{
+  "b": {
+    "translations": [
+      {
+        "key": "section.product.rz.json.principal.eyebrow:qrodqzv75wjk",
+        "value": "Ritual capilar de alecrim",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.subtitulo:9254qcjx14a",
+        "value": "Para o couro cabeludo e o cabelo · 30 ml",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.etiqueta:16h0kxb96v3q5",
+        "value": "Promoção",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.nota_precio:2d782hjtk3k6w",
+        "value": "Impostos incluídos.",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.intro:3a1e1swusvun3",
+        "value": "Uma mistura de óleo de alecrim e óleo de hortelã-pimenta que nutre o couro cabeludo e devolve força e brilho ao seu cabelo desde a raiz. Aplique antes da lavagem e deixe atuar 15 minutos.",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.boton:3a1e1syksfebt",
+        "value": "Adicionar ao carrinho",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.envio_texto:2qq0v0ewnvu9z",
+        "value": "Envio por apenas 2,99 € a partir de 39,99 € · com 2 frascos já o tem!",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.garantia_1_texto:gwj69pifx9at",
+        "value": "Pagamento 100% seguro",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.garantia_2_texto:gwj4v5qstw5y",
+        "value": "Fórmula vegana",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.garantia_3_texto:gwj79o07udhz",
+        "value": "Fabricado na UE",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.k1.titulo:16shrsfrqktr",
+        "value": "Nutre",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.k1.texto:36pccafxr6h4y",
+        "value": "Cuida da raiz com óleos vegetais",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.k2.titulo:5wxk1u96aoq4",
+        "value": "Fortalece",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.k2.texto:28vdgh1a8yv4x",
+        "value": "Mais resistência para o cabelo seco",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.k3.titulo:c4ja53hm7rhp",
+        "value": "Ilumina",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.k3.texto:20kd9kccb7r40",
+        "value": "Cabelo mais saudável, suave e luminoso",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.k4.titulo:3alza2lgofvze",
+        "value": "Refresca",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.k4.texto:2p0zig260mxgn",
+        "value": "Sensação de frescura graças à hortelã-pimenta",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.d1.titulo:13x6gllm971c0",
+        "value": "Modo de utilização",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.d1.contenido:2jrpcpng5b8xs",
+        "value": "<p>Aplique umas gotas no couro cabeludo e no cabelo, massaje com as pontas dos dedos e deixe atuar pelo menos <strong>15 minutos</strong>. Depois lave o cabelo como de costume. Use 1–2 vezes por semana.</p>",
+        "outdated": true
+      },
+      {
+        "key": "section.product.rz.json.principal.d2.titulo:2zpvvm7wo8keb",
+        "value": "Ingredientes principais",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.d2.contenido:noop9mzx3ndv",
+        "value": "<ul><li><strong>Óleo de alecrim</strong></li><li><strong>Óleo de hortelã-pimenta</strong></li><li><strong>Óleo de amêndoa doce</strong></li><li>Óleos vegetais de girassol, argão, cânhamo, azeite e abacate</li></ul><p><strong>COSMOS ORGANIC</strong> certificado pela ECOCERT Greenlife · 100% de origem natural · 69% biológico · Vegano · Fabricado na UE.</p><p><strong>INCI:</strong> Helianthus Annuus (Sunflower) Seed Oil*, Decyl Cocoate, Ricinus Communis (Castor) Seed Oil*, Prunus Amygdalus Dulcis (Sweet Almond) Oil*, Argania Spinosa (Argan) Kernel Oil*, Parfum/Fragrance, Cannabis Sativa (Hemp) Seed Oil*, Olea Europaea (Olive) Fruit Oil*, Persea Gratissima (Avocado) Oil*, Mentha Piperita (Peppermint) Oil*, Rosmarinus Officinalis (Rosemary) Leaf Oil*, Urtica Dioica (Nettle) Leaf Extract*, Menthol**, Limonene**, Camphor**, Pinene**, Citrus Aurantium Bergamia Peel Oil, Linalool**, Beta-Caryophyllene**, Vanillin, Linalyl Acetate**, Eugenia Caryophyllus Oil, Eugenol**, Citrus Aurantium Peel Oil, Citrus Limon Peel Oil, Pogostemon Cablin Oil, Santalol**, Coumarin**, Carvone**.</p><p>*Ingredientes de agricultura biológica. **Provenientes de óleos essenciais naturais.</p>",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.d3.titulo:w4ikhb84g8le",
+        "value": "O que inclui",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.d3.contenido:26ho1minilc8y",
+        "value": "<p>1 frasco de vidro de 30 ml com conta-gotas doseador.</p>",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.d4.titulo:2pxxy0qrgkmyt",
+        "value": "Descrição completa",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.principal.d4.contenido:1ggn5t9zrm2jp",
+        "value": "<p>Escreva aqui o conteúdo.</p>",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.marquesina.items:2v1acz35mr69b",
+        "value": "Alecrim e hortelã-pimenta\nCuida desde a raiz\nFórmula vegana\nFabricado na UE\nRitual de 15 minutos",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.beneficios.eyebrow:2ubi7g4nhfqpz",
+        "value": "Porque funciona",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.beneficios.titulo:1i2b43d9qj91l",
+        "value": "Cuide da raiz, <em>exiba</em> o resultado",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.beneficios.texto:3pal5gdf42hr8",
+        "value": "Pensado para a sua rotina de sempre.",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.beneficios.b1.titulo:5z6exd83xin5",
+        "value": "Nutre o couro cabeludo",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.beneficios.b1.texto:20dns96ridz9o",
+        "value": "A sua fórmula com óleos vegetais cuida da raiz e deixa uma sensação de frescura graças à hortelã-pimenta.",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.beneficios.b2.titulo:3rbumajilmq1u",
+        "value": "Fortalece o cabelo",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.beneficios.b2.texto:8cit2izrgpwv",
+        "value": "Ajuda a melhorar a resistência do cabelo seco ou quebradiço.",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.beneficios.b3.titulo:zesreuxthwv7",
+        "value": "Devolve o brilho",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.beneficios.b3.texto:25insnxjqrxu6",
+        "value": "O seu cabelo parece mais saudável, suave e luminoso.",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.beneficios.b4.titulo:3eetsg1po8ep0",
+        "value": "Natural e vegano",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.beneficios.b4.texto:t6vteux7df1l",
+        "value": "Fórmula vegana, fabricada na UE com certificação de qualidade.",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.beneficios.c1.sufijo:3s77h6n0hsj7",
+        "value": "min",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.beneficios.c1.etiqueta:1jpm5xckjlnhv",
+        "value": "de ritual antes da lavagem",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.beneficios.c2.sufijo:1zkwmchvzf8s0",
+        "value": "ml",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.beneficios.c2.etiqueta:s61nigmwcptc",
+        "value": "com conta-gotas doseador",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.beneficios.c3.etiqueta:36rnaznhanx9t",
+        "value": "aplicações por semana (1–2)",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.beneficios.c4.sufijo:1psyoxjh4reeu",
+        "value": "%",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.beneficios.c4.etiqueta:xa6myrhqug1i",
+        "value": "fórmula vegana",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.ingredientes.eyebrow:9iulru8wz735",
+        "value": "O que tem dentro",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.ingredientes.titulo:3s6vzoyrec75b",
+        "value": "Poucos ingredientes, <em>bem</em> escolhidos",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.ingredientes.texto:1euda5h9b72te",
+        "value": "Uma mistura simples de óleos vegetais pensada para nutrir o couro cabeludo.",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.ingredientes.i1.titulo:2528hxjhwsbjg",
+        "value": "Óleo de alecrim",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.ingredientes.i1.texto:rtet3eaa895t",
+        "value": "O protagonista do ritual: nutre o couro cabeludo e ajuda o cabelo a recuperar a força.",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.ingredientes.i2.titulo:6kszjcmu7wkv",
+        "value": "Óleo de hortelã-pimenta",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.ingredientes.i2.texto:2u4jt3jmhxfnm",
+        "value": "Traz aquela sensação de frescura que vai notar desde a primeira massagem.",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.ingredientes.i3.titulo:2yhuuf17mcpri",
+        "value": "Óleos vegetais",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.ingredientes.i3.texto:wyeti52im7qb",
+        "value": "Uma base leve que cuida da raiz e deixa o cabelo suave e luminoso.",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.ingredientes.i4.titulo:2srz5fx6h9wa1",
+        "value": "Cabelo mais forte",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.ingredientes.i4.texto:1z06rxq4l8tdw",
+        "value": "Mais resistência para o cabelo seco ou quebradiço, e um brilho que se nota.",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.pasos.eyebrow:sbuqrw54zuks",
+        "value": "O seu ritual",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.pasos.titulo:37iy8g2ubelia",
+        "value": "Três gestos, <em>quinze</em> minutos",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.pasos.texto:g8p7zhj19gz3",
+        "value": "Transforme-o no seu pequeno momento de autocuidado antes da lavagem.",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.pasos.p1.titulo:3w2ux0iv4aazc",
+        "value": "Aplique umas gotas",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.pasos.p1.texto:xz1qb5gr545x",
+        "value": "Com o conta-gotas, distribua umas gotas pelo couro cabeludo e pelo cabelo, antes de o lavar.",
+        "outdated": true
+      },
+      {
+        "key": "section.product.rz.json.pasos.p1.tiempo:3w2ux0ilta5d9",
+        "value": "Sem desperdício: frasco de 30 ml",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.pasos.p2.titulo:1vq6b02zejd97",
+        "value": "Massaje suavemente",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.pasos.p2.texto:j1g2n1iibr7a",
+        "value": "Com as pontas dos dedos, em movimentos circulares. Vai notar a frescura da hortelã-pimenta.",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.pasos.p2.tiempo:1vq6b02osup7y",
+        "value": "O seu momento de autocuidado",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.pasos.p3.titulo:3oa70w8gzji8q",
+        "value": "Deixe atuar e lave",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.pasos.p3.texto:2gy4cnftnffdj",
+        "value": "Deixe atuar pelo menos 15 minutos e depois lave o cabelo como de costume. Repita 1–2 vezes por semana.",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.pasos.p3.tiempo:3oa70w87u0jan",
+        "value": "Mínimo 15 minutos",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.ritual.flotante_num:lajmyvq9vavm",
+        "value": "1–2",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.ritual.flotante_texto:1rar3aupm47km",
+        "value": "vezes por semana. A constância é o segredo.",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.ritual.eyebrow:g0dvhrg6lehx",
+        "value": "Ritual da noite",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.ritual.titulo:3jw6mu1tkwp7v",
+        "value": "Um pequeno gesto que se torna um <em>hábito</em>",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.ritual.texto:1n33jn5cd44jq",
+        "value": "Acenda uma vela, fique confortável e ofereça a si mesma quinze minutos. O nosso sérum transforma algo tão simples como lavar o cabelo num pequeno ritual de cuidado.",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.ritual.lista:1n33jmrcb0713",
+        "value": "Couro cabeludo nutrido e com sensação de frescura\nCabelo com mais força desde a raiz\nUm brilho saudável que se nota",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.resenas.eyebrow:ajs4bx2b6wzz",
+        "value": "Opiniões",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.resenas.titulo:3b8g1849vmarl",
+        "value": "O que dizem as clientes que já têm o seu <em>ritual</em>",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.faq.eyebrow:1u80yinqsnq90",
+        "value": "Dúvidas",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.faq.titulo:1xyhqvxqmlsui",
+        "value": "Perguntas <em>frequentes</em>",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.faq.f1.pregunta:3v70crvswyxrr",
+        "value": "Como se usa o sérum?",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.faq.f1.respuesta:30nurg9dt1tp7",
+        "value": "<p>Aplique umas gotas no couro cabeludo e no cabelo, massaje com as pontas dos dedos e deixe atuar pelo menos 15 minutos. Depois lave o cabelo como de costume.</p>",
+        "outdated": true
+      },
+      {
+        "key": "section.product.rz.json.faq.f2.pregunta:xwb2pewbu2ic",
+        "value": "Com que frequência devo aplicar?",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.faq.f2.respuesta:3tjq2c18cnnnc",
+        "value": "<p>Recomendamos usá-lo 1–2 vezes por semana. A constância é o que faz a diferença.</p>",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.faq.f3.pregunta:3t885ss6queet",
+        "value": "Vai deixar o cabelo oleoso?",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.faq.f3.respuesta:17tmt0mazwpqx",
+        "value": "<p>Não, porque se aplica <strong>antes</strong> da lavagem. Depois de o deixar atuar, lava o cabelo como sempre e sai.</p>",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.faq.f4.pregunta:3klchfeqdxhde",
+        "value": "É vegano?",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.faq.f4.respuesta:130j0hdevf7em",
+        "value": "<p>Sim. A sua fórmula é natural e vegana, fabricada na UE com certificação de qualidade.</p>",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.faq.f5.pregunta:2jrvjhpuo5chf",
+        "value": "Qual é o tamanho do frasco?",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.faq.f5.respuesta:2dfts70nngqan",
+        "value": "<p>30 ml, com conta-gotas para dosear apenas o que precisa, sem desperdício.</p>",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.faq.f6.pregunta:3imkagb47sy0g",
+        "value": "A que cheira?",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.faq.f6.respuesta:36bp32si72k8s",
+        "value": "<p>Cheira a alecrim e hortelã-pimenta: um aroma herbal e fresco, com um toque de frescura no couro cabeludo graças à hortelã-pimenta.</p>",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.faq.f7.pregunta:2ht3cim8i0t4h",
+        "value": "Quanto custa o envio e quanto tempo demora?",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.faq.f7.respuesta:klltrdkubmcd",
+        "value": "<p><strong>Portugal e França:</strong> 4,99 € (ou apenas 2,99 € a partir de 39,99 €). Chega em cerca de 11 dias úteis a Portugal e 8 a França.</p><p><strong>Espanha:</strong> envio <strong>grátis</strong> a partir de 45 € (caso contrário, 3,99 €), em cerca de 10 dias úteis.</p><p>Receberá um e-mail com o número de seguimento. Mais informações na nossa <a href=\"/policies/shipping-policy\">política de envio</a>.</p>",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.faq.f8.pregunta:31jt148w2ljjy",
+        "value": "Posso devolvê-lo?",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.faq.f8.respuesta:33cjnnrz1e5ki",
+        "value": "<p>Sim. Tem 14 dias desde que o recebe para solicitar a devolução. Consulte todas as condições na nossa <a href=\"/policies/refund-policy\">política de devoluções</a>.</p>",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.garantias.g1.titulo:1sphby1w0hv0l",
+        "value": "Pagamento seguro",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.garantias.g1.texto:1xwu8hwocchew",
+        "value": "Os seus dados sempre protegidos",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.garantias.g2.titulo:fenh1m9gjjie",
+        "value": "Certificado biológico",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.garantias.g2.texto:3o4ezav09iiyz",
+        "value": "COSMOS ORGANIC pela ECOCERT",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.garantias.g3.titulo:2j00s6iy0bvbb",
+        "value": "Qualidade comprovada",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.garantias.g3.texto:1q7qpagp4eusq",
+        "value": "Fabricado na UE com certificação",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.garantias.g4.titulo:6opuiwqt49ds",
+        "value": "Envio reduzido",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.garantias.g4.texto:1f5zc7hxoxk25",
+        "value": "2,99 € a partir de 39,99 €",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.faq.f9.pregunta:20qc36k0ctenz",
+        "value": "Há desconto se comprar mais de um?",
+        "outdated": false
+      },
+      {
+        "key": "section.product.rz.json.faq.f9.respuesta:hmgecd1on7o3",
+        "value": "<p>Sim! Com os nossos packs poupa: <strong>2 frascos por 47,99 €</strong> (poupa 7,99 €) ou <strong>3 frascos por 64,99 €</strong> (21,66 € cada, poupa 18,98 €). Para Portugal e França, o envio dos packs custa apenas 2,99 € (e é grátis em Espanha). Escolha o seu pack na página do produto: o desconto aplica-se automaticamente no carrinho.</p>",
+        "outdated": false
+      }
+    ]
+  }
+}

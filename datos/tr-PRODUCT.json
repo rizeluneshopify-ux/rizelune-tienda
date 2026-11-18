@@ -1,0 +1,47 @@
+{
+  "translatableResources": {
+    "nodes": [
+      {
+        "resourceId": "gid://shopify/Product/16123855962442",
+        "translatableContent": [
+          {
+            "key": "title",
+            "value": "Rizelune · Aceite de Romero y Menta",
+            "digest": "6b4174cd1a2c54c2857d59fa099a28bf9a7b2aea955be307a6626855dedeb90b",
+            "locale": "es"
+          },
+          {
+            "key": "body_html",
+            "value": "<h3>Un ritual de 15 minutos para un pelo más fuerte y con brillo</h3>\n\n<p><strong>¿Tu pelo se ve débil y sin brillo?</strong><br>\nPlanchas, tintes, secador, sol, estrés… Poco a poco el pelo se vuelve seco, quebradizo y apagado. Y aunque lo cuidamos de medios a puntas, casi siempre nos olvidamos de donde empieza todo: la raíz.</p>\n\n<p><strong>La solución: cuidarlo desde la raíz</strong><br>\nLa clave de Rizelune está en su mezcla de aceite de romero y aceite de menta. Aplícalo en el cuero cabelludo antes de lavarte el pelo, masajea suavemente y déjalo actuar al menos 15 minutos. Tu cuero cabelludo queda nutrido y tu pelo recupera fuerza y brillo desde la raíz.</p>\n\n<p>Esto convierte un gesto tan simple como tu lavado de pelo en un pequeño ritual de cuidado.</p>\n\n<p><strong>Ideal para ti si…</strong></p>\n<ul>\n<li>Tienes el pelo <strong>seco, apagado o quebradizo</strong>.</li>\n<li>Usas a menudo <strong>plancha, secador o tintes</strong>.</li>\n<li>Sientes que tu pelo ha perdido <strong>fuerza y brillo</strong>.</li>\n<li>Quieres empezar a <strong>cuidar tu cuero cabelludo</strong>, no solo las puntas.</li>\n<li>Buscas un <strong>momento de autocuidado</strong> sencillo en tu rutina.</li>\n</ul>\n\n<p><strong>Pensado para usarse en tu rutina de siempre</strong></p>\n<ul>\n<li>\n<strong>Nutre el cuero cabelludo:</strong> su fórmula con aceites vegetales cuida la raíz y deja una sensación de frescor gracias a la menta.</li>\n<li>\n<strong>Fortalece el cabello:</strong> ayuda a mejorar la resistencia del pelo seco o quebradizo.</li>\n<li>\n<strong>Devuelve el brillo:</strong> tu pelo se ve más sano, suave y luminoso.</li>\n<li>\n<strong>Fácil de aplicar:</strong> frasco con cuentagotas de 30 ml para dosificar justo lo que necesitas, sin derrochar.</li>\n<li>\n<strong>Fórmula natural y vegana</strong>, fabricada en la UE con certificación de calidad.</li>\n</ul>\n\n<p><strong>Modo de uso:</strong> aplica unas gotas sobre el cuero cabelludo y el cabello, masajea con las yemas de los dedos y deja actuar al menos 15 minutos. Después lava tu pelo como de costumbre. Úsalo 1–2 veces por semana.</p>\n",
+            "digest": "b784aea9fe1501b14b02dd3f2f8843baab05c0e10893ada7f97823fc92eaeb64",
+            "locale": "es"
+          },
+          {
+            "key": "handle",
+            "value": "rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo",
+            "digest": "9961dfeb643819ed335f4c64e96029866b2b9179857159e4ebc7cd4fd9cd5c37",
+            "locale": "es"
+          },
+          {
+            "key": "product_type",
+            "value": "Aceites capilares.",
+            "digest": "bd82764634062888f914a68ae46c6e511f4612ac75b7047ddc0abf1fafeb53d1",
+            "locale": "es"
+          },
+          {
+            "key": "meta_title",
+            "value": "Rizelune – Aceite de Romero y Menta para el Cuero Cabelludo y el Cabello",
+            "digest": "cd2c14a3c0aa4ef946ffa93d3a579cd4b00afbb0dfcd61553bd2c9a9c76a3c01",
+            "locale": "es"
+          },
+          {
+            "key": "meta_description",
+            "value": "Aceite capilar de romero y menta en frasco cuentagotas de 30 ml. Nutre el cuero cabelludo, fortalece el pelo seco y devuelve el brillo. Vegano y fabricado en la UE.",
+            "digest": "3d8fcfa85d6200ebed5a9e74d6760220f7f24a2378b20592429c0d8e3db101a1",
+            "locale": "es"
+          }
+        ]
+      }
+    ]
+  }
+}

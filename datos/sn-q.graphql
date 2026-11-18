@@ -1,0 +1,4 @@
+query { deliveryProfile(id: "gid://shopify/DeliveryProfile/151207608650") { name
+  profileLocationGroups { locationGroup { id } locationGroupZones(first: 60) { nodes { zone { id name countries { code { countryCode } } }
+    methodDefinitions(first: 100) { nodes { id name active description rateProvider { ... on DeliveryRateDefinition { id price { amount } } }
+      methodConditions { id field operator conditionCriteria { __typename ... on MoneyV2 { amount } ... on Weight { value unit } } } } } } } } } }

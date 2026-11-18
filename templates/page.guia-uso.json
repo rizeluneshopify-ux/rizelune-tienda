@@ -1,0 +1,147 @@
+{
+  "sections": {
+    "guia": {
+      "type": "rz-guia-uso",
+      "blocks": {
+        "p1": {
+          "type": "producto",
+          "settings": {
+            "producto": "rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo",
+            "etiqueta": "Raíz · 2 veces por semana",
+            "color": "ambar",
+            "donde": "En la piel de la cabeza (el cuero cabelludo), raya a raya, con el pelo seco. No en el largo ni en las puntas.",
+            "cuanto": "6–10 gotas para toda la cabeza según la cantidad de pelo (6 si es fino, 8 normal, 10 si es grueso), o 3–5 si solo lo usas en una zona. Haz el test y te decimos tus gotas exactas.",
+            "como": "Masajea 2–3 minutos con las yemas de los dedos y déjalo actuar antes de lavarte: de 15 minutos a toda la noche, según tu cuero cabelludo. Después, champú.",
+            "frecuencia": "2 veces por semana, los días que te lavas el pelo.",
+            "test": true
+          }
+        },
+        "p2": {
+          "type": "producto",
+          "settings": {
+            "producto": "exfoliante-capilar-romero-menta",
+            "etiqueta": "Limpieza · 1 vez por semana",
+            "color": "salvia",
+            "donde": "En el cuero cabelludo, en la ducha, con el pelo mojado.",
+            "cuanto": "Una cantidad del tamaño de una nuez.",
+            "como": "Masajea con círculos suaves, sin frotar fuerte. Déjalo 5 minutos (hasta 15 si tienes el cuero cabelludo graso), aclara y lávate con tu champú.",
+            "frecuencia": "1 vez por semana (cada 2 semanas si tu piel es sensible).",
+            "test": false
+          }
+        },
+        "p3": {
+          "type": "producto",
+          "settings": {
+            "producto": "aceite-facial-bakuchiol",
+            "etiqueta": "Piel · cada noche",
+            "color": "rosa",
+            "donde": "En la cara y el cuello, por la noche, con la piel limpia y seca.",
+            "cuanto": "3–4 gotas.",
+            "como": "Extiéndelo con suaves toques, sin frotar y evitando el contorno de los ojos. No se aclara. Por la mañana, tu protector solar.",
+            "frecuencia": "Cada noche.",
+            "test": false
+          }
+        },
+        "d1": {
+          "type": "dia",
+          "settings": {
+            "dia": "Lunes",
+            "serum": true,
+            "exfoliante": true,
+            "aceite": true,
+            "nota": "Día de lavado"
+          }
+        },
+        "d2": {
+          "type": "dia",
+          "settings": {
+            "dia": "Martes",
+            "serum": false,
+            "exfoliante": false,
+            "aceite": true,
+            "nota": ""
+          }
+        },
+        "d3": {
+          "type": "dia",
+          "settings": {
+            "dia": "Miércoles",
+            "serum": false,
+            "exfoliante": false,
+            "aceite": true,
+            "nota": ""
+          }
+        },
+        "d4": {
+          "type": "dia",
+          "settings": {
+            "dia": "Jueves",
+            "serum": true,
+            "exfoliante": false,
+            "aceite": true,
+            "nota": "Día de lavado"
+          }
+        },
+        "d5": {
+          "type": "dia",
+          "settings": {
+            "dia": "Viernes",
+            "serum": false,
+            "exfoliante": false,
+            "aceite": true,
+            "nota": ""
+          }
+        },
+        "d6": {
+          "type": "dia",
+          "settings": {
+            "dia": "Sábado",
+            "serum": false,
+            "exfoliante": false,
+            "aceite": true,
+            "nota": ""
+          }
+        },
+        "d7": {
+          "type": "dia",
+          "settings": {
+            "dia": "Domingo",
+            "serum": false,
+            "exfoliante": false,
+            "aceite": true,
+            "nota": ""
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "d6",
+        "d7"
+      ],
+      "settings": {
+        "eyebrow": "Guía de uso",
+        "titulo": "Tu ritual Rizelune, <em>paso a paso</em>",
+        "texto": "Tres productos que se complementan: el sérum cuida la raíz antes del lavado, el exfoliante limpia el cuero cabelludo una vez por semana y el aceite facial cuida tu piel cada noche.",
+        "cal_titulo": "Tu semana con los tres",
+        "leyenda_1": "Sérum",
+        "leyenda_2": "Exfoliante",
+        "leyenda_3": "Aceite facial",
+        "cal_nota": "¿Te lavas el pelo otros días? Pon el sérum en tus dos días de lavado y el exfoliante en uno de ellos. El aceite facial, cada noche.",
+        "packs": true,
+        "packs_eyebrow": "Los tres juntos",
+        "packs_titulo": "Tu ritual completo, en un pack",
+        "packs_texto": "Llévate los productos juntos y ahorra. Envío gratis a península y Baleares."
+      }
+    }
+  },
+  "order": [
+    "guia"
+  ]
+}

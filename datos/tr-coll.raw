@@ -1,0 +1,113 @@
+<claude-code-hint v="1" type="plugin" value="shopify-ai-toolkit@claude-plugins-official" />
+Loading stored store auth ...
+[2K[1A[2K[G
+Executing GraphQL operation ...
+[2K[1A[2K[G
+╭─ success ────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  Operation succeeded.                                                        │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+{
+  "r": {
+    "resourceId": "gid://shopify/OnlineStoreThemeJsonTemplate/collection?theme_id=210260099402",
+    "translatableContent": [
+      {
+        "key": "section.collection.json.proximamente.eyebrow:330gs03g3jer2",
+        "value": "Próximamente",
+        "digest": "f44cddb1bb0325b65ba93187ed1063fde2cb18d67cfc8bf47a3582fda0d56b56"
+      },
+      {
+        "key": "section.collection.json.proximamente.titulo:2t1l79nix4lkw",
+        "value": "Nuevos rituales <em>en camino</em>",
+        "digest": "6528831cd8d97f98183d3bcff47142fe9697f26ac45abc12a0b7d499cf985289"
+      },
+      {
+        "key": "section.collection.json.proximamente.texto:wsgpj21z8fm5",
+        "value": "Estamos preparando nuevos productos para cuidar tu pelo. Muy pronto podrás encontrarlos aquí.",
+        "digest": "ea8ea737c82a9181dbe577fe34124e1c61a61b26b7ee8d1405a81262d606743f"
+      },
+      {
+        "key": "section.collection.json.proximamente.aviso_titulo:3k1g2qx0k8xlp",
+        "value": "¿Quieres enterarte antes que nadie?",
+        "digest": "6e86e357b5d4ed8f86aff64cd251a0467c9dce096e8701075bea8b165505951c"
+      },
+      {
+        "key": "section.collection.json.proximamente.aviso_texto:2pb9u82nmymi8",
+        "value": "Déjanos tu email y te avisaremos en cuanto lleguen.",
+        "digest": "ee6760d76cb05368a1f93699ad853fedba630d6818f1674cab159abff3ac9f8c"
+      },
+      {
+        "key": "section.collection.json.proximamente.aviso_placeholder:1j06tr6wlrwh",
+        "value": "Tu email",
+        "digest": "30f2b96f0da262166b471560974963bd10ec4b7f1ab1192b43a4c20022062740"
+      },
+      {
+        "key": "section.collection.json.proximamente.aviso_boton:2pb9u8hlwoyje",
+        "value": "Avísame",
+        "digest": "6d7ddb84c41dbc68a96f384bee3a56350273e50b745ef09b8328104b58e937dd"
+      },
+      {
+        "key": "section.collection.json.proximamente.aviso_ok:jj746o8qhskm",
+        "value": "¡Hecho! Te avisaremos en cuanto estén disponibles.",
+        "digest": "a2637cc7f25bf31e467089e00cb46424bbd32a6fbb91b99741359f951395d6a7"
+      },
+      {
+        "key": "section.collection.json.proximamente.aviso_legal:2pb9u87edicxt",
+        "value": "Solo te escribiremos para contarte novedades. Puedes darte de baja cuando quieras.",
+        "digest": "2ced2629464568486add85e83c485571f243e0fe68b61ef28cfd034e8ff623e3"
+      },
+      {
+        "key": "section.collection.json.proximamente.aviso_etiqueta:3iy6csgtmzxm6",
+        "value": "proximamente",
+        "digest": "83a3a85c924cb329a28a86880d4b617f0c4bb9a75400d5f0f453fdc7121fabad"
+      },
+      {
+        "key": "section.collection.json.proximamente.p1.titulo:2c11u65eblvy2",
+        "value": "Exfoliante capilar de romero y menta",
+        "digest": "d942a084e8c88ee058f4853dd128db98a112abcfe379c9d22a903185dacc1761"
+      },
+      {
+        "key": "section.collection.json.proximamente.p1.texto:3ug60tkvssxx3",
+        "value": "Limpieza profunda para un cuero cabelludo fresco y sin residuos.",
+        "digest": "f9f3bae6989990f6822c56729a951da8709ff2027b28b527d7961d1aa7d7a787"
+      },
+      {
+        "key": "section.collection.json.proximamente.p1.etiqueta:3m6pqs7der289",
+        "value": "Próximamente",
+        "digest": "f44cddb1bb0325b65ba93187ed1063fde2cb18d67cfc8bf47a3582fda0d56b56"
+      },
+      {
+        "key": "section.collection.json.proximamente.p2.titulo:2mtrnu19yp5bt",
+        "value": "Champú y acondicionador de keratina",
+        "digest": "6687959b8958d825d851ac78ed5a9b2889e0f53558a6e69f50faeb19b928ee33"
+      },
+      {
+        "key": "section.collection.json.proximamente.p2.texto:1qbwyz6hexqhg",
+        "value": "Para un pelo con más cuerpo, suave y con brillo.",
+        "digest": "7d2ed6d31cc61c58089970be0dcad2a20bf507376e929bd23241a2af8743f40e"
+      },
+      {
+        "key": "section.collection.json.proximamente.p2.etiqueta:38b6hukfmtg5m",
+        "value": "Próximamente",
+        "digest": "f44cddb1bb0325b65ba93187ed1063fde2cb18d67cfc8bf47a3582fda0d56b56"
+      },
+      {
+        "key": "section.collection.json.proximamente.p3.titulo:1ilfhonom1hq0",
+        "value": "Mascarilla reparadora de keratina",
+        "digest": "382e1a50740b3f999fe4ad2656fbf1a07de16d9872adfdefb47e2a1b7ced5f1f"
+      },
+      {
+        "key": "section.collection.json.proximamente.p3.texto:3pb60eu3kezcl",
+        "value": "Nutrición intensa para el pelo seco y dañado.",
+        "digest": "cda7f81b307bbc4b40d369fe871e04a5aa493a8fdbbf78f9f04aa9414ea427f1"
+      },
+      {
+        "key": "section.collection.json.proximamente.p3.etiqueta:uskghzya9ssr",
+        "value": "Próximamente",
+        "digest": "f44cddb1bb0325b65ba93187ed1063fde2cb18d67cfc8bf47a3582fda0d56b56"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{%- comment -%}
+  Barra de la Black Week con cuenta atrás, encima de todo. Solo sale entre las fechas de Configuración del tema → Rizelune · Black Week.
+{%- endcomment -%}
+{%- capture bf_on -%}{%- render 'rz-bf-on' -%}{%- endcapture -%}
+{%- if bf_on == '1' and template.name != 'password' -%}
+  {%- capture bf_start %}{{ settings.rz_bf_inicio | strip }}T00:00:00+01:00{% endcapture -%}
+  {%- capture bf_end %}{{ settings.rz_bf_fin | strip }}T23:59:59+01:00{% endcapture -%}
+  {%- assign p3 = settings.rz_ritual3_precio_bf | replace: ',', '.' | strip | times: 100 | round -%}
+  {%- assign p1 = settings.rz_ritual1_precio_bf | replace: ',', '.' | strip | times: 100 | round -%}
+  <a class="rz-bfbar" href="{{ routes.root_url | append: '/#rz-black-week' | replace: '//', '/' }}" data-rz-bf-bar data-start="{{ bf_start }}" data-end="{{ bf_end }}">
+    <span class="rz-bfbar__tag">{{ settings.rz_bf_etiqueta | default: 'Black Week' }}</span>
+    <span class="rz-bfbar__txt">
+      <span class="rz-bfbar__item rz-bfbar__hasta"><b>{{ 'rizelune.bf_hasta' | t }}</b></span>
+      {%- comment -%} Jon (17-nov): en la barra solo el titular, sin los packs ni sus precios. {%- endcomment -%}
+    </span>
+    <span class="rz-bfbar__count" data-rz-bf-count data-end="{{ bf_end }}" data-label="{{ 'rizelune.bf_ends' | t | escape }}"></span>
+  </a>
+{%- endif -%}

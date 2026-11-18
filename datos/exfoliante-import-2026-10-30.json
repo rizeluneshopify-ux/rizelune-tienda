@@ -1,0 +1,56 @@
+{
+ "id": "gid://shopify/Product/16152349638986",
+ "status": "ACTIVE",
+ "onlineStoreUrl": "https://rizelune.myshopify.com/products/deep-cleanse-scalp-scrub-rosemary-mint",
+ "publishedAt": "2026-10-30T14:29:02Z",
+ "descriptionHtml": "Expand your hair care collection with our Deep Cleanse Scalp Scrub, Rosemary &amp; Mint. This deep-cleansing product is ideal for customers wanting to combat buildup and dandruff while promoting a healthy scalp.\r\n\r\n\r\n\r\nDescription: Deep Cleanse Scalp Scrub, Rosemary &amp; Mint to revitalize the scalp and hair. Formulated with natural exfoliants and rosemary and peppermint oils, it works to deeply cleanse and effectively remove buildup from the scalp, while helping to reduce the appearance of dandruff. This invigorating scrub supports a healthy, balanced scalp. Apply to wet hair and scalp, massage gently with emphasis on the scalp. Leave in for 5-15 minutes before rinsing.\r\nKeratin\r\n\r\nRosemary Oil\r\n\r\nShea Butter\r\n\r\nPeppermint Oil\r\n",
+ "productType": "",
+ "tags": [
+  "All skin types (Skin type)",
+  "Exfoliator (Type)",
+  "Hair salon / Barbershop (Business type)",
+  "hair-care",
+  "Lack of glow (Concern)",
+  "Lack of volume (Concern)",
+  "Removes buildup",
+  "Rosemary Oil",
+  "Rosemary Oil (Active ingredients)",
+  "Spa / Massage centre (Business type)"
+ ],
+ "variants": {
+  "nodes": [
+   {
+    "id": "gid://shopify/ProductVariant/64156660957514",
+    "price": "32.99",
+    "inventoryItem": {
+     "measurement": {
+      "weight": {
+       "value": 350,
+       "unit": "GRAMS"
+      }
+     }
+    }
+   }
+  ]
+ },
+ "media": {
+  "nodes": [
+   {
+    "id": "gid://shopify/MediaImage/72780041355594",
+    "image": {
+     "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/nTZoVB1hA4zMf5xfj2n44giItecFU1D9.jpg?v=1793370543",
+     "width": 3000,
+     "height": 3980
+    }
+   },
+   {
+    "id": "gid://shopify/MediaImage/72780041388362",
+    "image": {
+     "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/Kri26dJMtgTZnlwQIZ3W1n8irUjLjDQ2.jpg?v=1793370543",
+     "width": 3000,
+     "height": 3980
+    }
+   }
+  ]
+ }
+}

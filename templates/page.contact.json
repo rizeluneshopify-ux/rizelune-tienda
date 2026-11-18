@@ -1,0 +1,88 @@
+{
+  "sections": {
+    "contacto": {
+      "type": "rz-contacto",
+      "settings": {
+        "eyebrow": "Contacto",
+        "titulo": "¿Tienes alguna <em>duda</em>?",
+        "texto": "Escríbenos con el formulario o por el medio que prefieras. Estaremos encantados de ayudarte.",
+        "form_titulo": "Escríbenos",
+        "form_nota": "Te responderemos por email lo antes posible.",
+        "info_titulo": "Otras formas de contactar",
+        "info_texto": "¿Prefieres llamar o escribir directamente? Aquí tienes todos nuestros datos.",
+        "bg": "#F5EFE6",
+        "fg": "#2F3B2E",
+        "text_align": "left",
+        "heading_size": 44,
+        "body_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "d1": {
+          "type": "dato",
+          "settings": {
+            "icono": "email",
+            "titulo": "Email",
+            "texto": "contacto@rizelune.com",
+            "enlace": "mailto:contacto@rizelune.com"
+          }
+        },
+        "d2": {
+          "type": "dato",
+          "settings": {
+            "icono": "telefono",
+            "titulo": "Teléfono",
+            "texto": "+34 609 97 11 44",
+            "enlace": "tel:+34609971144"
+          }
+        },
+        "d3": {
+          "type": "dato",
+          "settings": {
+            "icono": "whatsapp",
+            "titulo": "WhatsApp",
+            "texto": "Escríbenos por WhatsApp",
+            "enlace": "https://wa.me/34609971144?text=Hola%2C%20tengo%20una%20duda%20sobre%20Rizelune"
+          }
+        },
+        "d4": {
+          "type": "dato",
+          "settings": {
+            "icono": "reloj",
+            "titulo": "Respuesta",
+            "texto": "Te respondemos lo antes posible"
+          }
+        },
+        "d5": {
+          "type": "dato",
+          "settings": {
+            "icono": "ubicacion",
+            "titulo": "Enviamos a",
+            "texto": "España peninsular y Baleares"
+          }
+        },
+        "d6": {
+          "type": "dato",
+          "settings": {
+            "icono": "documento",
+            "titulo": "Datos de la empresa",
+            "texto": "Ver aviso legal",
+            "enlace": "/policies/legal-notice"
+          }
+        }
+      },
+      "block_order": [
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "d6"
+      ]
+    }
+  },
+  "order": [
+    "contacto"
+  ]
+}

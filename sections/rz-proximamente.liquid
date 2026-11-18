@@ -1,0 +1,337 @@
+{{ 'rz-styles.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'rz-scripts.js' | asset_url }}" defer="defer"></script>
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg }};
+    color: {{ section.settings.fg }};
+  }
+  #shopify-section-{{ section.id }} .rz-h1,
+  #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size }}px; }
+  #shopify-section-{{ section.id }} .rz-body { font-size: {{ section.settings.body_size }}px; }
+  #shopify-section-{{ section.id }} .rz-head { text-align: {{ section.settings.text_align }}; }
+  #shopify-section-{{ section.id }} .rz-head .rz-eyebrow { justify-content: {% case section.settings.text_align %}{% when 'center' %}center{% when 'right' %}flex-end{% else %}flex-start{% endcase %}; }
+  @media (max-width: 749px) {
+    #shopify-section-{{ section.id }} { padding-top: {{ section.settings.padding_top | times: 0.65 | round }}px; padding-bottom: {{ section.settings.padding_bottom | times: 0.65 | round }}px; }
+    #shopify-section-{{ section.id }} .rz-h1,
+    #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size | times: 0.68 | round }}px; }
+  }
+  
+{%- endstyle -%}
+<section class="rz-section rz-soon" id="rz-proximamente">
+  <div class="rz-container">
+    <div class="rz-head rz-reveal">
+      {%- if section.settings.eyebrow != blank -%}<span class="rz-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+      {%- if section.settings.titulo != blank -%}<h2 class="rz-h2">{{ section.settings.titulo }}</h2>{%- endif -%}
+      {%- if section.settings.texto != blank -%}<p class="rz-body">{{ section.settings.texto | newline_to_br }}</p>{%- endif -%}
+    </div>
+    {%- if section.blocks.size > 0 -%}
+    <div class="rz-soon__grid" style="--rz-cols: {{ section.settings.columnas }}; --rz-blur: {{ section.settings.difuminado }}px;">
+      {%- for block in section.blocks -%}
+        <div class="rz-soon__card rz-reveal" style="--rz-delay: {{ forloop.index0 | times: 80 }}ms" {{ block.shopify_attributes }}>
+          <div class="rz-soon__media">
+            {%- if block.settings.imagen != blank -%}
+              {{ block.settings.imagen | image_url: width: 700 | image_tag: loading: 'lazy', class: 'rz-soon__art', alt: '' }}
+            {%- else -%}{% render 'rz-soon-art', forma: block.settings.forma, color: block.settings.color_tapa, uid: block.id %}{%- endif -%}
+            {%- if block.settings.etiqueta != blank -%}<span class="rz-soon__badge">{% render 'rz-icon', name: 'luna' %}{{ block.settings.etiqueta }}</span>{%- endif -%}
+          </div>
+          <h3 class="rz-soon__title">{{ block.settings.titulo }}</h3>
+          {%- if block.settings.texto != blank -%}<p class="rz-soon__text">{{ block.settings.texto }}</p>{%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+
+    {%- if section.settings.aviso_activo -%}
+      <div class="rz-soon__notify rz-reveal" id="rz-aviso-{{ section.id }}">
+        {%- form 'customer', id: 'rz-aviso-form', class: 'rz-soon__formwrap' -%}
+          {%- if form.posted_successfully? -%}
+            <p class="rz-soon__ok">{% render 'rz-icon', name: 'check' %}<span>{{ section.settings.aviso_ok }}</span></p>
+          {%- else -%}
+            {%- if section.settings.aviso_titulo != blank -%}<h3 class="rz-soon__ntitle">{{ section.settings.aviso_titulo }}</h3>{%- endif -%}
+            {%- if section.settings.aviso_texto != blank -%}<p class="rz-soon__ntext">{{ section.settings.aviso_texto }}</p>{%- endif -%}
+            <input type="hidden" name="contact[tags]" value="{{ section.settings.aviso_etiqueta | default: 'proximamente' | escape }}">
+            <div class="rz-soon__form">
+              <label class="visually-hidden" for="rz-aviso-email-{{ section.id }}">{{ section.settings.aviso_placeholder }}</label>
+              <input id="rz-aviso-email-{{ section.id }}" type="email" name="contact[email]" required autocomplete="email" placeholder="{{ section.settings.aviso_placeholder | escape }}" value="{{ form.email }}">
+              <button type="submit" class="rz-btn">{{ section.settings.aviso_boton }}</button>
+            </div>
+            {%- if form.errors -%}<p class="rz-soon__err">{{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}</p>{%- endif -%}
+            {%- if section.settings.aviso_legal != blank -%}<p class="rz-soon__legal">{{ section.settings.aviso_legal }}</p>{%- endif -%}
+          {%- endif -%}
+        {%- endform -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Rizelune · Próximamente",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Encabezado"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo (texto pequeño)",
+      "default": "Próximamente"
+    },
+    {
+      "type": "text",
+      "id": "titulo",
+      "label": "Título",
+      "default": "Nuevos rituales <em>en camino</em>",
+      "info": "Pon una palabra entre <em> y </em> para destacarla en cursiva."
+    },
+    {
+      "type": "textarea",
+      "id": "texto",
+      "label": "Texto",
+      "default": "Estamos preparando nuevos productos para cuidar tu pelo. Muy pronto podrás encontrarlos aquí."
+    },
+    {
+      "type": "header",
+      "content": "Productos"
+    },
+    {
+      "type": "range",
+      "id": "columnas",
+      "label": "Productos por fila (ordenador)",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "difuminado",
+      "label": "Difuminado de las imágenes",
+      "min": 0,
+      "max": 14,
+      "step": 1,
+      "default": 6,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Avísame (recoger emails)"
+    },
+    {
+      "type": "checkbox",
+      "id": "aviso_activo",
+      "label": "Mostrar formulario «Avísame»",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "aviso_titulo",
+      "label": "Título",
+      "default": "¿Quieres enterarte antes que nadie?"
+    },
+    {
+      "type": "text",
+      "id": "aviso_texto",
+      "label": "Texto",
+      "default": "Déjanos tu email y te avisaremos en cuanto lleguen."
+    },
+    {
+      "type": "text",
+      "id": "aviso_placeholder",
+      "label": "Texto dentro de la casilla",
+      "default": "Tu email"
+    },
+    {
+      "type": "text",
+      "id": "aviso_boton",
+      "label": "Botón",
+      "default": "Avísame"
+    },
+    {
+      "type": "text",
+      "id": "aviso_ok",
+      "label": "Mensaje al apuntarse",
+      "default": "¡Hecho! Te avisaremos en cuanto estén disponibles."
+    },
+    {
+      "type": "text",
+      "id": "aviso_legal",
+      "label": "Nota de privacidad",
+      "default": "Solo te escribiremos para contarte novedades. Puedes darte de baja cuando quieras."
+    },
+    {
+      "type": "text",
+      "id": "aviso_etiqueta",
+      "label": "Etiqueta del cliente en Shopify",
+      "default": "proximamente",
+      "info": "Así encontrarás a estas personas en Clientes, filtrando por esta etiqueta."
+    },
+    {
+      "type": "header",
+      "content": "Colores"
+    },
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Color de fondo",
+      "default": "#F5EFE6"
+    },
+    {
+      "type": "color",
+      "id": "fg",
+      "label": "Color del texto",
+      "default": "#2F3B2E"
+    },
+    {
+      "type": "header",
+      "content": "Tipografía"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Alineación del encabezado",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Tamaño del título",
+      "min": 24,
+      "max": 88,
+      "step": 2,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "Tamaño del texto",
+      "min": 13,
+      "max": 26,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Espaciado"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espacio superior",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 24,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espacio inferior",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 88,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "producto",
+      "name": "Producto próximo",
+      "settings": [
+        {
+          "type": "text",
+          "id": "titulo",
+          "label": "Nombre",
+          "default": "Nuevo producto"
+        },
+        {
+          "type": "text",
+          "id": "texto",
+          "label": "Descripción breve"
+        },
+        {
+          "type": "text",
+          "id": "etiqueta",
+          "label": "Etiqueta sobre la imagen",
+          "default": "Próximamente"
+        },
+        {
+          "type": "image_picker",
+          "id": "imagen",
+          "label": "Foto (opcional)",
+          "info": "Si no pones foto, se usa un dibujo del envase. Se muestra difuminada."
+        },
+        {
+          "type": "select",
+          "id": "forma",
+          "label": "Dibujo del envase (si no hay foto)",
+          "options": [
+            {
+              "value": "tarro",
+              "label": "Tarro (exfoliante, mascarilla)"
+            },
+            {
+              "value": "bote",
+              "label": "Bote con tapón (champú, acondicionador)"
+            },
+            {
+              "value": "frasco",
+              "label": "Frasco cuentagotas (sérum)"
+            },
+            {
+              "value": "tubo",
+              "label": "Tubo (crema)"
+            }
+          ],
+          "default": "tarro"
+        },
+        {
+          "type": "color",
+          "id": "color_tapa",
+          "label": "Color de la tapa del dibujo",
+          "default": "#2F3B2E"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Rizelune · Próximamente",
+      "blocks": [
+        {
+          "type": "producto"
+        },
+        {
+          "type": "producto"
+        },
+        {
+          "type": "producto"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

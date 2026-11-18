@@ -1,0 +1,589 @@
+{
+  "sections": {
+    "principal": {
+      "type": "rz-producto",
+      "settings": {
+        "eyebrow": "Rizelune",
+        "subtitulo": "Rosemary Mint Scalp Serum · para el cuero cabelludo · 30 ml",
+        "etiqueta": "Oferta",
+        "nota_precio": "Impuestos incluidos.",
+        "intro": "Una mezcla de aceite de romero y aceite de menta que nutre el cuero cabelludo y deja tu pelo suave y con brillo. Aplícalo antes del lavado y déjalo actuar al menos 15 minutos.",
+        "boton": "Añadir al carrito",
+        "envio_texto": "Envío gratis desde 39,99 €",
+        "garantia_1_texto": "Pago 100% seguro",
+        "garantia_2_texto": "Fórmula vegana",
+        "garantia_3_texto": "Fabricado en la UE",
+        "entrega_texto": "entrega en 5–10 días laborables",
+        "uso_texto": "Unos 0,37 € por uso con 8 gotas · estimación, depende de cuánto uses",
+        "mostrar_bienvenida": false
+      },
+      "blocks": {
+        "k1": {
+          "type": "caracteristica",
+          "settings": {
+            "titulo": "Nutre la raíz",
+            "texto": "Cuida la raíz con aceites vegetales"
+          }
+        },
+        "k2": {
+          "type": "caracteristica",
+          "settings": {
+            "titulo": "Suaviza y da brillo",
+            "texto": "Aceites que cuidan el pelo seco"
+          }
+        },
+        "k3": {
+          "type": "caracteristica",
+          "settings": {
+            "titulo": "Frescor de menta",
+            "texto": "Aspecto más sano, suave y luminoso"
+          }
+        },
+        "k4": {
+          "type": "caracteristica",
+          "settings": {
+            "titulo": "Refresca",
+            "texto": "Sensación de frescor gracias a la menta"
+          }
+        },
+        "d1": {
+          "type": "desplegable",
+          "settings": {
+            "titulo": "Modo de uso",
+            "abierto": true,
+            "contenido": "<p>Aplica el sérum <strong>antes de lavarte el pelo</strong>: con el pelo seco, pon las gotas <strong>sobre el cuero cabelludo</strong>, raya a raya, masajea 2–3 minutos con las yemas de los dedos y deja actuar al menos <strong>15 minutos</strong>. Después lava tu pelo como de costumbre. Úsalo 2 veces por semana.</p><p><a href=\"/pages/como-se-usa\"><strong>Cómo combinarlo con el exfoliante y el aceite facial →</strong></a></p>",
+            "guia_gotas": true
+          }
+        },
+        "d2": {
+          "type": "desplegable",
+          "settings": {
+            "titulo": "Ingredientes clave",
+            "contenido": "<ul><li><strong>Aceite de romero</strong></li><li><strong>Aceite de menta</strong></li><li><strong>Aceite de almendras dulces</strong></li><li>Aceites vegetales de girasol, argán, cáñamo, oliva y aguacate</li></ul><p><strong>COSMOS ORGANIC</strong> certificado por ECOCERT Greenlife · 100 % de origen natural · 69 % ecológico · Vegano · Fabricado en la UE.</p><p><strong>INCI:</strong> Helianthus Annuus (Sunflower) Seed Oil*, Decyl Cocoate, Ricinus Communis (Castor) Seed Oil*, Prunus Amygdalus Dulcis (Sweet Almond) Oil*, Argania Spinosa (Argan) Kernel Oil*, Parfum/Fragrance, Cannabis Sativa (Hemp) Seed Oil*, Olea Europaea (Olive) Fruit Oil*, Persea Gratissima (Avocado) Oil*, Mentha Piperita (Peppermint) Oil*, Rosmarinus Officinalis (Rosemary) Leaf Oil*, Urtica Dioica (Nettle) Leaf Extract*, Menthol**, Limonene**, Camphor**, Pinene**, Citrus Aurantium Bergamia Peel Oil, Linalool**, Beta-Caryophyllene**, Vanillin, Linalyl Acetate**, Eugenia Caryophyllus Oil, Eugenol**, Citrus Aurantium Peel Oil, Citrus Limon Peel Oil, Pogostemon Cablin Oil, Santalol**, Coumarin**, Carvone**.</p><p>*Ingredientes de agricultura ecológica. **Procedentes de aceites esenciales naturales.</p><p><strong>Precauciones:</strong> contiene aceite de almendras dulces y componentes naturales de los aceites esenciales (mentol, alcanfor, limonene, linalool, eugenol y coumarin) que pueden irritar las pieles sensibles. Haz una prueba en una pequeña zona de la piel 24 horas antes del primer uso. Evita el contacto con los ojos y deja de usarlo si notas irritación. Solo para uso externo.</p>"
+          }
+        },
+        "d3": {
+          "type": "desplegable",
+          "settings": {
+            "titulo": "Qué incluye",
+            "contenido": "<p>1 frasco de vidrio de 30 ml con cuentagotas dosificador. Da para unos 60–100 usos en toda la cabeza, según la cantidad de pelo y las gotas que uses (es una estimación; más si solo lo usas en una zona).</p>"
+          }
+        },
+        "d4": {
+          "type": "desplegable",
+          "settings": {
+            "titulo": "Descripción completa",
+            "usar_descripcion": true,
+            "contenido": "<p>Escribe aquí el contenido.</p>"
+          },
+          "disabled": true
+        },
+        "jm_stars": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "k1",
+        "k2",
+        "k3",
+        "k4",
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "jm_stars"
+      ]
+    },
+    "marquesina": {
+      "type": "rz-marquesina",
+      "settings": {
+        "items": "Romero y menta\nCuida desde la raíz\nFórmula vegana\nHecho en la UE\nRitual de 15 minutos"
+      },
+      "disabled": true
+    },
+    "ingredientes": {
+      "type": "rz-ingredientes",
+      "settings": {
+        "eyebrow": "Lo que lleva dentro",
+        "titulo": "Pocos ingredientes, <em>bien</em> elegidos",
+        "texto": "Una mezcla sencilla de aceites vegetales pensada para nutrir el cuero cabelludo."
+      },
+      "blocks": {
+        "i1": {
+          "type": "ingrediente",
+          "settings": {
+            "imagen": "shopify://shop_images/tienda.webp",
+            "titulo": "Aceite de romero",
+            "texto": "El protagonista del ritual: nutre el cuero cabelludo y le da su aroma fresco y herbal."
+          }
+        },
+        "i2": {
+          "type": "ingrediente",
+          "settings": {
+            "imagen": "shopify://shop_images/tienda3.webp",
+            "titulo": "Aceite de menta",
+            "texto": "Aporta esa sensación de frescor que notarás desde el primer masaje."
+          }
+        },
+        "i3": {
+          "type": "ingrediente",
+          "settings": {
+            "imagen": "shopify://shop_images/tienda4.webp",
+            "titulo": "Aceites vegetales",
+            "texto": "Una base ligera que cuida la raíz y deja el pelo suave y luminoso."
+          }
+        },
+        "i4": {
+          "type": "ingrediente",
+          "settings": {
+            "imagen": "shopify://shop_images/tienda2.webp",
+            "titulo": "Pelo suave y con brillo",
+            "texto": "Los aceites de almendras dulces y de argán suavizan el pelo seco o quebradizo y le dan un brillo natural."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "disabled": true
+    },
+    "pasos": {
+      "type": "rz-pasos",
+      "settings": {
+        "imagen": "shopify://shop_images/rizelune-ritual-tres-gestos.jpg",
+        "ancla": "rz-ritual",
+        "boton": "Ver la guía de uso de los tres productos",
+        "eyebrow": "Tu ritual",
+        "titulo": "Tres gestos, <em>quince</em> minutos",
+        "texto": "Conviértelo en tu pequeño momento de autocuidado antes del lavado.",
+        "boton_url": "shopify://pages/como-se-usa"
+      },
+      "blocks": {
+        "p1": {
+          "type": "paso",
+          "settings": {
+            "titulo": "Aplica unas gotas",
+            "texto": "Con el pelo seco, pon las gotas sobre el cuero cabelludo, raya a raya, antes de lavarte.",
+            "tiempo": "Sin derrochar: frasco de 30 ml",
+            "guia_gotas": true
+          }
+        },
+        "p2": {
+          "type": "paso",
+          "settings": {
+            "titulo": "Masajea suavemente",
+            "texto": "Con las yemas de los dedos, con movimientos circulares. Notarás el frescor de la menta.",
+            "tiempo": "Tu momento de autocuidado"
+          }
+        },
+        "p3": {
+          "type": "paso",
+          "settings": {
+            "titulo": "Deja actuar y lava",
+            "texto": "Déjalo al menos 15 minutos y después lávate el pelo como de costumbre. Repite 2 veces por semana.",
+            "tiempo": "Mínimo 15 minutos"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ]
+    },
+    "beneficios": {
+      "type": "rz-beneficios",
+      "settings": {
+        "eyebrow": "Por qué funciona",
+        "titulo": "Cuida la raíz, <em>disfruta</em> del ritual",
+        "texto": "Pensado para usarse en tu rutina de siempre."
+      },
+      "blocks": {
+        "b1": {
+          "type": "beneficio",
+          "settings": {
+            "icono": "raiz",
+            "titulo": "Nutre el cuero cabelludo",
+            "texto": "Su fórmula con aceites vegetales cuida la raíz y deja una sensación de frescor gracias a la menta."
+          }
+        },
+        "b2": {
+          "type": "beneficio",
+          "settings": {
+            "icono": "fuerza",
+            "titulo": "Suaviza el pelo seco",
+            "texto": "Los aceites vegetales cuidan el pelo seco o quebradizo y lo dejan más suave."
+          }
+        },
+        "b3": {
+          "type": "beneficio",
+          "settings": {
+            "icono": "brillo",
+            "titulo": "Aporta brillo",
+            "texto": "Tu pelo se ve más sano, suave y luminoso."
+          }
+        },
+        "b4": {
+          "type": "beneficio",
+          "settings": {
+            "icono": "hoja",
+            "titulo": "Natural y vegano",
+            "texto": "Fórmula vegana con certificado COSMOS Organic de Ecocert, fabricada en la UE."
+          }
+        },
+        "c1": {
+          "type": "cifra",
+          "settings": {
+            "numero": 15,
+            "sufijo": "min",
+            "etiqueta": "de ritual antes del lavado"
+          }
+        },
+        "c2": {
+          "type": "cifra",
+          "settings": {
+            "numero": 30,
+            "sufijo": "ml",
+            "etiqueta": "con cuentagotas dosificador"
+          }
+        },
+        "c3": {
+          "type": "cifra",
+          "settings": {
+            "numero": 2,
+            "sufijo": "",
+            "etiqueta": "aplicaciones a la semana (1–2)"
+          }
+        },
+        "c4": {
+          "type": "cifra",
+          "settings": {
+            "numero": 100,
+            "sufijo": "%",
+            "etiqueta": "fórmula vegana"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "disabled": true
+    },
+    "ritual": {
+      "type": "rz-imagen-texto",
+      "settings": {
+        "imagen": "shopify://shop_images/tienda2.webp",
+        "imagen_respaldo": "rz-antes-despues.jpg",
+        "invertir": true,
+        "oscuro": true,
+        "bg": "#1F2620",
+        "fg": "#F5EFE6",
+        "flotante_num": "1–2",
+        "flotante_texto": "veces por semana. La constancia es el secreto.",
+        "eyebrow": "Ritual de noche",
+        "titulo": "Un gesto pequeño que se convierte en <em>costumbre</em>",
+        "texto": "Enciende una vela, ponte cómoda y regálate quince minutos. Nuestro sérum convierte algo tan simple como tu lavado de pelo en un pequeño ritual de cuidado.",
+        "lista_titulo": "",
+        "lista": "Cuero cabelludo nutrido y con sensación de frescor\nPelo más suave y con aspecto más fuerte\nUn brillo natural",
+        "boton": "",
+        "boton_url": "/products/rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo",
+        "ancla": "rz-noche",
+        "proporcion": "4/5"
+      },
+      "disabled": true
+    },
+    "resenas": {
+      "type": "rz-resenas",
+      "settings": {
+        "eyebrow": "Opiniones",
+        "titulo": "Lo que dicen quienes ya tienen su <em>ritual</em>"
+      }
+    },
+    "faq": {
+      "type": "rz-faq",
+      "settings": {
+        "eyebrow": "Dudas",
+        "titulo": "Preguntas <em>frecuentes</em>",
+        "ancla": "rz-faq"
+      },
+      "blocks": {
+        "f2": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Cada cuánto debo aplicarlo?",
+            "respuesta": "<p><strong>2 veces por semana</strong>, los días que te lavas el pelo (si tienes el cuero cabelludo sensible, empieza con 1). ¿Quieres tu pauta exacta? Pulsa el botón de la gota que verás en la pantalla y haz el test de 30 segundos.</p>"
+          }
+        },
+        "f3": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Me dejará el pelo graso?",
+            "respuesta": "<p>No, porque se aplica <strong>antes</strong> del lavado. Tras dejarlo actuar, lavas tu pelo como siempre y se retira.</p>"
+          }
+        },
+        "f4": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Es vegano?",
+            "respuesta": "<p>Sí. Es una fórmula vegana con certificado COSMOS Organic de Ecocert, fabricada en la Unión Europea.</p>"
+          }
+        },
+        "f5": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Qué tamaño tiene el frasco?",
+            "respuesta": "<p>30 ml, con cuentagotas para que dosifiques justo lo que necesitas, sin derrochar.</p>"
+          }
+        },
+        "f6": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿A qué huele?",
+            "respuesta": "<p>A romero y menta: un aroma herbal y fresco, con un toque de frescor en el cuero cabelludo gracias a la menta.</p>"
+          }
+        },
+        "f7": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Cuánto cuesta el envío y cuánto tarda?",
+            "respuesta": "<p><strong>Plazo:</strong> normalmente lo recibes en una semana y, como muy tarde, en 10 días laborables.</p><p><strong>Envío gratis a partir de 39,99 €</strong> a toda la península y Baleares: con 2 frascos ya lo tienes.</p><p>Si tu pedido es menor, el envío cuesta 3,99 €. Por ahora no enviamos a Canarias, Ceuta ni Melilla.</p><p>Recibirás un correo con el número de seguimiento. Más información en nuestra <a href=\"/policies/shipping-policy\">política de envío</a>.</p>"
+          }
+        },
+        "f8": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Puedo devolverlo?",
+            "respuesta": "<p>Sí, en los 14 días siguientes a recibirlo, siempre que el producto esté <strong>sin abrir y con su precinto</strong>: por higiene, un cosmético abierto no se puede devolver. Si te llega dañado o con un defecto, te enviamos otro o te devolvemos el dinero. Escríbenos antes de enviar nada y te explicamos cómo hacerlo. Más información en nuestra <a href=\"/policies/refund-policy\">política de devoluciones</a>.</p>"
+          }
+        },
+        "f9": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Hay descuento si compro más de uno?",
+            "respuesta": "<p>Sí. En todos ahorras frente a comprar los productos por separado:</p><ul><li><strong>2 sérums</strong>: 49,99 € (ahorras 5,99 €)</li><li><strong>3 sérums</strong>: 66,99 € (ahorras 16,98 €)</li><li><strong>Ritual Raíz</strong> (sérum + exfoliante): 52,99 € (ahorras 7,99 €)</li><li><strong>Pelo y Piel</strong> (sérum + aceite facial): 56,99 € (ahorras 7,99 €)</li><li><strong>Ritual Completo</strong> (los tres): 89,98 € (ahorras 7,99 €)</li></ul><p>Todos tienen envío gratis a península y Baleares y el descuento se aplica solo en el carrito. Son los precios habituales: en promociones pueden ser más bajos.</p>"
+          }
+        },
+        "f10": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Cuánto me dura un frasco?",
+            "respuesta": "<p>Un frasco de 30 ml tiene unas 600 gotas. Para toda la cabeza se usan de 6 a 10 gotas según la cantidad de pelo, así que da para unos <strong>60–100 usos</strong> (más si solo lo usas en una zona). Usándolo 2 veces por semana, te dura varios meses.</p><p><em>Son estimaciones: la duración real depende de la cantidad que uses y de cada cuánto lo apliques.</em></p>"
+          }
+        },
+        "f11": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Tengo que tener alguna precaución?",
+            "respuesta": "<p><strong>Precauciones:</strong> contiene aceite de almendras dulces y componentes naturales de los aceites esenciales (mentol, alcanfor, limonene, linalool, eugenol y coumarin) que pueden irritar las pieles sensibles. Haz una prueba en una pequeña zona de la piel 24 horas antes del primer uso. Evita el contacto con los ojos y deja de usarlo si notas irritación. Solo para uso externo.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "f9",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f6",
+        "f7",
+        "f10",
+        "f11",
+        "f8"
+      ]
+    },
+    "garantias": {
+      "type": "rz-garantias",
+      "settings": {},
+      "blocks": {
+        "g1": {
+          "type": "garantia",
+          "settings": {
+            "icono": "candado",
+            "titulo": "Pago seguro",
+            "texto": "Tus datos siempre protegidos"
+          }
+        },
+        "g2": {
+          "type": "garantia",
+          "settings": {
+            "icono": "hoja",
+            "titulo": "Certificado ecológico",
+            "texto": "COSMOS ORGANIC por ECOCERT"
+          }
+        },
+        "g3": {
+          "type": "garantia",
+          "settings": {
+            "icono": "escudo",
+            "titulo": "Calidad comprobada",
+            "texto": "Fabricado en la UE, en un laboratorio certificado"
+          }
+        },
+        "g4": {
+          "type": "garantia",
+          "settings": {
+            "icono": "camion",
+            "titulo": "Envío gratis",
+            "texto": "A partir de 39,99 €"
+          }
+        }
+      },
+      "block_order": [
+        "g1",
+        "g2",
+        "g3",
+        "g4"
+      ]
+    },
+    "opiniones": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true,
+        "rz_ocultar_sin_opiniones": true
+      },
+      "blocks": {
+        "jm_widget": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "jm_widget"
+      ]
+    },
+    "comparativa": {
+      "type": "rz-comparativa",
+      "blocks": {
+        "c1": {
+          "type": "fila",
+          "settings": {
+            "criterio": "Listo para usar",
+            "v1": "si",
+            "t1": "Sin mezclar nada",
+            "v2": "no",
+            "t2": "Hay que diluirlo",
+            "v3": "no",
+            "t3": "Hay que prepararla"
+          }
+        },
+        "c2": {
+          "type": "fila",
+          "settings": {
+            "criterio": "Se aplica directamente en el cuero cabelludo",
+            "v1": "si",
+            "t1": "Fórmula equilibrada",
+            "v2": "no",
+            "t2": "Puro puede irritar",
+            "v3": "medio",
+            "t3": "Depende de la mezcla"
+          }
+        },
+        "c3": {
+          "type": "fila",
+          "settings": {
+            "criterio": "Romero + menta + aceites nutritivos",
+            "v1": "si",
+            "t1": "Almendra, argán, cáñamo…",
+            "v2": "no",
+            "t2": "Solo romero",
+            "v3": "medio",
+            "t3": "Lo que tengas en casa"
+          }
+        },
+        "c4": {
+          "type": "fila",
+          "settings": {
+            "criterio": "Certificado ecológico COSMOS ORGANIC",
+            "v1": "si",
+            "t1": "Ecocert",
+            "v2": "medio",
+            "t2": "Solo algunos",
+            "v3": "no",
+            "t3": "No"
+          }
+        },
+        "c5": {
+          "type": "fila",
+          "settings": {
+            "criterio": "Dosis exacta",
+            "v1": "si",
+            "t1": "Cuentagotas + test",
+            "v2": "no",
+            "t2": "Hay que calcularla",
+            "v3": "no",
+            "t3": "A ojo"
+          }
+        },
+        "c6": {
+          "type": "fila",
+          "settings": {
+            "criterio": "Aroma agradable",
+            "v1": "si",
+            "t1": "Herbal y fresco",
+            "v2": "no",
+            "t2": "Muy intenso",
+            "v3": "medio",
+            "t3": "Variable"
+          }
+        },
+        "c7": {
+          "type": "fila",
+          "settings": {
+            "criterio": "Precio por uso",
+            "v1": "si",
+            "t1": "0,28–0,47 € (6–10 gotas)",
+            "v2": "medio",
+            "t2": "Bajo, pero necesitas aceite base",
+            "v3": "medio",
+            "t3": "Según lo que compres"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7"
+      ],
+      "settings": {
+        "eyebrow": "Compara",
+        "titulo": "¿Por qué <em>Rizelune</em>?",
+        "texto": "Lo que cambia frente a usar aceite esencial de romero o hacer tu propia mezcla en casa.",
+        "col1": "Rizelune",
+        "col1_imagen": "shopify://shop_images/rizelune-serum-romero-menta-estrella.jpg",
+        "col2": "Aceite esencial de romero puro",
+        "col3": "Mezcla casera",
+        "nota": "Los aceites esenciales puros deben diluirse siempre antes de aplicarlos en la piel.",
+        "ancla": "rz-comparativa",
+        "bg": "#EEF1EA"
+      }
+    }
+  },
+  "order": [
+    "principal",
+    "garantias",
+    "pasos",
+    "comparativa",
+    "resenas",
+    "opiniones",
+    "faq",
+    "marquesina",
+    "beneficios",
+    "ingredientes",
+    "ritual"
+  ]
+}

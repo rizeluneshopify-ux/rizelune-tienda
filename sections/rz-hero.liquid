@@ -1,0 +1,330 @@
+{{ 'rz-styles.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'rz-scripts.js' | asset_url }}" defer="defer"></script>
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg }};
+    color: {{ section.settings.fg }};
+  }
+  #shopify-section-{{ section.id }} .rz-h1,
+  #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size }}px; }
+  #shopify-section-{{ section.id }} .rz-body { font-size: {{ section.settings.body_size }}px; }
+  #shopify-section-{{ section.id }} .rz-head { text-align: {{ section.settings.text_align }}; }
+  #shopify-section-{{ section.id }} .rz-head .rz-eyebrow { justify-content: {% case section.settings.text_align %}{% when 'center' %}center{% when 'right' %}flex-end{% else %}flex-start{% endcase %}; }
+  @media (max-width: 749px) {
+    #shopify-section-{{ section.id }} { padding-top: {{ section.settings.padding_top | times: 0.65 | round }}px; padding-bottom: {{ section.settings.padding_bottom | times: 0.65 | round }}px; }
+    #shopify-section-{{ section.id }} .rz-h1,
+    #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size | times: 0.68 | round }}px; }
+  }
+  
+{%- endstyle -%}
+{%- assign p = section.settings.producto -%}
+{%- assign v = p.selected_or_first_available_variant -%}
+<section class="rz-hero rz-section" style="--rz-hero-h: {{ section.settings.altura }}vh; --rz-veil: {{ section.settings.oscurecer | divided_by: 100.0 }}; --rz-hero-pos: {{ section.settings.posicion }};">
+  <div class="rz-hero__media">
+    {%- if section.settings.imagen != blank -%}
+      {%- assign img = section.settings.imagen -%}
+      {%- comment -%} Velocidad (18-nov): la foto de portada es lo primero que se ve; se precarga con prioridad alta y en el móvil se pide un tamaño ajustado. {%- endcomment -%}
+      {%- capture rz_hero_srcset -%}{{ img | image_url: width: 600 }} 600w, {{ img | image_url: width: 800 }} 800w, {{ img | image_url: width: 1000 }} 1000w, {{ img | image_url: width: 1400 }} 1400w, {{ img | image_url: width: 2200 }} 2200w{%- endcapture -%}
+      {%- assign rz_hero_sizes = '(max-width: 749px) 85vw, 100vw' -%}
+      {{ img | image_url: width: 1000 | preload_tag: as: 'image', imagesrcset: rz_hero_srcset, imagesizes: rz_hero_sizes, fetchpriority: 'high' }}
+      <img src="{{ img | image_url: width: 1400 }}" srcset="{{ rz_hero_srcset }}" sizes="{{ rz_hero_sizes }}" alt="{{ img.alt | escape }}" width="{{ img.width }}" height="{{ img.height }}" loading="eager" fetchpriority="high" decoding="async" data-rz-parallax="{{ section.settings.parallax }}">
+    {%- else -%}
+      <img src="{{ 'rz-hero.jpg' | asset_url }}" alt="Mujer aplicándose el aceite Rizelune en el cuero cabelludo" loading="eager" fetchpriority="high" data-rz-parallax="{{ section.settings.parallax }}">
+    {%- endif -%}
+  </div>
+  <div class="rz-hero__veil"></div>
+  <div class="rz-container rz-hero__inner">
+    <div class="rz-hero__content rz-head">
+      {%- if section.settings.eyebrow != blank -%}<span class="rz-eyebrow rz-reveal">{{ section.settings.eyebrow }}</span>{%- endif -%}
+      <h1 class="rz-h1 rz-reveal" style="--rz-delay: 100ms">{{ section.settings.titulo }}</h1>
+      {%- if section.settings.texto != blank -%}<p class="rz-body rz-reveal" style="--rz-delay: 200ms">{{ section.settings.texto | newline_to_br }}</p>{%- endif -%}
+      {%- if section.settings.mostrar_nombre and p != blank -%}
+        <p class="rz-hero__product rz-reveal" style="--rz-delay: 230ms"><a href="{{ p.url }}">{{ p.title }}</a>{%- if section.settings.nombre_extra != blank -%}<span> · {{ section.settings.nombre_extra }}</span>{%- endif -%}</p>
+      {%- endif -%}
+      {%- if section.settings.mostrar_precio and p != blank -%}
+        <div class="rz-hero__price rz-reveal" style="--rz-delay: 260ms">
+          <strong>{{ v.price | money }}</strong>
+          {%- if v.compare_at_price > v.price -%}
+            <s>{{ v.compare_at_price | money }}</s>
+            {%- if section.settings.etiqueta != blank -%}<span class="rz-tag">{{ section.settings.etiqueta }} {{ v.compare_at_price | minus: v.price | money }}</span>{%- endif -%}
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+      <div class="rz-hero__ctas rz-reveal" style="--rz-delay: 320ms">
+        {%- if section.settings.boton1 != blank -%}
+          <a class="rz-btn rz-btn--light" href="{{ section.settings.boton1_url | default: p.url | default: routes.all_products_collection_url }}">{{ section.settings.boton1 }} {% render 'rz-icon', name: 'flecha' %}</a>
+        {%- endif -%}
+        {%- if section.settings.boton2 != blank -%}
+          <a class="rz-btn rz-btn--ghost" href="{{ section.settings.boton2_url | default: '#rz-ritual' }}">{{ section.settings.boton2 }}</a>
+        {%- endif -%}
+      </div>
+      {%- if section.settings.badges != blank -%}
+        <ul class="rz-badges rz-reveal" style="--rz-delay: 400ms">
+          {%- assign lines = section.settings.badges | newline_to_br | split: '<br />' -%}
+          {%- for l in lines -%}{%- assign t = l | strip -%}{%- if t != blank -%}<li>{% render 'rz-icon', name: 'check' %}{{ t }}</li>{%- endif -%}{%- endfor -%}
+        </ul>
+      {%- endif -%}
+    </div>
+  </div>
+  {%- if section.settings.indicador -%}<span class="rz-hero__scroll" aria-hidden="true"></span>{%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Rizelune · Portada",
+  "tag": "section",
+  "class": "rz-wrap",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Imagen"
+    },
+    {
+      "type": "image_picker",
+      "id": "imagen",
+      "label": "Imagen de fondo"
+    },
+    {
+      "type": "select",
+      "id": "posicion",
+      "label": "Encuadre de la imagen",
+      "default": "70% 30%",
+      "options": [
+        {
+          "value": "50% 50%",
+          "label": "Centro"
+        },
+        {
+          "value": "70% 30%",
+          "label": "Derecha arriba"
+        },
+        {
+          "value": "30% 30%",
+          "label": "Izquierda arriba"
+        },
+        {
+          "value": "50% 20%",
+          "label": "Arriba"
+        },
+        {
+          "value": "50% 80%",
+          "label": "Abajo"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "oscurecer",
+      "label": "Oscurecer imagen (%)",
+      "min": 0,
+      "max": 90,
+      "step": 5,
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "altura",
+      "label": "Altura (% de la pantalla)",
+      "min": 50,
+      "max": 100,
+      "step": 2,
+      "default": 90
+    },
+    {
+      "type": "range",
+      "id": "parallax",
+      "label": "Efecto de profundidad al bajar",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "default": 16
+    },
+    {
+      "type": "checkbox",
+      "id": "indicador",
+      "label": "Mostrar indicador de 'baja'",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Textos"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo",
+      "default": "Ritual capilar de romero"
+    },
+    {
+      "type": "text",
+      "id": "titulo",
+      "label": "Título",
+      "default": "Un ritual de 15 minutos para un pelo más <em>fuerte</em> y con brillo",
+      "info": "Pon una palabra entre <em> y </em> para destacarla."
+    },
+    {
+      "type": "textarea",
+      "id": "texto",
+      "label": "Texto",
+      "default": "Aceite de romero y menta que cuida tu pelo desde donde empieza todo: la raíz."
+    },
+    {
+      "type": "textarea",
+      "id": "badges",
+      "label": "Ventajas (una por línea)",
+      "default": "Fórmula vegana\nFabricado en la UE\nFrasco cuentagotas de 30 ml"
+    },
+    {
+      "type": "header",
+      "content": "Producto y precio"
+    },
+    {
+      "type": "product",
+      "id": "producto",
+      "label": "Producto"
+    },
+    {
+      "type": "checkbox",
+      "id": "mostrar_nombre",
+      "label": "Mostrar el nombre del producto encima del precio",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "nombre_extra",
+      "label": "Texto junto al nombre (p. ej. 30 ml)",
+      "default": "30 ml"
+    },
+    {
+      "type": "checkbox",
+      "id": "mostrar_precio",
+      "label": "Mostrar precio",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "etiqueta",
+      "label": "Etiqueta de oferta (se añade lo que ahorras)",
+      "default": "Ahorra"
+    },
+    {
+      "type": "header",
+      "content": "Botones"
+    },
+    {
+      "type": "text",
+      "id": "boton1",
+      "label": "Botón principal",
+      "default": "Quiero mi ritual"
+    },
+    {
+      "type": "url",
+      "id": "boton1_url",
+      "label": "Enlace botón principal",
+      "info": "Si lo dejas vacío, lleva al producto."
+    },
+    {
+      "type": "text",
+      "id": "boton2",
+      "label": "Botón secundario",
+      "default": "Cómo se usa"
+    },
+    {
+      "type": "url",
+      "id": "boton2_url",
+      "label": "Enlace botón secundario"
+    },
+    {
+      "type": "header",
+      "content": "Colores"
+    },
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Color de fondo",
+      "default": "#1F2620"
+    },
+    {
+      "type": "color",
+      "id": "fg",
+      "label": "Color del texto",
+      "default": "#F5EFE6"
+    },
+    {
+      "type": "header",
+      "content": "Tipografía"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Alineación del encabezado",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Tamaño del título",
+      "min": 28,
+      "max": 96,
+      "step": 2,
+      "default": 64,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "Tamaño del texto",
+      "min": 13,
+      "max": 26,
+      "step": 1,
+      "default": 18,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Espaciado"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espacio superior",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espacio inferior",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 0,
+      "unit": "px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rizelune · Portada"
+    }
+  ]
+}
+{% endschema %}

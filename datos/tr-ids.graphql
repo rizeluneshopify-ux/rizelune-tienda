@@ -1,0 +1,1 @@
+query($ids: [ID!]!) { translatableResourcesByIds(first: 50, resourceIds: $ids) { nodes { resourceId translatableContent { key value digest locale type } } } }

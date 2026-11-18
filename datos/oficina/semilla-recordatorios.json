@@ -1,0 +1,212 @@
+{
+ "r-navidad-foto": {
+  "categoria": "ia",
+  "herramienta": "Gemini",
+  "titulo": "Foto de Navidad de los tres productos",
+  "como": "Para la portada y los anuncios de diciembre. Deja hueco a la izquierda para poner texto encima.",
+  "cuando": "Antes del 1 dic",
+  "fecha": "2026-11-28",
+  "prompt": "Usa como referencia exacta los tres productos de las fotos adjuntas: el frasco de cristal con cuentagotas blanco y etiqueta blanca de rizelune, el tarro de tapa blanca con etiqueta verde salvia de rizelune y el frasco del aceite facial con su caja crema y la luna rosa. No cambies sus formas, colores ni etiquetas y no añadas ningún texto. Crea una fotografía navideña de producto, realista, profesional y en alta resolución, en formato horizontal 16:9: los tres productos agrupados en el tercio derecho de la imagen, sobre una mesa de madera clara con un mantel de lino crema, ramitas de romero fresco que recuerdan a pequeños árboles de Navidad, algunas ramas de abeto, una vela encendida y un regalo envuelto en papel kraft con cordel; al fondo, luces cálidas de Navidad desenfocadas con bokeh dorado. Deja el lado izquierdo despejado y suave para poder poner texto encima. Ambiente cálido, acogedor y elegante, en tonos crema, verde y dorado. Sin personas, sin Papá Noel, sin texto y sin marcas de agua.",
+  "prompt_nota": "Adjunta las 3 fotos de los productos. Cuando te guste, pide: «Repite exactamente la misma escena en formato vertical 4:5, con los productos centrados».",
+  "orden": 1,
+  "hecha": false,
+  "autor": "claude",
+  "creada": "2026-11-16T14:09:39Z"
+ },
+ "r-bw-video": {
+  "categoria": "ia",
+  "herramienta": "Kling o Veo (Gemini)",
+  "titulo": "Vídeo de Black Week con tu foto de noche del pack",
+  "como": "Un clip de 8 segundos con las velas para anuncios y redes durante la Black Week.",
+  "cuando": "Antes del 23 nov",
+  "fecha": "2026-11-21",
+  "prompt": "Vídeo vertical 9:16 de 8 segundos que empieza exactamente en la imagen adjunta. Movimiento de cámara lento y suave: un travelling lateral de izquierda a derecha que se acerca un poco a los productos, como en un anuncio de cosmética de lujo. Las llamas de las velas parpadean de forma natural y sube una fina voluta de humo; las luces doradas del fondo brillan suavemente. Los productos y sus etiquetas permanecen totalmente quietos y nítidos, sin deformarse ni cambiar ninguna letra. Sin personas, sin texto, sin precios y sin música. Aspecto cinematográfico, colores cálidos ámbar y verde, grano de película suave.",
+  "prompt_nota": "Adjunta tu foto de noche de los tres productos (la de las velas) como primer fotograma. Pide 3 o 4 versiones y descarta las que tengan letras raras.",
+  "orden": 2,
+  "hecha": false,
+  "autor": "claude",
+  "creada": "2026-11-16T14:09:39Z"
+ },
+ "r-pantalla": {
+  "categoria": "ia",
+  "herramienta": "Tu móvil",
+  "titulo": "Grabar la pantalla del móvil comprando en tu tienda",
+  "como": "Para el anuncio de la chica comprando: una grabación real se ve mucho mejor que la IA. Activa la grabación de pantalla, entra en la tienda y añade el Ritual Completo al carrito despacio, hasta antes de pagar. Mándamelo y te digo cómo unirlo en CapCut.",
+  "orden": 3,
+  "hecha": false,
+  "autor": "claude",
+  "creada": "2026-11-16T14:09:39Z"
+ },
+ "r-aplicacion": {
+  "categoria": "ia",
+  "herramienta": "Veo (Gemini) o Kling",
+  "titulo": "Vídeo aplicando el sérum en la raya (si no lo grabas tú)",
+  "como": "Alternativa con IA al vídeo del sérum que falta en la galería. Grabado de verdad es mejor.",
+  "prompt": "Vídeo vertical 9:16 de 8 segundos con aspecto de estar grabado con un iPhone sujeto con la mano, con un ligero movimiento natural. Plano desde arriba de la cabeza de una mujer de pelo castaño, sin que se vea su cara. Con una mano separa el pelo haciendo una raya y con la otra usa el cuentagotas del frasco de la foto adjunta para dejar caer dos gotas de aceite dorado sobre la piel de la raya; después masajea despacio con las yemas de los dedos en pequeños círculos. Luz natural de baño por la mañana entrando por una ventana, tonos cálidos y reales. Movimientos a velocidad normal, manos con proporciones naturales, el frasco y su etiqueta estables. Sin texto, sin música y sin efectos.",
+  "prompt_nota": "Adjunta la foto del frasco del sérum.",
+  "orden": 4,
+  "hecha": false,
+  "autor": "claude",
+  "creada": "2026-11-16T14:09:39Z"
+ },
+ "r-gota": {
+  "categoria": "ia",
+  "herramienta": "Kling",
+  "titulo": "Animar la foto del sérum: una gota cayendo",
+  "como": "Un clip corto y bonito para reels, historias o para cerrar un vídeo.",
+  "prompt": "Vertical 9:16, 5 seconds, starting exactly from the attached photo. Very slow push-in towards the bottle. A single golden drop of oil gathers at the tip of the glass dropper and falls in slow motion, catching the warm light. Soft natural window light, gentle shadows, warm and calm. The bottle and its label stay perfectly still and sharp, every letter unchanged. No people, no text, no music, no watermark.",
+  "prompt_nota": "Usa «imagen a vídeo» y adjunta una foto del sérum con el cuentagotas a la vista.",
+  "orden": 5,
+  "hecha": false,
+  "autor": "claude",
+  "creada": "2026-11-16T14:09:39Z"
+ },
+ "r-2140": {
+  "categoria": "ia",
+  "herramienta": "Gemini (Veo)",
+  "titulo": "Vídeo «Domingo, 21:40» (ritual de noche)",
+  "como": "El anuncio de 5 planos con vela, sérum, exfoliante y aceite. Cuando quieras hacerlo, dime «pásame los prompts del 21:40» y te los mando otra vez.",
+  "orden": 6,
+  "hecha": false,
+  "autor": "claude",
+  "creada": "2026-11-16T14:09:39Z"
+ },
+ "r-capcut": {
+  "categoria": "redes",
+  "herramienta": "CapCut",
+  "titulo": "Montar los vídeos en CapCut",
+  "como": "Frase gancho en los 2 primeros segundos, subtítulos automáticos y un sonido de moda. Mezcla planos de IA con planos grabados con el móvil: lo real funciona mejor.",
+  "orden": 7,
+  "hecha": false,
+  "autor": "claude",
+  "creada": "2026-11-16T14:09:39Z"
+ },
+ "r-caseros": {
+  "categoria": "redes",
+  "herramienta": "Tu móvil",
+  "titulo": "Grabar 3 vídeos caseros",
+  "como": "Ideas del plan de anuncios: el mito del pelo graso, tu primera reacción al frescor de la menta y tú contando a cámara por qué creaste Rizelune. Con el móvil basta.",
+  "orden": 8,
+  "hecha": false,
+  "autor": "claude",
+  "creada": "2026-11-16T14:09:39Z"
+ },
+ "r-aviso-ia": {
+  "categoria": "anuncios",
+  "herramienta": "Meta / TikTok",
+  "titulo": "Avisar cuando un anuncio esté hecho con IA",
+  "como": "Pon «Escenas creadas con IA» en el texto del anuncio y activa la casilla de contenido con IA en TikTok. Nada de antes/después ni promesas de que crece el pelo.",
+  "orden": 9,
+  "hecha": false,
+  "autor": "claude",
+  "creada": "2026-11-16T14:09:39Z"
+ },
+ "r-lanzar": {
+  "categoria": "anuncios",
+  "herramienta": "Meta",
+  "titulo": "Lanzar la campaña de prueba en España",
+  "como": "En cuanto arregles Facebook e Instagram. Objetivo Ventas, un solo conjunto para España, público Advantage+ sin intereses, 4 o 5 anuncios distintos, 20 €/día, las 24 horas. No la toques en 3 días.",
+  "orden": 10,
+  "hecha": false,
+  "autor": "claude",
+  "creada": "2026-11-16T14:09:39Z"
+ },
+ "r-revisar": {
+  "categoria": "anuncios",
+  "herramienta": "Meta",
+  "titulo": "Revisar los anuncios a los 3 días",
+  "como": "Pausa solo los claramente malos: tras gastar 10–15 €, si menos del 20 % ve los primeros segundos y el CTR baja del 0,6 %. Mándame una captura y lo vemos juntos.",
+  "orden": 11,
+  "hecha": false,
+  "autor": "claude",
+  "creada": "2026-11-16T14:09:39Z"
+ },
+ "r-subida": {
+  "categoria": "anuncios",
+  "herramienta": "Meta",
+  "titulo": "Programar la subida de presupuesto del Black Friday",
+  "como": "Del viernes 27 al lunes 30, a unos 35 €/día. Prográmala en Meta y no crees campañas nuevas esos días: los anuncios cuestan hasta un 85 % más.",
+  "cuando": "Jueves 26 nov",
+  "fecha": "2026-11-26",
+  "orden": 12,
+  "hecha": false,
+  "autor": "claude",
+  "creada": "2026-11-16T14:09:39Z"
+ },
+ "r-fin-bw": {
+  "categoria": "anuncios",
+  "herramienta": "Meta",
+  "titulo": "Quitar los anuncios de Black Week",
+  "como": "El 1 de diciembre vuelven los precios normales. Pausa los anuncios que hablen de Black Week y pasa a los de regalo de Navidad.",
+  "cuando": "1 dic",
+  "fecha": "2026-12-01",
+  "orden": 13,
+  "hecha": false,
+  "autor": "claude",
+  "creada": "2026-11-16T14:09:39Z"
+ },
+ "r-navidad-limite": {
+  "categoria": "anuncios",
+  "herramienta": "Meta",
+  "titulo": "Anunciar el último día para pedir antes de Navidad",
+  "como": "El 10 de diciembre es el último día recomendado para que llegue a tiempo. Empieza a avisarlo hacia el 5.",
+  "cuando": "5 dic",
+  "fecha": "2026-12-05",
+  "orden": 14,
+  "hecha": false,
+  "autor": "claude",
+  "creada": "2026-11-16T14:09:39Z"
+ },
+ "r-limite": {
+  "categoria": "anuncios",
+  "titulo": "Límite de pérdida: 400 €",
+  "como": "Si hasta el 10 de diciembre lo gastado en anuncios menos lo que te dejan los pedidos llega a −400 €, para los anuncios y lo revisamos.",
+  "orden": 15,
+  "hecha": false,
+  "autor": "claude",
+  "creada": "2026-11-16T14:09:39Z"
+ },
+ "r-gestoria": {
+  "categoria": "tienda",
+  "herramienta": "Gestoría",
+  "titulo": "Preguntar a la gestoría por el IVA",
+  "como": "Lo que ganas por pedido cambia según tu régimen de IVA. Con su respuesta ajusto las cuentas de tus precios.",
+  "orden": 16,
+  "hecha": false,
+  "autor": "claude",
+  "creada": "2026-11-16T14:09:39Z"
+ },
+ "r-sorteo": {
+  "categoria": "tienda",
+  "herramienta": "Gobierno Vasco",
+  "titulo": "Consultar si hay que comunicar el sorteo mensual",
+  "como": "Pregunta a la Dirección de Juego del Gobierno Vasco si el sorteo «pedido gratis del mes» necesita algún aviso o permiso.",
+  "cuando": "Antes del 1 dic",
+  "fecha": "2026-11-30",
+  "orden": 17,
+  "hecha": false,
+  "autor": "claude",
+  "creada": "2026-11-16T14:09:39Z"
+ },
+ "r-compra-prueba": {
+  "categoria": "tienda",
+  "herramienta": "Tu tienda",
+  "titulo": "Hacer una compra de prueba y devolverla",
+  "como": "Así compruebas que el pago, los emails y el seguimiento de Meta funcionan antes de gastar en anuncios. Luego la reembolsas desde Pedidos.",
+  "enlace": "https://admin.shopify.com/store/dfqp9i-am/orders",
+  "enlace_txt": "Abrir pedidos",
+  "orden": 18,
+  "hecha": false,
+  "autor": "claude",
+  "creada": "2026-11-16T14:09:39Z"
+ },
+ "r-resenas": {
+  "categoria": "tienda",
+  "titulo": "Pedir una opinión a cada cliente",
+  "como": "Cuando alguien reciba su pedido, escríbele para pedirle una opinión sincera. Las reseñas reales son lo que más vende. Nunca inventadas.",
+  "orden": 19,
+  "hecha": false,
+  "autor": "claude",
+  "creada": "2026-11-16T14:09:39Z"
+ }
+}

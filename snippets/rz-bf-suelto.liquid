@@ -1,0 +1,20 @@
+{%- comment -%}
+  Línea «Black Week −5 %» para productos sueltos (exfoliante y aceite facial).
+  Uso: {% render 'rz-bf-suelto', p: product, precio: variant.price, oscuro: false %}
+  Sale solo entre las fechas de la Black Week (y el JS la esconde fuera de fechas aunque la página venga de caché).
+  Ajustes: Configuración del tema → Rizelune · Black Week → «Descuento en sueltos» y «Productos sueltos con descuento».
+  El descuento real lo hace el descuento automático «Black Week · 5 % exfoliante y aceite facial sueltos» (Marketing → Descuentos).
+{%- endcomment -%}
+{%- capture rz_bfs_on %}{% render 'rz-bf-on' %}{% endcapture -%}
+{%- assign rz_bfs_pct = settings.rz_bf_sueltos_pct | default: 0 | plus: 0 -%}
+{%- assign rz_bfs_hs = settings.rz_bf_sueltos | remove: ' ' | split: ',' -%}
+{%- if rz_bfs_on contains '1' and rz_bfs_pct > 0 and p != blank and rz_bfs_hs contains p.handle -%}
+  {%- assign rz_bfs_f = 100 | minus: rz_bfs_pct -%}
+  {%- assign rz_bfs_precio = precio | times: rz_bfs_f | divided_by: 100 -%}
+  {%- assign rz_bfs_meses = 'enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre' | split: ',' -%}
+  {%- assign rz_bfs_m = settings.rz_bf_fin | date: '%-m' | minus: 1 -%}
+  <p class="rz-bf-suelto{% if oscuro %} rz-bf-suelto--oscuro{% endif %}" data-rz-bf-bar data-start="{{ settings.rz_bf_inicio | strip }}T00:00:00+01:00" data-end="{{ settings.rz_bf_fin | strip }}T23:59:59+01:00">
+    <span class="rz-bf-suelto__tag">{{ settings.rz_bf_etiqueta | default: 'Black Week' }} −{{ rz_bfs_pct }} %</span>
+    <span><b>{{ rz_bfs_precio | money }}</b> en el carrito · hasta el {{ settings.rz_bf_fin | date: '%-d' }} de {{ rz_bfs_meses[rz_bfs_m] }}</span>
+  </p>
+{%- endif -%}

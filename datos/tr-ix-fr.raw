@@ -1,0 +1,417 @@
+<claude-code-hint v="1" type="plugin" value="shopify-ai-toolkit@claude-plugins-official" />
+Loading stored store auth ...
+[2K[1A[2K[G
+Executing GraphQL operation ...
+[2K[1A[2K[G
+╭─ success ────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  Operation succeeded.                                                        │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+{
+  "r": {
+    "translations": [
+      {
+        "key": "section.index.json.hero.eyebrow:1xz6u7cdc61v5",
+        "value": "Rizelune · Soin capillaire naturel"
+      },
+      {
+        "key": "section.index.json.hero.titulo:ev0dywi5fpq7",
+        "value": "Un rituel de 15 minutes pour des cheveux plus <em>forts</em> et brillants"
+      },
+      {
+        "key": "section.index.json.hero.texto:hfrw6n9wzec2",
+        "value": "Prenez soin de vos cheveux là où tout commence : la racine, avec du romarin, de la menthe et des huiles végétales."
+      },
+      {
+        "key": "section.index.json.hero.badges:ev0e6p8mb9w6",
+        "value": "Formule vegan\nFabriqué dans l'UE\nLivraison à 2,99 € dès 39,99 €"
+      },
+      {
+        "key": "section.index.json.hero.etiqueta:1uv1emj4ehbd8",
+        "value": "Économisez"
+      },
+      {
+        "key": "section.index.json.hero.boton1:ev0e6guuxv3d",
+        "value": "Je veux mon rituel"
+      },
+      {
+        "key": "section.index.json.hero.boton2:ev0e6guuxvze",
+        "value": "Mode d'emploi"
+      },
+      {
+        "key": "section.index.json.marquesina.items:1se8tw2zvzykc",
+        "value": "Romarin et menthe\nSoin dès la racine\nFormule vegan\nFabriqué dans l'UE\nRituel de 15 minutes"
+      },
+      {
+        "key": "section.index.json.problema.eyebrow:2nnu3lh4pj9ij",
+        "value": "Ça vous parle ?"
+      },
+      {
+        "key": "section.index.json.problema.titulo:2k327j3brqjdx",
+        "value": "Vos cheveux ne perdent pas leur éclat du jour au <em>lendemain</em>"
+      },
+      {
+        "key": "section.index.json.problema.texto:2sgfi14e4eh4",
+        "value": "Lisseur, colorations, sèche-cheveux, soleil, stress… Peu à peu, les cheveux deviennent secs, cassants et ternes. Et même si nous en prenons soin des longueurs aux pointes, nous oublions presque toujours là où tout commence : la racine."
+      },
+      {
+        "key": "section.index.json.problema.lista_titulo:122xkrufhfw49",
+        "value": "Notre sérum est fait pour vous si…"
+      },
+      {
+        "key": "section.index.json.problema.lista:2sgfhw6b6qqh",
+        "value": "Vos cheveux sont secs, ternes ou cassants\nVous utilisez souvent lisseur, sèche-cheveux ou colorations\nVous sentez que vos cheveux ont perdu force et éclat\nVous voulez prendre soin de votre cuir chevelu, pas seulement des pointes\nVous cherchez un moment de bien-être simple dans votre routine"
+      },
+      {
+        "key": "section.index.json.problema.boton:2sgfhxegj3mq",
+        "value": "Prendre soin dès la racine"
+      },
+      {
+        "key": "section.index.json.ingredientes.eyebrow:s4lgfm87ytbm",
+        "value": "Ce qu'il contient"
+      },
+      {
+        "key": "section.index.json.ingredientes.titulo:1ob5i62ccollo",
+        "value": "Peu d'ingrédients, <em>bien</em> choisis"
+      },
+      {
+        "key": "section.index.json.ingredientes.texto:2erlrctyj4ihd",
+        "value": "Un mélange simple d'huiles végétales pensé pour nourrir le cuir chevelu."
+      },
+      {
+        "key": "section.index.json.ingredientes.i1.titulo:236p87zjg1nrz",
+        "value": "Huile de romarin"
+      },
+      {
+        "key": "section.index.json.ingredientes.i1.texto:2jgq1ztxubmsy",
+        "value": "La star du rituel : nourrit le cuir chevelu et aide vos cheveux à retrouver leur force."
+      },
+      {
+        "key": "section.index.json.ingredientes.i2.titulo:2ai7gdnxxffto",
+        "value": "Huile de menthe"
+      },
+      {
+        "key": "section.index.json.ingredientes.i2.texto:2s6hn15pxa3gx",
+        "value": "Apporte cette sensation de fraîcheur que vous sentirez dès le premier massage."
+      },
+      {
+        "key": "section.index.json.ingredientes.i3.titulo:2azd4c9xksgil",
+        "value": "Huiles végétales"
+      },
+      {
+        "key": "section.index.json.ingredientes.i3.texto:10hnfnjky1blc",
+        "value": "Une base légère qui prend soin de la racine et laisse les cheveux doux et lumineux."
+      },
+      {
+        "key": "section.index.json.ingredientes.i4.titulo:2ka5dz5353d96",
+        "value": "Des cheveux plus forts"
+      },
+      {
+        "key": "section.index.json.ingredientes.i4.texto:1ui132n111t5j",
+        "value": "Plus de résistance pour les cheveux secs ou cassants, et un éclat qui se voit."
+      },
+      {
+        "key": "section.index.json.pasos.eyebrow:ade850ql34sf",
+        "value": "Votre rituel"
+      },
+      {
+        "key": "section.index.json.pasos.titulo:1b140cbke8m5t",
+        "value": "Trois gestes, <em>quinze</em> minutes"
+      },
+      {
+        "key": "section.index.json.pasos.texto:iev9ybba9nbw",
+        "value": "Faites-en votre petit moment de bien-être avant le shampooing."
+      },
+      {
+        "key": "section.index.json.pasos.boton:iev9ym2x35ti",
+        "value": "Commencer mon rituel"
+      },
+      {
+        "key": "section.index.json.pasos.p1.titulo:27jj5tnunioej",
+        "value": "Appliquez quelques gouttes"
+      },
+      {
+        "key": "section.index.json.pasos.p1.texto:f5g1czwd01t2",
+        "value": "Avec le compte-gouttes, répartissez le sérum sur le cuir chevelu et les cheveux avant le shampooing."
+      },
+      {
+        "key": "section.index.json.pasos.p1.tiempo:27jj5to9ak326",
+        "value": "Sans gaspiller : flacon de 30 ml"
+      },
+      {
+        "key": "section.index.json.pasos.p2.titulo:2ev1dzc94wgg8",
+        "value": "Massez délicatement"
+      },
+      {
+        "key": "section.index.json.pasos.p2.texto:nv7mebofyih1",
+        "value": "Du bout des doigts, par mouvements circulaires. Vous sentirez la fraîcheur de la menthe."
+      },
+      {
+        "key": "section.index.json.pasos.p2.tiempo:2ev1dzck1pa7x",
+        "value": "Votre moment pour vous"
+      },
+      {
+        "key": "section.index.json.pasos.p3.titulo:2fc71xy8s9h55",
+        "value": "Laissez agir puis lavez"
+      },
+      {
+        "key": "section.index.json.pasos.p3.texto:2sbrg1rpli7dw",
+        "value": "Laissez agir au moins 15 minutes, puis lavez vos cheveux comme d'habitude. À répéter 1 à 2 fois par semaine."
+      },
+      {
+        "key": "section.index.json.pasos.p3.tiempo:2fc71xyn9tp4s",
+        "value": "15 minutes minimum"
+      },
+      {
+        "key": "section.index.json.beneficios.eyebrow:144cri2q31ous",
+        "value": "Pourquoi ça marche"
+      },
+      {
+        "key": "section.index.json.beneficios.titulo:i7bwdgdg14ai",
+        "value": "Prenez soin de la racine, <em>révélez</em> le résultat"
+      },
+      {
+        "key": "section.index.json.beneficios.texto:1wi3w0x95vyrb",
+        "value": "Pensé pour votre routine de tous les jours."
+      },
+      {
+        "key": "section.index.json.beneficios.b1.titulo:10plijxasxuxe",
+        "value": "Nourrit le cuir chevelu"
+      },
+      {
+        "key": "section.index.json.beneficios.b1.texto:1stenxt24mokf",
+        "value": "Sa formule aux huiles végétales prend soin de la racine et laisse une sensation de fraîcheur grâce à la menthe."
+      },
+      {
+        "key": "section.index.json.beneficios.b2.titulo:aw7qa28ggvbl",
+        "value": "Fortifie les cheveux"
+      },
+      {
+        "key": "section.index.json.beneficios.b2.texto:8tnzrmwdbjb0",
+        "value": "Aide à améliorer la résistance des cheveux secs ou cassants."
+      },
+      {
+        "key": "section.index.json.beneficios.b3.titulo:af22bg8t3umo",
+        "value": "Redonne de l'éclat"
+      },
+      {
+        "key": "section.index.json.beneficios.b3.texto:20ii7591ckb6l",
+        "value": "Vos cheveux paraissent plus sains, doux et lumineux."
+      },
+      {
+        "key": "section.index.json.beneficios.b4.titulo:jm5csrr3w5g7",
+        "value": "Naturel et vegan"
+      },
+      {
+        "key": "section.index.json.beneficios.b4.texto:2hs3muzyxwi7u",
+        "value": "Formule vegan, fabriquée dans l'UE avec certification qualité."
+      },
+      {
+        "key": "section.index.json.beneficios.c1.sufijo:2m79su07c1sxs",
+        "value": "min"
+      },
+      {
+        "key": "section.index.json.beneficios.c1.etiqueta:3sju21qjoznls",
+        "value": "de rituel avant le shampooing"
+      },
+      {
+        "key": "section.index.json.beneficios.c2.sufijo:2qxev9hnvknnn",
+        "value": "ml"
+      },
+      {
+        "key": "section.index.json.beneficios.c2.etiqueta:2prnnlu0hlhkz",
+        "value": "avec compte-gouttes doseur"
+      },
+      {
+        "key": "section.index.json.beneficios.c3.etiqueta:3ql1wy0g8ys76",
+        "value": "applications par semaine (1–2)"
+      },
+      {
+        "key": "section.index.json.beneficios.c4.sufijo:2wi9ll3kbfu4l",
+        "value": "%"
+      },
+      {
+        "key": "section.index.json.beneficios.c4.etiqueta:7031gfegrhhh",
+        "value": "formule vegan"
+      },
+      {
+        "key": "section.index.json.ritual.flotante_num:3de462l1ptp7l",
+        "value": "1–2"
+      },
+      {
+        "key": "section.index.json.ritual.flotante_texto:ytmpf9chuxyd",
+        "value": "fois par semaine. La régularité est le secret."
+      },
+      {
+        "key": "section.index.json.ritual.eyebrow:xlrymj2siigm",
+        "value": "Rituel du soir"
+      },
+      {
+        "key": "section.index.json.ritual.titulo:3bxlgz367q3mg",
+        "value": "Un petit geste qui devient une <em>habitude</em>"
+      },
+      {
+        "key": "section.index.json.ritual.texto:1ecms4ow0juz9",
+        "value": "Allumez une bougie, installez-vous confortablement et offrez-vous quinze minutes. Notre sérum transforme un geste aussi simple que votre shampooing en un petit rituel de soin."
+      },
+      {
+        "key": "section.index.json.ritual.lista:1ecms4tu6b3lw",
+        "value": "Cuir chevelu nourri et sensation de fraîcheur\nDes cheveux plus forts dès la racine\nUn éclat sain qui se voit"
+      },
+      {
+        "key": "section.index.json.ritual.boton:1ecms4uwsne7z",
+        "value": "Commencer mon rituel"
+      },
+      {
+        "key": "section.index.json.resenas.eyebrow:1r1kmj6tbabjw",
+        "value": "Avis"
+      },
+      {
+        "key": "section.index.json.resenas.titulo:vn0bgzy0m6mq",
+        "value": "Ce qu'en disent celles qui ont déjà leur <em>rituel</em>"
+      },
+      {
+        "key": "section.index.json.faq.eyebrow:1qok4ayf6xpef",
+        "value": "Questions"
+      },
+      {
+        "key": "section.index.json.faq.titulo:38kfcpzcwq02h",
+        "value": "Questions <em>fréquentes</em>"
+      },
+      {
+        "key": "section.index.json.faq.f1.pregunta:glwoapxqjiuc",
+        "value": "Comment utiliser le sérum ?"
+      },
+      {
+        "key": "section.index.json.faq.f1.respuesta:3jlos18517vxk",
+        "value": "<p>Avant le shampooing, répartissez le sérum sur le cuir chevelu et les cheveux : <strong>6 à 8 gouttes</strong> pour des cheveux courts, <strong>8 à 12</strong> s'ils arrivent aux épaules, <strong>12 à 16</strong> s'ils sont longs et <strong>16 à 20</strong> s'ils sont très longs ou épais. Massez du bout des doigts, laissez agir au moins 15 minutes et lavez vos cheveux comme d'habitude.</p>"
+      },
+      {
+        "key": "section.index.json.faq.f2.pregunta:3dwlyd6uboe3r",
+        "value": "À quelle fréquence l'appliquer ?"
+      },
+      {
+        "key": "section.index.json.faq.f2.respuesta:2qpth5gahm1zf",
+        "value": "<p>Nous recommandons de l'utiliser 1 à 2 fois par semaine. C'est la régularité qui fait la différence.</p>"
+      },
+      {
+        "key": "section.index.json.faq.f3.pregunta:ikov9tjwo27a",
+        "value": "Va-t-il graisser mes cheveux ?"
+      },
+      {
+        "key": "section.index.json.faq.f3.respuesta:1gaipft1pkj3e",
+        "value": "<p>Non, car il s'applique <strong>avant</strong> le shampooing. Après l'avoir laissé agir, vous lavez vos cheveux comme d'habitude et il s'élimine.</p>"
+      },
+      {
+        "key": "section.index.json.faq.f4.pregunta:20ioy3x9wq9gh",
+        "value": "Est-il vegan ?"
+      },
+      {
+        "key": "section.index.json.faq.f4.respuesta:ankjgkhivuml",
+        "value": "<p>Oui. Sa formule est naturelle et vegan, fabriquée dans l'UE avec certification qualité.</p>"
+      },
+      {
+        "key": "section.index.json.faq.f5.pregunta:31c5w1m5miecg",
+        "value": "Quelle est la taille du flacon ?"
+      },
+      {
+        "key": "section.index.json.faq.f5.respuesta:2wdnsrzevmsj0",
+        "value": "<p>30 ml, avec compte-gouttes pour doser juste ce qu'il faut, sans gaspiller.</p>"
+      },
+      {
+        "key": "section.index.json.faq.f6.pregunta:22hh530w2ustf",
+        "value": "Quelle est son odeur ?"
+      },
+      {
+        "key": "section.index.json.faq.f6.respuesta:23hshw7kc0ykv",
+        "value": "<p>Le romarin et la menthe : un parfum herbacé et frais, avec une touche de fraîcheur sur le cuir chevelu grâce à la menthe.</p>"
+      },
+      {
+        "key": "section.index.json.faq.f7.pregunta:33ay30prsmxpe",
+        "value": "Combien coûte la livraison et quel est le délai ?"
+      },
+      {
+        "key": "section.index.json.faq.f7.respuesta:t2hq6kbjzfou",
+        "value": "<p><strong>France et Portugal :</strong> 4,99 € (ou seulement 2,99 € dès 39,99 € d'achat). Livraison en 8 jours ouvrés environ en France et 11 au Portugal.</p><p><strong>Espagne :</strong> livraison <strong>gratuite</strong> dès 45 € (sinon 3,99 €), en 10 jours ouvrés environ.</p><p>Vous recevrez un e-mail avec le numéro de suivi. Plus d'informations dans notre <a href=\"/policies/shipping-policy\">politique de livraison</a>.</p>"
+      },
+      {
+        "key": "section.index.json.faq.f8.pregunta:1hh5hsrflebn1",
+        "value": "Puis-je le retourner ?"
+      },
+      {
+        "key": "section.index.json.faq.f8.respuesta:2azl6mz1oussh",
+        "value": "<p>Oui. Vous disposez de 14 jours à compter de la réception pour demander un retour. Consultez toutes les conditions dans notre <a href=\"/policies/refund-policy\">politique de retour</a>.</p>"
+      },
+      {
+        "key": "section.index.json.compra.eyebrow:bwp9ip6pdnz7",
+        "value": "Rizelune"
+      },
+      {
+        "key": "section.index.json.compra.texto:zj452n1matq8",
+        "value": "Votre rituel commence ce soir : nourrissez, fortifiez et illuminez vos cheveux depuis la racine en seulement 15 minutes."
+      },
+      {
+        "key": "section.index.json.compra.etiqueta:34odufkad72zi",
+        "value": "Promo !"
+      },
+      {
+        "key": "section.index.json.compra.lista:zj4528wbgyvl",
+        "value": "Flacon compte-gouttes de 30 ml\nSérum romarin et menthe aux huiles végétales\nFormule naturelle et vegan, fabriquée dans l'UE\n🚚 Livraison à 2,99 € dès 2 flacons"
+      },
+      {
+        "key": "section.index.json.compra.boton:zj452eku44bu",
+        "value": "Ajouter au panier"
+      },
+      {
+        "key": "section.index.json.compra.ver_mas:bwpjsu21wb03",
+        "value": "Voir tous les détails"
+      },
+      {
+        "key": "section.index.json.garantias.g1.titulo:2qr88n3eqw3fa",
+        "value": "Paiement sécurisé"
+      },
+      {
+        "key": "section.index.json.garantias.g1.texto:1up3cq9qwldqz",
+        "value": "Vos données toujours protégées"
+      },
+      {
+        "key": "section.index.json.garantias.g2.titulo:20xugd8cef3th",
+        "value": "Certifié bio"
+      },
+      {
+        "key": "section.index.json.garantias.g2.texto:apcok3l5a8hk",
+        "value": "COSMOS ORGANIC par ECOCERT"
+      },
+      {
+        "key": "section.index.json.garantias.g3.titulo:20gosemcr234k",
+        "value": "Qualité contrôlée"
+      },
+      {
+        "key": "section.index.json.garantias.g3.texto:22e6vxpq4j0d5",
+        "value": "Fabriqué dans l'UE avec certification"
+      },
+      {
+        "key": "section.index.json.garantias.g4.titulo:1cml1ly1hi87n",
+        "value": "Livraison réduite"
+      },
+      {
+        "key": "section.index.json.garantias.g4.texto:13p2a5b8d9vzy",
+        "value": "2,99 € dès 39,99 € d'achat"
+      },
+      {
+        "key": "section.index.json.faq.f9.pregunta:2iamfqgbb6gj0",
+        "value": "Y a-t-il une réduction si j'en achète plusieurs ?"
+      },
+      {
+        "key": "section.index.json.faq.f9.respuesta:10kaexbswt9wg",
+        "value": "<p>Oui ! Avec nos packs, vous économisez : <strong>2 flacons pour 47,99 €</strong> (7,99 € d'économie) ou <strong>3 flacons pour 64,99 €</strong> (21,66 € le flacon, 18,98 € d'économie). En France et au Portugal, la livraison des packs ne coûte que 2,99 € (et elle est gratuite en Espagne). Choisissez votre pack sur la page du produit : la réduction s'applique automatiquement dans le panier.</p>"
+      },
+      {
+        "key": "section.index.json.hero.nombre_extra:250y2j673zgm4",
+        "value": "30 ml"
+      }
+    ]
+  }
+}

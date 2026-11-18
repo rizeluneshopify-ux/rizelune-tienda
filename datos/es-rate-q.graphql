@@ -1,0 +1,1 @@
+query { market(id: "gid://shopify/Market/125028073802") { delivery { shipping { optionDefinitions(first: 5) { nodes { ... on DeliveryFlatRateOptionDefinition { id name freeDeliveryMinimumValue { amount } rateGroups(first: 5) { nodes { id rate { id price { amount currencyCode } } } } } } } } } } }

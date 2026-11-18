@@ -1,0 +1,155 @@
+<claude-code-hint v="1" type="plugin" value="shopify-ai-toolkit@claude-plugins-official" />
+Loading stored store auth ...
+[2K[1A[2K[G
+Executing GraphQL operation ...
+[2K[1A[2K[G
+╭─ success ────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  Operation succeeded.                                                        │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+{
+  "translatableResources": {
+    "nodes": [
+      {
+        "resourceId": "gid://shopify/Link/1077921218890",
+        "translatableContent": [
+          {
+            "key": "title",
+            "value": "Buscar"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/Link/1077921251658",
+        "translatableContent": [
+          {
+            "key": "title",
+            "value": "Pedidos"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/Link/1077921284426",
+        "translatableContent": [
+          {
+            "key": "title",
+            "value": "Perfil"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/Link/1078173663562",
+        "translatableContent": [
+          {
+            "key": "title",
+            "value": "Inicio"
+          }
+        ],
+        "fr": [
+          {
+            "key": "title",
+            "value": "Accueil"
+          }
+        ],
+        "pt": [
+          {
+            "key": "title",
+            "value": "Início"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/Link/1078173696330",
+        "translatableContent": [
+          {
+            "key": "title",
+            "value": "Rizelune"
+          }
+        ],
+        "fr": [
+          {
+            "key": "title",
+            "value": "Rizelune"
+          }
+        ],
+        "pt": [
+          {
+            "key": "title",
+            "value": "Rizelune"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/Link/1078173729098",
+        "translatableContent": [
+          {
+            "key": "title",
+            "value": "El ritual"
+          }
+        ],
+        "fr": [
+          {
+            "key": "title",
+            "value": "Le rituel"
+          }
+        ],
+        "pt": [
+          {
+            "key": "title",
+            "value": "O ritual"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/Link/1078173761866",
+        "translatableContent": [
+          {
+            "key": "title",
+            "value": "Preguntas frecuentes"
+          }
+        ],
+        "fr": [
+          {
+            "key": "title",
+            "value": "Questions fréquentes"
+          }
+        ],
+        "pt": [
+          {
+            "key": "title",
+            "value": "Perguntas frequentes"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/Link/1078173794634",
+        "translatableContent": [
+          {
+            "key": "title",
+            "value": "Contacto"
+          }
+        ],
+        "fr": [
+          {
+            "key": "title",
+            "value": "Contact"
+          }
+        ],
+        "pt": [
+          {
+            "key": "title",
+            "value": "Contacto"
+          }
+        ]
+      }
+    ]
+  }
+}

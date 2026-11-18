@@ -1,0 +1,1 @@
+{"id":"gid://shopify/Market/125028073802","input":{"delivery":{"shipping":{"optionDefinitionsToUpdate":[{"flatRate":{"id":"gid://shopify/DeliveryFlatRateOptionDefinition/1477325652298","rateGroupsToUpdate":[{"id":"gid://shopify/DeliveryFlatRateGroup/668507177290","rate":{"price":{"amount":"1.99","currencyCode":"EUR"}}}]}}]}}}}

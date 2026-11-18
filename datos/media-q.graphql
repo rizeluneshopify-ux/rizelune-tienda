@@ -1,0 +1,1 @@
+query { product(id: "gid://shopify/Product/16123855962442") { media(first: 20) { nodes { id ... on MediaImage { image { url } } } } } }

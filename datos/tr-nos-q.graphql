@@ -1,0 +1,6 @@
+query {
+  t: translatableResource(resourceId: "gid://shopify/OnlineStoreThemeJsonTemplate/page.nosotros?theme_id=210260099402") { resourceId translatableContent { key value digest } }
+  g: translatableResource(resourceId: "gid://shopify/Page/720496099658") { resourceId translatableContent { key value digest } }
+  f: translatableResource(resourceId: "gid://shopify/OnlineStoreThemeSectionGroup/footer-group?theme_id=210260099402") { resourceId translatableContent { key value digest } }
+  m: menu(id: "gid://shopify/Menu/362958029130") { items { id title } }
+}

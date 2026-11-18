@@ -1,0 +1,116 @@
+{
+  "sections": {
+    "historia": {
+      "type": "rz-imagen-texto",
+      "settings": {
+        "imagen": "shopify://shop_images/Rincon_calido_con_aceite_capilar_de_romero.png",
+        "imagen_respaldo": "rz-bodegon.jpg",
+        "proporcion": "4/5",
+        "flotante_num": "",
+        "flotante_texto": "",
+        "eyebrow": "Sobre Rizelune",
+        "titulo": "Una marca pequeña, hecha con <em>calma</em>",
+        "texto": "Rizelune nace en 2026 de una idea sencilla: cuidar el pelo desde la raíz, con ingredientes naturales y sin complicaciones. Un momento tranquilo para ti, de esos que apetece repetir.\n\nEmpezamos con un sérum de romero y menta y, poco a poco, hemos añadido lo que lo complementa: un exfoliante para el cuero cabelludo y un aceite facial para la noche. Por eso nuestro símbolo es una luna.",
+        "lista_titulo": "",
+        "lista": "",
+        "boton": "",
+        "heading_size": 46,
+        "padding_top": 96,
+        "padding_bottom": 72
+      }
+    },
+    "valores": {
+      "type": "rz-garantias",
+      "settings": {
+        "eyebrow": "Lo que nos importa",
+        "titulo": "Nuestros <em>valores</em>",
+        "texto": "",
+        "columnas": 4,
+        "padding_top": 64,
+        "padding_bottom": 64
+      },
+      "blocks": {
+        "v1": {
+          "type": "garantia",
+          "settings": {
+            "icono": "hoja",
+            "titulo": "Ingredientes naturales",
+            "texto": "Fórmulas con ingredientes de origen natural"
+          }
+        },
+        "v2": {
+          "type": "garantia",
+          "settings": {
+            "icono": "escudo",
+            "titulo": "Certificado ecológico",
+            "texto": "El sérum y el aceite facial: COSMOS ORGANIC por ECOCERT"
+          }
+        },
+        "v3": {
+          "type": "garantia",
+          "settings": {
+            "icono": "eu",
+            "titulo": "Fabricado en la UE",
+            "texto": "En un laboratorio certificado"
+          }
+        },
+        "v4": {
+          "type": "garantia",
+          "settings": {
+            "icono": "corazon",
+            "titulo": "Hecho bajo pedido",
+            "texto": "Cada producto se prepara cuando lo pides"
+          }
+        }
+      },
+      "block_order": [
+        "v1",
+        "v2",
+        "v3",
+        "v4"
+      ]
+    },
+    "como": {
+      "type": "rz-imagen-texto",
+      "settings": {
+        "imagen": "shopify://shop_images/rizelune-unboxing-caja-relleno.jpg",
+        "imagen_respaldo": "rz-hero.jpg",
+        "proporcion": "1/1",
+        "invertir": true,
+        "flotante_num": "",
+        "flotante_texto": "",
+        "eyebrow": "Cómo trabajamos",
+        "titulo": "Poco, bien hecho y contado con claridad",
+        "texto": "Somos un proyecto pequeño e independiente, y queremos que se note en el trato.",
+        "lista_titulo": "Así lo hacemos",
+        "lista": "Fabricamos bajo pedido, en un laboratorio certificado de la Unión Europea: sin stock acumulado ni desperdicio\nFórmulas con ingredientes naturales; el sérum y el aceite facial tienen certificado COSMOS ORGANIC\nSin promesas milagrosas ni fotos de antes y después: te contamos cómo usarlo y qué esperar\nTe respondemos personalmente, por email o por WhatsApp",
+        "boton": "Escríbenos",
+        "boton_url": "/pages/contact",
+        "heading_size": 44,
+        "padding_top": 72,
+        "padding_bottom": 96
+      }
+    },
+    "compra": {
+      "type": "rz-compra",
+      "settings": {
+        "producto": "rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo",
+        "imagen": "shopify://shop_images/rizelune-serum-romero-menta-vela-calida.jpg",
+        "texto": "Tu ritual empieza esta noche: nutre tu cuero cabelludo y deja tu pelo suave y con brillo en solo 15 minutos.",
+        "lista": "Frasco cuentagotas de 30 ml\nSérum de romero y menta con aceites vegetales\nFórmula natural y vegana, fabricada en la UE\nEnvío gratis con 2 frascos o más",
+        "eyebrow": "Rizelune",
+        "titulo": "",
+        "etiqueta": "¡Oferta!",
+        "boton": "Añadir al carrito",
+        "ver_mas": "Ver todos los detalles"
+      },
+      "disabled": true
+    }
+  },
+  "order": [
+    "historia",
+    "valores",
+    "como",
+    "compra"
+  ]
+}

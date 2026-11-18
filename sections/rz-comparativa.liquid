@@ -1,0 +1,113 @@
+{%- comment -%}
+  Tabla comparativa: Rizelune frente a otras opciones (por defecto: aceite esencial de romero puro y mezcla casera).
+  Cada fila es un bloque «Fila» con el criterio y, para cada columna, un icono (sí / no / a medias) y un texto corto.
+{%- endcomment -%}
+{{ 'rz-styles.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg }};
+    color: {{ section.settings.fg }};
+  }
+  #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size }}px; }
+  #shopify-section-{{ section.id }} .rz-head { text-align: {{ section.settings.text_align }}; }
+  #shopify-section-{{ section.id }} .rz-head .rz-eyebrow { justify-content: {% case section.settings.text_align %}{% when 'center' %}center{% when 'right' %}flex-end{% else %}flex-start{% endcase %}; }
+  @media (max-width: 749px) {
+    #shopify-section-{{ section.id }} { padding-top: {{ section.settings.padding_top | times: 0.65 | round }}px; padding-bottom: {{ section.settings.padding_bottom | times: 0.65 | round }}px; }
+    #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size | times: 0.68 | round }}px; }
+  }
+{%- endstyle -%}
+{%- capture ico_si -%}<svg class="rz-cmp__ico rz-cmp__ico--si" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><path d="M7 12.5l3.2 3.2L17 9"/></svg>{%- endcapture -%}
+{%- capture ico_no -%}<svg class="rz-cmp__ico rz-cmp__ico--no" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/></svg>{%- endcapture -%}
+{%- capture ico_medio -%}<svg class="rz-cmp__ico rz-cmp__ico--medio" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5"/><path d="M8 12h8"/></svg>{%- endcapture -%}
+<section class="rz-section" id="{{ section.settings.ancla | default: section.id }}">
+  <div class="rz-container rz-container--narrow">
+    <div class="rz-head rz-reveal">
+      {%- if section.settings.eyebrow != blank -%}<span class="rz-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+      {%- if section.settings.titulo != blank -%}<h2 class="rz-h2">{{ section.settings.titulo }}</h2>{%- endif -%}
+      {%- if section.settings.texto != blank -%}<p class="rz-body">{{ section.settings.texto | newline_to_br }}</p>{%- endif -%}
+    </div>
+
+    <div class="rz-cmp rz-reveal" role="table" aria-label="{{ section.settings.titulo | strip_html | escape }}">
+      <div class="rz-cmp__row rz-cmp__row--head" role="row">
+        <span class="rz-cmp__crit" role="columnheader"><span class="rz-visually-hidden">{{ section.settings.criterio_titulo }}</span></span>
+        <span class="rz-cmp__cell rz-cmp__cell--hl" role="columnheader">
+          {%- if section.settings.col1_imagen != blank -%}{{ section.settings.col1_imagen | image_url: width: 160 | image_tag: loading: 'lazy', class: 'rz-cmp__thumb', alt: '' }}{%- endif -%}
+          <strong>{{ section.settings.col1 }}</strong>
+        </span>
+        <span class="rz-cmp__cell" role="columnheader">{{ section.settings.col2 }}</span>
+        <span class="rz-cmp__cell" role="columnheader">{{ section.settings.col3 }}</span>
+      </div>
+      {%- for block in section.blocks -%}
+        <div class="rz-cmp__row{% if forloop.last %} rz-cmp__row--last{% endif %}" role="row" {{ block.shopify_attributes }}>
+          <span class="rz-cmp__crit" role="rowheader">{{ block.settings.criterio }}</span>
+          {%- for n in (1..3) -%}
+            {%- case n -%}
+              {%- when 1 -%}{%- assign val = block.settings.v1 -%}{%- assign txt = block.settings.t1 -%}{%- assign col = section.settings.col1 -%}
+              {%- when 2 -%}{%- assign val = block.settings.v2 -%}{%- assign txt = block.settings.t2 -%}{%- assign col = section.settings.col2 -%}
+              {%- else -%}{%- assign val = block.settings.v3 -%}{%- assign txt = block.settings.t3 -%}{%- assign col = section.settings.col3 -%}
+            {%- endcase -%}
+            <span class="rz-cmp__cell{% if n == 1 %} rz-cmp__cell--hl{% endif %}" role="cell">
+              <span class="rz-visually-hidden">{{ col }}: </span>
+              {%- case val -%}{%- when 'si' -%}{{ ico_si }}{%- when 'no' -%}{{ ico_no }}{%- when 'medio' -%}{{ ico_medio }}{%- endcase -%}
+              {%- if txt != blank -%}<span class="rz-cmp__txt">{{ txt }}</span>{%- endif -%}
+            </span>
+          {%- endfor -%}
+        </div>
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.nota != blank -%}<p class="rz-cmp__note">{{ section.settings.nota }}</p>{%- endif -%}
+    {%- if section.settings.boton != blank and section.settings.boton_url != blank -%}
+      <div class="rz-cmp__cta"><a class="rz-btn" href="{{ section.settings.boton_url }}">{{ section.settings.boton }}</a></div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Rizelune · Comparativa",
+  "tag": "div",
+  "class": "rz-cmp-section",
+  "settings": [
+    { "type": "header", "content": "Textos" },
+    { "type": "text", "id": "eyebrow", "label": "Antetítulo", "default": "Compara" },
+    { "type": "text", "id": "titulo", "label": "Título (admite <em>)", "default": "¿Por qué <em>Rizelune</em>?" },
+    { "type": "textarea", "id": "texto", "label": "Texto", "default": "Lo que cambia frente a usar aceite esencial de romero o hacer tu propia mezcla en casa." },
+    { "type": "text", "id": "criterio_titulo", "label": "Nombre de la columna de criterios (solo para lectores de pantalla)", "default": "Qué comparamos" },
+    { "type": "text", "id": "col1", "label": "Columna destacada", "default": "Rizelune" },
+    { "type": "image_picker", "id": "col1_imagen", "label": "Foto pequeña de la columna destacada" },
+    { "type": "text", "id": "col2", "label": "Columna 2", "default": "Aceite esencial de romero puro" },
+    { "type": "text", "id": "col3", "label": "Columna 3", "default": "Mezcla casera" },
+    { "type": "text", "id": "nota", "label": "Nota al pie", "default": "Los aceites esenciales puros deben diluirse siempre antes de aplicarlos en la piel." },
+    { "type": "text", "id": "boton", "label": "Texto del botón" },
+    { "type": "url", "id": "boton_url", "label": "Enlace del botón" },
+    { "type": "text", "id": "ancla", "label": "Ancla (id)", "default": "rz-comparativa" },
+    { "type": "header", "content": "Colores" },
+    { "type": "color", "id": "bg", "label": "Fondo", "default": "#EEF1EA" },
+    { "type": "color", "id": "fg", "label": "Texto", "default": "#2F3B2E" },
+    { "type": "header", "content": "Tamaños y espacios" },
+    { "type": "select", "id": "text_align", "label": "Alineación del título", "default": "center", "options": [{ "value": "left", "label": "Izquierda" }, { "value": "center", "label": "Centro" }, { "value": "right", "label": "Derecha" }] },
+    { "type": "range", "id": "heading_size", "label": "Tamaño del título", "min": 24, "max": 72, "step": 2, "unit": "px", "default": 44 },
+    { "type": "range", "id": "padding_top", "label": "Espacio arriba", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 96 },
+    { "type": "range", "id": "padding_bottom", "label": "Espacio abajo", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 96 }
+  ],
+  "blocks": [
+    {
+      "type": "fila",
+      "name": "Fila",
+      "settings": [
+        { "type": "text", "id": "criterio", "label": "Qué se compara", "default": "Listo para usar" },
+        { "type": "select", "id": "v1", "label": "Columna destacada · icono", "default": "si", "options": [{ "value": "si", "label": "✓ Sí" }, { "value": "medio", "label": "– A medias" }, { "value": "no", "label": "✗ No" }, { "value": "nada", "label": "Sin icono" }] },
+        { "type": "text", "id": "t1", "label": "Columna destacada · texto" },
+        { "type": "select", "id": "v2", "label": "Columna 2 · icono", "default": "no", "options": [{ "value": "si", "label": "✓ Sí" }, { "value": "medio", "label": "– A medias" }, { "value": "no", "label": "✗ No" }, { "value": "nada", "label": "Sin icono" }] },
+        { "type": "text", "id": "t2", "label": "Columna 2 · texto" },
+        { "type": "select", "id": "v3", "label": "Columna 3 · icono", "default": "no", "options": [{ "value": "si", "label": "✓ Sí" }, { "value": "medio", "label": "– A medias" }, { "value": "no", "label": "✗ No" }, { "value": "nada", "label": "Sin icono" }] },
+        { "type": "text", "id": "t3", "label": "Columna 3 · texto" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Rizelune · Comparativa", "blocks": [{ "type": "fila" }, { "type": "fila" }, { "type": "fila" }] }]
+}
+{% endschema %}

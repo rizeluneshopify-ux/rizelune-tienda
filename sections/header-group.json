@@ -1,0 +1,118 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "a1": {
+          "type": "announcement",
+          "settings": {
+            "text": "Envío gratis desde 39,99 € a península y Baleares",
+            "link": "/products/rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo"
+          }
+        },
+        "a2": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "Francia y Portugal: envío a solo 2,99 € desde 39,99 €",
+            "link": "/policies/shipping-policy"
+          }
+        },
+        "a3": {
+          "type": "announcement",
+          "settings": {
+            "text": "Ingredientes naturales · Fabricado en la UE · Pago seguro",
+            "link": ""
+          }
+        },
+        "a0": {
+          "type": "announcement",
+          "settings": {
+            "text": "10 % de descuento en tu primera compra con el código BIENVENIDA10",
+            "link": "/products/rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo"
+          },
+          "disabled": true
+        },
+        "ag": {
+          "type": "announcement",
+          "settings": {
+            "text": "Cada mes, un pedido sale GRATIS: devolvemos el dinero de uno al azar",
+            "link": "/pages/pedido-gratis-del-mes",
+            "rz_ocultar_pt": true
+          },
+          "disabled": true
+        },
+        "ap": {
+          "type": "announcement",
+          "settings": {
+            "text": "Packs desde 49,99 € · ahorra hasta 16,98 € · Ver packs",
+            "link": "/#rz-packs"
+          },
+          "disabled": true
+        },
+        "as": {
+          "type": "announcement",
+          "settings": {
+            "text": "Muy pronto: packs Ritual Raíz y Pelo y Piel · Avísame",
+            "link": "/#rz-packs"
+          },
+          "disabled": true
+        },
+        "ab": {
+          "type": "announcement",
+          "settings": {
+            "text": "Apúntate y llévate un 10 % de descuento en tu primera compra",
+            "link": "/#rz-bienvenida"
+          },
+          "disabled": true
+        }
+      },
+      "block_order": [
+        "ap",
+        "ag",
+        "ab",
+        "as",
+        "a0",
+        "a1",
+        "a2",
+        "a3"
+      ],
+      "settings": {
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "color_scheme": "scheme-5",
+        "show_line_separator": false,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_ancho": 130,
+        "logo_texto": "rizelune",
+        "logo_texto_tam": 30,
+        "logo_position": "middle-left",
+        "mobile_logo_position": "center",
+        "menu": "main-menu",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "on-scroll-up",
+        "show_line_separator": false,
+        "color_scheme": "scheme-1",
+        "menu_color_scheme": "scheme-1",
+        "enable_country_selector": false,
+        "enable_language_selector": true,
+        "margin_bottom": 0,
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

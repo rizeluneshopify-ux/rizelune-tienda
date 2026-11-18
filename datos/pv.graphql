@@ -1,0 +1,1 @@
+query { productVariant(id: "gid://shopify/ProductVariant/64031421071690") { price compareAtPrice updatedAt } }

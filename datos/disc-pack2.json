@@ -1,0 +1,8 @@
+{"id": "gid://shopify/DiscountAutomaticNode/2097850384714", "d": {
+  "title": "Pack Ritual · 2 frascos",
+  "endsAt": null,
+  "minimumRequirement": { "quantity": { "greaterThanOrEqualToQuantity": "2" } },
+  "customerGets": { "value": { "discountAmount": { "amount": "7.99", "appliesOnEachItem": false } },
+                    "items": { "products": { "productsToAdd": ["gid://shopify/Product/16124464922954"] } } },
+  "combinesWith": { "productDiscounts": false, "orderDiscounts": false, "shippingDiscounts": true }
+} }

@@ -1,0 +1,46 @@
+{
+  "translatableResource": {
+    "translatableContent": [
+      {
+        "key": "section.sections/header-group.json.announcement-bar.a1.text:347n6lgdb73c1",
+        "value": "🚚 Envío GRATIS en España a partir de 39,99 €",
+        "digest": "b3f22fa89b147081ba5486cce49f783a70e0ead8dda7655908a466f55d0ecf8c"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.a1.link:347n6lg829470",
+        "value": "/products/rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo",
+        "digest": "9ccc605f8cc6987c0b644e2fb599f2823efc21cb378a9b877ed86c0fa1f16a58"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.a2.text:3vota34o25qhu",
+        "value": "Francia y Portugal: envío a solo 2,99 € desde 39,99 €",
+        "digest": "362db3cd2280b14634c4519d29392938efc47af0ef5e154ca3e2bb28293fb86c"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.a2.link:3vota34it4mnz",
+        "value": "/policies/shipping-policy",
+        "digest": "64928ae043b0d9287039dbd830c309b31ecdc58ab1322f6bafc63d3b65668ceb"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.a3.text:3paho6ziu7mar",
+        "value": "🌿 Fórmula vegana · Fabricado en la UE · Pago 100% seguro",
+        "digest": "e0f8f4b99be75ef84aa36b427ab0a841917c20aade0e8174f7d69fbc7d730713"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.a0.text:3alyshlij57j4",
+        "value": "🎁 10 % de descuento en tu primera compra con el código BIENVENIDA10",
+        "digest": "b902d154c12275b01c964da9e26c70c38d522c245f647fed4c88822074a62fc1"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.a0.link:3alyshlda1459",
+        "value": "/products/rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo",
+        "digest": "9ccc605f8cc6987c0b644e2fb599f2823efc21cb378a9b877ed86c0fa1f16a58"
+      },
+      {
+        "key": "section.sections/header-group.json.header.logo_texto:2fhpdbl4uwhdf",
+        "value": "rizelune",
+        "digest": "8a3bcd09d7dce4588255c5801d5494a86798d19187a80973bfd86017a7c415cf"
+      }
+    ]
+  }
+}

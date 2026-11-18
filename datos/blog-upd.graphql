@@ -1,0 +1,1 @@
+mutation B($id: ID!, $blog: BlogUpdateInput!) { blogUpdate(id: $id, blog: $blog) { blog { id handle title } userErrors { field message } } }

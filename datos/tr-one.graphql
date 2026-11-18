@@ -1,0 +1,2 @@
+query { a: translatableResource(resourceId: "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402") { resourceId translatableContent { key value } }
+ b: translatableResource(resourceId: "gid://shopify/OnlineStoreThemeSectionGroup/header-group?theme_id=210260099402") { resourceId translatableContent { key value } } }

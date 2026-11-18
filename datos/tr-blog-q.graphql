@@ -1,0 +1,8 @@
+query {
+ a1: translatableResource(resourceId: "gid://shopify/Article/1005528580426") { resourceId translatableContent { key value digest } }
+ a2: translatableResource(resourceId: "gid://shopify/Article/1005528613194") { resourceId translatableContent { key value digest } }
+ bl: translatableResource(resourceId: "gid://shopify/Blog/134916604234") { resourceId translatableContent { key value digest } }
+ at: translatableResource(resourceId: "gid://shopify/OnlineStoreThemeJsonTemplate/article?theme_id=210260099402") { resourceId translatableContent { key value digest } }
+ f: translatableResource(resourceId: "gid://shopify/OnlineStoreThemeSectionGroup/footer-group?theme_id=210260099402") { resourceId translatableContent { key value digest } }
+ m: menu(id: "gid://shopify/Menu/362958029130") { items { id title } }
+}

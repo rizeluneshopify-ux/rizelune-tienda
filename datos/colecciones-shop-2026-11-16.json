@@ -1,0 +1,44 @@
+[
+ {
+  "collection": {
+   "id": "gid://shopify/Collection/731533574474",
+   "handle": "ritual-completo",
+   "title": "Ritual Completo",
+   "productsCount": {
+    "count": 0
+   },
+   "image": {
+    "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/collections/rizelune-ritual-completo-noche.jpg?v=1794845120"
+   }
+  },
+  "userErrors": []
+ },
+ {
+  "collection": {
+   "id": "gid://shopify/Collection/731533640010",
+   "handle": "cuero-cabelludo",
+   "title": "Cuero cabelludo",
+   "productsCount": {
+    "count": 0
+   },
+   "image": {
+    "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/collections/rizelune-serum-romero-menta-ritual-velas.jpg?v=1794845123"
+   }
+  },
+  "userErrors": []
+ },
+ {
+  "collection": {
+   "id": "gid://shopify/Collection/731533672778",
+   "handle": "cuidado-facial",
+   "title": "Cuidado facial",
+   "productsCount": {
+    "count": 0
+   },
+   "image": {
+    "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/collections/rizelune-aceite-facial-ritual-noche.jpg?v=1794845127"
+   }
+  },
+  "userErrors": []
+ }
+]

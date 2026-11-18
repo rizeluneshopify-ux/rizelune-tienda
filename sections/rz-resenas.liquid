@@ -1,0 +1,209 @@
+{{ 'rz-styles.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'rz-scripts.js' | asset_url }}" defer="defer"></script>
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg }};
+    color: {{ section.settings.fg }};
+  }
+  #shopify-section-{{ section.id }} .rz-h1,
+  #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size }}px; }
+  #shopify-section-{{ section.id }} .rz-body { font-size: {{ section.settings.body_size }}px; }
+  #shopify-section-{{ section.id }} .rz-head { text-align: {{ section.settings.text_align }}; }
+  #shopify-section-{{ section.id }} .rz-head .rz-eyebrow { justify-content: {% case section.settings.text_align %}{% when 'center' %}center{% when 'right' %}flex-end{% else %}flex-start{% endcase %}; }
+  @media (max-width: 749px) {
+    #shopify-section-{{ section.id }} { padding-top: {{ section.settings.padding_top | times: 0.65 | round }}px; padding-bottom: {{ section.settings.padding_bottom | times: 0.65 | round }}px; }
+    #shopify-section-{{ section.id }} .rz-h1,
+    #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size | times: 0.68 | round }}px; }
+  }
+  {%- if section.blocks.size == 0 and request.design_mode == false -%}#shopify-section-{{ section.id }} { display: none; }{%- endif -%}
+{%- endstyle -%}
+{%- if section.blocks.size > 0 or request.design_mode -%}
+<section class="rz-section">
+  <div class="rz-container">
+    <div class="rz-head rz-reveal">
+      {%- if section.settings.eyebrow != blank -%}<span class="rz-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+      {%- if section.settings.titulo != blank -%}<h2 class="rz-h2">{{ section.settings.titulo }}</h2>{%- endif -%}
+      {%- if section.settings.texto != blank -%}<p class="rz-body">{{ section.settings.texto | newline_to_br }}</p>{%- endif -%}
+    </div>
+    {%- if section.blocks.size == 0 -%}
+      <div class="rz-empty">Añade aquí opiniones reales de tus clientes: pulsa «Añadir opinión» en el panel de la izquierda. Mientras no haya ninguna, esta sección no se muestra en tu tienda.</div>
+    {%- else -%}
+      <div class="rz-reviews">
+        {%- for block in section.blocks -%}
+          <figure class="rz-review rz-reveal" style="--rz-delay: {{ forloop.index0 | times: 100 }}ms; margin: 0;" {{ block.shopify_attributes }}>
+            <div class="rz-stars" aria-label="{{ block.settings.estrellas }} {{ 'rizelune.of_5' | t }}">{%- for i in (1..block.settings.estrellas) -%}{% render 'rz-icon', name: 'estrella' %}{%- endfor -%}</div>
+            <blockquote>{{ block.settings.texto | newline_to_br }}</blockquote>
+            <figcaption class="rz-review__who">
+              {%- if block.settings.foto != blank -%}{{ block.settings.foto | image_url: width: 120 | image_tag: loading: 'lazy' }}{%- endif -%}
+              <span><strong>{{ block.settings.nombre }}</strong><small>{{ block.settings.detalle }}</small></span>
+            </figcaption>
+          </figure>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Rizelune · Opiniones",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Encabezado"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo (texto pequeño)",
+      "default": "Opiniones"
+    },
+    {
+      "type": "text",
+      "id": "titulo",
+      "label": "Título",
+      "default": "Lo que dicen quienes ya tienen su <em>ritual</em>",
+      "info": "Pon una palabra entre <em> y </em> para destacarla en cursiva."
+    },
+    {
+      "type": "textarea",
+      "id": "texto",
+      "label": "Texto"
+    },
+    {
+      "type": "header",
+      "content": "Colores"
+    },
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Color de fondo",
+      "default": "#DCE3D3"
+    },
+    {
+      "type": "color",
+      "id": "fg",
+      "label": "Color del texto",
+      "default": "#2F3B2E"
+    },
+    {
+      "type": "header",
+      "content": "Tipografía"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Alineación del encabezado",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Tamaño del título",
+      "min": 24,
+      "max": 88,
+      "step": 2,
+      "default": 44,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "Tamaño del texto",
+      "min": 13,
+      "max": 26,
+      "step": 1,
+      "default": 17,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Espaciado"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espacio superior",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 100,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espacio inferior",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 100,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "resena",
+      "name": "Opinión",
+      "settings": [
+        {
+          "type": "range",
+          "id": "estrellas",
+          "label": "Estrellas",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "textarea",
+          "id": "texto",
+          "label": "Opinión",
+          "default": "Escribe aquí la opinión real de tu cliente."
+        },
+        {
+          "type": "text",
+          "id": "nombre",
+          "label": "Nombre",
+          "default": "Nombre"
+        },
+        {
+          "type": "text",
+          "id": "detalle",
+          "label": "Detalle (ciudad, tipo de pelo...)",
+          "default": "Compra verificada"
+        },
+        {
+          "type": "image_picker",
+          "id": "foto",
+          "label": "Foto (opcional)"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Rizelune · Opiniones"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,5 @@
+query { markets(first: 10) { nodes { id name delivery { shipping { isEnabled optionDefinitions(first: 20) { nodes {
+  __typename id isActive freeDeliveryMinimumValue { amount }
+  ... on DeliveryFlatRateOptionDefinition { name }
+  ... on DeliveryValueBasedOptionDefinition { name rateGroups(first: 5) { nodes { rates(first: 10) { nodes { price { amount } minValue { amount } maxValue { amount } } } } } }
+} } } } } } }

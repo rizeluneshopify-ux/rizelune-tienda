@@ -1,0 +1,195 @@
+<claude-code-hint v="1" type="plugin" value="shopify-ai-toolkit@claude-plugins-official" />
+Loading stored store auth ...
+[2K[1A[2K[G
+Executing GraphQL operation ...
+[2K[1A[2K[G
+╭─ success ────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  Operation succeeded.                                                        │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+{
+  "product": {
+    "title": "Rizelune · Aceite de Romero y Menta",
+    "handle": "rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo",
+    "productType": "Aceite capilar",
+    "vendor": "Selfnamed",
+    "seo": {
+      "title": "Rizelune – Aceite de Romero y Menta para el Cuero Cabelludo y el Cabello",
+      "description": "Aceite capilar de romero y menta en frasco cuentagotas de 30 ml. Nutre el cuero cabelludo, fortalece el pelo seco y devuelve el brillo. Certificado COSMOS ORGANIC, vegano y fabricado en la UE."
+    },
+    "descriptionHtml": "<h3>Un ritual de 15 minutos para un pelo más fuerte y con brillo</h3>\n\n<p><strong>¿Tu pelo se ve débil y sin brillo?</strong><br>\nPlanchas, tintes, secador, sol, estrés… Poco a poco el pelo se vuelve seco, quebradizo y apagado. Y aunque lo cuidamos de medios a puntas, casi siempre nos olvidamos de donde empieza todo: la raíz.</p>\n\n<p><strong>La solución: cuidarlo desde la raíz</strong><br>\nLa clave de Rizelune está en su mezcla de aceite de romero y aceite de menta. Aplícalo en el cuero cabelludo antes de lavarte el pelo, masajea suavemente y déjalo actuar al menos 15 minutos. Tu cuero cabelludo queda nutrido y tu pelo recupera fuerza y brillo desde la raíz.</p>\n\n<p>Esto convierte un gesto tan simple como tu lavado de pelo en un pequeño ritual de cuidado.</p>\n\n<p><strong>Ideal para ti si…</strong></p>\n<ul>\n<li>Tienes el pelo <strong>seco, apagado o quebradizo</strong>.</li>\n<li>Usas a menudo <strong>plancha, secador o tintes</strong>.</li>\n<li>Sientes que tu pelo ha perdido <strong>fuerza y brillo</strong>.</li>\n<li>Quieres empezar a <strong>cuidar tu cuero cabelludo</strong>, no solo las puntas.</li>\n<li>Buscas un <strong>momento de autocuidado</strong> sencillo en tu rutina.</li>\n</ul>\n\n<p><strong>Pensado para usarse en tu rutina de siempre</strong></p>\n<ul>\n<li>\n<strong>Nutre el cuero cabelludo:</strong> su fórmula con aceites vegetales cuida la raíz y deja una sensación de frescor gracias a la menta.</li>\n<li>\n<strong>Fortalece el cabello:</strong> ayuda a mejorar la resistencia del pelo seco o quebradizo.</li>\n<li>\n<strong>Devuelve el brillo:</strong> tu pelo se ve más sano, suave y luminoso.</li>\n<li>\n<strong>Fácil de aplicar:</strong> frasco con cuentagotas de 30 ml para dosificar justo lo que necesitas, sin derrochar.</li>\n<li>\n<strong>Fórmula natural y vegana</strong>, fabricada en la UE con certificación de calidad.</li>\n</ul>\n\n<p><strong>Modo de uso:</strong> aplica unas gotas sobre el cuero cabelludo y el cabello, masajea con las yemas de los dedos y deja actuar al menos 15 minutos. Después lava tu pelo como de costumbre. Úsalo 1–2 veces por semana.</p>\n\n<p><strong>Ingredientes principales:</strong> aceite de romero, aceite de menta y aceite de almendras dulces, junto a aceites vegetales de girasol, argán, cáñamo, oliva y aguacate.</p>\n\n<p><strong>Certificación:</strong> COSMOS ORGANIC certificado por ECOCERT Greenlife. 100 % de origen natural · 69 % de ingredientes ecológicos.</p>\n\n<p><strong>Ingredientes (INCI):</strong> Helianthus Annuus (Sunflower) Seed Oil*, Decyl Cocoate, Ricinus Communis (Castor) Seed Oil*, Prunus Amygdalus Dulcis (Sweet Almond) Oil*, Argania Spinosa (Argan) Kernel Oil*, Parfum/Fragrance, Cannabis Sativa (Hemp) Seed Oil*, Olea Europaea (Olive) Fruit Oil*, Persea Gratissima (Avocado) Oil*, Mentha Piperita (Peppermint) Oil*, Rosmarinus Officinalis (Rosemary) Leaf Oil*, Urtica Dioica (Nettle) Leaf Extract*, Menthol**, Limonene**, Camphor**, Pinene**, Citrus Aurantium Bergamia Peel Oil, Linalool**, Beta-Caryophyllene**, Vanillin, Linalyl Acetate**, Eugenia Caryophyllus Oil, Eugenol**, Citrus Aurantium Peel Oil, Citrus Limon Peel Oil, Pogostemon Cablin Oil, Santalol**, Coumarin**, Carvone**.</p>\n<p><small>*Ingredientes de agricultura ecológica. **Procedentes de aceites esenciales naturales.</small></p>"
+  },
+  "menus": {
+    "nodes": [
+      {
+        "id": "gid://shopify/Menu/362958029130",
+        "handle": "main-menu",
+        "title": "Menú principal",
+        "items": [
+          {
+            "id": "gid://shopify/MenuItem/1078173663562",
+            "title": "Inicio",
+            "type": "FRONTPAGE",
+            "url": "/",
+            "resourceId": null
+          },
+          {
+            "id": "gid://shopify/MenuItem/1078173696330",
+            "title": "Rizelune",
+            "type": "PRODUCT",
+            "url": "/products/rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo",
+            "resourceId": "gid://shopify/Product/16124464922954"
+          },
+          {
+            "id": "gid://shopify/MenuItem/1078173729098",
+            "title": "El ritual",
+            "type": "HTTP",
+            "url": "/#rz-ritual",
+            "resourceId": null
+          },
+          {
+            "id": "gid://shopify/MenuItem/1078173761866",
+            "title": "Preguntas frecuentes",
+            "type": "HTTP",
+            "url": "/#rz-faq",
+            "resourceId": null
+          },
+          {
+            "id": "gid://shopify/MenuItem/1078173794634",
+            "title": "Contacto",
+            "type": "PAGE",
+            "url": "/pages/contact",
+            "resourceId": "gid://shopify/Page/720462479690"
+          }
+        ]
+      },
+      {
+        "id": "gid://shopify/Menu/362958061898",
+        "handle": "footer",
+        "title": "Menú de pie de página",
+        "items": [
+          {
+            "id": "gid://shopify/MenuItem/1077921218890",
+            "title": "Buscar",
+            "type": "SEARCH",
+            "url": "/search",
+            "resourceId": null
+          }
+        ]
+      },
+      {
+        "id": "gid://shopify/Menu/362958094666",
+        "handle": "customer-account-main-menu",
+        "title": "Menú principal de la cuenta de cliente",
+        "items": [
+          {
+            "id": "gid://shopify/MenuItem/1077921251658",
+            "title": "Pedidos",
+            "type": "CUSTOMER_ACCOUNT_PAGE",
+            "url": "https://shopify.com/109083230538/account/orders",
+            "resourceId": "gid://shopify/CustomerAccountPage/276027048266"
+          },
+          {
+            "id": "gid://shopify/MenuItem/1077921284426",
+            "title": "Perfil",
+            "type": "CUSTOMER_ACCOUNT_PAGE",
+            "url": "https://shopify.com/109083230538/account/profile",
+            "resourceId": "gid://shopify/CustomerAccountPage/276027081034"
+          }
+        ]
+      }
+    ]
+  },
+  "collections": {
+    "nodes": [
+      {
+        "id": "gid://shopify/Collection/728025694538",
+        "handle": "frontpage",
+        "title": "Página de inicio",
+        "productsCount": {
+          "count": 1
+        }
+      }
+    ]
+  },
+  "tr": {
+    "translatableContent": [
+      {
+        "key": "title",
+        "value": "Rizelune · Aceite de Romero y Menta",
+        "digest": "6b4174cd1a2c54c2857d59fa099a28bf9a7b2aea955be307a6626855dedeb90b"
+      },
+      {
+        "key": "body_html",
+        "value": "<h3>Un ritual de 15 minutos para un pelo más fuerte y con brillo</h3>\n\n<p><strong>¿Tu pelo se ve débil y sin brillo?</strong><br>\nPlanchas, tintes, secador, sol, estrés… Poco a poco el pelo se vuelve seco, quebradizo y apagado. Y aunque lo cuidamos de medios a puntas, casi siempre nos olvidamos de donde empieza todo: la raíz.</p>\n\n<p><strong>La solución: cuidarlo desde la raíz</strong><br>\nLa clave de Rizelune está en su mezcla de aceite de romero y aceite de menta. Aplícalo en el cuero cabelludo antes de lavarte el pelo, masajea suavemente y déjalo actuar al menos 15 minutos. Tu cuero cabelludo queda nutrido y tu pelo recupera fuerza y brillo desde la raíz.</p>\n\n<p>Esto convierte un gesto tan simple como tu lavado de pelo en un pequeño ritual de cuidado.</p>\n\n<p><strong>Ideal para ti si…</strong></p>\n<ul>\n<li>Tienes el pelo <strong>seco, apagado o quebradizo</strong>.</li>\n<li>Usas a menudo <strong>plancha, secador o tintes</strong>.</li>\n<li>Sientes que tu pelo ha perdido <strong>fuerza y brillo</strong>.</li>\n<li>Quieres empezar a <strong>cuidar tu cuero cabelludo</strong>, no solo las puntas.</li>\n<li>Buscas un <strong>momento de autocuidado</strong> sencillo en tu rutina.</li>\n</ul>\n\n<p><strong>Pensado para usarse en tu rutina de siempre</strong></p>\n<ul>\n<li>\n<strong>Nutre el cuero cabelludo:</strong> su fórmula con aceites vegetales cuida la raíz y deja una sensación de frescor gracias a la menta.</li>\n<li>\n<strong>Fortalece el cabello:</strong> ayuda a mejorar la resistencia del pelo seco o quebradizo.</li>\n<li>\n<strong>Devuelve el brillo:</strong> tu pelo se ve más sano, suave y luminoso.</li>\n<li>\n<strong>Fácil de aplicar:</strong> frasco con cuentagotas de 30 ml para dosificar justo lo que necesitas, sin derrochar.</li>\n<li>\n<strong>Fórmula natural y vegana</strong>, fabricada en la UE con certificación de calidad.</li>\n</ul>\n\n<p><strong>Modo de uso:</strong> aplica unas gotas sobre el cuero cabelludo y el cabello, masajea con las yemas de los dedos y deja actuar al menos 15 minutos. Después lava tu pelo como de costumbre. Úsalo 1–2 veces por semana.</p>\n\n<p><strong>Ingredientes principales:</strong> aceite de romero, aceite de menta y aceite de almendras dulces, junto a aceites vegetales de girasol, argán, cáñamo, oliva y aguacate.</p>\n\n<p><strong>Certificación:</strong> COSMOS ORGANIC certificado por ECOCERT Greenlife. 100 % de origen natural · 69 % de ingredientes ecológicos.</p>\n\n<p><strong>Ingredientes (INCI):</strong> Helianthus Annuus (Sunflower) Seed Oil*, Decyl Cocoate, Ricinus Communis (Castor) Seed Oil*, Prunus Amygdalus Dulcis (Sweet Almond) Oil*, Argania Spinosa (Argan) Kernel Oil*, Parfum/Fragrance, Cannabis Sativa (Hemp) Seed Oil*, Olea Europaea (Olive) Fruit Oil*, Persea Gratissima (Avocado) Oil*, Mentha Piperita (Peppermint) Oil*, Rosmarinus Officinalis (Rosemary) Leaf Oil*, Urtica Dioica (Nettle) Leaf Extract*, Menthol**, Limonene**, Camphor**, Pinene**, Citrus Aurantium Bergamia Peel Oil, Linalool**, Beta-Caryophyllene**, Vanillin, Linalyl Acetate**, Eugenia Caryophyllus Oil, Eugenol**, Citrus Aurantium Peel Oil, Citrus Limon Peel Oil, Pogostemon Cablin Oil, Santalol**, Coumarin**, Carvone**.</p>\n<p><small>*Ingredientes de agricultura ecológica. **Procedentes de aceites esenciales naturales.</small></p>",
+        "digest": "2b9f777a844fda121e409ea6e313e44f476223f9d51a03f068fb3fee5cf3ee5a"
+      },
+      {
+        "key": "handle",
+        "value": "rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo",
+        "digest": "9961dfeb643819ed335f4c64e96029866b2b9179857159e4ebc7cd4fd9cd5c37"
+      },
+      {
+        "key": "product_type",
+        "value": "Aceite capilar",
+        "digest": "61c2e62347efc7afa4aa7967ef4d8fba5fbe9042bab097d87398c87538814c77"
+      },
+      {
+        "key": "meta_title",
+        "value": "Rizelune – Aceite de Romero y Menta para el Cuero Cabelludo y el Cabello",
+        "digest": "cd2c14a3c0aa4ef946ffa93d3a579cd4b00afbb0dfcd61553bd2c9a9c76a3c01"
+      },
+      {
+        "key": "meta_description",
+        "value": "Aceite capilar de romero y menta en frasco cuentagotas de 30 ml. Nutre el cuero cabelludo, fortalece el pelo seco y devuelve el brillo. Certificado COSMOS ORGANIC, vegano y fabricado en la UE.",
+        "digest": "795c5ffecbc23d97f12ace544c2812d792e52cf297a5d878d469058570d47355"
+      }
+    ],
+    "fr": [
+      {
+        "key": "title",
+        "value": "Rizelune · Huile de Romarin et Menthe"
+      },
+      {
+        "key": "body_html",
+        "value": "<h3>Un rituel de 15 minutes pour des cheveux plus forts et brillants</h3>\n\n<p><strong>Vos cheveux paraissent fragiles et ternes ?</strong><br>\nLisseur, colorations, sèche-cheveux, soleil, stress… Peu à peu, les cheveux deviennent secs, cassants et ternes. Et même si nous en prenons soin des longueurs aux pointes, nous oublions presque toujours là où tout commence : la racine.</p>\n\n<p><strong>La solution : en prendre soin dès la racine</strong><br>\nLe secret de Rizelune, c'est son mélange d'huile de romarin et d'huile de menthe. Appliquez-le sur le cuir chevelu avant le shampooing, massez délicatement et laissez agir au moins 15 minutes. Votre cuir chevelu est nourri et vos cheveux retrouvent force et éclat dès la racine.</p>\n\n<p>Un geste aussi simple que votre shampooing devient ainsi un petit rituel de soin.</p>\n\n<p><strong>Idéal pour vous si…</strong></p>\n<ul>\n<li>Vos cheveux sont <strong>secs, ternes ou cassants</strong>.</li>\n<li>Vous utilisez souvent <strong>lisseur, sèche-cheveux ou colorations</strong>.</li>\n<li>Vous sentez que vos cheveux ont perdu <strong>force et éclat</strong>.</li>\n<li>Vous voulez <strong>prendre soin de votre cuir chevelu</strong>, pas seulement des pointes.</li>\n<li>Vous cherchez un <strong>moment de bien-être</strong> simple dans votre routine.</li>\n</ul>\n\n<p><strong>Pensé pour votre routine de tous les jours</strong></p>\n<ul>\n<li><strong>Nourrit le cuir chevelu :</strong> sa formule aux huiles végétales prend soin de la racine et laisse une sensation de fraîcheur grâce à la menthe.</li>\n<li><strong>Fortifie les cheveux :</strong> aide à améliorer la résistance des cheveux secs ou cassants.</li>\n<li><strong>Redonne de l'éclat :</strong> vos cheveux paraissent plus sains, doux et lumineux.</li>\n<li><strong>Facile à appliquer :</strong> flacon compte-gouttes de 30 ml pour doser juste ce qu'il faut, sans gaspiller.</li>\n<li><strong>Formule naturelle et vegan</strong>, fabriquée dans l'UE avec certification qualité.</li>\n</ul>\n\n<p><strong>Mode d'emploi :</strong> appliquez quelques gouttes sur le cuir chevelu et les cheveux, massez du bout des doigts et laissez agir au moins 15 minutes. Lavez ensuite vos cheveux comme d'habitude. À utiliser 1 à 2 fois par semaine.</p>\n\n<p><strong>Ingrédients principaux :</strong> huile de romarin, huile de menthe poivrée et huile d'amande douce, avec des huiles végétales de tournesol, d'argan, de chanvre, d'olive et d'avocat.</p>\n\n<p><strong>Certification :</strong> COSMOS ORGANIC certifié par ECOCERT Greenlife. 100 % d'origine naturelle · 69 % d'ingrédients biologiques.</p>\n\n<p><strong>Ingrédients (INCI) :</strong> Helianthus Annuus (Sunflower) Seed Oil*, Decyl Cocoate, Ricinus Communis (Castor) Seed Oil*, Prunus Amygdalus Dulcis (Sweet Almond) Oil*, Argania Spinosa (Argan) Kernel Oil*, Parfum/Fragrance, Cannabis Sativa (Hemp) Seed Oil*, Olea Europaea (Olive) Fruit Oil*, Persea Gratissima (Avocado) Oil*, Mentha Piperita (Peppermint) Oil*, Rosmarinus Officinalis (Rosemary) Leaf Oil*, Urtica Dioica (Nettle) Leaf Extract*, Menthol**, Limonene**, Camphor**, Pinene**, Citrus Aurantium Bergamia Peel Oil, Linalool**, Beta-Caryophyllene**, Vanillin, Linalyl Acetate**, Eugenia Caryophyllus Oil, Eugenol**, Citrus Aurantium Peel Oil, Citrus Limon Peel Oil, Pogostemon Cablin Oil, Santalol**, Coumarin**, Carvone**.</p>\n<p><small>*Ingrédients issus de l'agriculture biologique. **Issus d'huiles essentielles naturelles.</small></p>"
+      },
+      {
+        "key": "product_type",
+        "value": "Huile capillaire"
+      },
+      {
+        "key": "meta_title",
+        "value": "Rizelune – Huile de Romarin et Menthe pour le Cuir Chevelu et les Cheveux"
+      },
+      {
+        "key": "meta_description",
+        "value": "Huile capillaire au romarin et à la menthe en flacon compte-gouttes de 30 ml. Nourrit le cuir chevelu, fortifie les cheveux secs et redonne de l'éclat. Certifiée COSMOS ORGANIC, vegan et fabriquée dans l'UE."
+      }
+    ],
+    "pt": [
+      {
+        "key": "title",
+        "value": "Rizelune · Óleo de Alecrim e Hortelã-Pimenta"
+      },
+      {
+        "key": "body_html",
+        "value": "<h3>Um ritual de 15 minutos para um cabelo mais forte e com brilho</h3>\n\n<p><strong>O seu cabelo parece fraco e sem brilho?</strong><br>\nPranchas, pintura, secador, sol, stress… Pouco a pouco o cabelo fica seco, quebradiço e sem brilho. E embora cuidemos dele do comprimento às pontas, quase sempre nos esquecemos de onde tudo começa: a raiz.</p>\n\n<p><strong>A solução: cuidar desde a raiz</strong><br>\nO segredo do Rizelune está na mistura de óleo de alecrim e óleo de hortelã-pimenta. Aplique-o no couro cabeludo antes de lavar o cabelo, massaje suavemente e deixe atuar pelo menos 15 minutos. O couro cabeludo fica nutrido e o cabelo recupera força e brilho desde a raiz.</p>\n\n<p>Assim, um gesto tão simples como lavar o cabelo transforma-se num pequeno ritual de cuidado.</p>\n\n<p><strong>Ideal para si se…</strong></p>\n<ul>\n<li>Tem o cabelo <strong>seco, sem brilho ou quebradiço</strong>.</li>\n<li>Usa com frequência <strong>prancha, secador ou pintura</strong>.</li>\n<li>Sente que o seu cabelo perdeu <strong>força e brilho</strong>.</li>\n<li>Quer começar a <strong>cuidar do couro cabeludo</strong>, não só das pontas.</li>\n<li>Procura um <strong>momento de autocuidado</strong> simples na sua rotina.</li>\n</ul>\n\n<p><strong>Pensado para a sua rotina de sempre</strong></p>\n<ul>\n<li><strong>Nutre o couro cabeludo:</strong> a sua fórmula com óleos vegetais cuida da raiz e deixa uma sensação de frescura graças à hortelã-pimenta.</li>\n<li><strong>Fortalece o cabelo:</strong> ajuda a melhorar a resistência do cabelo seco ou quebradiço.</li>\n<li><strong>Devolve o brilho:</strong> o seu cabelo parece mais saudável, suave e luminoso.</li>\n<li><strong>Fácil de aplicar:</strong> frasco conta-gotas de 30 ml para dosear apenas o que precisa, sem desperdício.</li>\n<li><strong>Fórmula natural e vegana</strong>, fabricada na UE com certificação de qualidade.</li>\n</ul>\n\n<p><strong>Modo de utilização:</strong> aplique umas gotas no couro cabeludo e no cabelo, massaje com as pontas dos dedos e deixe atuar pelo menos 15 minutos. Depois lave o cabelo como de costume. Use 1–2 vezes por semana.</p>\n\n<p><strong>Ingredientes principais:</strong> óleo de alecrim, óleo de hortelã-pimenta e óleo de amêndoa doce, com óleos vegetais de girassol, argão, cânhamo, azeite e abacate.</p>\n\n<p><strong>Certificação:</strong> COSMOS ORGANIC certificado pela ECOCERT Greenlife. 100% de origem natural · 69% de ingredientes biológicos.</p>\n\n<p><strong>Ingredientes (INCI):</strong> Helianthus Annuus (Sunflower) Seed Oil*, Decyl Cocoate, Ricinus Communis (Castor) Seed Oil*, Prunus Amygdalus Dulcis (Sweet Almond) Oil*, Argania Spinosa (Argan) Kernel Oil*, Parfum/Fragrance, Cannabis Sativa (Hemp) Seed Oil*, Olea Europaea (Olive) Fruit Oil*, Persea Gratissima (Avocado) Oil*, Mentha Piperita (Peppermint) Oil*, Rosmarinus Officinalis (Rosemary) Leaf Oil*, Urtica Dioica (Nettle) Leaf Extract*, Menthol**, Limonene**, Camphor**, Pinene**, Citrus Aurantium Bergamia Peel Oil, Linalool**, Beta-Caryophyllene**, Vanillin, Linalyl Acetate**, Eugenia Caryophyllus Oil, Eugenol**, Citrus Aurantium Peel Oil, Citrus Limon Peel Oil, Pogostemon Cablin Oil, Santalol**, Coumarin**, Carvone**.</p>\n<p><small>*Ingredientes de agricultura biológica. **Provenientes de óleos essenciais naturais.</small></p>"
+      },
+      {
+        "key": "product_type",
+        "value": "Óleo capilar"
+      },
+      {
+        "key": "meta_title",
+        "value": "Rizelune – Óleo de Alecrim e Hortelã-Pimenta para o Couro Cabeludo e o Cabelo"
+      },
+      {
+        "key": "meta_description",
+        "value": "Óleo capilar de alecrim e hortelã-pimenta em frasco conta-gotas de 30 ml. Nutre o couro cabeludo, fortalece o cabelo seco e devolve o brilho. Certificado COSMOS ORGANIC, vegano e fabricado na UE."
+      }
+    ]
+  }
+}

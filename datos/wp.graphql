@@ -1,0 +1,1 @@
+query { webPresences(first: 10) { nodes { id defaultLocale { locale } alternateLocales { locale } subfolderSuffix domain { host } markets(first: 5) { nodes { name } } } } }

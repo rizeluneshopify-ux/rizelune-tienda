@@ -1,0 +1,1 @@
+mutation A($d: DiscountAutomaticBasicInput!) { discountAutomaticBasicCreate(automaticBasicDiscount: $d) { automaticDiscountNode { id automaticDiscount { ... on DiscountAutomaticBasic { title status startsAt endsAt } } } userErrors { field message code } } }

@@ -1,0 +1,122 @@
+{
+  "r": {
+    "resourceId": "gid://shopify/OnlineStoreThemeJsonTemplate/page.contact?theme_id=210260099402",
+    "translatableContent": [
+      {
+        "key": "section.page.contact.json.contacto.eyebrow:2ed3ezklc8ch9",
+        "value": "Contacto",
+        "digest": "771b96b0812dd393ffeac789c2b8da1b78c20530a7365dd8181b1e3580db063f"
+      },
+      {
+        "key": "section.page.contact.json.contacto.titulo:6v3t2dvz3cir",
+        "value": "¿Tienes alguna <em>duda</em>?",
+        "digest": "b5031880e6b46d39ac3582b2e50f67406af71ddde694ffaa1ecf4cfc0583dab9"
+      },
+      {
+        "key": "section.page.contact.json.contacto.texto:28weqkba1zzwu",
+        "value": "Escríbenos con el formulario o por el medio que prefieras. Estaremos encantados de ayudarte.",
+        "digest": "da2da5b893ac69924f175c665081123ebb7a5cddaacc2d6b3a29b59c180de8c3"
+      },
+      {
+        "key": "section.page.contact.json.contacto.form_titulo:g51pvuupm3re",
+        "value": "Escríbenos",
+        "digest": "e9c82906e1af47e904cd57a3a62b34775531eee3764e4266ca59231020baa6c5"
+      },
+      {
+        "key": "section.page.contact.json.contacto.form_nota:9o0fsops5t4x",
+        "value": "Te responderemos por email lo antes posible.",
+        "digest": "2cd28e96538176fb855a5a0b4ec1626e631442e2741d882f51f2304ba6e1859e"
+      },
+      {
+        "key": "section.page.contact.json.contacto.info_titulo:1dr3n20w9istu",
+        "value": "Otras formas de contactar",
+        "digest": "218010a1c874bc405b15a1d560d006486fb089a2d09d9fa1343956763523bbb4"
+      },
+      {
+        "key": "section.page.contact.json.contacto.info_texto:13qahccer61q7",
+        "value": "¿Prefieres llamar o escribir directamente? Aquí tienes todos nuestros datos.",
+        "digest": "bd7f9f2b832dbd99e7feb72262f2cec638eed1091e3ed753eeb28239bf2e464e"
+      },
+      {
+        "key": "section.page.contact.json.contacto.d1.titulo:2v0h8t0mv8mfh",
+        "value": "Email",
+        "digest": "969ccbd3cf6300ecd5c880459d81ae9027df7517563184a1b8b15282db230621"
+      },
+      {
+        "key": "section.page.contact.json.contacto.d1.texto:k3xuxqo8ojj4",
+        "value": "rizeluneshopify@gmail.com",
+        "digest": "f517e3c2b8f5e1bd2833aef0ea7500760726eeea8f8b8b69c18c71d3fa548ff9"
+      },
+      {
+        "key": "section.page.contact.json.contacto.d1.enlace:2v0h8kusbwgpe",
+        "value": "mailto:rizeluneshopify@gmail.com",
+        "digest": "bd0f7cc7b735d21dfedd52a974baf381f77b9b01683de45318481dc45b005675"
+      },
+      {
+        "key": "section.page.contact.json.contacto.d2.titulo:3ktv12vp7pm1a",
+        "value": "Teléfono",
+        "digest": "f1186abd0b8bec580263d92f0b7ea2da7c8ee8b48a1b8f7f9a8d2b2d4a49e397"
+      },
+      {
+        "key": "section.page.contact.json.contacto.d2.texto:243oj3wtzzosj",
+        "value": "+34 609 97 11 44",
+        "digest": "72932bc2cf5bce64435e419c96743fecba1a945487cedf447e21cafb1f8bda25"
+      },
+      {
+        "key": "section.page.contact.json.contacto.d2.enlace:3ktv0tnqk5s5t",
+        "value": "tel:+34609971144",
+        "digest": "602beac3abf35723be305ce7e454966d86f37b0e207bd9aa6c71ac4ccda9e9f6"
+      },
+      {
+        "key": "section.page.contact.json.contacto.d3.titulo:2n7tcoq8qhtov",
+        "value": "WhatsApp",
+        "digest": "6a40edf1fc87a29f243a7eefdbed57d19bfe16ab2e039d7ae1a44c097297e2f3"
+      },
+      {
+        "key": "section.page.contact.json.contacto.d3.texto:2330ha114yuqq",
+        "value": "Escríbenos por WhatsApp",
+        "digest": "25af3654e3e66ff7aeaa4ed7f4160c460df3f7ea4b074d3c236c085ec14dc025"
+      },
+      {
+        "key": "section.page.contact.json.contacto.d3.enlace:2n7tcgmmggxsg",
+        "value": "https://wa.me/34609971144?text=Hola%2C%20tengo%20una%20duda%20sobre%20Rizelune",
+        "digest": "79a57f4929b3d980b50e990945d22b59ec5c6f3d0230db6c93d6d4a23887d54c"
+      },
+      {
+        "key": "section.page.contact.json.contacto.d4.titulo:2e0q27eqfpivc",
+        "value": "Respuesta",
+        "digest": "eda96518d54f845d891b4c3e0a4bc399e123fdaa48013810d6587b0db9499815"
+      },
+      {
+        "key": "section.page.contact.json.contacto.d4.texto:1ltf1ka3jmnph",
+        "value": "Te respondemos lo antes posible",
+        "digest": "e24afd066da2ba6c8ccad1d349ffff9f8cbb69be406574d0e2caa426ba307751"
+      },
+      {
+        "key": "section.page.contact.json.contacto.d5.titulo:2ehvq60q32jk9",
+        "value": "Enviamos a",
+        "digest": "a7a424163342bef5325f48dfe0bf576cbf8cf0e1f119d42fa51ea1f4f0ecc944"
+      },
+      {
+        "key": "section.page.contact.json.contacto.d5.texto:3q9yv7q4p6cmc",
+        "value": "España, Francia y Portugal",
+        "digest": "9d4a3545131d9da8208dd922126541f905f68cf7a2ba9689b1ab145741ef188e"
+      },
+      {
+        "key": "section.page.contact.json.contacto.d6.titulo:34b9ifvsfjj62",
+        "value": "Datos de la empresa",
+        "digest": "232e7b48e09dd573b548525715c7e4387084e49690ea175dd9955779691e5713"
+      },
+      {
+        "key": "section.page.contact.json.contacto.d6.texto:1e4bicu4bp13b",
+        "value": "Ver aviso legal",
+        "digest": "7c24688f8c499db183de85558cdf2799c7ccf1cc74b10b107e6eff86d72ce140"
+      },
+      {
+        "key": "section.page.contact.json.contacto.d6.enlace:34b9i6jd41xp1",
+        "value": "/policies/legal-notice",
+        "digest": "2556c67436645936845e864e76b7b5252f0028c4f00fc163499a4d0dd382d68d"
+      }
+    ]
+  }
+}

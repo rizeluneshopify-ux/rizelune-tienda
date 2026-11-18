@@ -1,0 +1,2 @@
+query { a: __type(name: "DeliveryValueBasedRateGroupCreateInput") { inputFields { name type { name kind ofType { name kind ofType { name kind ofType { name } } } } } }
+ b: __type(name: "DeliveryFlatRateGroupCreateInput") { inputFields { name type { name kind ofType { name kind ofType { name } } } } } }

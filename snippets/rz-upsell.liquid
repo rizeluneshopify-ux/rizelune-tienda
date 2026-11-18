@@ -1,0 +1,39 @@
+{%- comment -%}
+  Oferta en el carrito: si llevas 1 o 2 frascos del producto con packs, propone añadir otro.
+  Precios: Configuración del tema → Rizelune · Packs. Textos: rizelune.upsell_*.
+{%- endcomment -%}
+{%- if settings.rz_upsell_activo and settings.rz_packs_activo and settings.rz_pack_producto != blank and cart.item_count > 0 -%}
+  {%- assign pp = settings.rz_pack_producto -%}
+  {%- for item in cart.items -%}
+    {%- if item.product_id == pp.id and item.quantity < 3 -%}
+      {%- assign unidad = item.variant.price -%}
+      {%- assign siguiente = item.quantity | plus: 1 -%}
+      {%- if siguiente == 2 -%}
+        {%- assign total = settings.rz_pack2_precio | default: '49,99' | replace: ',', '.' | strip | times: 100 | round -%}
+      {%- else -%}
+        {%- assign total = settings.rz_pack3_precio | default: '66,99' | replace: ',', '.' | strip | times: 100 | round -%}
+      {%- endif -%}
+      {%- assign ahorro = unidad | times: siguiente | minus: total -%}
+      {%- assign por_frasco = total | times: 1.0 | divided_by: siguiente | round -%}
+      {%- assign total_m = total | money -%}
+      {%- assign ahorro_m = ahorro | money -%}
+      {%- assign por_frasco_m = por_frasco | money -%}
+      <div class="rz-upsell">
+        {%- if item.image -%}<span class="rz-upsell__img">{{ item.image | image_url: width: 120 | image_tag: loading: 'lazy', alt: '' }}</span>{%- endif -%}
+        <span class="rz-upsell__txt">
+          <strong>{{ 'rizelune.upsell_title' | t: n: siguiente, total: total_m }}</strong>
+          <small>
+            {%- if siguiente == 2 -%}
+              {{ 'rizelune.pack_save' | t: amount: ahorro_m | capitalize }} ·
+              {% if localization.country.iso_code == 'ES' %}{{ 'rizelune.pack_ship_free' | t }}{% else %}{{ 'rizelune.pack_ship_int' | t }}{% endif %}
+            {%- else -%}
+              {{ 'rizelune.pack_unit' | t: amount: por_frasco_m }} · {{ 'rizelune.pack_save' | t: amount: ahorro_m }}
+            {%- endif -%}
+          </small>
+        </span>
+        <button type="button" class="rz-upsell__btn" data-rz-upsell data-line="{{ forloop.index }}" data-qty="{{ siguiente }}">+ {{ 'rizelune.upsell_btn' | t }}</button>
+      </div>
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}

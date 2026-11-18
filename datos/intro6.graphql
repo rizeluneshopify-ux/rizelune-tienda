@@ -1,0 +1,4 @@
+query { a: __type(name: "DeliveryFlatRateOptionDefinition") { fields { name type { name kind ofType { name } } } }
+ b: __type(name: "DeliveryValueBasedOptionDefinition") { fields { name type { name kind ofType { name } } } }
+ c: __type(name: "DeliveryFlatRateOptionDefinitionCreateInput") { inputFields { name type { name kind ofType { name kind ofType { name } } } } }
+ d: __type(name: "DeliveryValueBasedOptionDefinitionCreateInput") { inputFields { name type { name kind ofType { name kind ofType { name } } } } } }

@@ -1,0 +1,817 @@
+{
+  "sections": {
+    "hero": {
+      "type": "rz-hero",
+      "settings": {
+        "imagen": "shopify://shop_images/Rutina_nocturna_de_aceite_capilar.png",
+        "producto": "rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo",
+        "posicion": "70% 30%",
+        "titulo": "Un ritual de 15 minutos para un pelo con brillo y aspecto más <em>fuerte</em>",
+        "texto": "Cuida tu pelo desde donde empieza todo: la raíz, con romero, menta y aceites vegetales.",
+        "boton1": "Quiero mi ritual",
+        "boton2": "Cómo se usa",
+        "boton2_url": "#rz-ritual",
+        "oscurecer": 75,
+        "badges": "Fórmula vegana\nFabricado en la UE\nEnvío gratis desde 39,99 €",
+        "eyebrow": "Rizelune · Cuidado capilar natural",
+        "etiqueta": "Ahorra",
+        "mostrar_nombre": true,
+        "nombre_extra": "30 ml"
+      }
+    },
+    "marquesina": {
+      "type": "rz-marquesina",
+      "settings": {
+        "items": "Romero y menta\nCuida desde la raíz\nFórmula vegana\nHecho en la UE\nRitual de 15 minutos"
+      },
+      "disabled": true
+    },
+    "problema": {
+      "type": "rz-imagen-texto",
+      "settings": {
+        "imagen": "shopify://shop_images/rizelune-ficha-serum-2-veces.jpg",
+        "imagen_respaldo": "rz-packshot-beneficios.jpg",
+        "proporcion": "1/1",
+        "flotante_num": "",
+        "flotante_texto": "",
+        "eyebrow": "¿Te suena?",
+        "titulo": "Tu pelo no se apaga de un día para <em>otro</em>",
+        "texto": "Planchas, tintes, secador, sol, estrés… Poco a poco el pelo se vuelve seco, quebradizo y apagado. Y aunque lo cuidamos de medios a puntas, casi siempre nos olvidamos de donde empieza todo: la raíz.",
+        "lista_titulo": "Nuestro sérum es para ti si…",
+        "lista": "Tienes el pelo seco, apagado o quebradizo\nUsas a menudo plancha, secador o tintes\nSientes que tu pelo ha perdido fuerza y brillo\nQuieres empezar a cuidar tu cuero cabelludo, no solo las puntas\nBuscas un momento de autocuidado sencillo en tu rutina",
+        "boton": "Encuentra tu producto",
+        "heading_size": 46,
+        "boton_url": "#rz-elige"
+      }
+    },
+    "ingredientes": {
+      "type": "rz-ingredientes",
+      "settings": {
+        "eyebrow": "Lo que lleva dentro",
+        "titulo": "Pocos ingredientes, <em>bien</em> elegidos",
+        "texto": "Una mezcla sencilla de aceites vegetales pensada para nutrir el cuero cabelludo."
+      },
+      "blocks": {
+        "i1": {
+          "type": "ingrediente",
+          "settings": {
+            "imagen": "shopify://shop_images/tienda.webp",
+            "titulo": "Aceite de romero",
+            "texto": "El protagonista del ritual: nutre el cuero cabelludo y le da su aroma fresco y herbal."
+          }
+        },
+        "i2": {
+          "type": "ingrediente",
+          "settings": {
+            "imagen": "shopify://shop_images/tienda3.webp",
+            "titulo": "Aceite de menta",
+            "texto": "Aporta esa sensación de frescor que notarás desde el primer masaje."
+          }
+        },
+        "i3": {
+          "type": "ingrediente",
+          "settings": {
+            "imagen": "shopify://shop_images/tienda4.webp",
+            "titulo": "Aceites vegetales",
+            "texto": "Una base ligera que cuida la raíz y deja el pelo suave y luminoso."
+          }
+        },
+        "i4": {
+          "type": "ingrediente",
+          "settings": {
+            "imagen": "shopify://shop_images/tienda2.webp",
+            "titulo": "Pelo suave y con brillo",
+            "texto": "Los aceites de almendras dulces y de argán suavizan el pelo seco o quebradizo y le dan un brillo natural."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ]
+    },
+    "pasos": {
+      "type": "rz-pasos",
+      "settings": {
+        "imagen": "shopify://shop_images/rizelune-ritual-tres-gestos.jpg",
+        "ancla": "rz-ritual",
+        "proporcion": "4/5",
+        "eyebrow": "Tu ritual",
+        "titulo": "Tres gestos, <em>quince</em> minutos",
+        "texto": "Conviértelo en tu pequeño momento de autocuidado antes del lavado.",
+        "boton": "Ver la guía de uso de los tres productos",
+        "boton_url": "shopify://pages/como-se-usa"
+      },
+      "blocks": {
+        "p1": {
+          "type": "paso",
+          "settings": {
+            "titulo": "Aplica unas gotas",
+            "texto": "Con el pelo seco, pon las gotas sobre el cuero cabelludo, raya a raya, antes de lavarte.",
+            "tiempo": "Sin derrochar: frasco de 30 ml",
+            "guia_gotas": true
+          }
+        },
+        "p2": {
+          "type": "paso",
+          "settings": {
+            "titulo": "Masajea suavemente",
+            "texto": "Con las yemas de los dedos, con movimientos circulares. Notarás el frescor de la menta.",
+            "tiempo": "Tu momento de autocuidado"
+          }
+        },
+        "p3": {
+          "type": "paso",
+          "settings": {
+            "titulo": "Deja actuar y lava",
+            "texto": "Déjalo al menos 15 minutos y después lávate el pelo como de costumbre. Repite 2 veces por semana.",
+            "tiempo": "Mínimo 15 minutos"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ]
+    },
+    "beneficios": {
+      "type": "rz-beneficios",
+      "settings": {
+        "eyebrow": "Por qué funciona",
+        "titulo": "Cuida la raíz, <em>disfruta</em> del ritual",
+        "texto": "Pensado para usarse en tu rutina de siempre."
+      },
+      "blocks": {
+        "b1": {
+          "type": "beneficio",
+          "settings": {
+            "icono": "raiz",
+            "titulo": "Nutre el cuero cabelludo",
+            "texto": "Su fórmula con aceites vegetales cuida la raíz y deja una sensación de frescor gracias a la menta."
+          }
+        },
+        "b2": {
+          "type": "beneficio",
+          "settings": {
+            "icono": "fuerza",
+            "titulo": "Suaviza el pelo seco",
+            "texto": "Los aceites vegetales cuidan el pelo seco o quebradizo y lo dejan más suave."
+          }
+        },
+        "b3": {
+          "type": "beneficio",
+          "settings": {
+            "icono": "brillo",
+            "titulo": "Aporta brillo",
+            "texto": "Tu pelo se ve más sano, suave y luminoso."
+          }
+        },
+        "b4": {
+          "type": "beneficio",
+          "settings": {
+            "icono": "hoja",
+            "titulo": "Natural y vegano",
+            "texto": "Fórmula vegana, fabricada en la UE con certificación de calidad."
+          }
+        },
+        "c1": {
+          "type": "cifra",
+          "settings": {
+            "numero": 15,
+            "sufijo": "min",
+            "etiqueta": "de ritual antes del lavado"
+          }
+        },
+        "c2": {
+          "type": "cifra",
+          "settings": {
+            "numero": 30,
+            "sufijo": "ml",
+            "etiqueta": "con cuentagotas dosificador"
+          }
+        },
+        "c3": {
+          "type": "cifra",
+          "settings": {
+            "numero": 2,
+            "sufijo": "",
+            "etiqueta": "aplicaciones a la semana (1–2)"
+          }
+        },
+        "c4": {
+          "type": "cifra",
+          "settings": {
+            "numero": 100,
+            "sufijo": "%",
+            "etiqueta": "fórmula vegana"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "disabled": true
+    },
+    "ritual": {
+      "type": "rz-imagen-texto",
+      "settings": {
+        "imagen": "shopify://shop_images/rizelune-ritual-noche-frasco-vela.jpg",
+        "imagen_respaldo": "rz-antes-despues.jpg",
+        "invertir": true,
+        "oscuro": true,
+        "bg": "#1F2620",
+        "fg": "#F5EFE6",
+        "flotante_num": "1–2",
+        "flotante_texto": "veces por semana. La constancia es el secreto.",
+        "flotante_pos": "arriba",
+        "eyebrow": "Ritual de noche",
+        "titulo": "Un gesto pequeño que se convierte en <em>costumbre</em>",
+        "texto": "Enciende una vela, ponte cómoda y regálate quince minutos. Nuestro sérum convierte algo tan simple como tu lavado de pelo en un pequeño ritual de cuidado.",
+        "lista_titulo": "",
+        "lista": "Cuero cabelludo nutrido y con sensación de frescor\nPelo más suave y con aspecto más fuerte\nUn brillo natural",
+        "boton": "Empezar mi ritual",
+        "boton_url": "/products/rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo",
+        "ancla": "rz-noche",
+        "proporcion": "4/5"
+      },
+      "disabled": true
+    },
+    "resenas": {
+      "type": "rz-resenas",
+      "settings": {
+        "eyebrow": "Opiniones",
+        "titulo": "Lo que dicen quienes ya tienen su <em>ritual</em>"
+      }
+    },
+    "faq": {
+      "type": "rz-faq",
+      "settings": {
+        "eyebrow": "Dudas",
+        "titulo": "Preguntas <em>frecuentes</em>",
+        "ancla": "rz-faq"
+      },
+      "blocks": {
+        "f2": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Cada cuánto debo aplicarlo?",
+            "respuesta": "<p><strong>2 veces por semana</strong>, los días que te lavas el pelo (si tienes el cuero cabelludo sensible, empieza con 1). ¿Quieres tu pauta exacta? Pulsa el botón de la gota que verás en la pantalla y haz el test de 30 segundos.</p>"
+          }
+        },
+        "f3": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Me dejará el pelo graso?",
+            "respuesta": "<p>No, porque se aplica <strong>antes</strong> del lavado. Tras dejarlo actuar, lavas tu pelo como siempre y se retira.</p>"
+          }
+        },
+        "f4": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Es vegano?",
+            "respuesta": "<p>Sí. Su fórmula es natural y vegana, fabricada en la UE con certificación de calidad.</p>"
+          }
+        },
+        "f5": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Qué tamaño tiene el frasco?",
+            "respuesta": "<p>30 ml, con cuentagotas para que dosifiques justo lo que necesitas, sin derrochar.</p>"
+          }
+        },
+        "f6": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿A qué huele?",
+            "respuesta": "<p>A romero y menta: un aroma herbal y fresco, con un toque de frescor en el cuero cabelludo gracias a la menta.</p>"
+          }
+        },
+        "f7": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Cuánto cuesta el envío y cuánto tarda?",
+            "respuesta": "<p><strong>Plazo:</strong> normalmente lo recibes en una semana y, como muy tarde, en 10 días laborables.</p><p><strong>Envío gratis a partir de 39,99 €</strong> a toda la península y Baleares: con 2 frascos ya lo tienes.</p><p>Si tu pedido es menor, el envío cuesta 3,99 €. Por ahora no enviamos a Canarias, Ceuta ni Melilla.</p><p>Recibirás un correo con el número de seguimiento. Más información en nuestra <a href=\"/policies/shipping-policy\">política de envío</a>.</p>"
+          }
+        },
+        "f8": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Puedo devolverlo?",
+            "respuesta": "<p>Sí, en los 14 días siguientes a recibirlo, siempre que el producto esté <strong>sin abrir y con su precinto</strong>: por higiene, un cosmético abierto no se puede devolver. Si te llega dañado o con un defecto, te enviamos otro o te devolvemos el dinero. Escríbenos antes de enviar nada y te explicamos cómo hacerlo. Más información en nuestra <a href=\"/policies/refund-policy\">política de devoluciones</a>.</p>"
+          }
+        },
+        "f9": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Hay descuento si compro más de uno?",
+            "respuesta": "<p>¡Sí! Con nuestros packs ahorras: <strong>2 frascos por 49,99 €</strong> (ahorras 5,99 €) o <strong>3 frascos por 66,99 €</strong> (22,33 € cada uno, ahorras 16,98 €). Todos los packs tienen <strong>envío gratis</strong> a península y Baleares. Elige tu pack en la página del producto: el descuento se aplica solo en el carrito.</p>"
+          }
+        },
+        "f10": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Cuánto me dura un frasco?",
+            "respuesta": "<p>Un frasco de 30 ml tiene unas 600 gotas. Con la cantidad para toda la cabeza (6–10 gotas) da para unos <strong>60–100 usos</strong>; si solo lo usas en una zona, para muchos más. Usándolo 2 veces por semana, te dura varios meses.</p>"
+          }
+        },
+        "f11": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Tengo que tener alguna precaución?",
+            "respuesta": "<p><strong>Precauciones:</strong> contiene aceite de almendras dulces y componentes naturales de los aceites esenciales (mentol, alcanfor, limonene, linalool, eugenol y coumarin) que pueden irritar las pieles sensibles. Haz una prueba en una pequeña zona de la piel 24 horas antes del primer uso. Evita el contacto con los ojos y deja de usarlo si notas irritación. Solo para uso externo.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "f9",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f6",
+        "f7",
+        "f10",
+        "f11",
+        "f8"
+      ]
+    },
+    "compra": {
+      "type": "rz-compra",
+      "settings": {
+        "producto": "rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo",
+        "imagen": "shopify://shop_images/rizelune-serum-romero-menta-vela-calida.jpg",
+        "texto": "Tu ritual empieza esta noche: nutre tu cuero cabelludo y deja tu pelo suave y con brillo en solo 15 minutos.",
+        "lista": "Frasco cuentagotas de 30 ml\nSérum de romero y menta con aceites vegetales\nFórmula natural y vegana, fabricada en la UE\nEnvío gratis con 2 frascos o más",
+        "eyebrow": "Rizelune",
+        "titulo": "",
+        "etiqueta": "¡Oferta!",
+        "boton": "Añadir al carrito",
+        "ver_mas": "Ver todos los detalles"
+      },
+      "disabled": true
+    },
+    "garantias": {
+      "type": "rz-garantias",
+      "settings": {},
+      "blocks": {
+        "g1": {
+          "type": "garantia",
+          "settings": {
+            "icono": "candado",
+            "titulo": "Pago seguro",
+            "texto": "Tus datos siempre protegidos"
+          }
+        },
+        "g2": {
+          "type": "garantia",
+          "settings": {
+            "icono": "hoja",
+            "titulo": "Certificado ecológico",
+            "texto": "COSMOS ORGANIC por ECOCERT"
+          }
+        },
+        "g3": {
+          "type": "garantia",
+          "settings": {
+            "icono": "escudo",
+            "titulo": "Calidad comprobada",
+            "texto": "Fabricado en la UE con certificación"
+          }
+        },
+        "g4": {
+          "type": "garantia",
+          "settings": {
+            "icono": "camion",
+            "titulo": "Envío gratis",
+            "texto": "A partir de 39,99 €"
+          }
+        }
+      },
+      "block_order": [
+        "g1",
+        "g2",
+        "g3",
+        "g4"
+      ]
+    },
+    "packs": {
+      "type": "rz-packs",
+      "blocks": {
+        "r1": {
+          "type": "ritual",
+          "settings": {
+            "pack": "1"
+          }
+        },
+        "r2": {
+          "type": "ritual",
+          "settings": {
+            "pack": "2"
+          }
+        },
+        "r3": {
+          "type": "ritual",
+          "settings": {
+            "pack": "3"
+          }
+        },
+        "c3": {
+          "type": "cantidad",
+          "settings": {
+            "frascos": "3"
+          }
+        },
+        "c2": {
+          "type": "cantidad",
+          "settings": {
+            "frascos": "2"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "c3",
+        "c2"
+      ],
+      "settings": {
+        "fondo": "noche",
+        "formulario": true,
+        "lista_espera": false
+      },
+      "disabled": true
+    },
+    "comparativa": {
+      "type": "rz-comparativa",
+      "blocks": {
+        "c1": {
+          "type": "fila",
+          "settings": {
+            "criterio": "Listo para usar",
+            "v1": "si",
+            "t1": "Sin mezclar nada",
+            "v2": "no",
+            "t2": "Hay que diluirlo",
+            "v3": "no",
+            "t3": "Hay que prepararla"
+          }
+        },
+        "c2": {
+          "type": "fila",
+          "settings": {
+            "criterio": "Se aplica directamente en el cuero cabelludo",
+            "v1": "si",
+            "t1": "Fórmula equilibrada",
+            "v2": "no",
+            "t2": "Puro puede irritar",
+            "v3": "medio",
+            "t3": "Depende de la mezcla"
+          }
+        },
+        "c3": {
+          "type": "fila",
+          "settings": {
+            "criterio": "Romero + menta + aceites nutritivos",
+            "v1": "si",
+            "t1": "Almendra, argán, cáñamo…",
+            "v2": "no",
+            "t2": "Solo romero",
+            "v3": "medio",
+            "t3": "Lo que tengas en casa"
+          }
+        },
+        "c4": {
+          "type": "fila",
+          "settings": {
+            "criterio": "Certificado ecológico COSMOS ORGANIC",
+            "v1": "si",
+            "t1": "Ecocert",
+            "v2": "medio",
+            "t2": "Solo algunos",
+            "v3": "no",
+            "t3": "No"
+          }
+        },
+        "c5": {
+          "type": "fila",
+          "settings": {
+            "criterio": "Dosis exacta",
+            "v1": "si",
+            "t1": "Cuentagotas + test",
+            "v2": "no",
+            "t2": "Hay que calcularla",
+            "v3": "no",
+            "t3": "A ojo"
+          }
+        },
+        "c6": {
+          "type": "fila",
+          "settings": {
+            "criterio": "Aroma agradable",
+            "v1": "si",
+            "t1": "Herbal y fresco",
+            "v2": "no",
+            "t2": "Muy intenso",
+            "v3": "medio",
+            "t3": "Variable"
+          }
+        },
+        "c7": {
+          "type": "fila",
+          "settings": {
+            "criterio": "Precio por uso",
+            "v1": "si",
+            "t1": "Menos de 0,40 €",
+            "v2": "medio",
+            "t2": "Bajo, pero necesitas aceite base",
+            "v3": "medio",
+            "t3": "Según lo que compres"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7"
+      ],
+      "settings": {
+        "eyebrow": "Compara",
+        "titulo": "¿Por qué <em>Rizelune</em>?",
+        "texto": "Lo que cambia frente a usar aceite esencial de romero o hacer tu propia mezcla en casa.",
+        "col1": "Rizelune",
+        "col1_imagen": "shopify://shop_images/rizelune-serum-romero-menta-estrella.jpg",
+        "col2": "Aceite esencial de romero puro",
+        "col3": "Mezcla casera",
+        "nota": "Los aceites esenciales puros deben diluirse siempre antes de aplicarlos en la piel.",
+        "ancla": "rz-comparativa",
+        "bg": "#EEF1EA",
+        "boton": "Comprar Rizelune",
+        "boton_url": "shopify://products/rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo"
+      },
+      "disabled": true
+    },
+    "black_week": {
+      "type": "rz-black-week",
+      "blocks": {
+        "bw3": {
+          "type": "pack",
+          "settings": {
+            "pack": "3"
+          }
+        },
+        "bw1": {
+          "type": "pack",
+          "settings": {
+            "pack": "1"
+          }
+        }
+      },
+      "block_order": [
+        "bw3",
+        "bw1"
+      ],
+      "settings": {
+        "imagen": "shopify://shop_images/rizelune-ritual-completo-noche.jpg"
+      }
+    },
+    "porque": {
+      "type": "rz-porque",
+      "blocks": {
+        "p-serum": {
+          "type": "producto",
+          "settings": {
+            "producto": "rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo",
+            "pestana": "Sérum",
+            "imagen": "shopify://shop_images/rizelune-serum-romero-menta-luz-de-dia.jpg",
+            "badge": "30 ml · unos 75 usos",
+            "calculadora": true,
+            "pack": "no"
+          }
+        },
+        "s1": {
+          "type": "motivo",
+          "settings": {
+            "emoji": "",
+            "titulo": "Romero y menta, listos para usar",
+            "texto": "Ya vienen mezclados y diluidos en aceites vegetales. Nada de mezclas caseras ni de aceite esencial puro, que siempre hay que diluir antes.",
+            "icono": "hoja"
+          }
+        },
+        "s2": {
+          "type": "motivo",
+          "settings": {
+            "emoji": "",
+            "titulo": "Gotero: la dosis justa, sin pringar",
+            "texto": "Dejas las gotas directamente en la piel, raya a raya. El pelo no se engrasa y sabes siempre cuánto pones.",
+            "icono": "gota"
+          }
+        },
+        "s3": {
+          "type": "motivo",
+          "settings": {
+            "emoji": "",
+            "titulo": "Un frescor de menta que se nota",
+            "texto": "Al masajear notas el frescor de la menta en el cuero cabelludo. Es la parte del ritual que más engancha.",
+            "icono": "brillo"
+          }
+        },
+        "s4": {
+          "type": "motivo",
+          "settings": {
+            "emoji": "",
+            "titulo": "Solo 2 noches por semana",
+            "texto": "Lo dejas actuar de 15 minutos a toda la noche, según tu cuero cabelludo, y luego te lavas el pelo con tu champú de siempre.",
+            "icono": "luna"
+          }
+        },
+        "s5": {
+          "type": "motivo",
+          "settings": {
+            "emoji": "",
+            "titulo": "Raíz nutrida, pelo suave y con brillo",
+            "texto": "Cuida tu cuero cabelludo y, de paso, deja el pelo más suave y con brillo.",
+            "icono": "raiz"
+          }
+        },
+        "s6": {
+          "type": "motivo",
+          "settings": {
+            "emoji": "",
+            "titulo": "COSMOS Organic y hecho en la UE",
+            "texto": "Fórmula vegana con certificado ecológico COSMOS Organic, fabricada en la Unión Europea.",
+            "icono": "eu"
+          }
+        },
+        "p-exf": {
+          "type": "producto",
+          "settings": {
+            "producto": "exfoliante-capilar-romero-menta",
+            "pestana": "Exfoliante",
+            "badge": "170 ml",
+            "calculadora": false,
+            "uso": "Una vez por semana, en la ducha: una cantidad del tamaño de una nuez y 5 minutos de masaje suave.",
+            "pack": "1"
+          }
+        },
+        "e1": {
+          "type": "motivo",
+          "settings": {
+            "emoji": "",
+            "titulo": "5 minutos en la ducha, una vez por semana",
+            "texto": "Con el pelo mojado, masajea una cantidad del tamaño de una nuez y aclara. Si tu cuero cabelludo es graso, puedes dejarlo hasta 15 minutos.",
+            "icono": "reloj"
+          }
+        },
+        "e2": {
+          "type": "motivo",
+          "settings": {
+            "emoji": "",
+            "titulo": "Limpia la raíz a fondo",
+            "texto": "Con arcilla caolín y hueso de cereza, retira los restos de producto y la grasa acumulados en el cuero cabelludo.",
+            "icono": "raiz"
+          }
+        },
+        "e3": {
+          "type": "motivo",
+          "settings": {
+            "emoji": "",
+            "titulo": "La pareja del sérum",
+            "texto": "Deja la raíz limpia y fresca antes del sérum. Juntos forman el Ritual Raíz.",
+            "icono": "corazon"
+          }
+        },
+        "p-aceite": {
+          "type": "producto",
+          "settings": {
+            "producto": "aceite-facial-bakuchiol",
+            "pestana": "Aceite facial",
+            "badge": "30 ml · unos 5 meses",
+            "calculadora": false,
+            "uso": "Cada noche: 3–4 gotas con la piel limpia, a toquecitos. Por la mañana, protector solar.",
+            "pack": "2"
+          }
+        },
+        "a1": {
+          "type": "motivo",
+          "settings": {
+            "emoji": "",
+            "titulo": "Bakuchiol, de origen vegetal",
+            "texto": "Se extrae de las semillas de una planta y se usa mucho en rutinas de noche. Lo acompaña la rosa mosqueta.",
+            "icono": "hoja"
+          }
+        },
+        "a2": {
+          "type": "motivo",
+          "settings": {
+            "emoji": "",
+            "titulo": "3–4 gotas cada noche",
+            "texto": "Con la piel limpia y seca, a toquecitos, sin frotar y evitando los ojos. No se aclara.",
+            "icono": "gota"
+          }
+        },
+        "a3": {
+          "type": "motivo",
+          "settings": {
+            "emoji": "",
+            "titulo": "Tu ritual, también para la cara",
+            "texto": "Aprovechas el momento del sérum para cuidar la piel. Vegano y con certificado COSMOS Organic.",
+            "icono": "luna"
+          }
+        }
+      },
+      "block_order": [
+        "p-serum",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "p-exf",
+        "e1",
+        "e2",
+        "e3",
+        "p-aceite",
+        "a1",
+        "a2",
+        "a3"
+      ],
+      "settings": {
+        "eyebrow": "Encuentra tu producto",
+        "titulo": "Nuestros <em>productos</em>",
+        "texto": "Tres productos para un mismo ritual. Toca cada uno para ver por qué te va a gustar.",
+        "calc_titulo": "¿Cuánto te cuesta cada uso?",
+        "usos_cabeza": 75,
+        "usos_zona": 130,
+        "calc_cafe": "Menos de lo que cuesta un café",
+        "calc_nota": "Aproximado: un frasco de 30 ml tiene unas 600 gotas (8 por uso en toda la cabeza, 4–5 en una zona).",
+        "boton": "Añadir",
+        "boton_test": "Haz el test: tus gotas en 1 minuto",
+        "ver_txt": "Ver producto",
+        "ancla": "rz-elige",
+        "bg": "#F5EFE6",
+        "fg": "#2F3B2E",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "packs_ritual": {
+      "type": "rz-packs-ritual",
+      "settings": {
+        "eyebrow": "Packs",
+        "titulo": "Tu ritual, <em>en pack</em>",
+        "texto": "Los tres productos están pensados para usarse juntos. En pack, pagas menos.",
+        "para1": "Para cuidar la raíz a fondo",
+        "para3": "Todo tu ritual de noche: pelo y piel",
+        "para2": "Pelo y cara en el mismo momento",
+        "ribbon": "El más completo",
+        "emoji_a": "",
+        "emoji_b": "",
+        "emoji_c": "",
+        "sep_txt": "Por separado",
+        "ahorro_txt": "Ahorras",
+        "boton": "Añadir el pack",
+        "solo": true,
+        "solo_txt": "¿Solo el sérum?",
+        "ancla": "rz-packs",
+        "bg": "#2F3B2E",
+        "fg": "#F5EFE6",
+        "padding_top": 92,
+        "padding_bottom": 92
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "black_week",
+    "marquesina",
+    "problema",
+    "porque",
+    "packs_ritual",
+    "ingredientes",
+    "pasos",
+    "beneficios",
+    "ritual",
+    "resenas",
+    "comparativa",
+    "packs",
+    "faq",
+    "compra",
+    "garantias"
+  ]
+}

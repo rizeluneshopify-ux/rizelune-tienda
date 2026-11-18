@@ -1,0 +1,164 @@
+{%- comment -%}
+  Catálogo de «Nuestros productos»: el producto estrella en grande (ocupa 2×2 en escritorio) y los packs como tarjetas de producto.
+  Bloques: «Pack de rutina» (packs 1–3 de Rizelune · Packs de rutina) y «Pack de sérums» (2 o 3 frascos de Rizelune · Packs).
+  Si algún pack está «Muy pronto», abajo sale el formulario «Avísame» (clientes con etiqueta «proximamente, packs»).
+  Textos: rizelune.estrella_* y rizelune.packs_*.
+{%- endcomment -%}
+{%- assign hay_pronto = false -%}
+{%- for block in section.blocks -%}
+  {%- if block.type == 'ritual' -%}
+    {%- capture pre %}rz_ritual{{ block.settings.pack }}_{% endcapture -%}
+    {%- assign k_on = pre | append: 'activo' -%}
+    {%- assign k_b = pre | append: 'b' -%}
+    {%- assign k_c = pre | append: 'c' -%}
+    {%- assign k_fc = pre | append: 'forma_c' -%}
+    {%- assign pbx = settings[k_b] -%}
+    {%- assign pcx = settings[k_c] -%}
+    {%- if settings[k_on] -%}
+      {%- if pbx == blank or pbx.available == false -%}{%- assign hay_pronto = true -%}{%- endif -%}
+      {%- if pcx == blank and settings[k_fc] != 'ninguno' -%}{%- assign hay_pronto = true -%}{%- endif -%}
+      {%- if pcx != blank and pcx.available == false -%}{%- assign hay_pronto = true -%}{%- endif -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign p = section.settings.producto -%}
+<section id="rz-packs" class="rz-section rz-catalogo">
+  <div class="rz-container">
+    <div class="rz-catalogo__grid">
+      {%- if p != blank and p.available -%}
+        {%- assign v = p.selected_or_first_available_variant -%}
+        {%- assign img = section.settings.imagen | default: p.featured_image -%}
+        <article class="rz-catalogo__star">
+          <a class="rz-catalogo__star-media" href="{{ p.url }}">
+            {%- if img -%}{{ img | image_url: width: 1400 | image_tag: loading: 'eager', alt: p.title, sizes: '(min-width: 990px) 800px, 100vw' }}{%- endif -%}
+            <em class="rz-catalogo__star-badge">★ {{ 'rizelune.estrella_eyebrow' | t }}</em>
+          </a>
+          <div class="rz-catalogo__star-body">
+            <div class="rz-catalogo__star-info">
+              <h2 class="rz-catalogo__star-title"><a href="{{ p.url }}">{{ p.title }}</a></h2>
+              {%- assign rating = p.metafields.reviews.rating.value -%}
+              {%- if rating != blank -%}
+                <p class="rz-estrella__rating"><span aria-hidden="true">{% for i in (1..5) %}{% if rating.rating >= i %}★{% else %}☆{% endif %}{% endfor %}</span><small>{{ rating.rating | round: 1 }} ({{ p.metafields.reviews.rating_count }})</small></p>
+              {%- endif -%}
+              <p class="rz-catalogo__star-text">{{ 'rizelune.estrella_text' | t }}</p>
+            </div>
+            <div class="rz-catalogo__star-buy">
+              <p class="rz-catalogo__star-price">{{ v.price | money }}</p>
+              <button type="button" class="rz-btn" data-rz-ritual data-items='[{"id":{{ v.id }},"quantity":1}]'>{{ 'rizelune.estrella_btn' | t }}</button>
+              <a class="rz-estrella__more" href="{{ p.url }}">{{ 'rizelune.estrella_more' | t }} →</a>
+              <p class="rz-ritual__err" data-rz-ritual-err hidden>{{ 'rizelune.ritual_error' | t }}</p>
+            </div>
+          </div>
+        </article>
+      {%- endif -%}
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'producto' -%}
+          {%- assign pp = block.settings.producto -%}
+          {%- if pp != blank and pp.available -%}
+            {%- assign vv = pp.selected_or_first_available_variant -%}
+            <article class="rz-packcard rz-packcard--prod rz-packcard--suelto" {{ block.shopify_attributes }}>
+              <a class="rz-packcard__media" href="{{ pp.url }}">
+                <span class="rz-packcard__single">{%- if pp.featured_image -%}{{ pp.featured_image | image_url: width: 900 | image_tag: loading: 'lazy', alt: pp.title, class: 'rz-packcard__img', widths: '400,600,900', sizes: '(min-width: 990px) 360px, 50vw' }}{%- endif -%}</span>
+                {%- if block.settings.nuevo -%}<span class="rz-packcard__badges"><em class="rz-packcard__badge rz-packcard__badge--new">{{ 'rizelune.packs_new' | t }}</em></span>{%- endif -%}
+              </a>
+              <div class="rz-packcard__body">
+                <h3 class="rz-packcard__name"><a href="{{ pp.url }}">{{ pp.title }}</a></h3>
+                {%- if block.settings.texto != blank -%}<p class="rz-packcard__text">{{ block.settings.texto }}</p>{%- endif -%}
+                <p class="rz-packcard__price"><b>{{ vv.price | money }}</b></p>
+                <div class="rz-packcard__cta">
+                  <button type="button" class="rz-btn rz-btn--full" data-rz-ritual data-items='[{"id":{{ vv.id }},"quantity":1}]'>{{ 'rizelune.estrella_btn' | t }}</button>
+                  <p class="rz-ritual__err" data-rz-ritual-err hidden>{{ 'rizelune.ritual_error' | t }}</p>
+                </div>
+              </div>
+            </article>
+          {%- endif -%}
+        {%- elsif block.type == 'ritual' -%}
+          {%- assign n = block.settings.pack | plus: 0 -%}
+          {% render 'rz-pack-card', tipo: 'ritual', n: n, uid: block.id, aviso: '#rz-packs-form', estilo: 'producto' %}
+        {%- else -%}
+          {%- assign n = block.settings.frascos | plus: 0 -%}
+          {% render 'rz-pack-card', tipo: 'cantidad', n: n, uid: block.id, estilo: 'producto' %}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+    {%- if hay_pronto or section.settings.lista_espera -%}
+      <div class="rz-ofertas__notify rz-catalogo__notify" id="rz-packs-form">
+        {%- form 'customer', id: 'rz-catalogo-notify', class: 'rz-ofertas__form' -%}
+          <div class="rz-ofertas__notify-txt">
+            <strong>{{ 'rizelune.packs_form_title' | t }}</strong>
+            <span>{{ 'rizelune.packs_form_text' | t }}</span>
+          </div>
+          {%- if form.posted_successfully? -%}
+            <p class="rz-ofertas__ok" role="status">{{ 'rizelune.packs_form_ok' | t }}</p>
+          {%- else -%}
+            <input type="hidden" name="contact[tags]" value="proximamente, packs">
+            <label class="visually-hidden" for="rz-catalogo-email">{{ 'rizelune.packs_email' | t }}</label>
+            <input id="rz-catalogo-email" type="email" name="contact[email]" required autocomplete="email" placeholder="{{ 'rizelune.packs_email' | t | escape }}">
+            <button type="submit" class="rz-btn">{{ 'rizelune.packs_form_btn' | t }}</button>
+          {%- endif -%}
+        {%- endform -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Rizelune · Catálogo",
+  "tag": "div",
+  "class": "rz-catalogo-section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "El producto estrella en grande y los packs como tarjetas de producto. Precios y productos de los packs: Configuración del tema → Rizelune · Packs y Rizelune · Packs de rutina."
+    },
+    { "type": "product", "id": "producto", "label": "Producto estrella" },
+    { "type": "image_picker", "id": "imagen", "label": "Imagen del producto estrella (si no, la del producto)" },
+    { "type": "checkbox", "id": "lista_espera", "label": "Mostrar siempre la lista de espera «Avísame»", "info": "Aunque no haya ningún pack «Muy pronto» a la vista.", "default": false }
+  ],
+  "blocks": [
+    {
+      "type": "producto",
+      "name": "Producto suelto",
+      "settings": [
+        { "type": "product", "id": "producto", "label": "Producto", "info": "Solo se muestra si el producto está publicado." },
+        { "type": "text", "id": "texto", "label": "Texto corto" },
+        { "type": "checkbox", "id": "nuevo", "label": "Etiqueta «Nuevo»", "default": true }
+      ]
+    },
+    {
+      "type": "ritual",
+      "name": "Pack de rutina",
+      "settings": [
+        { "type": "select", "id": "pack", "label": "Pack", "options": [
+          { "value": "1", "label": "Pack 1 (Ritual Raíz)" },
+          { "value": "2", "label": "Pack 2 (Pelo y Piel)" },
+          { "value": "3", "label": "Pack 3 (Ritual Completo)" }
+        ], "default": "1" }
+      ]
+    },
+    {
+      "type": "cantidad",
+      "name": "Pack de sérums",
+      "settings": [
+        { "type": "select", "id": "frascos", "label": "Frascos", "options": [
+          { "value": "2", "label": "2 frascos" },
+          { "value": "3", "label": "3 frascos" }
+        ], "default": "2" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rizelune · Catálogo",
+      "blocks": [
+        { "type": "cantidad", "settings": { "frascos": "2" } },
+        { "type": "cantidad", "settings": { "frascos": "3" } },
+        { "type": "ritual", "settings": { "pack": "1" } },
+        { "type": "ritual", "settings": { "pack": "2" } },
+        { "type": "ritual", "settings": { "pack": "3" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

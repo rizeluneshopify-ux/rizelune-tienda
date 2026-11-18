@@ -1,0 +1,1 @@
+query { translatableResource(resourceId: "gid://shopify/Product/16124464922954") { translatableContent { key value digest } } }

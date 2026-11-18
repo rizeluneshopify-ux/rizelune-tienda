@@ -1,0 +1,199 @@
+{{ 'rz-styles.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'rz-scripts.js' | asset_url }}" defer="defer"></script>
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg }};
+    color: {{ section.settings.fg }};
+  }
+  #shopify-section-{{ section.id }} .rz-h1,
+  #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size }}px; }
+  #shopify-section-{{ section.id }} .rz-body { font-size: {{ section.settings.body_size }}px; }
+  #shopify-section-{{ section.id }} .rz-head { text-align: {{ section.settings.text_align }}; }
+  #shopify-section-{{ section.id }} .rz-head .rz-eyebrow { justify-content: {% case section.settings.text_align %}{% when 'center' %}center{% when 'right' %}flex-end{% else %}flex-start{% endcase %}; }
+  @media (max-width: 749px) {
+    #shopify-section-{{ section.id }} { padding-top: {{ section.settings.padding_top | times: 0.65 | round }}px; padding-bottom: {{ section.settings.padding_bottom | times: 0.65 | round }}px; }
+    #shopify-section-{{ section.id }} .rz-h1,
+    #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size | times: 0.68 | round }}px; }
+  }
+  
+{%- endstyle -%}
+<section class="rz-section" id="{{ section.settings.ancla | default: section.id }}">
+  <div class="rz-container rz-container--narrow">
+    <div class="rz-head rz-reveal">
+      {%- if section.settings.eyebrow != blank -%}<span class="rz-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+      {%- if section.settings.titulo != blank -%}<h2 class="rz-h2">{{ section.settings.titulo }}</h2>{%- endif -%}
+      {%- if section.settings.texto != blank -%}<p class="rz-body">{{ section.settings.texto | newline_to_br }}</p>{%- endif -%}
+    </div>
+    <div class="rz-faq">
+      {%- for block in section.blocks -%}
+        <details class="rz-reveal" style="--rz-delay: {{ forloop.index0 | times: 60 }}ms" {{ block.shopify_attributes }}{% if forloop.first and section.settings.abrir_primera %} open{% endif %}>
+          <summary>{{ block.settings.pregunta }}<span class="rz-faq__plus" aria-hidden="true"></span></summary>
+          <div class="rz-faq__answer rz-body">{{ block.settings.respuesta }}</div>
+        </details>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Rizelune · Preguntas",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Encabezado"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo (texto pequeño)",
+      "default": "Dudas"
+    },
+    {
+      "type": "text",
+      "id": "titulo",
+      "label": "Título",
+      "default": "Preguntas <em>frecuentes</em>",
+      "info": "Pon una palabra entre <em> y </em> para destacarla en cursiva."
+    },
+    {
+      "type": "textarea",
+      "id": "texto",
+      "label": "Texto"
+    },
+    {
+      "type": "checkbox",
+      "id": "abrir_primera",
+      "label": "Primera pregunta abierta",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "ancla",
+      "label": "Nombre de ancla (para enlazar con #)",
+      "default": "rz-faq"
+    },
+    {
+      "type": "header",
+      "content": "Colores"
+    },
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Color de fondo",
+      "default": "#F5EFE6"
+    },
+    {
+      "type": "color",
+      "id": "fg",
+      "label": "Color del texto",
+      "default": "#2F3B2E"
+    },
+    {
+      "type": "header",
+      "content": "Tipografía"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Alineación del encabezado",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Tamaño del título",
+      "min": 24,
+      "max": 88,
+      "step": 2,
+      "default": 44,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "Tamaño del texto",
+      "min": 13,
+      "max": 26,
+      "step": 1,
+      "default": 17,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Espaciado"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espacio superior",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 100,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espacio inferior",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 100,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "pregunta",
+      "name": "Pregunta",
+      "settings": [
+        {
+          "type": "text",
+          "id": "pregunta",
+          "label": "Pregunta",
+          "default": "¿Pregunta?"
+        },
+        {
+          "type": "richtext",
+          "id": "respuesta",
+          "label": "Respuesta",
+          "default": "<p>Respuesta.</p>"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 16,
+  "presets": [
+    {
+      "name": "Rizelune · Preguntas",
+      "blocks": [
+        {
+          "type": "pregunta"
+        },
+        {
+          "type": "pregunta"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

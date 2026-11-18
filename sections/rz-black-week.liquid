@@ -1,0 +1,57 @@
+{%- comment -%}
+  Banner de la Black Week en la portada: titular, cuenta atrás y (si hay bloques) los packs en oferta; sin bloques sale un botón «Ver las ofertas» que baja a #rz-packs (tarjetas de rz-pack-card con el precio Black Week).
+  Solo se ve entre las fechas de Configuración del tema → Rizelune · Black Week (en el editor se ve siempre para poder revisarlo).
+  Textos: rizelune.bf_*.
+{%- endcomment -%}
+{%- capture bf_on -%}{%- render 'rz-bf-on' -%}{%- endcapture -%}
+{%- if bf_on == '1' or request.design_mode -%}
+  {%- capture bf_end %}{{ settings.rz_bf_fin | strip }}T23:59:59+01:00{% endcapture -%}
+  {%- assign cards = 0 -%}
+  {%- for block in section.blocks -%}{%- assign cards = cards | plus: 1 -%}{%- endfor -%}
+  <section id="rz-black-week" class="rz-section rz-ofertas rz-ofertas--noche rz-bfweek" data-rz-bf-bar data-start="{{ settings.rz_bf_inicio | strip }}T00:00:00+01:00" data-end="{{ bf_end }}" data-keep="{% if request.design_mode %}1{% endif %}">
+    <div class="rz-container">
+      {%- if section.settings.imagen != blank -%}
+        <div class="rz-bfweek__bg" aria-hidden="true">{{ section.settings.imagen | image_url: width: 1800 | image_tag: loading: 'lazy', alt: '', widths: '700,1100,1500,1800', sizes: '100vw' }}</div>
+      {%- endif -%}
+      <header class="rz-ofertas__head rz-reveal">
+        <span class="rz-eyebrow">{{ settings.rz_bf_etiqueta | default: 'Black Week' }} · <span data-rz-bf-until data-end="{{ settings.rz_bf_fin | strip }}T12:00:00+01:00" data-tpl="{{ 'rizelune.bf_until' | t | escape }}"></span></span>
+        <h2 class="rz-h2">{{ 'rizelune.bf_title' | t }}</h2>
+        <p class="rz-ofertas__lead">{{ 'rizelune.bf_text' | t }}</p>
+        <p class="rz-bfweek__count" data-rz-bf-count data-end="{{ bf_end }}" data-label="{{ 'rizelune.bf_ends' | t | escape }}" data-big="1"></p>
+      </header>
+      {%- if cards == 0 -%}
+        <p class="rz-bfweek__cta rz-reveal"><a class="rz-btn rz-btn--light" href="{{ routes.root_url | append: '/#rz-packs' | replace: '//', '/' }}">{{ 'rizelune.bf_cta' | t }}</a></p>
+      {%- endif -%}
+      {%- if cards > 0 -%}
+      <div class="rz-ofertas__grid" style="--rz-pack-cols: {{ cards | at_least: 1 }};">
+        {%- for block in section.blocks -%}
+          {%- assign n = block.settings.pack | plus: 0 -%}
+          <div {{ block.shopify_attributes }}>{% render 'rz-pack-card', tipo: 'ritual', n: n, uid: block.id, aviso: '#rz-packs-form' %}</div>
+        {%- endfor -%}
+      </div>
+      {%- endif -%}
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Rizelune · Black Week",
+  "tag": "div",
+  "class": "rz-bfweek-section",
+  "settings": [
+    { "type": "paragraph", "content": "Solo se ve en la tienda entre las fechas de Configuración del tema → Rizelune · Black Week. Aquí, en el editor, se ve siempre para que puedas revisarlo." },
+    { "type": "image_picker", "id": "imagen", "label": "Foto de fondo (detrás del título)", "info": "Se oscurece un poco para que el texto se lea bien." }
+  ],
+  "blocks": [
+    {
+      "type": "pack",
+      "name": "Pack en oferta",
+      "settings": [
+        { "type": "select", "id": "pack", "label": "Pack de rutina", "default": "3", "options": [{ "value": "1", "label": "Pack 1 (Ritual Raíz)" }, { "value": "2", "label": "Pack 2 (Pelo y Piel)" }, { "value": "3", "label": "Pack 3 (Ritual Completo)" }] }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Rizelune · Black Week", "blocks": [{ "type": "pack", "settings": { "pack": "3" } }, { "type": "pack", "settings": { "pack": "1" } }] }]
+}
+{% endschema %}

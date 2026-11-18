@@ -1,0 +1,1 @@
+query($t: TranslatableResourceType!) { translatableResources(first: 50, resourceType: $t) { nodes { resourceId translatableContent { key value } fr: translations(locale: "fr") { key value } pt: translations(locale: "pt-PT") { key value } } } }

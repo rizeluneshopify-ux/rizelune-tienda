@@ -1,0 +1,3 @@
+query { products(first: 10, sortKey: CREATED_AT, reverse: true) { nodes { id title handle status vendor productType templateSuffix createdAt tags
+  variants(first: 3) { nodes { id price compareAtPrice sku inventoryPolicy inventoryItem { tracked } } }
+  media(first: 10) { nodes { id ... on MediaImage { image { url width height } } } } descriptionHtml } } }

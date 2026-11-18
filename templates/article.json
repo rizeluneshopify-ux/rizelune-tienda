@@ -1,0 +1,55 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "image_height": "medium"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "blog_show_date": true,
+            "blog_show_author": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Compartir"
+          }
+        },
+        "content": {
+          "type": "content"
+        }
+      },
+      "block_order": [
+        "featured_image",
+        "title",
+        "share",
+        "content"
+      ]
+    },
+    "compra": {
+      "type": "rz-compra",
+      "settings": {
+        "producto": "rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo",
+        "imagen": "shopify://shop_images/rizelune-serum-romero-menta-vela-calida.jpg",
+        "texto": "Tu ritual empieza esta noche: 15 minutos antes del lavado para cuidar tu cuero cabelludo.",
+        "lista": "Frasco cuentagotas de 30 ml\nSérum de romero y menta con aceites vegetales\nFórmula natural y vegana, fabricada en la UE\nEnvío gratis desde 39,99 €",
+        "eyebrow": "Rizelune",
+        "titulo": "",
+        "etiqueta": "¡Oferta!",
+        "boton": "Añadir al carrito",
+        "ver_mas": "Ver todos los detalles"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "compra"
+  ]
+}

@@ -1,0 +1,90 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "catalogo": {
+      "type": "rz-catalogo",
+      "settings": {
+        "producto": "rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo",
+        "imagen": "shopify://shop_images/rizelune-serum-romero-menta-estrella.jpg",
+        "lista_espera": false
+      },
+      "blocks": {
+        "c2": {
+          "type": "cantidad",
+          "settings": {
+            "frascos": "2"
+          }
+        },
+        "c3": {
+          "type": "cantidad",
+          "settings": {
+            "frascos": "3"
+          }
+        },
+        "p_exf": {
+          "type": "producto",
+          "settings": {
+            "producto": "exfoliante-capilar-romero-menta",
+            "texto": "Limpia y refresca el cuero cabelludo. 1 vez por semana.",
+            "nuevo": true
+          }
+        },
+        "p_aceite": {
+          "type": "producto",
+          "settings": {
+            "producto": "aceite-facial-bakuchiol",
+            "texto": "Aceite facial de noche con bakuchiol y rosa mosqueta.",
+            "nuevo": true
+          }
+        },
+        "r1": {
+          "type": "ritual",
+          "settings": {
+            "pack": "1"
+          }
+        },
+        "r2": {
+          "type": "ritual",
+          "settings": {
+            "pack": "2"
+          }
+        },
+        "r3": {
+          "type": "ritual",
+          "settings": {
+            "pack": "3"
+          }
+        }
+      },
+      "block_order": [
+        "p_exf",
+        "p_aceite",
+        "c2",
+        "c3",
+        "r1",
+        "r2",
+        "r3"
+      ]
+    }
+  },
+  "order": [
+    "banner",
+    "catalogo"
+  ]
+}

@@ -1,0 +1,63 @@
+<claude-code-hint v="1" type="plugin" value="shopify-ai-toolkit@claude-plugins-official" />
+{
+  "product": {
+    "media": {
+      "nodes": [
+        {
+          "id": "gid://shopify/MediaImage/72563338543434",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/tienda4.webp?v=1792511139"
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/72563338576202",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/tienda3.webp?v=1792511139"
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/72563338608970",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/tienda2.webp?v=1792511139"
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/72563338641738",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/tienda.webp?v=1792511139"
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/72563368198474",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/rizelune_3.jpg?v=1792511235"
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/72563459621194",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/Rincon_calido_con_aceite_capilar_de_romero.png?v=1792511615"
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/72563368100170",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/rizelune_2.jpg?v=1792511235"
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/72563523027274",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/Rutina_nocturna_de_aceite_capilar.png?v=1792511790"
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/72563569459530",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/Cabello_radiante_resultados_visibles.png?v=1792511920"
+          }
+        }
+      ]
+    }
+  }
+}

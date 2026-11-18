@@ -1,0 +1,22 @@
+{%- comment -%}
+  Botón privado «Mi oficina» (abajo a la izquierda). Solo sale en los dispositivos donde el dueño ha abierto su página secreta
+  de acceso (plantilla page.oficina, sección rz-oficina): esa página guarda el enlace en el navegador. Aquí no va ningún enlace,
+  así que el resto de visitantes no ve nada. Para quitarlo de un dispositivo: botón «Quitar el botón» de esa misma página.
+{%- endcomment -%}
+<script>
+  (function () {
+    try {
+      var u = localStorage.getItem('rz_oficina');
+      if (!u || u.indexOf('https://claude.ai/') !== 0) return;
+      if (document.querySelector('.rz-ofi-btn')) return;
+      var s = document.createElement('style');
+      s.textContent = '.rz-ofi-btn{position:fixed;left:18px;bottom:18px;z-index:91;display:inline-flex;align-items:center;gap:8px;padding:10px 16px 10px 13px;border-radius:999px;background:#2F3B2E;color:#F5EFE6;font:600 14px/1.2 var(--rz-sans,sans-serif);letter-spacing:.02em;text-decoration:none;box-shadow:0 12px 30px -12px rgba(31,38,32,.55);transition:bottom .3s}.rz-ofi-btn:hover{background:#1F2620;color:#F5EFE6}body.rz-sticky-on .rz-ofi-btn{bottom:96px}';
+      document.head.appendChild(s);
+      var a = document.createElement('a');
+      a.className = 'rz-ofi-btn'; a.href = u; a.target = '_blank'; a.rel = 'noopener';
+      a.setAttribute('aria-label', 'Abrir mi oficina (solo la ves tú)');
+      a.innerHTML = '<span aria-hidden="true">💼</span><span>Mi oficina</span>';
+      document.body.appendChild(a);
+    } catch (e) {}
+  })();
+</script>

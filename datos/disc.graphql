@@ -1,0 +1,1 @@
+mutation D($d: DiscountCodeBasicInput!) { discountCodeBasicCreate(basicCodeDiscount: $d) { codeDiscountNode { id codeDiscount { ... on DiscountCodeBasic { title status codes(first: 1) { nodes { code } } } } } userErrors { field message code } } }

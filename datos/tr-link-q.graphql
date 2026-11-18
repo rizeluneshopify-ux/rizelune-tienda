@@ -1,0 +1,1 @@
+query { r: translatableResource(resourceId: "gid://shopify/Link/1078662365514") { resourceId translatableContent { key value digest } } }

@@ -1,0 +1,18 @@
+{%- comment -%}
+  Aviso del «Pedido gratis del mes» (ficha y carrito). Ajuste global: Packs → «Mostrar Pedido gratis del mes».
+  No se muestra en Portugal (país o idioma portugués): allí el sorteo no aplica.
+  Uso: {% render 'rz-sorteo' %} · {% render 'rz-sorteo', variante: 'carrito' %}
+{%- endcomment -%}
+{%- liquid
+  assign rz_pt = false
+  if localization.country.iso_code == 'PT' or request.locale.iso_code == 'pt-PT'
+    assign rz_pt = true
+  endif
+  assign rz_pag = pages['pedido-gratis-del-mes']
+-%}
+{%- if settings.rz_sorteo_activo and rz_pt == false and rz_pag != blank -%}
+  <a class="rz-sorteo-link{% if variante != blank %} rz-sorteo-link--{{ variante }}{% endif %}" href="{{ rz_pag.url }}">
+    <span class="rz-sorteo-link__ico" aria-hidden="true">{% render 'rz-icon', name: 'regalo' %}</span>
+    <span>{{ 'rizelune.sorteo_line' | t }} <u>{{ 'rizelune.sorteo_more' | t }}</u></span>
+  </a>
+{%- endif -%}

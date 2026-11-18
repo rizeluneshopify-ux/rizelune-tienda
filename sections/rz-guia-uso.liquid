@@ -1,0 +1,146 @@
+{%- comment -%}
+  Guía de uso del ritual: una tarjeta por producto (dónde, cuánto, cómo, cada cuánto), calendario semanal y packs para comprar.
+  Bloques «Producto» (uno por producto), «Día» (calendario) y la parte de packs usa snippets/rz-pack-card.liquid.
+{%- endcomment -%}
+{{ 'rz-styles.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  #shopify-section-{{ section.id }} { background: {{ section.settings.bg }}; color: {{ section.settings.fg }}; }
+{%- endstyle -%}
+{%- assign productos = section.blocks | where: 'type', 'producto' -%}
+{%- assign dias = section.blocks | where: 'type', 'dia' -%}
+<section class="rz-section rz-guia" id="{{ section.settings.ancla | default: section.id }}">
+  <div class="rz-container">
+    <header class="rz-head rz-guia__head rz-reveal">
+      {%- if section.settings.eyebrow != blank -%}<span class="rz-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+      {%- if section.settings.titulo != blank -%}<h1 class="rz-h2">{{ section.settings.titulo }}</h1>{%- endif -%}
+      {%- if section.settings.texto != blank -%}<p class="rz-body">{{ section.settings.texto | newline_to_br }}</p>{%- endif -%}
+    </header>
+
+    <div class="rz-guia__grid">
+      {%- for block in productos -%}
+        {%- assign p = block.settings.producto -%}
+        {%- assign img = block.settings.imagen | default: p.featured_image -%}
+        <article class="rz-guia__card rz-guia__card--{{ block.settings.color }} rz-reveal" {{ block.shopify_attributes }}>
+          <div class="rz-guia__media">
+            {%- if img -%}{{ img | image_url: width: 900 | image_tag: loading: 'lazy', alt: '', widths: '400,600,900', sizes: '(min-width: 990px) 360px, 92vw' }}{%- endif -%}
+            <span class="rz-guia__num">{{ forloop.index }}</span>
+          </div>
+          <div class="rz-guia__body">
+            {%- if block.settings.etiqueta != blank -%}<span class="rz-guia__tag">{{ block.settings.etiqueta }}</span>{%- endif -%}
+            <h2 class="rz-guia__name">{{ block.settings.titulo | default: p.title }}</h2>
+            <dl class="rz-guia__list">
+              {%- if block.settings.donde != blank -%}<div><dt>{{ 'rizelune.guia_donde' | t }}</dt><dd>{{ block.settings.donde }}</dd></div>{%- endif -%}
+              {%- if block.settings.cuanto != blank -%}<div><dt>{{ 'rizelune.guia_cuanto' | t }}</dt><dd>{{ block.settings.cuanto }}</dd></div>{%- endif -%}
+              {%- if block.settings.como != blank -%}<div><dt>{{ 'rizelune.guia_como' | t }}</dt><dd>{{ block.settings.como }}</dd></div>{%- endif -%}
+              {%- if block.settings.frecuencia != blank -%}<div><dt>{{ 'rizelune.guia_frecuencia' | t }}</dt><dd>{{ block.settings.frecuencia }}</dd></div>{%- endif -%}
+            </dl>
+            <div class="rz-guia__actions">
+              {%- if block.settings.test and settings.rz_quiz_activo -%}<button type="button" class="rz-btn rz-guia__btn" data-rz-quiz-open>{{ 'rizelune.guia_test' | t }}</button>{%- endif -%}
+              {%- if p != blank -%}<a class="rz-guia__link" href="{{ p.url }}">{{ 'rizelune.guia_ver' | t }} {{ p.title }} →</a>{%- endif -%}
+            </div>
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+
+    {%- if dias.size > 0 -%}
+      <div class="rz-guia__cal rz-reveal">
+        {%- if section.settings.cal_titulo != blank -%}<h2 class="rz-guia__caltitle">{{ section.settings.cal_titulo }}</h2>{%- endif -%}
+        <div class="rz-guia__legend" aria-hidden="true">
+          <span><i class="rz-dot rz-dot--ambar"></i>{{ section.settings.leyenda_1 }}</span>
+          <span><i class="rz-dot rz-dot--salvia"></i>{{ section.settings.leyenda_2 }}</span>
+          <span><i class="rz-dot rz-dot--rosa"></i>{{ section.settings.leyenda_3 }}</span>
+        </div>
+        <ol class="rz-guia__week">
+          {%- for block in dias -%}
+            <li class="rz-guia__day{% if block.settings.serum or block.settings.exfoliante %} is-wash{% endif %}" {{ block.shopify_attributes }}>
+              <strong>{{ block.settings.dia }}</strong>
+              <ul>
+                {%- if block.settings.serum -%}<li><i class="rz-dot rz-dot--ambar"></i>{{ section.settings.leyenda_1 }}</li>{%- endif -%}
+                {%- if block.settings.exfoliante -%}<li><i class="rz-dot rz-dot--salvia"></i>{{ section.settings.leyenda_2 }}</li>{%- endif -%}
+                {%- if block.settings.aceite -%}<li><i class="rz-dot rz-dot--rosa"></i>{{ section.settings.leyenda_3 }}</li>{%- endif -%}
+              </ul>
+              {%- if block.settings.nota != blank -%}<small>{{ block.settings.nota }}</small>{%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ol>
+        {%- if section.settings.cal_nota != blank -%}<p class="rz-guia__calnote">{{ section.settings.cal_nota }}</p>{%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+
+  {%- if section.settings.packs -%}
+    <div class="rz-ofertas rz-ofertas--noche rz-guia__packs">
+      <div class="rz-container">
+        <header class="rz-ofertas__head rz-reveal">
+          {%- if section.settings.packs_eyebrow != blank -%}<span class="rz-eyebrow">{{ section.settings.packs_eyebrow }}</span>{%- endif -%}
+          {%- if section.settings.packs_titulo != blank -%}<h2 class="rz-h2">{{ section.settings.packs_titulo }}</h2>{%- endif -%}
+          {%- if section.settings.packs_texto != blank -%}<p class="rz-ofertas__lead">{{ section.settings.packs_texto }}</p>{%- endif -%}
+        </header>
+        <div class="rz-ofertas__grid" style="--rz-pack-cols: 3;">
+          {% render 'rz-pack-card', tipo: 'ritual', n: 3, uid: 'guia3', aviso: '#rz-packs-form' %}
+          {% render 'rz-pack-card', tipo: 'ritual', n: 1, uid: 'guia1', aviso: '#rz-packs-form' %}
+          {% render 'rz-pack-card', tipo: 'ritual', n: 2, uid: 'guia2', aviso: '#rz-packs-form' %}
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Rizelune · Guía de uso",
+  "tag": "div",
+  "class": "rz-guia-section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Antetítulo", "default": "Guía de uso" },
+    { "type": "text", "id": "titulo", "label": "Título (admite <em>)", "default": "Tu ritual Rizelune, <em>paso a paso</em>" },
+    { "type": "textarea", "id": "texto", "label": "Texto" },
+    { "type": "text", "id": "ancla", "label": "Ancla (id)", "default": "rz-guia" },
+    { "type": "header", "content": "Calendario" },
+    { "type": "text", "id": "cal_titulo", "label": "Título del calendario", "default": "Tu semana con los tres" },
+    { "type": "text", "id": "leyenda_1", "label": "Nombre corto · producto 1", "default": "Sérum" },
+    { "type": "text", "id": "leyenda_2", "label": "Nombre corto · producto 2", "default": "Exfoliante" },
+    { "type": "text", "id": "leyenda_3", "label": "Nombre corto · producto 3", "default": "Aceite facial" },
+    { "type": "textarea", "id": "cal_nota", "label": "Nota bajo el calendario" },
+    { "type": "header", "content": "Packs al final" },
+    { "type": "checkbox", "id": "packs", "label": "Mostrar los packs de rutina", "default": true },
+    { "type": "text", "id": "packs_eyebrow", "label": "Antetítulo", "default": "Los tres juntos" },
+    { "type": "text", "id": "packs_titulo", "label": "Título", "default": "Tu ritual completo, en un pack" },
+    { "type": "text", "id": "packs_texto", "label": "Texto" },
+    { "type": "header", "content": "Colores" },
+    { "type": "color", "id": "bg", "label": "Fondo", "default": "#F5EFE6" },
+    { "type": "color", "id": "fg", "label": "Texto", "default": "#2F3B2E" }
+  ],
+  "blocks": [
+    {
+      "type": "producto",
+      "name": "Producto",
+      "settings": [
+        { "type": "product", "id": "producto", "label": "Producto" },
+        { "type": "image_picker", "id": "imagen", "label": "Foto (si no, la del producto)" },
+        { "type": "text", "id": "titulo", "label": "Nombre (si no, el del producto)" },
+        { "type": "text", "id": "etiqueta", "label": "Etiqueta pequeña", "default": "Raíz · 2 veces por semana" },
+        { "type": "select", "id": "color", "label": "Color", "default": "ambar", "options": [{ "value": "ambar", "label": "Ámbar" }, { "value": "salvia", "label": "Verde salvia" }, { "value": "rosa", "label": "Rosa" }] },
+        { "type": "textarea", "id": "donde", "label": "Dónde" },
+        { "type": "textarea", "id": "cuanto", "label": "Cuánto" },
+        { "type": "textarea", "id": "como", "label": "Cómo" },
+        { "type": "textarea", "id": "frecuencia", "label": "Cada cuánto" },
+        { "type": "checkbox", "id": "test", "label": "Botón del test de gotas (solo para el sérum)", "default": false }
+      ]
+    },
+    {
+      "type": "dia",
+      "name": "Día del calendario",
+      "settings": [
+        { "type": "text", "id": "dia", "label": "Día", "default": "Lunes" },
+        { "type": "checkbox", "id": "serum", "label": "Producto 1 (sérum)", "default": false },
+        { "type": "checkbox", "id": "exfoliante", "label": "Producto 2 (exfoliante)", "default": false },
+        { "type": "checkbox", "id": "aceite", "label": "Producto 3 (aceite facial)", "default": true },
+        { "type": "text", "id": "nota", "label": "Nota corta" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Rizelune · Guía de uso", "blocks": [{ "type": "producto" }, { "type": "producto" }, { "type": "producto" }] }]
+}
+{% endschema %}

@@ -1,0 +1,131 @@
+{%- comment -%}
+  Packs de rutina en la página del producto («Completa tu ritual»): primero el pack 3 (Ritual Completo) y los demás que llevan este producto plegados en «Ver otros packs».
+  Parámetros: product (producto de la página).
+  Si a un pack le falta algún producto, sale como «Muy pronto» y abajo hay un botón «Avísame» que lleva a la sección Packs de la portada.
+  Ajustes: Configuración del tema → Rizelune · Packs de rutina. Textos: rizelune.ritual*.
+  El descuento real lo hacen los descuentos automáticos de cada pack (Marketing → Descuentos).
+{%- endcomment -%}
+{%- capture bf_on -%}{%- render 'rz-bf-on' -%}{%- endcapture -%}
+{%- capture filas -%}
+  {%- assign hay_pronto = false -%}
+  {%- assign primera = '' -%}{%- assign resto = '' -%}{%- assign n_resto = 0 -%}
+  {%- assign orden = '3,1,2' | split: ',' -%}
+  {%- for nn in orden -%}
+    {%- assign n = nn | plus: 0 -%}
+    {%- capture fila -%}
+    {%- capture pre %}rz_ritual{{ n }}_{% endcapture -%}
+    {%- assign k_on = pre | append: 'activo' -%}
+    {%- assign k_a = pre | append: 'a' -%}
+    {%- assign k_b = pre | append: 'b' -%}
+    {%- assign k_c = pre | append: 'c' -%}
+    {%- assign k_f = pre | append: 'forma' -%}
+    {%- assign k_col = pre | append: 'color' -%}
+    {%- assign k_fc = pre | append: 'forma_c' -%}
+    {%- assign k_colc = pre | append: 'color_c' -%}
+    {%- assign k_p = pre | append: 'precio' -%}
+    {%- assign k_s = pre | append: 'separado' -%}
+    {%- assign k_sr = pre | append: 'sin_rebaja' -%}
+    {%- assign pa = settings[k_a] -%}
+    {%- assign pb = settings[k_b] -%}
+    {%- assign pc = settings[k_c] -%}
+    {%- assign con_c = false -%}
+    {%- if pc != blank or settings[k_fc] != 'ninguno' -%}{%- assign con_c = true -%}{%- endif -%}
+    {%- assign es_mio = false -%}
+    {%- if pa != blank and pa.id == product.id -%}{%- assign es_mio = true -%}{%- endif -%}
+    {%- if pb != blank and pb.id == product.id -%}{%- assign es_mio = true -%}{%- endif -%}
+    {%- if pc != blank and pc.id == product.id -%}{%- assign es_mio = true -%}{%- endif -%}
+    {%- if settings[k_on] and es_mio and pa.available -%}
+      {%- assign va = pa.selected_or_first_available_variant -%}
+      {%- assign b_ok = false -%}{%- if pb != blank and pb.available -%}{%- assign b_ok = true -%}{%- assign vb = pb.selected_or_first_available_variant -%}{%- endif -%}
+      {%- assign c_ok = true -%}
+      {%- if con_c -%}{%- assign c_ok = false -%}{%- if pc != blank and pc.available -%}{%- assign c_ok = true -%}{%- assign vc = pc.selected_or_first_available_variant -%}{%- endif -%}{%- endif -%}
+      {%- assign en_venta = false -%}{%- if b_ok and c_ok -%}{%- assign en_venta = true -%}{%- endif -%}
+      {%- assign precio = settings[k_p] | default: '0' | replace: ',', '.' | strip | times: 100 | round -%}
+      {%- if en_venta -%}
+        {%- assign separado = va.price | plus: vb.price -%}
+        {%- if con_c -%}{%- assign separado = separado | plus: vc.price -%}{%- endif -%}
+      {%- else -%}
+        {%- assign hay_pronto = true -%}
+        {%- assign separado = settings[k_s] | default: '0' | replace: ',', '.' | strip | times: 100 | round -%}
+      {%- endif -%}
+      {%- if precio <= 0 or separado > 0 and precio > separado -%}{%- assign precio = separado -%}{%- endif -%}
+      {%- assign es_bf = false -%}
+      {%- assign k_bf = pre | append: 'precio_bf' -%}
+      {%- if bf_on == '1' and en_venta and settings[k_bf] != blank -%}
+        {%- assign precio_bf = settings[k_bf] | replace: ',', '.' | strip | times: 100 | round -%}
+        {%- if precio > 0 and precio_bf > 0 and precio_bf < precio -%}
+          {%- assign es_bf = true -%}
+          {%- assign separado_total = separado -%}
+          {%- assign separado = precio -%}
+          {%- assign precio = precio_bf -%}
+        {%- endif -%}
+      {%- endif -%}
+      {%- assign ahorro = separado | minus: precio -%}
+      {%- if settings[k_sr] and es_bf == false -%}{%- assign ahorro = 0 -%}{%- endif -%}
+      {%- capture k_name %}rizelune.ritual{{ n }}_name{% endcapture -%}
+      {%- capture k_text %}rizelune.ritual{{ n }}_text{% endcapture -%}
+      <div class="rz-ritual__item{% unless en_venta %} is-soon{% endunless %}">
+        <div class="rz-ritual__row">
+          <span class="rz-ritual__imgs{% if con_c %} is-trio{% endif %}" aria-hidden="true">
+            {%- if pa.featured_image -%}{{ pa.featured_image | image_url: width: 160 | image_tag: loading: 'lazy', alt: '' }}{%- endif -%}
+            <b>+</b>
+            {%- if b_ok and pb.featured_image -%}{{ pb.featured_image | image_url: width: 160 | image_tag: loading: 'lazy', alt: '' }}{%- else -%}
+              {%- capture uid_b %}pdp{{ n }}b{% endcapture -%}
+              <span class="rz-ritual__art">{% render 'rz-soon-art', forma: settings[k_f], color: settings[k_col], uid: uid_b %}</span>
+            {%- endif -%}
+            {%- if con_c -%}
+              <b>+</b>
+              {%- if c_ok and pc.featured_image -%}{{ pc.featured_image | image_url: width: 160 | image_tag: loading: 'lazy', alt: '' }}{%- else -%}
+                {%- capture uid_c %}pdp{{ n }}c{% endcapture -%}
+                <span class="rz-ritual__art">{% render 'rz-soon-art', forma: settings[k_fc], color: settings[k_colc], uid: uid_c %}</span>
+              {%- endif -%}
+            {%- endif -%}
+          </span>
+          <span class="rz-ritual__txt">
+            <strong>{{ k_name | t }}{% unless en_venta %} <em class="rz-ritual__soon">{{ 'rizelune.packs_soon' | t }}</em>{% endunless %}{% if es_bf %} <em class="rz-ritual__bf">{{ settings.rz_bf_etiqueta | default: 'Black Week' }}</em>{% endif %}</strong>
+            <small>{{ k_text | t }}</small>
+          </span>
+          <span class="rz-ritual__price">
+            <b>{{ precio | money }}</b>
+            {%- if ahorro > 0 -%}<s>{{ separado | money }}</s>{%- endif -%}
+          </span>
+        </div>
+        {%- if es_bf -%}<p class="rz-ritual__bfline"><span class="rz-bf-count" data-rz-bf-count data-end="{{ settings.rz_bf_fin | strip }}T23:59:59+01:00" data-label="{{ 'rizelune.bf_ends' | t | escape }}"></span></p>{%- endif -%}
+        <details class="rz-ritual__how">
+          <summary>{{ 'rizelune.packs_howto' | t }}</summary>
+          <ol>
+            {%- for s in (1..3) -%}
+              {%- capture k_step %}rizelune.ritual{{ n }}_s{{ s }}{% endcapture -%}
+              <li>{{ k_step | t }}</li>
+            {%- endfor -%}
+          </ol>
+        </details>
+        {%- if en_venta -%}
+          {%- capture items -%}[{"id":{{ va.id }},"quantity":1},{"id":{{ vb.id }},"quantity":1}{% if con_c %},{"id":{{ vc.id }},"quantity":1}{% endif %}]{%- endcapture -%}
+          <button type="button" class="rz-btn rz-btn--full rz-ritual__btn" data-rz-ritual data-items='{{ items }}'>{{ 'rizelune.ritual_btn' | t }} · {{ precio | money }}</button>
+          <p class="rz-ritual__err" data-rz-ritual-err hidden>{{ 'rizelune.ritual_error' | t }}</p>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+    {%- endcapture -%}
+    {%- if fila contains 'rz-ritual__item' -%}
+      {%- if primera == '' -%}{%- assign primera = fila -%}{%- else -%}{%- assign resto = resto | append: fila -%}{%- assign n_resto = n_resto | plus: 1 -%}{%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {{ primera }}
+  {%- if n_resto > 0 -%}
+    <details class="rz-ritual__more">
+      <summary>{% if n_resto == 1 %}{{ 'rizelune.ritual_more_one' | t }}{% else %}{{ 'rizelune.ritual_more' | t: count: n_resto }}{% endif %}</summary>
+      {{ resto }}
+    </details>
+  {%- endif -%}
+  {%- if hay_pronto -%}
+    <a class="rz-btn rz-btn--full rz-btn--line rz-ritual__notify" href="{{ routes.root_url | append: '/#rz-packs-form' | replace: '//', '/' }}">{{ 'rizelune.packs_notify' | t }}</a>
+  {%- endif -%}
+{%- endcapture -%}
+{%- if filas contains 'rz-ritual__item' -%}
+  <div class="rz-ritual">
+    <span class="rz-ritual__eyebrow">{{ 'rizelune.ritual_eyebrow' | t }}</span>
+    {{ filas }}
+  </div>
+{%- endif -%}

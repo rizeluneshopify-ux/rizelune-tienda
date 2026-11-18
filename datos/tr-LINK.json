@@ -1,0 +1,94 @@
+{
+  "translatableResources": {
+    "nodes": [
+      {
+        "resourceId": "gid://shopify/Link/1077921218890",
+        "translatableContent": [
+          {
+            "key": "title",
+            "value": "Buscar",
+            "digest": "5f55edf9008960128df99fce2812a6b1e54e099351ed83fa544b7fb7b4c1a1c5",
+            "locale": "es"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/Link/1077921251658",
+        "translatableContent": [
+          {
+            "key": "title",
+            "value": "Pedidos",
+            "digest": "d86393bc38de3b46f0b5c4819c0fc4cb02c8bfb713c1bd073a4b1dfa37edb32d",
+            "locale": "es"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/Link/1077921284426",
+        "translatableContent": [
+          {
+            "key": "title",
+            "value": "Perfil",
+            "digest": "00d551e63dd540fcd2431ec32c2e398b096651c864c18b33adaffc07bf7ccd67",
+            "locale": "es"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/Link/1078173663562",
+        "translatableContent": [
+          {
+            "key": "title",
+            "value": "Inicio",
+            "digest": "58fcc9468fe1f60716a71caef50fce70a6d2d46f7a2c0d0f45f1f76dc7779625",
+            "locale": "es"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/Link/1078173696330",
+        "translatableContent": [
+          {
+            "key": "title",
+            "value": "Rizelune",
+            "digest": "35af6ab0adbd6420303eab846907e5d4ecff364372f8854e3348202822193f08",
+            "locale": "es"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/Link/1078173729098",
+        "translatableContent": [
+          {
+            "key": "title",
+            "value": "El ritual",
+            "digest": "cf401cffd81c8b148b19b215455ecdad84944923447447e934a1a0993d1eda42",
+            "locale": "es"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/Link/1078173761866",
+        "translatableContent": [
+          {
+            "key": "title",
+            "value": "Preguntas frecuentes",
+            "digest": "a3f351ce05807683563d43891b3e9d1d0c8ca20b647ad50ade5240f8d458b1c6",
+            "locale": "es"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/Link/1078173794634",
+        "translatableContent": [
+          {
+            "key": "title",
+            "value": "Contacto",
+            "digest": "771b96b0812dd393ffeac789c2b8da1b78c20530a7365dd8181b1e3580db063f",
+            "locale": "es"
+          }
+        ]
+      }
+    ]
+  }
+}

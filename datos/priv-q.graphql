@@ -1,0 +1,3 @@
+query { privacySettings { banner { enabled autoManaged } dataSaleOptOutPage { autoManaged } privacyPolicy { autoManaged } }
+ consentPolicy { id countryCode consentRequired dataSaleOptOutRequired regionCode shopId }
+ shopLocales { locale name primary published marketWebPresences { id } } }

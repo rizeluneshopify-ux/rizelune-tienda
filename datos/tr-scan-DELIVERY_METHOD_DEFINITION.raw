@@ -1,0 +1,567 @@
+<claude-code-hint v="1" type="plugin" value="shopify-ai-toolkit@claude-plugins-official" />
+Loading stored store auth ...
+[2K[1A[2K[G
+Executing GraphQL operation ...
+[2K[1A[2K[G
+╭─ success ────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  Operation succeeded.                                                        │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+{
+  "translatableResources": {
+    "nodes": [
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477325521226",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Estándar"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477325586762",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Estándar Internacional"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477325619530",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Estándar"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477325652298",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Estándar"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477707628874",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Envío estándar"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756191050",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756223818",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756256586",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756289354",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756322122",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756354890",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756387658",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756420426",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756453194",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756485962",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756518730",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756551498",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756584266",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756617034",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756649802",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756682570",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756715338",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756748106",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756780874",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756813642",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756846410",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756879178",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756911946",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756944714",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477756977482",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477757010250",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477757043018",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477757075786",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477757108554",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477757141322",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477757174090",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477757206858",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477757239626",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477757272394",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477757305162",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477757337930",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477757370698",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477757403466",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477757436234",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477757469002",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477757501770",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477757534538",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477757567306",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477757600074",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      },
+      {
+        "resourceId": "gid://shopify/DeliveryMethodDefinition/1477757632842",
+        "translatableContent": [
+          {
+            "key": "name",
+            "value": "Standard"
+          }
+        ],
+        "fr": [],
+        "pt": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,617 @@
+{{ 'rz-styles.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'rz-scripts.js' | asset_url }}" defer="defer"></script>
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg }};
+    color: {{ section.settings.fg }};
+  }
+  #shopify-section-{{ section.id }} .rz-h1,
+  #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size }}px; }
+  #shopify-section-{{ section.id }} .rz-body { font-size: {{ section.settings.body_size }}px; }
+  #shopify-section-{{ section.id }} .rz-head { text-align: {{ section.settings.text_align }}; }
+  #shopify-section-{{ section.id }} .rz-head .rz-eyebrow { justify-content: {% case section.settings.text_align %}{% when 'center' %}center{% when 'right' %}flex-end{% else %}flex-start{% endcase %}; }
+  @media (max-width: 749px) {
+    #shopify-section-{{ section.id }} { padding-top: {{ section.settings.padding_top | times: 0.65 | round }}px; padding-bottom: {{ section.settings.padding_bottom | times: 0.65 | round }}px; }
+    #shopify-section-{{ section.id }} .rz-h1,
+    #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size | times: 0.68 | round }}px; }
+  }
+  
+{%- endstyle -%}
+{%- assign v = product.selected_or_first_available_variant -%}
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<section class="rz-section" data-rz-product data-money-format="{{ shop.money_format | strip_html | escape }}">
+  <div class="rz-container">
+    <div class="rz-pdp">
+      <div class="rz-gallery" data-rz-gallery>
+        {%- assign imgs = product.media | where: 'media_type', 'image' -%}
+        {%- assign vids = product.media | where: 'media_type', 'video' -%}
+        {%- assign n_media = imgs.size | plus: vids.size -%}
+        <div class="rz-gallery__thumbs">
+          {%- if n_media > 1 -%}
+            {%- for m in product.media -%}
+              {%- if m.media_type == 'image' -%}
+                <button type="button" class="{% if forloop.first %}is-active{% endif %}" data-rz-thumb data-src="{{ m | image_url: width: 1400 }}" data-alt="{{ m.alt | default: product.title | escape }}" aria-label="{{ 'rizelune.view_photo' | t }} {{ forloop.index }}">
+                  {{ m | image_url: width: 180 | image_tag: loading: 'lazy', alt: '' }}
+                </button>
+              {%- elsif m.media_type == 'video' -%}
+                {%- assign vsrc = '' -%}
+                {%- for s in m.sources -%}{%- if s.mime_type == 'video/mp4' -%}{%- if vsrc == blank or s.height <= 1080 -%}{%- assign vsrc = s.url -%}{%- endif -%}{%- endif -%}{%- endfor -%}
+                {%- if vsrc != blank -%}
+                  <button type="button" class="rz-gallery__vthumb{% if forloop.first %} is-active{% endif %}" data-rz-thumb data-video="{{ vsrc }}" data-poster="{{ m.preview_image | image_url: width: 1400 }}" data-alt="{{ m.alt | default: product.title | escape }}" aria-label="{{ 'rizelune.view_video' | t }}">
+                    {{ m.preview_image | image_url: width: 180 | image_tag: loading: 'lazy', alt: '' }}
+                  </button>
+                {%- endif -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+        </div>
+        <div class="rz-gallery__main">
+          {%- if imgs.size > 0 -%}
+            {%- assign first = product.selected_or_first_available_variant.featured_media | default: imgs.first -%}
+            <img data-rz-main src="{{ first | image_url: width: 1400 }}" srcset="{{ first | image_url: width: 700 }} 700w, {{ first | image_url: width: 1400 }} 1400w" sizes="(min-width: 990px) 55vw, 100vw" alt="{{ first.alt | default: product.title | escape }}" width="1400" height="1400" loading="eager" fetchpriority="high">
+            {%- if vids.size > 0 -%}<video data-rz-main-video muted loop playsinline preload="none" hidden></video>{%- endif -%}
+          {%- else -%}
+            {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+      </div>
+
+      <div class="rz-pdp__info">
+        {%- if section.settings.eyebrow != blank -%}<span class="rz-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+        <h1 class="rz-h1">{{ product.title }}</h1>
+        {%- if section.settings.subtitulo != blank -%}<p class="rz-body" style="margin-top: -6px;">{{ section.settings.subtitulo }}</p>{%- endif -%}
+
+        <div class="rz-price">
+          <span class="rz-price__now" data-rz-price>{{ v.price | money }}</span>
+          <s class="rz-price__old" data-rz-compare>{% if v.compare_at_price > v.price %}{{ v.compare_at_price | money }}{% endif %}</s>
+          {%- if v.compare_at_price > v.price and section.settings.etiqueta != blank -%}
+            {%- assign ahorro = v.compare_at_price | minus: v.price | times: 100.0 | divided_by: v.compare_at_price | round -%}
+            <span class="rz-tag">{{ section.settings.etiqueta }} −{{ ahorro }}%</span>
+          {%- endif -%}
+        </div>
+        {% render 'rz-bf-suelto', p: product, precio: v.price %}
+        {%- if section.settings.nota_precio != blank -%}<p style="margin: -12px 0 20px; font-size: 13px; opacity: .65;">{{ section.settings.nota_precio }}</p>{%- endif -%}
+        {%- if section.settings.uso_texto != blank -%}<p class="rz-peruse">{% render 'rz-icon', name: 'gota' %}<span>{{ section.settings.uso_texto }}</span></p>{%- endif -%}
+        {%- if section.settings.mostrar_bienvenida and settings.rz_pop_activo -%}{%- unless customer -%}<button type="button" class="rz-welcome-link" data-rz-pop-link>{{ 'rizelune.pop_link' | t }} <span aria-hidden="true">→</span></button>{%- endunless -%}{%- endif -%}
+
+        {%- for block in section.blocks -%}{%- if block.type == '@app' -%}<div class="rz-app-block">{% render block %}</div>{%- endif -%}{%- endfor -%}
+
+        {%- if section.settings.intro != blank -%}<p class="rz-pdp__intro rz-body">{{ section.settings.intro | newline_to_br }}</p>{%- endif -%}
+
+        {%- assign feats = section.blocks | where: 'type', 'caracteristica' -%}
+        {%- if feats.size > 0 -%}
+          <ul class="rz-feats">
+            {%- for block in feats limit: 3 -%}
+              <li {{ block.shopify_attributes }}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>{{ block.settings.titulo }}</li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+
+        {%- unless product.has_only_default_variant -%}
+          {%- for option in product.options_with_values -%}
+            <div class="rz-variant">
+              <label for="rz-opt-{{ section.id }}-{{ forloop.index }}">{{ option.name }}</label>
+              <select id="rz-opt-{{ section.id }}-{{ forloop.index }}" data-rz-option>
+                {%- for value in option.values -%}
+                  <option value="{{ value | escape }}" {% if option.selected_value == value %}selected{% endif %}>{{ value }}</option>
+                {%- endfor -%}
+              </select>
+            </div>
+          {%- endfor -%}
+          <script type="application/json" data-rz-variants>{{ product.variants | json }}</script>
+        {%- endunless -%}
+
+        <div data-rz-buy-anchor>
+          {% render 'rz-buy-form', product: product, label: section.settings.boton, show_qty: true, packs: true, section_id: section.id, main: true %}
+        </div>
+
+        {% render 'rz-ritual-pack', product: product %}
+
+        {%- assign envio_t = section.settings.envio_texto -%}
+        {%- assign entrega_t = section.settings.entrega_texto -%}
+        {%- if envio_t != blank or entrega_t != blank -%}
+          <p class="rz-ship-note rz-ship-note--combo"{% if settings.rz_eta_activo and entrega_t != blank %} data-rz-eta data-min="{{ settings.rz_eta_min | default: 5 }}" data-max="{{ settings.rz_eta_max | default: 10 }}" data-tpl="{{ 'rizelune.eta_text' | t | escape }}"{% endif %}>
+            {% render 'rz-icon', name: 'camion' %}
+            <span class="rz-ship-note__txt">
+              {%- if envio_t != blank -%}<span>{{ envio_t }}</span>{%- endif -%}
+              {%- if envio_t != blank and entrega_t != blank -%}<span class="rz-ship-note__sep" aria-hidden="true"> · </span>{%- endif -%}
+              {%- if entrega_t != blank -%}<span data-rz-eta-text>{{ entrega_t }}</span>{%- endif -%}
+            </span>
+          </p>
+        {%- endif -%}
+
+        <ul class="rz-pdp__trust">
+          {%- for i in (1..3) -%}
+            {%- capture k_icon %}garantia_{{ i }}_icono{% endcapture -%}
+            {%- capture k_text %}garantia_{{ i }}_texto{% endcapture -%}
+            {%- if section.settings[k_text] != blank -%}<li>{% render 'rz-icon', name: section.settings[k_icon] %}{{ section.settings[k_text] }}</li>{%- endif -%}
+          {%- endfor -%}
+        </ul>
+
+        <div class="rz-acc">
+          {%- for block in section.blocks -%}{%- if block.type == 'desplegable' -%}
+            <details {{ block.shopify_attributes }}{% if block.settings.abierto %} open{% endif %}>
+              <summary>{{ block.settings.titulo }}</summary>
+              <div class="rz-acc__body">
+                {%- if block.settings.usar_descripcion -%}{{ product.description }}{%- else -%}{{ block.settings.contenido }}{%- endif -%}
+                {%- if block.settings.guia_gotas -%}{% render 'rz-gotas' %}{%- endif -%}
+              </div>
+            </details>
+          {%- endif -%}{%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {%- if section.settings.barra_fija -%}
+    <div class="rz-sticky-buy" data-rz-sticky>
+      <div class="rz-sticky-buy__info">
+        {%- if product.featured_image -%}{{ product.featured_image | image_url: width: 120 | image_tag: loading: 'lazy', alt: '' }}{%- endif -%}
+        <span>{{ product.title }}</span>
+        <strong data-rz-price>{{ v.price | money }}</strong>
+      </div>
+      <button type="button" class="rz-btn" data-rz-sticky-btn {% unless v.available %}disabled{% endunless %}>{{ section.settings.boton }}</button>
+    </div>
+  {%- endif -%}
+</section>
+
+<script type="application/ld+json">
+  {{ product | structured_data }}
+</script>
+
+{% schema %}
+{
+  "name": "Rizelune · Producto",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Textos"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo",
+      "default": "Ritual capilar de romero"
+    },
+    {
+      "type": "text",
+      "id": "subtitulo",
+      "label": "Subtítulo",
+      "default": "Para el cuero cabelludo y el cabello · 30 ml"
+    },
+    {
+      "type": "text",
+      "id": "etiqueta",
+      "label": "Etiqueta de oferta (se añade el % de descuento)",
+      "default": "Oferta"
+    },
+    {
+      "type": "text",
+      "id": "nota_precio",
+      "label": "Nota bajo el precio",
+      "default": "Impuestos incluidos."
+    },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Introducción",
+      "default": "Una mezcla de aceite de romero y aceite de menta que nutre el cuero cabelludo y devuelve fuerza y brillo a tu pelo desde la raíz. Aplícalo antes del lavado y déjalo actuar 15 minutos."
+    },
+    {
+      "type": "text",
+      "id": "boton",
+      "label": "Texto del botón de compra",
+      "default": "Añadir al carrito"
+    },
+    {
+      "type": "text",
+      "id": "uso_texto",
+      "label": "Precio por uso (bajo el precio)",
+      "info": "Ej.: «Menos de 0,40 € por uso · un frasco da para unos 75 usos». Déjalo vacío para no mostrarlo."
+    },
+    {
+      "type": "text",
+      "id": "envio_texto",
+      "label": "Aviso de envío bajo el botón",
+      "default": "Envío GRATIS desde 39,99 € · ¡con 2 frascos ya lo tienes!"
+    },
+    {
+      "type": "checkbox",
+      "id": "mostrar_bienvenida",
+      "label": "Enlace «−10 % en tu primera compra» bajo el precio",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "entrega_texto",
+      "label": "Plazo de entrega bajo el botón",
+      "default": "Normalmente lo recibes en una semana · como muy tarde, en 10 días laborables"
+    },
+    {
+      "type": "checkbox",
+      "id": "barra_fija",
+      "label": "Barra de compra fija al bajar",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Garantías bajo el botón"
+    },
+    {
+      "type": "select",
+      "id": "garantia_1_icono",
+      "label": "Garantía 1: icono",
+      "options": [
+        {
+          "value": "hoja",
+          "label": "Hoja"
+        },
+        {
+          "value": "gota",
+          "label": "Gota"
+        },
+        {
+          "value": "raiz",
+          "label": "Raíz"
+        },
+        {
+          "value": "brillo",
+          "label": "Brillo"
+        },
+        {
+          "value": "fuerza",
+          "label": "Fuerza (cabello)"
+        },
+        {
+          "value": "luna",
+          "label": "Luna"
+        },
+        {
+          "value": "reloj",
+          "label": "Reloj"
+        },
+        {
+          "value": "escudo",
+          "label": "Escudo"
+        },
+        {
+          "value": "candado",
+          "label": "Candado"
+        },
+        {
+          "value": "caja",
+          "label": "Caja"
+        },
+        {
+          "value": "eu",
+          "label": "Unión Europea"
+        },
+        {
+          "value": "corazon",
+          "label": "Corazón"
+        },
+        {
+          "value": "mensaje",
+          "label": "Mensaje"
+        },
+        {
+          "value": "camion",
+          "label": "Camión"
+        },
+        {
+          "value": "check",
+          "label": "Check"
+        }
+      ],
+      "default": "candado"
+    },
+    {
+      "type": "text",
+      "id": "garantia_1_texto",
+      "label": "Garantía 1: texto",
+      "default": "Pago 100% seguro"
+    },
+    {
+      "type": "select",
+      "id": "garantia_2_icono",
+      "label": "Garantía 2: icono",
+      "options": [
+        {
+          "value": "hoja",
+          "label": "Hoja"
+        },
+        {
+          "value": "gota",
+          "label": "Gota"
+        },
+        {
+          "value": "raiz",
+          "label": "Raíz"
+        },
+        {
+          "value": "brillo",
+          "label": "Brillo"
+        },
+        {
+          "value": "fuerza",
+          "label": "Fuerza (cabello)"
+        },
+        {
+          "value": "luna",
+          "label": "Luna"
+        },
+        {
+          "value": "reloj",
+          "label": "Reloj"
+        },
+        {
+          "value": "escudo",
+          "label": "Escudo"
+        },
+        {
+          "value": "candado",
+          "label": "Candado"
+        },
+        {
+          "value": "caja",
+          "label": "Caja"
+        },
+        {
+          "value": "eu",
+          "label": "Unión Europea"
+        },
+        {
+          "value": "corazon",
+          "label": "Corazón"
+        },
+        {
+          "value": "mensaje",
+          "label": "Mensaje"
+        },
+        {
+          "value": "camion",
+          "label": "Camión"
+        },
+        {
+          "value": "check",
+          "label": "Check"
+        }
+      ],
+      "default": "hoja"
+    },
+    {
+      "type": "text",
+      "id": "garantia_2_texto",
+      "label": "Garantía 2: texto",
+      "default": "Fórmula vegana"
+    },
+    {
+      "type": "select",
+      "id": "garantia_3_icono",
+      "label": "Garantía 3: icono",
+      "options": [
+        {
+          "value": "hoja",
+          "label": "Hoja"
+        },
+        {
+          "value": "gota",
+          "label": "Gota"
+        },
+        {
+          "value": "raiz",
+          "label": "Raíz"
+        },
+        {
+          "value": "brillo",
+          "label": "Brillo"
+        },
+        {
+          "value": "fuerza",
+          "label": "Fuerza (cabello)"
+        },
+        {
+          "value": "luna",
+          "label": "Luna"
+        },
+        {
+          "value": "reloj",
+          "label": "Reloj"
+        },
+        {
+          "value": "escudo",
+          "label": "Escudo"
+        },
+        {
+          "value": "candado",
+          "label": "Candado"
+        },
+        {
+          "value": "caja",
+          "label": "Caja"
+        },
+        {
+          "value": "eu",
+          "label": "Unión Europea"
+        },
+        {
+          "value": "corazon",
+          "label": "Corazón"
+        },
+        {
+          "value": "mensaje",
+          "label": "Mensaje"
+        },
+        {
+          "value": "camion",
+          "label": "Camión"
+        },
+        {
+          "value": "check",
+          "label": "Check"
+        }
+      ],
+      "default": "eu"
+    },
+    {
+      "type": "text",
+      "id": "garantia_3_texto",
+      "label": "Garantía 3: texto",
+      "default": "Fabricado en la UE"
+    },
+    {
+      "type": "header",
+      "content": "Colores"
+    },
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Color de fondo",
+      "default": "#F5EFE6"
+    },
+    {
+      "type": "color",
+      "id": "fg",
+      "label": "Color del texto",
+      "default": "#2F3B2E"
+    },
+    {
+      "type": "header",
+      "content": "Tipografía"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Alineación del encabezado",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Tamaño del título",
+      "min": 24,
+      "max": 72,
+      "step": 2,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "Tamaño del texto",
+      "min": 13,
+      "max": 26,
+      "step": 1,
+      "default": 17,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Espaciado"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espacio superior",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 48,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espacio inferior",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 88,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "caracteristica",
+      "name": "Característica",
+      "settings": [
+        {
+          "type": "text",
+          "id": "titulo",
+          "label": "Título",
+          "default": "Nutre"
+        },
+        {
+          "type": "text",
+          "id": "texto",
+          "label": "Texto",
+          "default": "Texto breve"
+        }
+      ]
+    },
+    {
+      "type": "desplegable",
+      "name": "Desplegable",
+      "settings": [
+        {
+          "type": "text",
+          "id": "titulo",
+          "label": "Título",
+          "default": "Modo de uso"
+        },
+        {
+          "type": "checkbox",
+          "id": "usar_descripcion",
+          "label": "Mostrar la descripción del producto del catálogo",
+          "default": false
+        },
+        {
+          "type": "richtext",
+          "id": "contenido",
+          "label": "Contenido",
+          "default": "<p>Escribe aquí el contenido.</p>"
+        },
+        {
+          "type": "checkbox",
+          "id": "abierto",
+          "label": "Abierto al cargar",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "guia_gotas",
+          "label": "Mostrar guía de gotas",
+          "default": false,
+          "info": "Las cantidades se cambian en Configuración del tema → Rizelune · Guía de gotas."
+        }
+      ]
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "max_blocks": 16,
+  "presets": [
+    {
+      "name": "Rizelune · Producto"
+    }
+  ]
+}
+{% endschema %}

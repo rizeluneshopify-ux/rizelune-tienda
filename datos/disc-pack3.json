@@ -1,0 +1,8 @@
+{ "d": {
+  "title": "Pack Ritual · 3 frascos",
+  "startsAt": "2026-10-20T00:00:00Z",
+  "minimumRequirement": { "quantity": { "greaterThanOrEqualToQuantity": "3" } },
+  "customerGets": { "value": { "discountAmount": { "amount": "18.98", "appliesOnEachItem": false } },
+                    "items": { "products": { "productsToAdd": ["gid://shopify/Product/16124464922954"] } } },
+  "combinesWith": { "productDiscounts": false, "orderDiscounts": false, "shippingDiscounts": true }
+} }

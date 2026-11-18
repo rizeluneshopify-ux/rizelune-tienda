@@ -1,0 +1,2 @@
+query { a: __type(name: "Market") { fields(includeDeprecated: true) { name type { name kind ofType { name } } } }
+ b: __type(name: "DeliveryOptionDefinition") { fields { name type { name kind ofType { name kind ofType { name } } } } } }

@@ -1,0 +1,15 @@
+# Pack de rutina (2 productos distintos): al comprar el producto A, el producto B lleva X € de descuento.
+# Variables (datos/disc-ritual-*.json): title, startsAt, a (gid Product A), b (gid Product B), amount (descuento en €, p. ej. "7.99")
+mutation($title: String!, $startsAt: DateTime!, $a: ID!, $b: ID!, $amount: Decimal!) {
+  discountAutomaticBxgyCreate(automaticBxgyDiscount: {
+    title: $title
+    startsAt: $startsAt
+    combinesWith: { productDiscounts: false, orderDiscounts: false, shippingDiscounts: true }
+    customerBuys: { value: { quantity: "1" }, items: { products: { productsToAdd: [$a] } } }
+    customerGets: { value: { discountOnQuantity: { quantity: "1", effect: { amount: $amount } } }, items: { products: { productsToAdd: [$b] } } }
+    usesPerOrderLimit: "1"
+  }) {
+    automaticDiscountNode { id }
+    userErrors { field message code }
+  }
+}

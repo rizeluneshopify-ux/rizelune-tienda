@@ -1,0 +1,8 @@
+query {
+  markets(first: 20) { nodes { id name handle status type
+    conditions { regionsCondition { regions(first: 20) { nodes { name ... on MarketRegionCountry { code } } } } } } }
+  deliveryProfiles(first: 10) { nodes { id name default
+    profileLocationGroups { locationGroup { id } locationGroupZones(first: 20) { nodes { zone { id name countries { code { countryCode restOfWorld } } }
+      methodDefinitions(first: 20) { nodes { id name active rateProvider { ... on DeliveryRateDefinition { id price { amount currencyCode } } }
+        methodConditions { field operator conditionCriteria { ... on MoneyV2 { amount currencyCode } ... on Weight { value unit } } } } } } } } } }
+}

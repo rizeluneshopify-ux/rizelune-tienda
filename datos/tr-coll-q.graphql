@@ -1,0 +1,1 @@
+query { r: translatableResource(resourceId: "gid://shopify/OnlineStoreThemeJsonTemplate/collection?theme_id=210260099402") { resourceId translatableContent { key value digest } } }

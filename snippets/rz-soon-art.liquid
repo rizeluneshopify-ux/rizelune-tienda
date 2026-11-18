@@ -1,0 +1,31 @@
+{%- comment -%} Dibujo del envase para productos «Próximamente». Parámetros: forma, color, uid {%- endcomment -%}
+{%- assign tapa = color | default: '#2F3B2E' -%}
+<svg class="rz-soon__art" viewBox="0 0 300 400" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="rzs-b-{{ uid }}" x1="0" x2="1"><stop offset="0" stop-color="#E9E2D6"/><stop offset=".45" stop-color="#FFFDF9"/><stop offset="1" stop-color="#DDD4C6"/></linearGradient>
+  </defs>
+  <ellipse cx="150" cy="338" rx="92" ry="12" fill="rgba(31,38,32,.16)"/>
+  {%- case forma -%}
+    {%- when 'tarro' -%}
+      <rect x="72" y="196" width="156" height="140" rx="22" fill="url(#rzs-b-{{ uid }})"/>
+      <rect x="66" y="158" width="168" height="48" rx="12" fill="{{ tapa }}"/>
+      <rect x="92" y="236" width="116" height="62" rx="6" fill="#F5EFE6"/>
+      <text x="150" y="273" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#2F3B2E">rizelune</text>
+    {%- when 'frasco' -%}
+      <rect x="118" y="74" width="64" height="70" rx="26" fill="#F5EFE6"/>
+      <rect x="124" y="136" width="52" height="34" rx="6" fill="{{ tapa }}"/>
+      <rect x="96" y="168" width="108" height="168" rx="24" fill="url(#rzs-b-{{ uid }})"/>
+      <rect x="110" y="214" width="80" height="74" rx="6" fill="#F5EFE6"/>
+      <text x="150" y="257" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#2F3B2E">rizelune</text>
+    {%- when 'tubo' -%}
+      <path d="M100 86 H200 L188 300 H112 Z" fill="url(#rzs-b-{{ uid }})"/>
+      <rect x="116" y="298" width="68" height="40" rx="8" fill="{{ tapa }}"/>
+      <rect x="114" y="150" width="72" height="80" rx="6" fill="#F5EFE6"/>
+      <text x="150" y="196" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#2F3B2E">rizelune</text>
+    {%- else -%}
+      <rect x="122" y="70" width="56" height="44" rx="10" fill="{{ tapa }}"/>
+      <rect x="98" y="108" width="104" height="230" rx="26" fill="url(#rzs-b-{{ uid }})"/>
+      <rect x="110" y="178" width="80" height="92" rx="6" fill="#F5EFE6"/>
+      <text x="150" y="230" text-anchor="middle" font-family="Georgia, serif" font-size="17" fill="#2F3B2E">rizelune</text>
+  {%- endcase -%}
+</svg>

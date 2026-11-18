@@ -1,0 +1,23 @@
+<claude-code-hint v="1" type="plugin" value="shopify-ai-toolkit@claude-plugins-official" />
+Loading stored store auth ...
+[2K[1A[2K[G
+Executing GraphQL operation ...
+[2K[1A[2K[G
+╭─ success ────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  Operation succeeded.                                                        │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+{
+  "translatableResources": {
+    "nodes": [
+      {
+        "resourceId": "gid://shopify/OnlineStoreThemeSettingsDataSections/210260099402",
+        "translatableContent": [],
+        "fr": [],
+        "pt": []
+      }
+    ]
+  }
+}

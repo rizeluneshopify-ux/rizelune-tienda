@@ -1,0 +1,9 @@
+{ "d": {
+  "title": "Pack Ritual: 2 frascos por 44,99 €",
+  "startsAt": "2026-10-20T00:00:00Z",
+  "endsAt": "2026-12-20T22:59:59Z",
+  "minimumRequirement": { "quantity": { "greaterThanOrEqualToQuantity": "2" } },
+  "customerGets": { "value": { "discountAmount": { "amount": "7.00", "appliesOnEachItem": false } },
+                    "items": { "products": { "productsToAdd": ["gid://shopify/Product/16124464922954"] } } },
+  "combinesWith": { "productDiscounts": false, "orderDiscounts": false, "shippingDiscounts": true }
+} }

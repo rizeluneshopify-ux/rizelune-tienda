@@ -1,0 +1,495 @@
+{
+  "markets": {
+    "nodes": [
+      {
+        "id": "gid://shopify/Market/125028073802",
+        "name": "España",
+        "handle": "es",
+        "status": "ACTIVE",
+        "type": "REGION",
+        "conditions": {
+          "regionsCondition": {
+            "regions": {
+              "nodes": [
+                {
+                  "name": "España",
+                  "code": "ES"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": "gid://shopify/Market/125046227274",
+        "name": "portugal",
+        "handle": "portugal",
+        "status": "ACTIVE",
+        "type": "REGION",
+        "conditions": {
+          "regionsCondition": {
+            "regions": {
+              "nodes": [
+                {
+                  "name": "Portugal",
+                  "code": "PT"
+                },
+                {
+                  "name": "Francia",
+                  "code": "FR"
+                },
+                {
+                  "name": "España",
+                  "code": "ES"
+                },
+                {
+                  "name": "Alemania",
+                  "code": "DE"
+                },
+                {
+                  "name": "Italia",
+                  "code": "IT"
+                },
+                {
+                  "name": "Países Bajos",
+                  "code": "NL"
+                },
+                {
+                  "name": "Irlanda",
+                  "code": "IE"
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
+  "deliveryProfiles": {
+    "nodes": [
+      {
+        "id": "gid://shopify/DeliveryProfile/151185981770",
+        "name": "Perfil general",
+        "default": true,
+        "profileLocationGroups": [
+          {
+            "locationGroup": {
+              "id": "gid://shopify/DeliveryLocationGroup/153353355594"
+            },
+            "locationGroupZones": {
+              "nodes": [
+                {
+                  "zone": {
+                    "id": "gid://shopify/DeliveryZone/730908885322",
+                    "name": "España",
+                    "countries": [
+                      {
+                        "code": {
+                          "countryCode": "ES",
+                          "restOfWorld": false
+                        }
+                      }
+                    ]
+                  },
+                  "methodDefinitions": {
+                    "nodes": [
+                      {
+                        "id": "gid://shopify/DeliveryMethodDefinition/1477325521226",
+                        "name": "Estándar",
+                        "active": true,
+                        "rateProvider": {
+                          "id": "gid://shopify/DeliveryRateDefinition/1400804442442",
+                          "price": {
+                            "amount": "6.99",
+                            "currencyCode": "EUR"
+                          }
+                        },
+                        "methodConditions": []
+                      },
+                      {
+                        "id": "gid://shopify/DeliveryMethodDefinition/1477325521226?source=RateRangeCondition&source_id=515310387530",
+                        "name": "Estándar",
+                        "active": true,
+                        "rateProvider": {
+                          "id": "gid://shopify/DeliveryRateDefinition/0?source=RateRangeCondition&source_id=515310387530",
+                          "price": {
+                            "amount": "0.0",
+                            "currencyCode": "EUR"
+                          }
+                        },
+                        "methodConditions": [
+                          {
+                            "field": "TOTAL_PRICE",
+                            "operator": "GREATER_THAN_OR_EQUAL_TO",
+                            "conditionCriteria": {
+                              "amount": "55.0",
+                              "currencyCode": "EUR"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "zone": {
+                    "id": "gid://shopify/DeliveryZone/731003519306",
+                    "name": "Francia y Portugal",
+                    "countries": [
+                      {
+                        "code": {
+                          "countryCode": "FR",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "PT",
+                          "restOfWorld": false
+                        }
+                      }
+                    ]
+                  },
+                  "methodDefinitions": {
+                    "nodes": [
+                      {
+                        "id": "gid://shopify/DeliveryMethodDefinition/1477707039050",
+                        "name": "Envío estándar",
+                        "active": true,
+                        "rateProvider": {
+                          "id": "gid://shopify/DeliveryRateDefinition/1401194545482",
+                          "price": {
+                            "amount": "6.0",
+                            "currencyCode": "EUR"
+                          }
+                        },
+                        "methodConditions": [
+                          {
+                            "field": "TOTAL_PRICE",
+                            "operator": "GREATER_THAN_OR_EQUAL_TO",
+                            "conditionCriteria": {
+                              "amount": "0.0",
+                              "currencyCode": "EUR"
+                            }
+                          },
+                          {
+                            "field": "TOTAL_PRICE",
+                            "operator": "LESS_THAN_OR_EQUAL_TO",
+                            "conditionCriteria": {
+                              "amount": "39.98",
+                              "currencyCode": "EUR"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "id": "gid://shopify/DeliveryMethodDefinition/1477707071818",
+                        "name": "Envío estándar",
+                        "active": true,
+                        "rateProvider": {
+                          "id": "gid://shopify/DeliveryRateDefinition/1401194578250",
+                          "price": {
+                            "amount": "2.99",
+                            "currencyCode": "EUR"
+                          }
+                        },
+                        "methodConditions": [
+                          {
+                            "field": "TOTAL_PRICE",
+                            "operator": "GREATER_THAN_OR_EQUAL_TO",
+                            "conditionCriteria": {
+                              "amount": "39.99",
+                              "currencyCode": "EUR"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "zone": {
+                    "id": "gid://shopify/DeliveryZone/730908950858",
+                    "name": "Internacional",
+                    "countries": [
+                      {
+                        "code": {
+                          "countryCode": "AE",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "AU",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "CA",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "CH",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "GB",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "HK",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "IL",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "JP",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "KR",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "MY",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "NO",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "NZ",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "SG",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "US",
+                          "restOfWorld": false
+                        }
+                      }
+                    ]
+                  },
+                  "methodDefinitions": {
+                    "nodes": [
+                      {
+                        "id": "gid://shopify/DeliveryMethodDefinition/1477325619530",
+                        "name": "Estándar",
+                        "active": true,
+                        "rateProvider": {
+                          "id": "gid://shopify/DeliveryRateDefinition/1400804540746",
+                          "price": {
+                            "amount": "12.99",
+                            "currencyCode": "EUR"
+                          }
+                        },
+                        "methodConditions": []
+                      }
+                    ]
+                  }
+                },
+                {
+                  "zone": {
+                    "id": "gid://shopify/DeliveryZone/730908918090",
+                    "name": "UE (Unión Europea)",
+                    "countries": [
+                      {
+                        "code": {
+                          "countryCode": "AT",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "BE",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "BG",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "CY",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "CZ",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "DE",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "DK",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "EE",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "FI",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "GR",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "HR",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "HU",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "IE",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "IT",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "LT",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "LU",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "LV",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "MT",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "NL",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "PL",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "RO",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "SE",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "SI",
+                          "restOfWorld": false
+                        }
+                      },
+                      {
+                        "code": {
+                          "countryCode": "SK",
+                          "restOfWorld": false
+                        }
+                      }
+                    ]
+                  },
+                  "methodDefinitions": {
+                    "nodes": [
+                      {
+                        "id": "gid://shopify/DeliveryMethodDefinition/1477325586762",
+                        "name": "Estándar Internacional",
+                        "active": true,
+                        "rateProvider": {
+                          "id": "gid://shopify/DeliveryRateDefinition/1400804507978",
+                          "price": {
+                            "amount": "8.99",
+                            "currencyCode": "EUR"
+                          }
+                        },
+                        "methodConditions": []
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

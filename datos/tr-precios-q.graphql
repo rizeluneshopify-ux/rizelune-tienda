@@ -1,0 +1,6 @@
+query {
+  a: translatableResource(resourceId: "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402") { ...R }
+  b: translatableResource(resourceId: "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402") { ...R }
+  c: translatableResource(resourceId: "gid://shopify/OnlineStoreThemeSectionGroup/header-group?theme_id=210260099402") { ...R }
+}
+fragment R on TranslatableResource { resourceId translatableContent { key value digest } fr: translations(locale: "fr") { key value outdated } pt: translations(locale: "pt-PT") { key value outdated } }

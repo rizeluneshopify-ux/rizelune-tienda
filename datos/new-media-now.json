@@ -1,0 +1,104 @@
+{
+  "product": {
+    "media": {
+      "nodes": [
+        {
+          "id": "gid://shopify/MediaImage/72567712547146",
+          "status": "READY",
+          "alt": "",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/8FokJuo_vpsS1tQuk28oXzg628iJzoUy.jpg?v=1792531083"
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/72567712579914",
+          "status": "READY",
+          "alt": "",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/YiBlMuQvXF86vtIW_QD1yrNWeu7swg6o.jpg?v=1792531083"
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/72567712612682",
+          "status": "READY",
+          "alt": "",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/PBt3-mreuHhmEcb8cBj7-E8jgGA6TdXh.jpg?v=1792531082"
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/72567726342474",
+          "status": "READY",
+          "alt": "Textura del aceite capilar Rizelune",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/tienda4_58a18756-e682-490d-9908-395846ddc931.webp?v=1792531182"
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/72567726375242",
+          "status": "READY",
+          "alt": "Hojas verdes frescas, ingrediente natural del aceite Rizelune",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/tienda3.jpg?v=1792531183"
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/72567726408010",
+          "status": "READY",
+          "alt": "Trenza de cabello castaño sano y brillante",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/tienda2_690e8ef2-aca7-4ff7-934b-e5c3ea18cd7a.webp?v=1792531182"
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/72567726440778",
+          "status": "READY",
+          "alt": "Ramas de romero fresco, ingrediente del aceite Rizelune",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/tienda_e6e1d42b-5601-4d2b-a5be-5089345fc309.webp?v=1792531183"
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/72567726473546",
+          "status": "READY",
+          "alt": "Aceite capilar de romero Rizelune: nutre, fortalece y devuelve el brillo",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/rizelune_3_2e41f041-482e-4fa7-9ef3-fbe788595b42.jpg?v=1792531183"
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/72567726506314",
+          "status": "READY",
+          "alt": "Aceite capilar Rizelune junto a una vela en un rincón cálido",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/Rincon_calido_con_aceite_capilar_de_romero_aef0b1f3-5076-4f9a-b410-02784b26216b.png?v=1792531185"
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/72567726539082",
+          "status": "READY",
+          "alt": "Aceite capilar de romero y menta Rizelune, frasco cuentagotas de 30 ml con su caja",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/rizelune_2_dd58caeb-1750-4e1b-85e2-7115c8546051.jpg?v=1792531183"
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/72567726571850",
+          "status": "READY",
+          "alt": "Mujer aplicándose el aceite de romero Rizelune en el cuero cabelludo",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/Rutina_nocturna_de_aceite_capilar_4ab9c9cd-d7cc-4ec9-8baf-78b018f2cd3f.png?v=1792531184"
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/72567726604618",
+          "status": "READY",
+          "alt": "Cabello largo y brillante tras usar el aceite de romero Rizelune",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/1090/8323/0538/files/Cabello_radiante_resultados_visibles_6b6ec872-5678-4108-a89a-24f357fc97f0.png?v=1792531184"
+          }
+        }
+      ]
+    }
+  }
+}

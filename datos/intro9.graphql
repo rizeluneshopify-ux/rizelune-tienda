@@ -1,0 +1,2 @@
+query { a: __type(name: "DeliveryFlatRateGroup") { fields { name type { name kind ofType { name } } } }
+ m: market(id: "gid://shopify/Market/125028073802") { delivery { shipping { optionDefinitions(first: 5) { nodes { ... on DeliveryFlatRateOptionDefinition { name includedLocations(first: 5) { nodes { id name } } rateGroups(first: 5) { nodes { __typename } } } } } } } } }

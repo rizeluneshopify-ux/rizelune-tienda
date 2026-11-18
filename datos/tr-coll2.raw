@@ -1,0 +1,265 @@
+<claude-code-hint v="1" type="plugin" value="shopify-ai-toolkit@claude-plugins-official" />
+Loading stored store auth ...
+[2K[1A[2K[G
+Executing GraphQL operation ...
+[2K[1A[2K[G
+╭─ success ────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  Operation succeeded.                                                        │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+{
+  "c": {
+    "resourceId": "gid://shopify/OnlineStoreThemeJsonTemplate/collection?theme_id=210260099402",
+    "translatableContent": [
+      {
+        "key": "section.collection.json.product-grid.rz_destino:3l1f5v5vdb2pr",
+        "value": "#rz-proximamente",
+        "digest": "667126957fa17570c65ad8ad95215044a21cd4d8eae839886bad2c8f7fa818b7"
+      },
+      {
+        "key": "section.collection.json.product-grid.p1.titulo:32tqkqwae15er",
+        "value": "Exfoliante capilar de romero y menta",
+        "digest": "d942a084e8c88ee058f4853dd128db98a112abcfe379c9d22a903185dacc1761"
+      },
+      {
+        "key": "section.collection.json.product-grid.p1.texto:2c1tly5ahq426",
+        "value": "Limpieza profunda para un cuero cabelludo fresco y sin residuos.",
+        "digest": "f9f3bae6989990f6822c56729a951da8709ff2027b28b527d7961d1aa7d7a787"
+      },
+      {
+        "key": "section.collection.json.product-grid.p1.etiqueta:ko89bc7bezdc",
+        "value": "Próximamente",
+        "digest": "f44cddb1bb0325b65ba93187ed1063fde2cb18d67cfc8bf47a3582fda0d56b56"
+      },
+      {
+        "key": "section.collection.json.product-grid.p1.aviso:2c1tlxufu8tr2",
+        "value": "Avísame cuando llegue",
+        "digest": "e0ed328568c167baf49f307d57df872223ef02d0e8c55618d470b6f21cb98b91"
+      },
+      {
+        "key": "section.collection.json.product-grid.p2.titulo:155s240zbt3kw",
+        "value": "Champú y acondicionador de keratina",
+        "digest": "6687959b8958d825d851ac78ed5a9b2889e0f53558a6e69f50faeb19b928ee33"
+      },
+      {
+        "key": "section.collection.json.product-grid.p2.texto:9qolxzya0xkd",
+        "value": "Para un pelo con más cuerpo, suave y con brillo.",
+        "digest": "7d2ed6d31cc61c58089970be0dcad2a20bf507376e929bd23241a2af8743f40e"
+      },
+      {
+        "key": "section.collection.json.product-grid.p2.etiqueta:3828zqon3z05v",
+        "value": "Próximamente",
+        "digest": "f44cddb1bb0325b65ba93187ed1063fde2cb18d67cfc8bf47a3582fda0d56b56"
+      },
+      {
+        "key": "section.collection.json.product-grid.p2.aviso:9qolxny8p9x9",
+        "value": "Avísame cuando llegue",
+        "digest": "e0ed328568c167baf49f307d57df872223ef02d0e8c55618d470b6f21cb98b91"
+      },
+      {
+        "key": "section.collection.json.product-grid.p3.titulo:29e489ekogr6p",
+        "value": "Mascarilla reparadora de keratina",
+        "digest": "382e1a50740b3f999fe4ad2656fbf1a07de16d9872adfdefb47e2a1b7ced5f1f"
+      },
+      {
+        "key": "section.collection.json.product-grid.p3.texto:26wtljei9c5ho",
+        "value": "Nutrición intensa para el pelo seco y dañado.",
+        "digest": "cda7f81b307bbc4b40d369fe871e04a5aa493a8fdbbf78f9f04aa9414ea427f1"
+      },
+      {
+        "key": "section.collection.json.product-grid.p3.etiqueta:1pfh026ybq6qa",
+        "value": "Próximamente",
+        "digest": "f44cddb1bb0325b65ba93187ed1063fde2cb18d67cfc8bf47a3582fda0d56b56"
+      },
+      {
+        "key": "section.collection.json.product-grid.p3.aviso:26wtlj3q6z0ik",
+        "value": "Avísame cuando llegue",
+        "digest": "e0ed328568c167baf49f307d57df872223ef02d0e8c55618d470b6f21cb98b91"
+      },
+      {
+        "key": "section.collection.json.proximamente.eyebrow:330gs03g3jer2",
+        "value": "Próximamente",
+        "digest": "f44cddb1bb0325b65ba93187ed1063fde2cb18d67cfc8bf47a3582fda0d56b56"
+      },
+      {
+        "key": "section.collection.json.proximamente.titulo:2t1l79nix4lkw",
+        "value": "Nuevos rituales <em>en camino</em>",
+        "digest": "6528831cd8d97f98183d3bcff47142fe9697f26ac45abc12a0b7d499cf985289"
+      },
+      {
+        "key": "section.collection.json.proximamente.texto:wsgpj21z8fm5",
+        "value": "Estamos preparando nuevos productos para cuidar tu pelo. Muy pronto podrás encontrarlos aquí.",
+        "digest": "ea8ea737c82a9181dbe577fe34124e1c61a61b26b7ee8d1405a81262d606743f"
+      },
+      {
+        "key": "section.collection.json.proximamente.aviso_titulo:3k1g2qx0k8xlp",
+        "value": "¿Quieres enterarte antes que nadie?",
+        "digest": "6e86e357b5d4ed8f86aff64cd251a0467c9dce096e8701075bea8b165505951c"
+      },
+      {
+        "key": "section.collection.json.proximamente.aviso_texto:2pb9u82nmymi8",
+        "value": "Déjanos tu email y te avisaremos en cuanto lleguen.",
+        "digest": "ee6760d76cb05368a1f93699ad853fedba630d6818f1674cab159abff3ac9f8c"
+      },
+      {
+        "key": "section.collection.json.proximamente.aviso_placeholder:1j06tr6wlrwh",
+        "value": "Tu email",
+        "digest": "30f2b96f0da262166b471560974963bd10ec4b7f1ab1192b43a4c20022062740"
+      },
+      {
+        "key": "section.collection.json.proximamente.aviso_boton:2pb9u8hlwoyje",
+        "value": "Avísame",
+        "digest": "6d7ddb84c41dbc68a96f384bee3a56350273e50b745ef09b8328104b58e937dd"
+      },
+      {
+        "key": "section.collection.json.proximamente.aviso_ok:jj746o8qhskm",
+        "value": "¡Hecho! Te avisaremos en cuanto estén disponibles.",
+        "digest": "a2637cc7f25bf31e467089e00cb46424bbd32a6fbb91b99741359f951395d6a7"
+      },
+      {
+        "key": "section.collection.json.proximamente.aviso_legal:2pb9u87edicxt",
+        "value": "Solo te escribiremos para contarte novedades. Puedes darte de baja cuando quieras.",
+        "digest": "2ced2629464568486add85e83c485571f243e0fe68b61ef28cfd034e8ff623e3"
+      },
+      {
+        "key": "section.collection.json.proximamente.aviso_etiqueta:3iy6csgtmzxm6",
+        "value": "proximamente",
+        "digest": "83a3a85c924cb329a28a86880d4b617f0c4bb9a75400d5f0f453fdc7121fabad"
+      }
+    ],
+    "fr": [
+      {
+        "key": "section.collection.json.proximamente.eyebrow:330gs03g3jer2"
+      },
+      {
+        "key": "section.collection.json.proximamente.titulo:2t1l79nix4lkw"
+      },
+      {
+        "key": "section.collection.json.proximamente.texto:wsgpj21z8fm5"
+      },
+      {
+        "key": "section.collection.json.proximamente.aviso_titulo:3k1g2qx0k8xlp"
+      },
+      {
+        "key": "section.collection.json.proximamente.aviso_texto:2pb9u82nmymi8"
+      },
+      {
+        "key": "section.collection.json.proximamente.aviso_placeholder:1j06tr6wlrwh"
+      },
+      {
+        "key": "section.collection.json.proximamente.aviso_boton:2pb9u8hlwoyje"
+      },
+      {
+        "key": "section.collection.json.proximamente.aviso_ok:jj746o8qhskm"
+      },
+      {
+        "key": "section.collection.json.proximamente.aviso_legal:2pb9u87edicxt"
+      }
+    ]
+  },
+  "h": {
+    "resourceId": "gid://shopify/OnlineStoreThemeSectionGroup/header-group?theme_id=210260099402",
+    "translatableContent": [
+      {
+        "key": "section.sections/header-group.json.announcement-bar.a1.text:347n6lgdb73c1",
+        "value": "🚚 Envío GRATIS en España a partir de 45 €",
+        "digest": "d4ae8737a9b9e5544a519902222209d4ad37c7bc25c77e75d0a4fada5a01a963"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.a1.link:347n6lg829470",
+        "value": "/products/rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo",
+        "digest": "9ccc605f8cc6987c0b644e2fb599f2823efc21cb378a9b877ed86c0fa1f16a58"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.a2.text:3vota34o25qhu",
+        "value": "Francia y Portugal: envío a solo 2,99 € desde 39,99 €",
+        "digest": "362db3cd2280b14634c4519d29392938efc47af0ef5e154ca3e2bb28293fb86c"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.a2.link:3vota34it4mnz",
+        "value": "/policies/shipping-policy",
+        "digest": "64928ae043b0d9287039dbd830c309b31ecdc58ab1322f6bafc63d3b65668ceb"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.a3.text:3paho6ziu7mar",
+        "value": "🌿 Fórmula vegana · Fabricado en la UE · Pago 100% seguro",
+        "digest": "e0f8f4b99be75ef84aa36b427ab0a841917c20aade0e8174f7d69fbc7d730713"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.a0.text:3alyshlij57j4",
+        "value": "🎁 10 % de descuento en tu primera compra con el código BIENVENIDA10",
+        "digest": "b902d154c12275b01c964da9e26c70c38d522c245f647fed4c88822074a62fc1"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.a0.link:3alyshlda1459",
+        "value": "/products/rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo",
+        "digest": "9ccc605f8cc6987c0b644e2fb599f2823efc21cb378a9b877ed86c0fa1f16a58"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.ap.text:3t1ostb14tpr4",
+        "value": "🎁 Packs: 2 frascos por 47,99 € o 3 por 64,99 € · envío GRATIS en España",
+        "digest": "b12a586a3e1f78cb3bd7cfecb09167c83c3d4d6762fd9522cfd82524a1dec64b"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.ap.link:3t1ostavvvlod",
+        "value": "/products/rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo",
+        "digest": "9ccc605f8cc6987c0b644e2fb599f2823efc21cb378a9b877ed86c0fa1f16a58"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.as.text:glq0dj8fmbqb",
+        "value": "✨ Muy pronto: nuevos productos para tu pelo · Descúbrelos",
+        "digest": "50ba779eee76d2ad3af12542380b4f16d46c627132c1d00380cc38232a3123b5"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.as.link:glq0dj36lcu6",
+        "value": "/collections/all",
+        "digest": "acd0b3f1859723f1f6d5f2af6252ae4bbb09d67fbe6dbf290ecb10db6c1f961c"
+      },
+      {
+        "key": "section.sections/header-group.json.header.logo_texto:2fhpdbl4uwhdf",
+        "value": "rizelune",
+        "digest": "8a3bcd09d7dce4588255c5801d5494a86798d19187a80973bfd86017a7c415cf"
+      }
+    ],
+    "fr": [
+      {
+        "key": "section.sections/header-group.json.announcement-bar.a1.text:347n6lgdb73c1"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.a1.text:347n6lgdb73c1"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.a2.text:3vota34o25qhu"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.a2.text:3vota34o25qhu"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.a3.text:3paho6ziu7mar"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.a3.text:3paho6ziu7mar"
+      },
+      {
+        "key": "section.sections/header-group.json.header.logo_texto:2fhpdbl4uwhdf"
+      },
+      {
+        "key": "section.sections/header-group.json.header.logo_texto:2fhpdbl4uwhdf"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.a0.text:3alyshlij57j4"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.a0.text:3alyshlij57j4"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.ap.text:3t1ostb14tpr4"
+      },
+      {
+        "key": "section.sections/header-group.json.announcement-bar.ap.text:3t1ostb14tpr4"
+      }
+    ]
+  }
+}

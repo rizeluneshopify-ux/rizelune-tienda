@@ -1,0 +1,371 @@
+<claude-code-hint v="1" type="plugin" value="shopify-ai-toolkit@claude-plugins-official" />
+Loading stored store auth ...
+[2K[1A[2K[G
+Executing GraphQL operation ...
+[2K[1A[2K[G
+╭─ success ────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  Operation succeeded.                                                        │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+{
+  "translatableResources": {
+    "nodes": [
+      {
+        "resourceId": "gid://shopify/OnlineStoreThemeSectionGroup/footer-group?theme_id=210260099402",
+        "translatableContent": [
+          {
+            "key": "section.sections/footer-group.json.footer.logo_texto:3fdiq8pvx9ohf",
+            "value": "rizelune"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.tagline:1sy4y8hcwyoix",
+            "value": "Rituales capilares sencillos, con ingredientes naturales, para cuidar tu pelo desde la raíz."
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c1_titulo:2kyqedqv99b9j",
+            "value": "Tienda"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c1_l1:1lghinpejiphh",
+            "value": "Sérum de romero y menta"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c1_u1:1lghinpejow8s",
+            "value": "/products/rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c1_l2:1lghinpejin46",
+            "value": "Cómo se usa"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c1_u2:1lghinpejos73",
+            "value": "/#rz-ritual"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c1_l3:1lghinpejinwn",
+            "value": "Ver productos"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c1_u3:1lghinpejouny",
+            "value": "/collections/all"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_titulo:2kypwwiexpv6s",
+            "value": "Información"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_l1:1lghinpduum06",
+            "value": "Contacto"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_u1:1lghinpduz97j",
+            "value": "/pages/contact"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_l2:1lghinpduul45",
+            "value": "Envíos"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_u2:1lghinpduz9zw",
+            "value": "/policies/shipping-policy"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_l3:1lghinpduunl0",
+            "value": "Devoluciones"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_u3:1lghinpduzasd",
+            "value": "/policies/refund-policy"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_l4:1lghinpduumw3",
+            "value": "Privacidad"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_u4:1lghinpduzbru",
+            "value": "/policies/privacy-policy"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_l5:1lghinpduupcy",
+            "value": "Aviso legal"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_u5:1lghinpduzckb",
+            "value": "/policies/legal-notice"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.contacto_titulo:uz29frf7wp5m",
+            "value": "Atención al cliente"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.contacto_texto:3suaedia0bwpj",
+            "value": "¿Tienes dudas? Escríbenos y te ayudamos."
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.email:1lghinr9nqb15",
+            "value": "rizeluneshopify@gmail.com"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.contacto_boton:3suaedlux63jx",
+            "value": "Formulario de contacto"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.copyright:2kzcb9ocuepo0",
+            "value": "Rizelune"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.cookies_url:1wvhfaa0ajkty",
+            "value": "/pages/politica-de-cookies"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.aviso_url:2kysbcrtty1lv",
+            "value": "/policies/legal-notice"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.nota:2ixdtl118tom9",
+            "value": "Todos los precios incluyen IVA."
+          }
+        ],
+        "fr": [
+          {
+            "key": "section.sections/footer-group.json.footer.logo_texto:3fdiq8pvx9ohf",
+            "value": "rizelune"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.tagline:1sy4y8hcwyoix",
+            "value": "Des rituels capillaires simples, aux ingrédients naturels, pour prendre soin de vos cheveux dès la racine."
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c1_titulo:2kyqedqv99b9j",
+            "value": "Boutique"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c1_l1:1lghinpejiphh",
+            "value": "Sérum romarin et menthe"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c1_l2:1lghinpejin46",
+            "value": "Mode d'emploi"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c1_l3:1lghinpejinwn",
+            "value": "Voir les produits"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_titulo:2kypwwiexpv6s",
+            "value": "Informations"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_l1:1lghinpduum06",
+            "value": "Contact"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_l2:1lghinpduul45",
+            "value": "Livraison"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_l3:1lghinpduunl0",
+            "value": "Retours"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_l4:1lghinpduumw3",
+            "value": "Confidentialité"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_l5:1lghinpduupcy",
+            "value": "Mentions légales"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.contacto_titulo:uz29frf7wp5m",
+            "value": "Service client"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.contacto_texto:3suaedia0bwpj",
+            "value": "Une question ? Écrivez-nous, nous vous aidons."
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.contacto_boton:3suaedlux63jx",
+            "value": "Formulaire de contact"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.copyright:2kzcb9ocuepo0",
+            "value": "Rizelune"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.nota:2ixdtl118tom9",
+            "value": "Tous les prix incluent la TVA."
+          }
+        ],
+        "pt": [
+          {
+            "key": "section.sections/footer-group.json.footer.logo_texto:3fdiq8pvx9ohf",
+            "value": "rizelune"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.tagline:1sy4y8hcwyoix",
+            "value": "Rituais capilares simples, com ingredientes naturais, para cuidar do seu cabelo desde a raiz."
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c1_titulo:2kyqedqv99b9j",
+            "value": "Loja"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c1_l1:1lghinpejiphh",
+            "value": "Sérum de alecrim e hortelã"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c1_l2:1lghinpejin46",
+            "value": "Como se usa"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c1_l3:1lghinpejinwn",
+            "value": "Ver produtos"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_titulo:2kypwwiexpv6s",
+            "value": "Informações"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_l1:1lghinpduum06",
+            "value": "Contacto"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_l2:1lghinpduul45",
+            "value": "Envios"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_l3:1lghinpduunl0",
+            "value": "Devoluções"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_l4:1lghinpduumw3",
+            "value": "Privacidade"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.c2_l5:1lghinpduupcy",
+            "value": "Aviso legal"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.contacto_titulo:uz29frf7wp5m",
+            "value": "Apoio ao cliente"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.contacto_texto:3suaedia0bwpj",
+            "value": "Tem dúvidas? Escreva-nos e ajudamos."
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.contacto_boton:3suaedlux63jx",
+            "value": "Formulário de contacto"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.copyright:2kzcb9ocuepo0",
+            "value": "Rizelune"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer.nota:2ixdtl118tom9",
+            "value": "Todos os preços incluem IVA."
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/OnlineStoreThemeSectionGroup/header-group?theme_id=210260099402",
+        "translatableContent": [
+          {
+            "key": "section.sections/header-group.json.announcement-bar.a1.text:347n6lgdb73c1",
+            "value": "🚚 Envío GRATIS en España a partir de 45 €"
+          },
+          {
+            "key": "section.sections/header-group.json.announcement-bar.a1.link:347n6lg829470",
+            "value": "/products/rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo"
+          },
+          {
+            "key": "section.sections/header-group.json.announcement-bar.a2.text:3vota34o25qhu",
+            "value": "Francia y Portugal: envío a solo 2,99 € desde 39,99 €"
+          },
+          {
+            "key": "section.sections/header-group.json.announcement-bar.a2.link:3vota34it4mnz",
+            "value": "/policies/shipping-policy"
+          },
+          {
+            "key": "section.sections/header-group.json.announcement-bar.a3.text:3paho6ziu7mar",
+            "value": "🌿 Fórmula vegana · Fabricado en la UE · Pago 100% seguro"
+          },
+          {
+            "key": "section.sections/header-group.json.announcement-bar.a0.text:3alyshlij57j4",
+            "value": "🎁 10 % de descuento en tu primera compra con el código BIENVENIDA10"
+          },
+          {
+            "key": "section.sections/header-group.json.announcement-bar.a0.link:3alyshlda1459",
+            "value": "/products/rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo"
+          },
+          {
+            "key": "section.sections/header-group.json.announcement-bar.ap.text:3t1ostb14tpr4",
+            "value": "🎁 Packs: 2 frascos por 47,99 € o 3 por 64,99 € · envío GRATIS en España"
+          },
+          {
+            "key": "section.sections/header-group.json.announcement-bar.ap.link:3t1ostavvvlod",
+            "value": "/products/rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo"
+          },
+          {
+            "key": "section.sections/header-group.json.header.logo_texto:2fhpdbl4uwhdf",
+            "value": "rizelune"
+          }
+        ],
+        "fr": [
+          {
+            "key": "section.sections/header-group.json.announcement-bar.a1.text:347n6lgdb73c1",
+            "value": "🎁 Jusqu'à 18,98 € d'économie avec le pack de 3 flacons"
+          },
+          {
+            "key": "section.sections/header-group.json.announcement-bar.a2.text:3vota34o25qhu",
+            "value": "France et Portugal : livraison à seulement 2,99 € dès 39,99 €"
+          },
+          {
+            "key": "section.sections/header-group.json.announcement-bar.a3.text:3paho6ziu7mar",
+            "value": "🌿 Formule vegan · Fabriqué dans l'UE · Paiement 100 % sécurisé"
+          },
+          {
+            "key": "section.sections/header-group.json.header.logo_texto:2fhpdbl4uwhdf",
+            "value": "rizelune"
+          },
+          {
+            "key": "section.sections/header-group.json.announcement-bar.a0.text:3alyshlij57j4",
+            "value": "🎁 -10 % sur votre première commande avec le code BIENVENIDA10"
+          },
+          {
+            "key": "section.sections/header-group.json.announcement-bar.ap.text:3t1ostb14tpr4",
+            "value": "🎁 Packs : 2 flacons pour 47,99 € ou 3 pour 64,99 € · livraison à 2,99 €"
+          }
+        ],
+        "pt": [
+          {
+            "key": "section.sections/header-group.json.announcement-bar.a1.text:347n6lgdb73c1",
+            "value": "🎁 Poupe até 18,98 € com o pack de 3 frascos"
+          },
+          {
+            "key": "section.sections/header-group.json.announcement-bar.a2.text:3vota34o25qhu",
+            "value": "Portugal e França: envio por apenas 2,99 € a partir de 39,99 €"
+          },
+          {
+            "key": "section.sections/header-group.json.announcement-bar.a3.text:3paho6ziu7mar",
+            "value": "🌿 Fórmula vegana · Fabricado na UE · Pagamento 100% seguro"
+          },
+          {
+            "key": "section.sections/header-group.json.header.logo_texto:2fhpdbl4uwhdf",
+            "value": "rizelune"
+          },
+          {
+            "key": "section.sections/header-group.json.announcement-bar.a0.text:3alyshlij57j4",
+            "value": "🎁 10 % de desconto na primeira compra com o código BIENVENIDA10"
+          },
+          {
+            "key": "section.sections/header-group.json.announcement-bar.ap.text:3t1ostb14tpr4",
+            "value": "🎁 Packs: 2 frascos por 47,99 € ou 3 por 64,99 € · envio a 2,99 €"
+          }
+        ]
+      }
+    ]
+  }
+}

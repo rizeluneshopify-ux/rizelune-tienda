@@ -1,0 +1,238 @@
+{
+ "panel/numeros": {
+  "actualizado": "2026-11-16T11:54:25Z",
+  "mes": "noviembre",
+  "pedidos_mes": 0,
+  "ventas_mes": 0,
+  "pendientes_envio": 0,
+  "pedidos_total": 1,
+  "ventas_total": 31.98,
+  "ultimo": {
+   "nombre": "#1001",
+   "fecha": "21 oct",
+   "importe": 31.98,
+   "estado": "enviado"
+  }
+ },
+ "panel/estado": {
+  "actualizado": "2026-11-16T11:54:25Z",
+  "items": [
+   {
+    "texto": "Envíos de Selfnamed bien",
+    "detalle": "revisado el 16 nov",
+    "nivel": "ok"
+   },
+   {
+    "texto": "Tienda sin errores",
+    "nivel": "ok"
+   },
+   {
+    "texto": "Black Week programada",
+    "detalle": "23–30 nov",
+    "nivel": "info"
+   }
+  ]
+ },
+ "tareas/t-facebook": {
+  "titulo": "Arreglar el canal de Facebook e Instagram",
+  "como": "Shopify te marca «Acción necesaria» en ese canal. Entra y sigue los pasos que te pide; sin eso no puedes lanzar anuncios en Black Week.",
+  "enlace": "https://admin.shopify.com/store/dfqp9i-am/settings/apps",
+  "enlace_txt": "Abrir canales de ventas",
+  "prioridad": 1,
+  "orden": 1,
+  "autor": "claude",
+  "hecha": false,
+  "creada": "2026-11-16T11:54:25Z"
+ },
+ "tareas/t-casilla": {
+  "titulo": "Quitar la casilla de marketing que sale marcada en el pago",
+  "como": "Configuración → Pago → Opciones de marketing: que la casilla no salga marcada de antemano. La ley de protección de datos pide que la marque el cliente.",
+  "enlace": "https://admin.shopify.com/store/dfqp9i-am/settings/checkout",
+  "enlace_txt": "Abrir ajustes de pago",
+  "prioridad": 1,
+  "orden": 2,
+  "autor": "claude",
+  "hecha": false,
+  "creada": "2026-11-16T11:54:25Z"
+ },
+ "tareas/t-mercados": {
+  "titulo": "Decidir qué hacer con Francia y Portugal",
+  "como": "Ahora solo vendes en España. Puedes desactivar ese mercado en Configuración → Mercados, o decirme «sí, desactívalos» y lo hago yo.",
+  "enlace": "https://admin.shopify.com/store/dfqp9i-am/settings/markets",
+  "enlace_txt": "Abrir mercados",
+  "prioridad": 2,
+  "orden": 3,
+  "autor": "claude",
+  "hecha": false,
+  "creada": "2026-11-16T11:54:25Z"
+ },
+ "tareas/t-dominio": {
+  "titulo": "Comprar tu dominio",
+  "como": "Un dominio propio (por ejemplo rizelune.es) da más confianza que rizelune.myshopify.com. Se compra en Configuración → Dominios.",
+  "enlace": "https://admin.shopify.com/store/dfqp9i-am/settings/domains",
+  "enlace_txt": "Abrir dominios",
+  "prioridad": 2,
+  "orden": 4,
+  "autor": "claude",
+  "hecha": false,
+  "creada": "2026-11-16T11:54:25Z"
+ },
+ "tareas/t-video": {
+  "titulo": "Grabar el vídeo del sérum",
+  "como": "Al sérum le queda un hueco en la galería. Mándamelo y lo subo.",
+  "prioridad": 2,
+  "orden": 5,
+  "autor": "claude",
+  "hecha": false,
+  "creada": "2026-11-16T11:54:25Z"
+ },
+ "tareas/t-merchant": {
+  "titulo": "Decidir si verificas tu edad en Google",
+  "como": "Sin verificarla no puedes usar Merchant Center, que es lo que enseña tus productos en Google Shopping.",
+  "enlace": "https://merchants.google.com",
+  "enlace_txt": "Abrir Merchant Center",
+  "prioridad": 3,
+  "orden": 6,
+  "autor": "claude",
+  "hecha": false,
+  "creada": "2026-11-16T11:54:25Z"
+ },
+ "tareas/t-historia": {
+  "titulo": "Contarme tu historia para «Sobre nosotros»",
+  "como": "Dos o tres frases de cómo empezaste y las añado a la página.",
+  "prioridad": 3,
+  "orden": 7,
+  "autor": "claude",
+  "hecha": false,
+  "creada": "2026-11-16T11:54:25Z"
+ },
+ "agenda/a-envios": {
+  "fecha": "diario",
+  "hora": "08:35",
+  "titulo": "Reviso los envíos de Selfnamed y pongo al día esta oficina",
+  "detalle": "Si Selfnamed cambia las tarifas, las dejo como estaban y te aviso.",
+  "quien": "claude"
+ },
+ "agenda/a-bw-inicio": {
+  "fecha": "2026-11-23",
+  "hora": "00:00",
+  "titulo": "Empieza la Black Week",
+  "detalle": "Salen solos la barra con cuenta atrás, el banner y los precios: Ritual Completo 79,99 € y Ritual Raíz 49,99 €.",
+  "quien": "auto",
+  "destacado": true,
+  "corto": "la Black Week"
+ },
+ "agenda/a-bw-revision": {
+  "fecha": "2026-11-23",
+  "hora": "09:30",
+  "titulo": "Compruebo que la Black Week ha arrancado bien",
+  "detalle": "Precios, descuentos en el carrito y banner.",
+  "quien": "claude"
+ },
+ "agenda/a-navidad": {
+  "fecha": "2026-11-27",
+  "hora": "18:00",
+  "titulo": "Preparo la campaña de Navidad",
+  "detalle": "Las ideas que elegiste (F, G, H y J), solo para España.",
+  "quien": "claude"
+ },
+ "agenda/a-bw-fin": {
+  "fecha": "2026-11-30",
+  "hora": "23:59",
+  "titulo": "Termina la Black Week",
+  "detalle": "Los precios vuelven solos a los normales.",
+  "quien": "auto"
+ },
+ "agenda/a-sorteo": {
+  "fecha": "2026-12-01",
+  "hora": "10:13",
+  "titulo": "Sorteo del pedido gratis de noviembre",
+  "detalle": "Sorteo entre los pedidos del 30 oct al 30 nov y te paso los pasos para devolverle el dinero al ganador.",
+  "quien": "claude"
+ },
+ "ofertas/o-raiz": {
+  "nombre": "Pack Ritual Raíz",
+  "detalle": "Sérum + exfoliante",
+  "precio": "52,99 €",
+  "antes": "60,98 €",
+  "estado": "activa",
+  "orden": 1
+ },
+ "ofertas/o-pelo-piel": {
+  "nombre": "Pack Pelo y Piel",
+  "detalle": "Sérum + aceite facial",
+  "precio": "56,99 €",
+  "antes": "64,98 €",
+  "estado": "activa",
+  "orden": 2
+ },
+ "ofertas/o-2-serums": {
+  "nombre": "2 sérums",
+  "detalle": "Descuento automático al llevar 2",
+  "precio": "49,99 €",
+  "antes": "55,98 €",
+  "estado": "activa",
+  "orden": 3
+ },
+ "ofertas/o-3-serums": {
+  "nombre": "3 sérums",
+  "detalle": "Descuento automático al llevar 3",
+  "precio": "66,99 €",
+  "antes": "83,97 €",
+  "estado": "activa",
+  "orden": 4
+ },
+ "ofertas/o-bienvenida": {
+  "nombre": "BIENVENIDA10",
+  "detalle": "10 % en la primera compra. No se suma a los packs.",
+  "precio": "−10 %",
+  "estado": "activa",
+  "orden": 5
+ },
+ "ofertas/o-bw-completo": {
+  "nombre": "Black Week · Ritual Completo",
+  "detalle": "Los tres productos",
+  "precio": "79,99 €",
+  "antes": "97,97 €",
+  "estado": "programada",
+  "cuando": "23–30 nov",
+  "orden": 6
+ },
+ "ofertas/o-bw-raiz": {
+  "nombre": "Black Week · Ritual Raíz",
+  "detalle": "Sérum + exfoliante",
+  "precio": "49,99 €",
+  "antes": "60,98 €",
+  "estado": "programada",
+  "cuando": "23–30 nov",
+  "orden": 7
+ },
+ "productos/p-serum": {
+  "nombre": "Sérum de Romero y Menta",
+  "precio": "27,99 €",
+  "galeria": 5,
+  "img": "serum",
+  "nota": "falta tu vídeo",
+  "url": "https://rizelune.myshopify.com/products/rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo",
+  "admin": "https://admin.shopify.com/store/dfqp9i-am/products/16124464922954",
+  "orden": 1
+ },
+ "productos/p-exfoliante": {
+  "nombre": "Exfoliante Capilar de Romero y Menta",
+  "precio": "32,99 €",
+  "galeria": 3,
+  "img": "exfoliante",
+  "url": "https://rizelune.myshopify.com/products/exfoliante-capilar-romero-menta",
+  "admin": "https://admin.shopify.com/store/dfqp9i-am/products/16152349638986",
+  "orden": 2
+ },
+ "productos/p-aceite": {
+  "nombre": "Aceite Facial con Bakuchiol",
+  "precio": "36,99 €",
+  "galeria": 5,
+  "img": "aceite",
+  "url": "https://rizelune.myshopify.com/products/aceite-facial-bakuchiol",
+  "admin": "https://admin.shopify.com/store/dfqp9i-am/products/16152368742730",
+  "orden": 3
+ }
+}

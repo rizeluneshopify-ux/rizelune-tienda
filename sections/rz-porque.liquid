@@ -1,0 +1,272 @@
+{%- comment -%}
+  «Nuestros productos»: sección interactiva de portada, justo encima de los packs.
+  Pestañas: una por bloque «Producto». Los bloques «Motivo» que van detrás de un «Producto» son sus motivos (el sérum lleva más; los otros, menos).
+  Cada pestaña en ordenador: foto · motivos (se abren al tocarlos, uno cada vez) · columna lateral.
+  Columna lateral: si el producto tiene «calculadora» (el sérum) → precio por uso (toda la cabeza / una zona, 1 frasco / pack de 3) + añadir + test.
+  Si no → precio, modo de uso corto, añadir, ver producto y su pack con el sérum (precio de Rizelune · Packs de rutina, también en Black Week).
+  Base de la calculadora: un frasco de 30 ml ≈ 600 gotas; 8 gotas toda la cabeza, 4–5 una zona. Siempre aproximado.
+  Botones de compra: initRitual (selector .rz-pq__ctas).
+{%- endcomment -%}
+{{ 'rz-styles.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  #shopify-section-{{ section.id }} { background: {{ section.settings.bg }}; color: {{ section.settings.fg }}; padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; }
+  @media (max-width: 749px) { #shopify-section-{{ section.id }} { padding-top: {{ section.settings.padding_top | times: 0.7 | round }}px; padding-bottom: {{ section.settings.padding_bottom | times: 0.7 | round }}px; } }
+  .rz-pq__head { text-align: center; max-width: 660px; margin: 0 auto 20px; }
+  .rz-pq__head .rz-eyebrow { justify-content: center; margin-bottom: 12px; }
+  .rz-pq__head .rz-h2 { font-size: clamp(28px, 3.4vw, 40px); margin-bottom: 8px; }
+  .rz-pq__intro { color: var(--rz-texto-suave); margin: 0; font-size: 15px; }
+  .rz-pq__tabs { display: flex; justify-content: center; gap: 8px; margin: 0 auto 20px; flex-wrap: wrap; }
+  .rz-pq__tab { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(47, 59, 46, .18); background: #fff; color: inherit; border-radius: 999px; padding: 9px 16px 9px 10px; font: inherit; font-size: 14.5px; font-weight: 500; cursor: pointer; transition: background .25s, color .25s, border-color .25s; }
+  .rz-pq__tab img { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; display: block; }
+  .rz-pq__tab[aria-selected="true"] { background: var(--rz-romero); color: var(--rz-crema); border-color: var(--rz-romero); }
+  .rz-pq__tab:focus-visible { outline: 2px solid #C8975A; outline-offset: 2px; }
+  @media (max-width: 520px) { .rz-pq__tab { font-size: 13px; padding: 7px 12px 7px 7px; } .rz-pq__tab img { width: 26px; height: 26px; } }
+  .rz-pq__layout { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 5fr) minmax(0, 4fr); gap: 20px; align-items: stretch; }
+  @media (max-width: 989px) { .rz-pq__layout { grid-template-columns: minmax(0, 1fr); max-width: 620px; margin: 0 auto; gap: 16px; } }
+  .rz-pq__photo { position: relative; border-radius: var(--rz-radio); overflow: hidden; background: var(--rz-crema-2); min-height: 100%; }
+  @media (max-width: 989px) { .rz-pq__photo { aspect-ratio: 16 / 10; min-height: 0; } }
+  .rz-pq__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .rz-pq__badge { position: absolute; left: 12px; bottom: 12px; display: inline-flex; gap: 6px; align-items: center; padding: 7px 12px; border-radius: 999px; background: rgba(245, 239, 230, .94); color: var(--rz-romero); font-size: 12.5px; font-weight: 500; }
+  .rz-pq__pname { font-family: var(--rz-serif); font-weight: 500; font-size: 20px; margin: 0 0 4px; line-height: 1.2; }
+  .rz-pq__reasons { display: grid; gap: 7px; align-content: start; }
+  .rz-pq__r { background: #fff; border-radius: 14px; border: 1px solid rgba(47, 59, 46, .08); overflow: hidden; transition: box-shadow .3s; }
+  .rz-pq__r.is-open { box-shadow: 0 12px 26px -22px rgba(31, 38, 32, .5); border-color: rgba(200, 151, 90, .45); }
+  .rz-pq__rbtn { width: 100%; display: grid; grid-template-columns: 32px minmax(0, 1fr) 20px; gap: 10px; align-items: center; padding: 9px 12px; background: none; border: 0; cursor: pointer; text-align: left; color: inherit; font: inherit; }
+  .rz-pq__emoji { flex: none; width: 32px; height: 32px; border-radius: 10px; background: var(--rz-salvia); color: var(--rz-romero); display: grid; place-items: center; font-size: 16px; }
+  .rz-pq__emoji svg { width: 18px; height: 18px; }
+  .rz-pq__r.is-open .rz-pq__emoji { background: #f3e4cf; }
+  .rz-pq__rt { font-weight: 500; font-size: 14.5px; line-height: 1.3; }
+  .rz-pq__chev { width: 20px; height: 20px; border-radius: 50%; border: 1px solid rgba(47, 59, 46, .25); display: grid; place-items: center; font-size: 13px; line-height: 1; transition: transform .3s; }
+  .rz-pq__r.is-open .rz-pq__chev { transform: rotate(45deg); }
+  .rz-pq__rtxt { padding: 0 12px 11px 54px; font-size: 13.5px; line-height: 1.5; color: var(--rz-texto-suave); }
+  @media (max-width: 520px) { .rz-pq__rtxt { padding-left: 12px; } }
+  .rz-pq__side { display: grid; gap: 12px; align-content: start; }
+  .rz-pq__calc, .rz-pq__box { background: var(--rz-romero); color: var(--rz-crema); border-radius: var(--rz-radio-s); padding: 14px 16px; display: grid; gap: 10px; }
+  .rz-pq__calc h3, .rz-pq__box h3 { font-family: var(--rz-serif); font-weight: 500; font-size: 17px; margin: 0; color: var(--rz-crema); }
+  .rz-pq__seg { display: flex; flex-wrap: wrap; gap: 5px; }
+  .rz-pq__seg button { border: 1px solid rgba(245, 239, 230, .35); background: transparent; color: var(--rz-crema); border-radius: 999px; padding: 5px 10px; font: inherit; font-size: 12.5px; cursor: pointer; }
+  .rz-pq__seg button[aria-pressed="true"] { background: var(--rz-crema); color: var(--rz-romero); border-color: var(--rz-crema); font-weight: 500; }
+  .rz-pq__out { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+  .rz-pq__big { font-family: var(--rz-serif); font-size: 32px; line-height: 1; color: #E5C18F; font-variant-numeric: tabular-nums; }
+  .rz-pq__unit { font-size: 12.5px; }
+  .rz-pq__cafe { font-size: 12px; padding: 3px 10px; border-radius: 999px; background: rgba(245, 239, 230, .14); justify-self: start; }
+  .rz-pq__note { margin: 0; font-size: 10.5px; opacity: .65; line-height: 1.4; }
+  .rz-pq__uso { margin: 0; font-size: 13.5px; line-height: 1.45; opacity: .92; }
+  .rz-pq__packline { margin: 0; font-size: 13px; padding: 8px 10px; border-radius: 10px; background: rgba(245, 239, 230, .1); line-height: 1.4; }
+  .rz-pq__packline a { color: #E5C18F; font-weight: 500; text-underline-offset: 3px; }
+  .rz-pq__ctas { display: grid; gap: 8px; }
+  .rz-pq__ctas .rz-btn { padding: 12px 16px; font-size: 14px; width: 100%; }
+  .rz-pq__link { justify-self: center; font-size: 13.5px; font-weight: 500; color: inherit; text-underline-offset: 3px; }
+  .rz-pq__err { margin: 0; text-align: center; font-size: 12.5px; color: #a23b2a; }
+{%- endstyle -%}
+{%- capture bf_on -%}{%- render 'rz-bf-on' -%}{%- endcapture -%}
+{%- assign n_prod = 0 -%}
+{%- for b in section.blocks -%}{%- if b.type == 'producto' and b.settings.producto != blank -%}{%- assign n_prod = n_prod | plus: 1 -%}{%- endif -%}{%- endfor -%}
+{%- if n_prod > 0 -%}
+  <section class="rz-pq" id="{{ section.settings.ancla | default: section.id }}" data-rz-pq>
+    <div class="rz-container">
+      <header class="rz-pq__head rz-reveal">
+        {%- if section.settings.eyebrow != blank -%}<span class="rz-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+        <h2 class="rz-h2">{{ section.settings.titulo }}</h2>
+        {%- if section.settings.texto != blank -%}<p class="rz-pq__intro">{{ section.settings.texto }}</p>{%- endif -%}
+      </header>
+
+      <div class="rz-pq__tabs" role="tablist" aria-label="{{ section.settings.titulo | strip_html | escape }}">
+        {%- assign first_tab = true -%}
+        {%- for b in section.blocks -%}
+          {%- if b.type != 'producto' or b.settings.producto == blank -%}{%- continue -%}{%- endif -%}
+          {%- assign bp = b.settings.producto -%}
+          <button type="button" class="rz-pq__tab" role="tab" id="rz-pqt-{{ b.id }}" aria-controls="rz-pqp-{{ b.id }}" aria-selected="{% if first_tab %}true{% else %}false{% endif %}" tabindex="{% if first_tab %}0{% else %}-1{% endif %}" {{ b.shopify_attributes }}>
+            {%- if bp.featured_image -%}{{ bp.featured_image | image_url: width: 80 | image_tag: loading: 'lazy', alt: '' }}{%- endif -%}
+            <span>{{ b.settings.pestana | default: bp.title }}</span>
+          </button>
+          {%- assign first_tab = false -%}
+        {%- endfor -%}
+      </div>
+
+      {%- assign first_panel = true -%}
+      {%- for b in section.blocks -%}
+        {%- if b.type != 'producto' or b.settings.producto == blank -%}{%- continue -%}{%- endif -%}
+        {%- assign bp = b.settings.producto -%}
+        {%- assign vb = bp.selected_or_first_available_variant -%}
+        {%- assign img = b.settings.imagen | default: bp.featured_image -%}
+        {%- assign start = forloop.index -%}
+        <div class="rz-pq__panel" role="tabpanel" id="rz-pqp-{{ b.id }}" aria-labelledby="rz-pqt-{{ b.id }}"{% unless first_panel %} hidden{% endunless %}
+          {%- if b.settings.calculadora %} data-calc data-p1="{{ vb.price }}"{% assign p3 = settings.rz_pack3_precio | default: '0' | replace: ',', '.' | strip | times: 100 | round %}{% if p3 > 0 %} data-p3="{{ p3 | divided_by: 3 }}"{% else %} data-p3="{{ vb.price }}"{% endif %} data-uf="{{ section.settings.usos_cabeza }}" data-uz="{{ section.settings.usos_zona }}"{% endif %}>
+          <div class="rz-pq__layout">
+            <div class="rz-pq__photo">
+              {%- if img -%}{{ img | image_url: width: 900 | image_tag: loading: 'lazy', alt: bp.title, widths: '400,600,900', sizes: '(min-width: 990px) 340px, 92vw' }}{%- endif -%}
+              {%- if b.settings.badge != blank -%}<span class="rz-pq__badge">{{ b.settings.badge }}</span>{%- endif -%}
+            </div>
+
+            <div class="rz-pq__reasons" data-rz-pq-reasons>
+              <h3 class="rz-pq__pname">{{ bp.title }}</h3>
+              {%- assign first_r = true -%}
+              {%- for m in section.blocks offset: start -%}
+                {%- if m.type == 'producto' -%}{%- break -%}{%- endif -%}
+                <div class="rz-pq__r{% if first_r %} is-open{% endif %}" {{ m.shopify_attributes }}>
+                  <button type="button" class="rz-pq__rbtn" aria-expanded="{% if first_r %}true{% else %}false{% endif %}" aria-controls="rz-pq-{{ m.id }}">
+                    {%- if m.settings.icono != blank or m.settings.emoji != blank -%}<span class="rz-pq__emoji" aria-hidden="true">{%- if m.settings.icono != blank -%}{% render 'rz-icon', name: m.settings.icono %}{%- else -%}{{ m.settings.emoji }}{%- endif -%}</span>{%- endif -%}
+                    <span class="rz-pq__rt">{{ m.settings.titulo }}</span>
+                    <span class="rz-pq__chev" aria-hidden="true">+</span>
+                  </button>
+                  <div class="rz-pq__rtxt" id="rz-pq-{{ m.id }}"{% unless first_r %} hidden{% endunless %}>{{ m.settings.texto }}</div>
+                </div>
+                {%- assign first_r = false -%}
+              {%- endfor -%}
+            </div>
+
+            <div class="rz-pq__side">
+              {%- if b.settings.calculadora -%}
+                <div class="rz-pq__calc">
+                  <h3>{{ section.settings.calc_titulo }}</h3>
+                  <div class="rz-pq__seg" role="group" aria-label="Cómo lo usas">
+                    <button type="button" data-zona="f" aria-pressed="true">Toda la cabeza</button>
+                    <button type="button" data-zona="z" aria-pressed="false">Una zona</button>
+                  </div>
+                  <div class="rz-pq__seg" role="group" aria-label="Cómo lo compras">
+                    <button type="button" data-compra="1" aria-pressed="true">1 frasco</button>
+                    {%- if p3 > 0 -%}<button type="button" data-compra="3" aria-pressed="false">Pack de 3</button>{%- endif -%}
+                  </div>
+                  {%- assign por_uso = vb.price | divided_by: section.settings.usos_cabeza -%}
+                  <div class="rz-pq__out" aria-live="polite">
+                    <span class="rz-pq__big" data-pq-precio>{{ por_uso | money }}</span>
+                    <span class="rz-pq__unit" data-pq-usos>por uso · unos {{ section.settings.usos_cabeza }} usos (estimación)</span>
+                  </div>
+                  <span class="rz-pq__cafe">{{ section.settings.calc_cafe }}</span>
+                  <p class="rz-pq__note">{{ section.settings.calc_nota }}</p>
+                </div>
+              {%- else -%}
+                <div class="rz-pq__box">
+                  <h3>{{ vb.price | money }}</h3>
+                  {% render 'rz-bf-suelto', p: bp, precio: vb.price, oscuro: true %}
+                  {%- if b.settings.uso != blank -%}<p class="rz-pq__uso">{{ b.settings.uso }}</p>{%- endif -%}
+                  {%- if b.settings.pack != 'no' and settings.rz_pack_producto != blank -%}
+                    {%- capture pre %}rz_ritual{{ b.settings.pack }}_{% endcapture -%}
+                    {%- assign k_p = pre | append: 'precio' -%}{%- assign k_bf = pre | append: 'precio_bf' -%}
+                    {%- assign sv = settings.rz_pack_producto.selected_or_first_available_variant -%}
+                    {%- assign sep = sv.price | plus: vb.price -%}
+                    {%- assign pp = settings[k_p] | default: '0' | replace: ',', '.' | strip | times: 100 | round -%}
+                    {%- if bf_on == '1' and settings[k_bf] != blank -%}{%- assign pbf = settings[k_bf] | replace: ',', '.' | strip | times: 100 | round -%}{%- if pbf > 0 and pbf < pp -%}{%- assign pp = pbf -%}{%- endif -%}{%- endif -%}
+                    {%- if pp <= 0 or pp > sep -%}{%- assign pp = sep -%}{%- endif -%}
+                    {%- capture nombre_k %}rizelune.ritual{{ b.settings.pack }}_name{% endcapture -%}
+                    <p class="rz-pq__packline">Con el sérum, en pack: <strong>{{ nombre_k | t }} {{ pp | money }}</strong>{% if pp < sep %} (por separado {{ sep | money }}){% endif %} · <a href="#rz-packs">Ver packs</a></p>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+
+              <div class="rz-pq__ctas">
+                {%- if bp.available -%}
+                  {%- capture items -%}[{"id":{{ vb.id }},"quantity":1}]{%- endcapture -%}
+                  <button type="button" class="rz-btn" data-rz-ritual data-items='{{ items }}'>{{ section.settings.boton }} · {{ vb.price | money }}</button>
+                {%- endif -%}
+                {%- if b.settings.calculadora and settings.rz_quiz_activo -%}<button type="button" class="rz-btn rz-btn--ghost" data-rz-quiz-open>{{ section.settings.boton_test }}</button>{%- endif -%}
+                {%- unless b.settings.calculadora -%}<a class="rz-pq__link" href="{{ bp.url }}">{{ section.settings.ver_txt }} →</a>{%- endunless -%}
+                <p class="rz-pq__err" data-rz-ritual-err hidden>{{ 'rizelune.ritual_error' | t }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {%- assign first_panel = false -%}
+      {%- endfor -%}
+    </div>
+  </section>
+  <script>
+    (function () {
+      var root = document.currentScript && document.currentScript.previousElementSibling;
+      if (!root || !root.hasAttribute('data-rz-pq')) return;
+      var tabs = [].slice.call(root.querySelectorAll('.rz-pq__tab'));
+      function abrir(t, foco) {
+        tabs.forEach(function (x) { var on = x === t; x.setAttribute('aria-selected', on ? 'true' : 'false'); x.tabIndex = on ? 0 : -1; var p = document.getElementById(x.getAttribute('aria-controls')); if (p) p.hidden = !on; });
+        if (foco) t.focus();
+      }
+      tabs.forEach(function (t, i) {
+        t.addEventListener('click', function () { abrir(t); });
+        t.addEventListener('keydown', function (e) {
+          var k = e.key, j = i;
+          if (k === 'ArrowRight') j = (i + 1) % tabs.length; else if (k === 'ArrowLeft') j = (i - 1 + tabs.length) % tabs.length; else return;
+          e.preventDefault(); abrir(tabs[j], true);
+        });
+      });
+      root.addEventListener('click', function (e) {
+        var b = e.target.closest('.rz-pq__rbtn');
+        if (b) {
+          var list = b.closest('[data-rz-pq-reasons]'), item = b.parentElement, abierto = item.classList.contains('is-open');
+          list.querySelectorAll('.rz-pq__r').forEach(function (r) { r.classList.remove('is-open'); r.querySelector('.rz-pq__rbtn').setAttribute('aria-expanded', 'false'); r.querySelector('.rz-pq__rtxt').hidden = true; });
+          if (!abierto) { item.classList.add('is-open'); b.setAttribute('aria-expanded', 'true'); item.querySelector('.rz-pq__rtxt').hidden = false; }
+          return;
+        }
+        var z = e.target.closest('[data-zona]'), c = e.target.closest('[data-compra]');
+        if (!z && !c) return;
+        var panel = e.target.closest('[data-calc]'); if (!panel) return;
+        if (z) panel.setAttribute('data-zona', z.getAttribute('data-zona'));
+        if (c) panel.setAttribute('data-compra', c.getAttribute('data-compra'));
+        calc(panel);
+      });
+      var fmt = function (c) { return (c / 100).toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €'; };
+      function calc(panel) {
+        var zona = panel.getAttribute('data-zona') || 'f', compra = panel.getAttribute('data-compra') || '1';
+        var usos = zona === 'f' ? (+panel.getAttribute('data-uf') || 75) : (+panel.getAttribute('data-uz') || 130);
+        var precio = compra === '3' ? +panel.getAttribute('data-p3') : +panel.getAttribute('data-p1');
+        panel.querySelector('[data-pq-precio]').textContent = fmt(Math.round(precio / usos));
+        panel.querySelector('[data-pq-usos]').textContent = 'por uso · unos ' + usos + ' usos (estimación)';
+        panel.querySelectorAll('[data-zona]').forEach(function (x) { x.setAttribute('aria-pressed', x.getAttribute('data-zona') === zona ? 'true' : 'false'); });
+        panel.querySelectorAll('[data-compra]').forEach(function (x) { x.setAttribute('aria-pressed', x.getAttribute('data-compra') === compra ? 'true' : 'false'); });
+      }
+      root.querySelectorAll('[data-calc]').forEach(calc);
+    })();
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Rizelune · Por qué",
+  "tag": "div",
+  "class": "rz-pq-section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Antetítulo", "default": "Encuentra tu producto" },
+    { "type": "text", "id": "titulo", "label": "Título (admite <em>)", "default": "Nuestros <em>productos</em>" },
+    { "type": "textarea", "id": "texto", "label": "Texto", "default": "Tres productos para un mismo ritual. Toca cada uno para ver por qué te va a gustar." },
+    { "type": "header", "content": "Calculadora (pestaña con «calculadora»)" },
+    { "type": "text", "id": "calc_titulo", "label": "Título", "default": "¿Cuánto te cuesta cada uso?" },
+    { "type": "number", "id": "usos_cabeza", "label": "Usos por frasco · toda la cabeza", "default": 75 },
+    { "type": "number", "id": "usos_zona", "label": "Usos por frasco · una zona", "default": 130 },
+    { "type": "text", "id": "calc_cafe", "label": "Comparación", "default": "Menos de lo que cuesta un café" },
+    { "type": "text", "id": "calc_nota", "label": "Nota", "default": "Aproximado: un frasco de 30 ml tiene unas 600 gotas (8 por uso en toda la cabeza, 4–5 en una zona)." },
+    { "type": "text", "id": "boton", "label": "Botón de compra", "default": "Añadir" },
+    { "type": "text", "id": "boton_test", "label": "Botón del test", "default": "Haz el test: tus gotas en 1 minuto" },
+    { "type": "text", "id": "ver_txt", "label": "Texto «ver producto»", "default": "Ver producto" },
+    { "type": "text", "id": "ancla", "label": "Ancla (id)", "default": "rz-elige" },
+    { "type": "color", "id": "bg", "label": "Fondo", "default": "#F5EFE6" },
+    { "type": "color", "id": "fg", "label": "Texto", "default": "#2F3B2E" },
+    { "type": "range", "id": "padding_top", "label": "Espacio arriba", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 64 },
+    { "type": "range", "id": "padding_bottom", "label": "Espacio abajo", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 64 }
+  ],
+  "blocks": [
+    {
+      "type": "producto",
+      "name": "Producto (pestaña)",
+      "settings": [
+        { "type": "product", "id": "producto", "label": "Producto" },
+        { "type": "text", "id": "pestana", "label": "Nombre corto en la pestaña" },
+        { "type": "image_picker", "id": "imagen", "label": "Foto (si no, la del producto)" },
+        { "type": "text", "id": "badge", "label": "Etiqueta sobre la foto" },
+        { "type": "checkbox", "id": "calculadora", "label": "Mostrar la calculadora de precio por uso (solo el sérum)", "default": false },
+        { "type": "text", "id": "uso", "label": "Modo de uso corto (si no hay calculadora)" },
+        { "type": "select", "id": "pack", "label": "Su pack con el sérum", "default": "no", "options": [{ "value": "no", "label": "Ninguno" }, { "value": "1", "label": "Pack 1 · Ritual Raíz" }, { "value": "2", "label": "Pack 2 · Pelo y Piel" }] }
+      ]
+    },
+    {
+      "type": "motivo",
+      "name": "Motivo del producto",
+      "settings": [
+        { "type": "select", "id": "icono", "label": "Icono", "default": "hoja", "options": [{ "value": "", "label": "Ninguno" }, { "value": "hoja", "label": "Hoja" }, { "value": "gota", "label": "Gota" }, { "value": "raiz", "label": "Raíz" }, { "value": "brillo", "label": "Brillo" }, { "value": "fuerza", "label": "Fuerza" }, { "value": "luna", "label": "Luna" }, { "value": "reloj", "label": "Reloj" }, { "value": "escudo", "label": "Escudo" }, { "value": "corazon", "label": "Corazón" }, { "value": "eu", "label": "Hecho en la UE" }, { "value": "check", "label": "Check" }] },
+        { "type": "text", "id": "emoji", "label": "Emoji (si no hay icono)", "info": "Mejor dejarlo vacío: los iconos dan una imagen más seria." },
+        { "type": "text", "id": "titulo", "label": "Título" },
+        { "type": "textarea", "id": "texto", "label": "Texto" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Rizelune · Por qué", "blocks": [{ "type": "producto" }, { "type": "motivo" }, { "type": "motivo" }] }]
+}
+{% endschema %}

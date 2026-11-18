@@ -1,0 +1,168 @@
+{%- comment -%}
+  «Completa tu ritual»: bloque corto de portada que invita a sumar el exfoliante o el aceite facial al sérum, con 3 motivos y el precio del pack.
+  Cada bloque «Complemento» = un producto + su pack de Configuración del tema → Rizelune · Packs de rutina (1 = Ritual Raíz, 2 = Pelo y Piel).
+  Precio normal y de Black Week: los mismos ajustes que las tarjetas de packs (rz_ritualN_precio y rz_ritualN_precio_bf). El botón añade los dos productos (JS: initRitual).
+  El precio por separado nunca sale tachado (normativa europea de precios): se muestra como «Por separado».
+{%- endcomment -%}
+{{ 'rz-styles.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  #shopify-section-{{ section.id }} { background: {{ section.settings.bg }}; color: {{ section.settings.fg }}; padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; }
+  @media (max-width: 749px) { #shopify-section-{{ section.id }} { padding-top: {{ section.settings.padding_top | times: 0.65 | round }}px; padding-bottom: {{ section.settings.padding_bottom | times: 0.65 | round }}px; } }
+  .rz-comp__head { text-align: center; max-width: 640px; margin: 0 auto 34px; }
+  .rz-comp__head .rz-eyebrow { justify-content: center; }
+  .rz-comp__text { color: var(--rz-texto-suave); margin: 0; }
+  .rz-comp__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  @media (max-width: 899px) { .rz-comp__grid { grid-template-columns: minmax(0, 1fr); max-width: 580px; margin: 0 auto; } }
+  .rz-comp__card { display: grid; grid-template-columns: 150px minmax(0, 1fr); grid-template-areas: "media top" "media rest"; column-gap: 20px; row-gap: 0; align-items: start; padding: 20px; background: #fff; border-radius: var(--rz-radio); border: 1px solid rgba(47, 59, 46, .08); box-shadow: 0 14px 34px -26px rgba(31, 38, 32, .45); }
+  @media (max-width: 520px) { .rz-comp__card { grid-template-columns: 84px minmax(0, 1fr); grid-template-areas: "media top" "rest rest"; column-gap: 14px; row-gap: 14px; padding: 16px; } }
+  .rz-comp__media { grid-area: media; display: block; border-radius: var(--rz-radio-s); overflow: hidden; aspect-ratio: 1; background: var(--rz-crema-2); }
+  .rz-comp__top { grid-area: top; min-width: 0; }
+  .rz-comp__rest { grid-area: rest; min-width: 0; }
+  .rz-comp__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .rz-comp__tag { display: inline-block; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; font-weight: 500; color: var(--rz-romero-2); background: var(--rz-salvia); padding: 4px 10px; border-radius: 999px; margin-bottom: 10px; }
+  .rz-comp__name { font-family: var(--rz-serif); font-weight: 500; font-size: 21px; line-height: 1.2; margin: 0 0 4px; }
+  .rz-comp__name a { color: inherit; text-decoration: none; }
+  .rz-comp__sub { margin: 0 0 12px; font-size: 14px; color: var(--rz-texto-suave); }
+  @media (max-width: 520px) { .rz-comp__sub { margin-bottom: 0; } }
+  .rz-comp__list { list-style: none; margin: 0 0 16px; padding: 0; display: grid; gap: 8px; font-size: 14.5px; line-height: 1.45; }
+  .rz-comp__list li { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 10px; align-items: start; }
+  .rz-comp__ico { width: 20px; height: 20px; border-radius: 50%; background: var(--rz-salvia); color: var(--rz-romero); display: grid; place-items: center; margin-top: 1px; }
+  .rz-comp__ico svg { width: 11px; height: 11px; }
+  .rz-comp__buy { display: grid; gap: 10px; }
+  .rz-comp__price { margin: 0; display: grid; gap: 2px; }
+  .rz-comp__pack { font-size: 15px; }
+  .rz-comp__pack strong { font-size: 18px; font-weight: 600; }
+  .rz-comp__sep { font-size: 13px; color: var(--rz-texto-suave); }
+  .rz-comp__bf { justify-self: start; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; background: #141414; color: #fff; padding: 3px 8px; border-radius: 4px; margin-bottom: 4px; }
+  .rz-comp__btn { padding: 13px 24px; justify-self: start; }
+  @media (max-width: 520px) { .rz-comp__btn { justify-self: stretch; padding: 13px 16px; } .rz-comp__name { font-size: 18px; } }
+  .rz-comp__err { margin: 0; font-size: 13px; color: #a23b2a; }
+  .rz-comp__all { text-align: center; margin: 26px 0 0; font-size: 15px; }
+  .rz-comp__all .rz-comp__sep { font-size: 14px; }
+  .rz-comp__link { color: inherit; font-weight: 500; text-underline-offset: 3px; margin-left: 6px; white-space: nowrap; }
+{%- endstyle -%}
+{%- capture bf_on -%}{%- render 'rz-bf-on' -%}{%- endcapture -%}
+{%- assign serum = settings.rz_pack_producto -%}
+{%- capture ico -%}<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.2 4.2L19 7"/></svg>{%- endcapture -%}
+<section class="rz-comp" id="{{ section.settings.ancla | default: section.id }}">
+  <div class="rz-container">
+    <header class="rz-comp__head rz-reveal">
+      {%- if section.settings.eyebrow != blank -%}<span class="rz-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+      {%- if section.settings.titulo != blank -%}<h2 class="rz-h2">{{ section.settings.titulo }}</h2>{%- endif -%}
+      {%- if section.settings.texto != blank -%}<p class="rz-comp__text">{{ section.settings.texto }}</p>{%- endif -%}
+    </header>
+
+    <div class="rz-comp__grid">
+      {%- for block in section.blocks -%}
+        {%- assign comp = block.settings.producto -%}
+        {%- if comp == blank or serum == blank -%}{%- continue -%}{%- endif -%}
+        {%- unless comp.available and serum.available -%}{%- continue -%}{%- endunless -%}
+        {%- assign vs = serum.selected_or_first_available_variant -%}
+        {%- assign vc = comp.selected_or_first_available_variant -%}
+        {%- assign separado = vs.price | plus: vc.price -%}
+        {%- capture pre %}rz_ritual{{ block.settings.ritual }}_{% endcapture -%}
+        {%- assign k_p = pre | append: 'precio' -%}
+        {%- assign k_bf = pre | append: 'precio_bf' -%}
+        {%- assign precio = settings[k_p] | default: '0' | replace: ',', '.' | strip | times: 100 | round -%}
+        {%- assign es_bf = false -%}
+        {%- if bf_on == '1' and settings[k_bf] != blank -%}
+          {%- assign precio_bf = settings[k_bf] | replace: ',', '.' | strip | times: 100 | round -%}
+          {%- if precio_bf > 0 and precio_bf < precio -%}{%- assign precio = precio_bf -%}{%- assign es_bf = true -%}{%- endif -%}
+        {%- endif -%}
+        {%- if precio <= 0 or precio > separado -%}{%- assign precio = separado -%}{%- endif -%}
+        {%- assign ahorro = separado | minus: precio -%}
+        {%- assign img = block.settings.imagen | default: comp.featured_image -%}
+        <article class="rz-comp__card rz-reveal" {{ block.shopify_attributes }}>
+          <a class="rz-comp__media" href="{{ comp.url }}" tabindex="-1" aria-hidden="true">
+            {%- if img -%}{{ img | image_url: width: 400 | image_tag: loading: 'lazy', alt: '', widths: '200,300,400', sizes: '(min-width: 750px) 150px, 84px' }}{%- endif -%}
+          </a>
+          <div class="rz-comp__top">
+            {%- if block.settings.etiqueta != blank -%}<span class="rz-comp__tag">{{ block.settings.etiqueta }}</span>{%- endif -%}
+            <h3 class="rz-comp__name"><a href="{{ comp.url }}">{{ block.settings.titulo | default: comp.title }}</a></h3>
+            {%- if block.settings.subtitulo != blank -%}<p class="rz-comp__sub">{{ block.settings.subtitulo }}</p>{%- endif -%}
+          </div>
+          <div class="rz-comp__rest">
+            {%- assign motivos = block.settings.motivos | newline_to_br | split: '<br />' -%}
+            <ul class="rz-comp__list">
+              {%- for m in motivos -%}
+                {%- assign mm = m | strip -%}
+                {%- if mm != blank -%}<li><span class="rz-comp__ico">{{ ico }}</span><span>{{ mm }}</span></li>{%- endif -%}
+              {%- endfor -%}
+            </ul>
+            <div class="rz-comp__buy">
+              <p class="rz-comp__price">
+                {%- if es_bf -%}<span class="rz-comp__bf">{{ settings.rz_bf_etiqueta | default: 'Black Week' }}</span>{%- endif -%}
+                <span class="rz-comp__pack">{{ block.settings.pack_txt }}: <strong>{{ precio | money }}</strong></span>
+                <span class="rz-comp__sep">{{ section.settings.sep_txt }}: {{ separado | money }}{% if ahorro > 0 %} · {{ section.settings.ahorro_txt }} {{ ahorro | money }}{% endif %}</span>
+              </p>
+              {%- capture items -%}[{"id":{{ vs.id }},"quantity":1},{"id":{{ vc.id }},"quantity":1}]{%- endcapture -%}
+              <button type="button" class="rz-btn rz-comp__btn" data-rz-ritual data-items='{{ items }}'>{{ block.settings.boton | default: 'Añadir el pack' }}</button>
+              <p class="rz-comp__err" data-rz-ritual-err hidden>{{ 'rizelune.ritual_error' | t }}</p>
+            </div>
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.completo -%}
+      {%- assign pb3 = settings.rz_ritual3_b -%}
+      {%- assign pc3 = settings.rz_ritual3_c -%}
+      {%- if serum != blank and pb3 != blank and pc3 != blank and serum.available and pb3.available and pc3.available -%}
+        {%- assign sep3 = serum.selected_or_first_available_variant.price | plus: pb3.selected_or_first_available_variant.price | plus: pc3.selected_or_first_available_variant.price -%}
+        {%- assign precio3 = settings.rz_ritual3_precio | default: '0' | replace: ',', '.' | strip | times: 100 | round -%}
+        {%- if bf_on == '1' and settings.rz_ritual3_precio_bf != blank -%}
+          {%- assign p3bf = settings.rz_ritual3_precio_bf | replace: ',', '.' | strip | times: 100 | round -%}
+          {%- if p3bf > 0 and p3bf < precio3 -%}{%- assign precio3 = p3bf -%}{%- endif -%}
+        {%- endif -%}
+        {%- if precio3 <= 0 or precio3 > sep3 -%}{%- assign precio3 = sep3 -%}{%- endif -%}
+        <p class="rz-comp__all rz-reveal">
+          <span>{{ section.settings.completo_txt }}</span> <strong>{{ precio3 | money }}</strong>
+          <span class="rz-comp__sep">· {{ section.settings.sep_txt | downcase }} {{ sep3 | money }}</span>
+          {%- if section.settings.completo_url != blank -%}<a class="rz-comp__link" href="{{ section.settings.completo_url }}">{{ section.settings.completo_link }} →</a>{%- endif -%}
+        </p>
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Rizelune · Completa",
+  "tag": "div",
+  "class": "rz-comp-section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Antetítulo", "default": "Completa tu ritual" },
+    { "type": "text", "id": "titulo", "label": "Título (admite <em>)", "default": "El sérum, <em>mejor acompañado</em>" },
+    { "type": "textarea", "id": "texto", "label": "Texto", "default": "Dos productos que encajan con tu sérum de romero y menta. Juntos, en pack, pagas menos." },
+    { "type": "text", "id": "sep_txt", "label": "Texto «por separado»", "default": "Por separado" },
+    { "type": "text", "id": "ahorro_txt", "label": "Texto «ahorras»", "default": "ahorras" },
+    { "type": "checkbox", "id": "completo", "label": "Mostrar la línea del Ritual Completo (los tres)", "default": true },
+    { "type": "text", "id": "completo_txt", "label": "Texto del Ritual Completo", "default": "¿Los tres juntos? Ritual Completo:" },
+    { "type": "text", "id": "completo_link", "label": "Texto del enlace", "default": "Ver el pack" },
+    { "type": "text", "id": "completo_url", "label": "Enlace del Ritual Completo", "default": "/collections/ritual-completo" },
+    { "type": "text", "id": "ancla", "label": "Ancla (id)", "default": "rz-completa" },
+    { "type": "color", "id": "bg", "label": "Fondo", "default": "#EEF1EA" },
+    { "type": "color", "id": "fg", "label": "Texto", "default": "#2F3B2E" },
+    { "type": "range", "id": "padding_top", "label": "Espacio arriba", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 80 },
+    { "type": "range", "id": "padding_bottom", "label": "Espacio abajo", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 80 }
+  ],
+  "blocks": [
+    {
+      "type": "complemento",
+      "name": "Complemento",
+      "settings": [
+        { "type": "product", "id": "producto", "label": "Producto que se suma al sérum" },
+        { "type": "select", "id": "ritual", "label": "Pack (de Rizelune · Packs de rutina)", "default": "1", "options": [{ "value": "1", "label": "Pack 1 · Ritual Raíz" }, { "value": "2", "label": "Pack 2 · Pelo y Piel" }] },
+        { "type": "image_picker", "id": "imagen", "label": "Foto (si no, la del producto)" },
+        { "type": "text", "id": "etiqueta", "label": "Etiqueta", "default": "+ sérum = Ritual Raíz" },
+        { "type": "text", "id": "titulo", "label": "Nombre (si no, el del producto)" },
+        { "type": "text", "id": "subtitulo", "label": "Frase corta" },
+        { "type": "textarea", "id": "motivos", "label": "Motivos (uno por línea)" },
+        { "type": "text", "id": "pack_txt", "label": "Nombre del pack junto al precio", "default": "Ritual Raíz" },
+        { "type": "text", "id": "boton", "label": "Texto del botón", "default": "Añadir el pack" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Rizelune · Completa", "blocks": [{ "type": "complemento" }, { "type": "complemento" }] }]
+}
+{% endschema %}

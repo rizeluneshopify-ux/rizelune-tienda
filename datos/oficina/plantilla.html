@@ -1,0 +1,1243 @@
+<title>Oficina Rizelune</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap">
+<style>
+/* Mesa de trabajo: franja de cabecera en verde romero; debajo, columna principal (hoy, tareas, agenda) y columna lateral (apuntes, ofertas, productos, enlaces). En móvil todo en una columna. */
+:root {
+  --bg: #F5EFE6;
+  --surface: #FFFCF7;
+  --surface-2: #EDE4D6;
+  --line: #E0D6C6;
+  --fg: #2F3B2E;
+  --fg-soft: #5E6A5B;
+  --band: #2F3B2E;
+  --band-fg: #F5EFE6;
+  --band-soft: #B9C4AE;
+  --accent: #A8743A;
+  --accent-bg: #F3E4CF;
+  --sage: #DCE3D3;
+  --btn: #2F3B2E;
+  --btn-fg: #F5EFE6;
+  --ok: #3E7448;
+  --ok-bg: #E2EDDF;
+  --warn: #A55D17;
+  --warn-bg: #F6E3CC;
+  --info: #49657F;
+  --info-bg: #E1E8EE;
+  --danger: #A23B2A;
+  --serif: 'Lora', Georgia, 'Times New Roman', serif;
+  --sans: 'Jost', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --r: 16px;
+  --r-s: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #171C18; --surface: #20271F; --surface-2: #2A3229; --line: #364135;
+    --fg: #EEE7DA; --fg-soft: #AAB4A5; --band: #10140F; --band-fg: #EEE7DA; --band-soft: #9DAA93;
+    --accent: #DDAE72; --accent-bg: #3A3023; --sage: #2F3A2C; --btn: #DCE3D3; --btn-fg: #1A2019;
+    --ok: #8CC896; --ok-bg: #22362A; --warn: #E7A964; --warn-bg: #3B2C1C; --info: #9DBBD6; --info-bg: #222F3B; --danger: #F08C78;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #171C18; --surface: #20271F; --surface-2: #2A3229; --line: #364135;
+  --fg: #EEE7DA; --fg-soft: #AAB4A5; --band: #10140F; --band-fg: #EEE7DA; --band-soft: #9DAA93;
+  --accent: #DDAE72; --accent-bg: #3A3023; --sage: #2F3A2C; --btn: #DCE3D3; --btn-fg: #1A2019;
+  --ok: #8CC896; --ok-bg: #22362A; --warn: #E7A964; --warn-bg: #3B2C1C; --info: #9DBBD6; --info-bg: #222F3B; --danger: #F08C78;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a { color: inherit; }
+button, input, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+
+/* Cabecera */
+.band { background: var(--band); color: var(--band-fg); }
+.band .wrap { padding-block: 28px 30px; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 18px 32px; }
+.eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--band-soft); }
+.brand h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(30px, 5vw, 44px); line-height: 1.05; margin: 4px 0 6px; letter-spacing: -.01em; text-wrap: balance; }
+.brand h1 em { font-style: italic; color: var(--band-soft); }
+.today { color: var(--band-soft); font-size: 15px; }
+.today::first-letter { text-transform: uppercase; }
+.next { display: flex; align-items: center; gap: 14px; padding: 12px 16px; border: 1px solid color-mix(in srgb, var(--band-fg) 22%, transparent); border-radius: var(--r); min-width: 0; max-width: 100%; }
+.next__n { font-family: var(--serif); font-size: 36px; line-height: 1; font-variant-numeric: tabular-nums; }
+.next__t { font-size: 14px; line-height: 1.35; }
+.next__t strong { display: block; font-weight: 600; font-size: 15px; }
+.next__t span { color: var(--band-soft); }
+
+/* Rejilla */
+.grid { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: 28px; padding-block: 14px 56px; align-items: start; }
+.col { display: grid; gap: 28px; min-width: 0; }
+@media (max-width: 880px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+
+section h2 { font-family: var(--serif); font-weight: 500; font-size: 22px; margin: 0; letter-spacing: -.005em; }
+.sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+.sec-head small { color: var(--fg-soft); font-size: 13px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); }
+.muted { color: var(--fg-soft); }
+.empty { padding: 18px; color: var(--fg-soft); font-size: 14px; }
+
+/* Hoy */
+.pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 6px 10px; border-radius: 999px; font-size: 13.5px; background: var(--info-bg); color: var(--info); }
+.pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; flex: none; }
+.pill--ok { background: var(--ok-bg); color: var(--ok); }
+.pill--aviso { background: var(--warn-bg); color: var(--warn); }
+.pill b { font-weight: 600; }
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.stat { padding: 16px 18px; border-left: 1px solid var(--line); min-width: 0; }
+.stat:first-child { border-left: 0; }
+.stat dt { font-size: 12.5px; color: var(--fg-soft); letter-spacing: .02em; }
+.stat dd { margin: 4px 0 0; font-family: var(--serif); font-size: 28px; line-height: 1.1; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.stat dd small { display: block; font-family: var(--sans); font-size: 12.5px; color: var(--fg-soft); margin-top: 2px; }
+@media (max-width: 620px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } .stat:nth-child(3) { border-left: 0; } .stat:nth-child(n+3) { border-top: 1px solid var(--line); } }
+.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; padding: 10px 18px; border-top: 1px solid var(--line); font-size: 13px; color: var(--fg-soft); }
+
+/* Tareas */
+.tasks { list-style: none; margin: 0; padding: 0; }
+.task { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 12px; padding: 14px 16px; border-top: 1px solid var(--line); align-items: start; }
+.task:first-child { border-top: 0; }
+.check { appearance: none; width: 22px; height: 22px; margin: 2px 0 0; border: 1.5px solid var(--fg-soft); border-radius: 7px; background: var(--surface); cursor: pointer; display: grid; place-items: center; }
+.check:checked { background: var(--ok); border-color: var(--ok); }
+.check:checked::after { content: ""; width: 6px; height: 11px; border: solid var(--surface); border-width: 0 2.5px 2.5px 0; transform: translateY(-1px) rotate(45deg); }
+.check:disabled { cursor: default; opacity: .6; }
+.task__t { font-weight: 500; }
+.task__c { color: var(--fg-soft); font-size: 14px; margin-top: 2px; }
+.task__meta { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; margin-top: 8px; font-size: 13px; }
+.tag { padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 500; background: var(--surface-2); color: var(--fg-soft); }
+.tag--1 { background: var(--warn-bg); color: var(--warn); }
+.tag--2 { background: var(--sage); color: var(--fg); }
+.go { font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--accent); color: var(--fg); }
+.go:hover { color: var(--accent); }
+.task.is-done .task__t { text-decoration: line-through; text-decoration-thickness: 1.5px; color: var(--fg-soft); }
+.task.is-done .task__c { opacity: .7; }
+.tag--hecha { background: var(--ok-bg); color: var(--ok); }
+.del { border: 0; background: none; color: var(--fg-soft); cursor: pointer; padding: 2px 6px; border-radius: 6px; font-size: 13px; }
+.del:hover { color: var(--danger); }
+.del.is-armed { color: var(--surface); background: var(--danger); }
+.done-toggle { width: 100%; text-align: left; border: 0; border-top: 1px solid var(--line); background: none; padding: 12px 16px; color: var(--fg-soft); cursor: pointer; font-size: 14px; }
+.done-toggle:hover { color: var(--fg); }
+.add { display: flex; gap: 8px; padding: 12px 16px; border-top: 1px solid var(--line); background: var(--surface-2); border-radius: 0 0 var(--r) var(--r); }
+.add input { flex: 1; min-width: 0; padding: 9px 12px; border: 1px solid var(--line); border-radius: var(--r-s); background: var(--surface); }
+.btn { border: 0; border-radius: var(--r-s); padding: 9px 16px; background: var(--btn); color: var(--btn-fg); font-weight: 500; cursor: pointer; white-space: nowrap; }
+.btn:disabled { opacity: .5; cursor: default; }
+
+/* Ideas y recordatorios */
+.filters { display: flex; flex-wrap: wrap; gap: 6px; padding: 12px 16px; border-bottom: 1px solid var(--line); }
+.chip { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 5px 12px; font-size: 13px; cursor: pointer; color: var(--fg-soft); }
+.chip:hover { color: var(--fg); }
+.chip[aria-pressed="true"] { background: var(--btn); color: var(--btn-fg); border-color: var(--btn); }
+.chip b { font-weight: 600; margin-left: 5px; font-variant-numeric: tabular-nums; }
+.tag.tool { background: var(--info-bg); color: var(--info); }
+.when { color: var(--fg-soft); font-size: 12.5px; }
+.prompt { margin-top: 10px; }
+.prompt summary { cursor: pointer; font-size: 13.5px; font-weight: 500; width: fit-content; color: var(--accent); }
+.prompt__box { margin-top: 8px; border: 1px solid var(--line); border-radius: var(--r-s); background: var(--surface-2); }
+.prompt__note { padding: 10px 12px 0; font-size: 13px; color: var(--fg-soft); }
+.prompt__text { margin: 0; padding: 10px 12px; font: 13.5px/1.55 var(--sans); white-space: pre-wrap; overflow-wrap: anywhere; max-height: 220px; overflow: auto; }
+.prompt__bar { display: flex; justify-content: flex-end; gap: 10px; align-items: center; padding: 8px 12px; border-top: 1px solid var(--line); }
+.btn--s { padding: 6px 12px; font-size: 13px; }
+.copied { font-size: 12.5px; color: var(--ok); }
+
+/* Anuncios que funcionan */
+.ads { display: grid; gap: 16px; }
+.ad { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; min-width: 0; }
+.ad.is-done .ad__name { text-decoration: line-through; color: var(--fg-soft); }
+.ad__img { background: var(--surface-2); display: flex; justify-content: center; overflow-x: auto; }
+.ad__img img { display: block; height: 200px; width: auto; max-width: none; }
+.ad__body { padding: 14px 16px 16px; display: grid; gap: 10px; min-width: 0; }
+.ad__top { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.ad__name { font-family: var(--serif); font-weight: 500; font-size: 19px; margin: 0; text-wrap: balance; }
+.ad__why { margin: 0; font-size: 14.5px; }
+.ad details > summary { cursor: pointer; font-weight: 500; font-size: 14px; color: var(--accent); width: fit-content; }
+.ad ul { margin: 8px 0 0; padding-left: 18px; font-size: 14px; color: var(--fg-soft); display: grid; gap: 4px; }
+.ad .warn { margin: 8px 0 0; font-size: 13.5px; padding: 8px 10px; border-radius: var(--r-s); background: var(--warn-bg); color: var(--warn); }
+.ours { border-top: 1px dashed var(--line); padding-top: 12px; display: grid; gap: 8px; }
+.ours h4 { margin: 0; font-size: 15px; font-weight: 600; }
+.ours__meta { font-size: 13px; color: var(--fg-soft); }
+.ad__done { display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--fg-soft); cursor: pointer; margin-left: auto; }
+
+/* Producción de anuncios (dentro de la tarea) */
+.packs-all { margin-top: 10px; }
+.packs-all > summary { cursor: pointer; font-weight: 600; font-size: 14px; color: var(--accent); width: fit-content; }
+.packs { display: grid; gap: 8px; margin-top: 10px; }
+.pack { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--r-s); background: var(--surface); }
+.pack.is-done .pack__t { text-decoration: line-through; color: var(--fg-soft); }
+.pack details { min-width: 0; }
+.pack details > summary { cursor: pointer; list-style: none; }
+.pack details > summary::-webkit-details-marker { display: none; }
+.pack__t { font-weight: 500; }
+.pack__body { display: grid; gap: 8px; margin-top: 10px; font-size: 14px; min-width: 0; }
+.pack__from { color: var(--fg-soft); font-size: 13px; margin: 0; }
+
+/* Guía paso a paso (dentro de una tarea) */
+.gsec { padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--r-s); background: var(--surface); }
+.gsec > summary { cursor: pointer; font-weight: 500; }
+.gsteps { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 10px; }
+.gstep { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px; align-items: start; font-size: 14px; }
+.gstep.is-done .gstep__t { text-decoration: line-through; color: var(--fg-soft); }
+.gstep__d { color: var(--fg-soft); font-size: 13px; margin-top: 2px; overflow-wrap: anywhere; }
+.gdot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); margin: 7px 7px 0; }
+
+/* Pestañas y apartado Anuncios */
+.tabs { max-width: 1180px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 8px; padding-top: 16px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.tab { padding: 8px 16px; border-radius: 999px; text-decoration: none; font-weight: 500; font-size: 14.5px; border: 1px solid var(--line); background: var(--surface); color: var(--fg-soft); }
+.tab:hover { color: var(--fg); }
+.tab[aria-current="page"] { background: var(--btn); color: var(--btn-fg); border-color: var(--btn); }
+.hub { display: grid; gap: 30px; padding-block: 18px 64px; max-width: 880px; }
+.hub-title { font-family: var(--serif); font-weight: 500; font-size: clamp(26px, 4vw, 34px); margin: 0; text-wrap: balance; }
+.hub-intro { color: var(--fg-soft); margin: 6px 0 14px; max-width: 65ch; }
+.hub-nav { display: flex; flex-wrap: wrap; gap: 6px; }
+.hub-sec { scroll-margin-top: 12px; min-width: 0; }
+.hub-sec h3 { font-size: 15px; font-weight: 600; margin: 20px 0 10px; }
+.steps-n { list-style: none; margin: 0; padding: 0; counter-reset: paso; }
+.steps-n li { counter-increment: paso; display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 12px; padding: 12px 16px; border-top: 1px solid var(--line); font-size: 14.5px; }
+.steps-n li:first-child { border-top: 0; }
+.steps-n li::before { content: counter(paso); width: 26px; height: 26px; border-radius: 50%; background: var(--sage); color: var(--fg); display: grid; place-items: center; font-weight: 600; font-size: 13px; font-variant-numeric: tabular-nums; }
+.tools { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 640px) { .tools { grid-template-columns: minmax(0, 1fr); } }
+.tool-card { padding: 14px 16px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.tool-card__h { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; justify-content: space-between; }
+.tool-card h3 { margin: 0; font-size: 16px; }
+.tool-card__p { margin: 0; font-size: 14px; }
+.hub-list { padding: 14px 16px; margin: 0; }
+.dodont { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 640px) { .dodont { grid-template-columns: minmax(0, 1fr); } }
+.dd { padding: 14px 16px; }
+.dd h3 { margin: 0 0 8px; font-size: 15px; }
+.dd ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 14px; }
+.dd-no h3 { color: var(--danger); }
+.dd-si h3 { color: var(--ok); }
+.checklist { list-style: none; margin: 0; padding: 14px 16px; display: grid; gap: 10px; }
+.gloss-search { width: 100%; padding: 10px 14px; border: 1px solid var(--line); border-radius: var(--r-s); background: var(--surface); }
+.gloss-group h3 { margin: 18px 0 8px; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--fg-soft); font-weight: 500; }
+.gloss { margin: 0; }
+.gl { display: grid; grid-template-columns: minmax(120px, 190px) minmax(0, 1fr); gap: 4px 16px; padding: 12px 16px; border-top: 1px solid var(--line); }
+.gl:first-child { border-top: 0; }
+@media (max-width: 560px) { .gl { grid-template-columns: minmax(0, 1fr); } }
+.gl dt { font-weight: 600; }
+.gl dd { margin: 0; font-size: 14px; display: grid; gap: 4px; }
+.gl__tu { color: var(--accent); font-size: 13.5px; }
+.faq__item { border-top: 1px solid var(--line); padding: 12px 16px; }
+.faq__item:first-child { border-top: 0; }
+.faq__item summary { cursor: pointer; font-weight: 500; }
+.faq__item p { margin: 8px 0 0; font-size: 14px; color: var(--fg-soft); }
+
+/* Apartados e ideas */
+.vista { display: grid; gap: 28px; padding-block: 14px 56px; max-width: 880px; }
+.ideas { display: grid; gap: 12px; }
+.ideas-filtros { display: grid; gap: 8px; margin-bottom: 12px; }
+.ideas-filtros .row { display: flex; flex-wrap: wrap; gap: 6px; }
+.idea { padding: 14px 16px; display: grid; gap: 8px; min-width: 0; }
+.idea.is-off { opacity: .65; }
+.idea__t { font-weight: 600; font-size: 15.5px; margin: 0; text-wrap: balance; }
+.idea__d { margin: 0; font-size: 14.5px; }
+.idea__p { margin: 0; font-size: 13.5px; color: var(--fg-soft); }
+.idea__acts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px; }
+.idea__btn { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 5px 12px; font-size: 13px; cursor: pointer; color: var(--fg-soft); }
+.idea__btn:hover { color: var(--fg); }
+.idea__btn[aria-pressed="true"] { background: var(--btn); color: var(--btn-fg); border-color: var(--btn); }
+.idea__btn:disabled { cursor: default; opacity: .6; }
+.tag--alto { background: var(--ok-bg); color: var(--ok); }
+.tag--nueva { background: var(--accent-bg); color: var(--accent); }
+
+/* Agenda */
+.agenda { list-style: none; margin: 0; padding: 0; }
+.ag { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 14px; padding: 14px 16px; border-top: 1px solid var(--line); }
+.ag:first-child { border-top: 0; }
+.date { text-align: center; border-radius: var(--r-s); background: var(--surface-2); padding: 6px 4px; align-self: start; }
+.date b { display: block; font-family: var(--serif); font-size: 24px; line-height: 1; font-weight: 500; font-variant-numeric: tabular-nums; }
+.date span { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--fg-soft); }
+.date--daily b { font-size: 15px; font-family: var(--sans); font-weight: 600; padding-block: 5px 2px; }
+.ag.is-soon .date { background: var(--accent-bg); }
+.ag.is-soon .date b { color: var(--accent); }
+.ag__t { font-weight: 500; }
+.ag__d { color: var(--fg-soft); font-size: 14px; margin-top: 2px; }
+.ag__m { display: flex; flex-wrap: wrap; gap: 6px 10px; margin-top: 6px; font-size: 12.5px; color: var(--fg-soft); }
+.who { padding: 1px 8px; border-radius: 999px; font-weight: 500; }
+.who--auto { background: var(--info-bg); color: var(--info); }
+.who--claude { background: var(--accent-bg); color: var(--accent); }
+.who--tu { background: var(--warn-bg); color: var(--warn); }
+
+/* Apuntes */
+.notes textarea { display: block; width: 100%; min-height: 150px; resize: vertical; border: 0; background: transparent; padding: 14px 16px; line-height: 1.55; border-radius: var(--r) var(--r) 0 0; }
+.notes textarea:focus-visible { outline-offset: -2px; }
+.notes .foot { justify-content: space-between; }
+
+/* Ofertas */
+.offers { list-style: none; margin: 0; padding: 0; }
+.offer__c { display: block; margin-top: 4px; font-size: 12.5px; color: var(--ok); font-weight: 500; }
+.offer { display: flex; justify-content: space-between; gap: 12px; padding: 12px 16px; border-top: 1px solid var(--line); align-items: baseline; }
+.offer:first-child { border-top: 0; }
+.offer__n { font-weight: 500; }
+.offer__d { color: var(--fg-soft); font-size: 13px; }
+.offer__p { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.offer__p b { font-family: var(--serif); font-size: 18px; font-weight: 500; display: block; }
+.offer__p s { color: var(--fg-soft); font-size: 12.5px; }
+.state { display: inline-block; margin-top: 4px; font-size: 12px; font-weight: 500; padding: 1px 8px; border-radius: 999px; }
+.state--activa { background: var(--ok-bg); color: var(--ok); }
+.state--programada { background: var(--accent-bg); color: var(--accent); }
+.state--pausada { background: var(--surface-2); color: var(--fg-soft); }
+
+/* Productos */
+.prods { list-style: none; margin: 0; padding: 0; }
+.prod { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 14px; padding: 12px 16px; border-top: 1px solid var(--line); align-items: center; }
+.prod:first-child { border-top: 0; }
+.prod img, .prod .ph { width: 64px; height: 64px; border-radius: 12px; object-fit: cover; background: var(--surface-2); display: block; }
+.prod__n { font-weight: 500; line-height: 1.3; }
+.prod__m { font-size: 13px; color: var(--fg-soft); display: flex; flex-wrap: wrap; gap: 4px 10px; margin-top: 2px; }
+.prod__m b { color: var(--fg); font-weight: 600; font-variant-numeric: tabular-nums; }
+.slots { display: inline-flex; gap: 3px; vertical-align: middle; }
+.slots i { width: 7px; height: 7px; border-radius: 2px; background: var(--line); }
+.slots i.on { background: var(--fg-soft); }
+.prod__l { display: flex; gap: 14px; margin-top: 6px; font-size: 13px; }
+
+/* Enlaces */
+.links { padding: 6px 16px 14px; }
+.links h3 { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--fg-soft); font-weight: 500; margin: 12px 0 6px; }
+.links ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.links a { display: inline-block; padding: 7px 12px; border-radius: var(--r-s); background: var(--surface-2); text-decoration: none; font-size: 14px; }
+.links a:hover { background: var(--sage); }
+.links a.main { background: var(--btn); color: var(--btn-fg); }
+
+.status-line { font-size: 13px; color: var(--fg-soft); min-height: 1.2em; margin: 12px 0 0; }
+.status-line.is-err { color: var(--danger); }
+@media (prefers-reduced-motion: no-preference) { .task, .ag, .offer { transition: background-color .2s; } }
+</style>
+
+<header class="band">
+  <div class="wrap">
+    <div class="brand">
+      <div class="eyebrow">Tu oficina</div>
+      <h1>Rizelune <em>· mesa de trabajo</em></h1>
+      <div class="today" id="hoy-fecha"></div>
+    </div>
+    <div class="next" id="proximo" hidden>
+      <div class="next__n" id="proximo-n"></div>
+      <div class="next__t"><strong id="proximo-t"></strong><span id="proximo-d"></span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Apartados de la oficina">
+  <a class="tab" href="#hoy">Hoy</a>
+  <a class="tab" href="#ideas">Ideas</a>
+  <a class="tab" href="#agenda">Lo que viene</a>
+  <a class="tab" href="#anuncios">Anuncios</a>
+  <a class="tab" href="#tienda">Tienda</a>
+  <a class="tab" href="#apuntes">Apuntes</a>
+</nav>
+
+<main class="wrap" id="vista-oficina">
+  <p class="status-line" id="aviso" role="status"></p>
+  <div class="grid">
+    <div class="col">
+      <section id="hoy" aria-labelledby="h-hoy">
+        <div class="sec-head"><h2 id="h-hoy">Cómo va la tienda</h2><small id="num-act"></small></div>
+        <div class="pills" id="estado"></div>
+        <div class="panel">
+          <dl class="stats" id="numeros">
+            <div class="stat"><dt>Pedidos este mes</dt><dd>—</dd></div>
+            <div class="stat"><dt>Ventas este mes</dt><dd>—</dd></div>
+            <div class="stat"><dt>Por enviar</dt><dd>—</dd></div>
+            <div class="stat"><dt>Desde el inicio</dt><dd>—</dd></div>
+          </dl>
+          <div class="foot" id="ultimo"><span>Los números los actualizo yo cada mañana.</span></div>
+        </div>
+      </section>
+
+      <section id="tareas" aria-labelledby="h-tareas">
+        <div class="sec-head"><h2 id="h-tareas">Lo que te toca a ti</h2><small id="tareas-n"></small></div>
+        <div class="panel">
+          <ul class="tasks" id="lista-tareas"><li class="empty">Cargando tus tareas…</li></ul>
+          <form class="add" id="form-tarea" autocomplete="off">
+            <input id="nueva-tarea" aria-label="Nueva tarea" maxlength="160" placeholder="Apunta una tarea nueva">
+            <button class="btn" type="submit" id="btn-tarea">Añadir</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="ideas-sec" aria-labelledby="h-ideas">
+        <div class="sec-head"><h2 id="h-ideas">Ideas para Rizelune</h2><small id="ideas-n"></small></div>
+        <p class="hub-intro">Ideas y recomendaciones que voy encontrando. Marca las que te gusten y hablamos de ellas.</p>
+        <div class="ideas-filtros" id="ideas-filtros"></div>
+        <div class="ideas" id="lista-ideas"><div class="panel empty">Cargando las ideas…</div></div>
+      </section>
+
+      <section id="recordatorios" aria-labelledby="h-rec">
+        <div class="sec-head"><h2 id="h-rec">Recordatorios</h2><small id="rec-n"></small></div>
+        <div class="panel">
+          <div class="filters" id="rec-filtros" role="group" aria-label="Filtrar por tema"></div>
+          <ul class="tasks" id="lista-rec"><li class="empty">Cargando las ideas…</li></ul>
+        </div>
+      </section>
+
+      <section id="agenda" aria-labelledby="h-agenda">
+        <div class="sec-head"><h2 id="h-agenda">Lo que viene</h2><small>Hora de Madrid</small></div>
+        <div class="panel"><ul class="agenda" id="lista-agenda"><li class="empty">Cargando la agenda…</li></ul></div>
+      </section>
+    </div>
+
+    <aside class="col">
+      <section id="apuntes" aria-labelledby="h-apuntes">
+        <div class="sec-head"><h2 id="h-apuntes">Apuntes para Claude</h2></div>
+        <div class="panel notes">
+          <textarea id="notas" aria-label="Apuntes para Claude" placeholder="Ideas, encargos o dudas. Cuando me digas «mira tus apuntes», los leo y me pongo con ello."></textarea>
+          <div class="foot"><span id="notas-estado">Se guarda solo.</span><span id="notas-fecha"></span></div>
+        </div>
+      </section>
+
+      <section id="ofertas" aria-labelledby="h-ofertas">
+        <div class="sec-head"><h2 id="h-ofertas">Ofertas</h2><small>Te cuesta = Selfnamed + envío, con IVA · Te queda = lo que paga el cliente menos eso</small></div>
+        <div class="panel"><ul class="offers" id="lista-ofertas"><li class="empty">Cargando las ofertas…</li></ul></div>
+      </section>
+
+      <section id="productos" aria-labelledby="h-productos">
+        <div class="sec-head"><h2 id="h-productos">Productos</h2><small>Máx. 6 fotos o vídeos</small></div>
+        <div class="panel"><ul class="prods" id="lista-productos"><li class="empty">Cargando los productos…</li></ul></div>
+      </section>
+
+      <section id="enlaces" aria-labelledby="h-enlaces">
+        <div class="sec-head"><h2 id="h-enlaces">Accesos rápidos</h2></div>
+        <div class="panel links">
+          <h3>Tu tienda</h3>
+          <ul>
+            <li><a class="main" href="https://admin.shopify.com/store/dfqp9i-am/orders" target="_blank" rel="noopener">Pedidos</a></li>
+            <li><a href="https://rizelune.com" target="_blank" rel="noopener">Ver la tienda</a></li>
+            <li><a href="https://admin.shopify.com/store/dfqp9i-am/products" target="_blank" rel="noopener">Productos</a></li>
+            <li><a href="https://admin.shopify.com/store/dfqp9i-am/discounts" target="_blank" rel="noopener">Descuentos</a></li>
+            <li><a href="https://admin.shopify.com/store/dfqp9i-am/analytics" target="_blank" rel="noopener">Estadísticas</a></li>
+            <li><a href="https://admin.shopify.com/store/dfqp9i-am/themes/210260099402/editor" target="_blank" rel="noopener">Editor del tema</a></li>
+            <li><a href="https://admin.shopify.com/store/dfqp9i-am/settings" target="_blank" rel="noopener">Configuración</a></li>
+          </ul>
+          <h3>Proveedor y anuncios</h3>
+          <ul>
+            <li><a href="https://selfnamed.com" target="_blank" rel="noopener">Selfnamed</a></li>
+            <li><a href="https://business.facebook.com" target="_blank" rel="noopener">Meta Business Suite</a></li>
+            <li><a href="https://merchants.google.com" target="_blank" rel="noopener">Google Merchant Center</a></li>
+          </ul>
+          <h3>Tus documentos</h3>
+          <ul>
+            <li><a href="https://claude.ai/artifact/CigYEhLyNJn9HzTxyd6NHU" target="_blank" rel="noopener">Precios, costes y ganancias</a></li>
+            <li><a href="https://claude.ai/artifact/UDBmvdjqpzWL8wHfCbtzTJ" target="_blank" rel="noopener">Emails automáticos</a></li>
+            <li><a href="https://claude.ai/artifact/4Le8rJvpiSpf8jaqtBYSsx" target="_blank" rel="noopener">Ideas del curso de dropshipping</a></li>
+            <li><a href="https://claude.ai/artifact/6pUg3W2fLuRvEKo7MsitSg" target="_blank" rel="noopener">Productos con más margen</a></li>
+          </ul>
+          <h3>Claude</h3>
+          <ul>
+            <li><a class="main" href="https://claude.ai/code/session_01GQQUXThsaocGU8ot7mQUm1" target="_blank" rel="noopener">Hablar con Claude de la tienda</a></li>
+          </ul>
+        </div>
+      </section>
+    </aside>
+  </div>
+</main>
+
+<main class="wrap" id="vista-anuncios" hidden>
+  <div class="hub">
+    <header>
+      <h2 class="hub-title">Todo sobre tus anuncios</h2>
+      <p class="hub-intro">El plan, los prompts para crear los anuncios con IA, cómo editarlos, el presupuesto, lo que se puede decir y qué significa cada palabra. Todo en un sitio.</p>
+      <div class="hub-nav" id="hub-nav"></div>
+    </header>
+
+    <section class="hub-sec" id="hub-resumen" aria-labelledby="hh-resumen">
+      <div class="sec-head"><h2 id="hh-resumen">Tu campaña de un vistazo</h2></div>
+      <div class="panel"><dl class="stats" id="hub-kpis"></dl><div class="foot" id="hub-prox"></div></div>
+    </section>
+
+    <section class="hub-sec" id="hub-pasos" aria-labelledby="hh-pasos">
+      <div class="sec-head"><h2 id="hh-pasos">Paso a paso: lanzar la campaña</h2><small>Lo que marques aquí se marca también en tu tarea</small></div>
+      <div id="hub-guia"></div>
+    </section>
+
+    <section class="hub-sec" id="hub-crear" aria-labelledby="hh-crear">
+      <div class="sec-head"><h2 id="hh-crear">Cómo crear un anuncio con IA</h2><small>De la foto al anuncio publicado</small></div>
+      <div class="panel"><ol class="steps-n" id="hub-crear-list"></ol></div>
+    </section>
+
+    <section class="hub-sec" id="hub-prompts" aria-labelledby="hh-prompts">
+      <div class="sec-head"><h2 id="hh-prompts">Los anuncios con sus prompts</h2><small>Copiados del formato de la competencia, con tus productos</small></div>
+      <div id="hub-packs"></div>
+    </section>
+
+    <section class="hub-sec" id="hub-editar" aria-labelledby="hh-editar">
+      <div class="sec-head"><h2 id="hh-editar">Herramientas y edición</h2></div>
+      <div class="tools" id="hub-tools"></div>
+      <h3>Montar un vídeo en CapCut</h3>
+      <div class="panel"><ol class="steps-n" id="hub-capcut"></ol></div>
+      <h3>Poner textos y precios en una imagen con Canva</h3>
+      <div class="panel"><ol class="steps-n" id="hub-canva"></ol></div>
+    </section>
+
+    <section class="hub-sec" id="hub-presupuesto" aria-labelledby="hh-presu">
+      <div class="sec-head"><h2 id="hh-presu">Presupuesto</h2><small>100 € como mucho</small></div>
+      <div class="panel" id="hub-presu"></div>
+    </section>
+
+    <section class="hub-sec" id="hub-normas" aria-labelledby="hh-normas">
+      <div class="sec-head"><h2 id="hh-normas">Lo que se puede y no se puede decir</h2></div>
+      <div class="dodont" id="hub-normas-box"></div>
+      <h3>Antes de publicar un anuncio, revisa</h3>
+      <div class="panel"><ul class="checklist" id="hub-check"></ul></div>
+    </section>
+
+    <section class="hub-sec" id="hub-conceptos" aria-labelledby="hh-conceptos">
+      <div class="sec-head"><h2 id="hh-conceptos">Conceptos: qué significa cada cosa</h2></div>
+      <input class="gloss-search" id="gloss-q" type="search" placeholder="Busca una palabra: píxel, CTR, ROAS…" aria-label="Buscar un concepto" autocomplete="off">
+      <p class="empty" id="gloss-vacio" hidden>No hay ningún concepto con esa palabra. Pregúntamelo y lo añado.</p>
+      <div id="hub-gloss"></div>
+    </section>
+
+    <section class="hub-sec" id="hub-competencia" aria-labelledby="h-ads">
+      <div class="sec-head"><h2 id="h-ads">Anuncios de la competencia</h2><small>Lo que hacen los que venden</small></div>
+      <div class="ads" id="lista-ads"><div class="panel empty">Cargando los anuncios…</div></div>
+    </section>
+
+    <section class="hub-sec" id="hub-dudas" aria-labelledby="hh-dudas">
+      <div class="sec-head"><h2 id="hh-dudas">Dudas frecuentes</h2></div>
+      <div class="panel" id="hub-faq"></div>
+    </section>
+  </div>
+</main>
+
+<script>
+(function () {
+  var IMG = __IMG__;
+  var TZ = 'Europe/Madrid';
+  var $ = function (id) { return document.getElementById(id); };
+  var el = function (tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+
+  function hoyISO() { return new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date()); }
+  function diasHasta(iso) { var a = hoyISO().split('-').map(Number), b = String(iso).split('-').map(Number); return Math.round((Date.UTC(b[0], b[1] - 1, b[2]) - Date.UTC(a[0], a[1] - 1, a[2])) / 864e5); }
+  function fechaLarga(d) { return new Intl.DateTimeFormat('es-ES', { timeZone: TZ, weekday: 'long', day: 'numeric', month: 'long' }).format(d); }
+  function fechaCorta(iso) { try { return new Intl.DateTimeFormat('es-ES', { timeZone: TZ, weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }).format(new Date(iso)).replace(/\./g, ''); } catch (e) { return ''; } }
+  function euros(n) { return (Number(n) || 0).toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €'; }
+  var MES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+
+  $('hoy-fecha').textContent = fechaLarga(new Date());
+
+  var aviso = $('aviso');
+  function decir(t, err) { aviso.textContent = t || ''; aviso.classList.toggle('is-err', !!err); }
+
+  var db = null, puedeEscribir = true;
+  var cargado = {};
+  var timer = setTimeout(function () {
+    if (!cargado.tareas) decir('Todavía no llegan los datos de la oficina. Si sigue así, recarga la página en un rato.', true);
+  }, 10000);
+
+  /* ---------- Hoy ---------- */
+  function pintarNumeros(d) {
+    var dl = $('numeros'); dl.textContent = '';
+    if (!d) {
+      [['Pedidos este mes'], ['Ventas este mes'], ['Por enviar'], ['Desde el inicio']].forEach(function (x) { var s = el('div', 'stat'); s.append(el('dt', null, x[0]), el('dd', null, '—')); dl.append(s); });
+      $('ultimo').textContent = 'Aún no hay números guardados. Los pongo yo cada mañana.';
+      return;
+    }
+    var stats = [
+      ['Pedidos este mes', String(d.pedidos_mes ?? 0), d.mes ? 'en ' + d.mes : ''],
+      ['Ventas este mes', euros(d.ventas_mes), ''],
+      ['Por enviar', String(d.pendientes_envio ?? 0), (d.pendientes_envio ? 'revisa Pedidos' : 'nada pendiente')],
+      ['Desde el inicio', String(d.pedidos_total ?? 0), euros(d.ventas_total) + ' vendidos']
+    ];
+    stats.forEach(function (x) { var s = el('div', 'stat'); var dd = el('dd', null, x[1]); if (x[2]) dd.append(el('small', null, x[2])); s.append(el('dt', null, x[0]), dd); dl.append(s); });
+    var u = $('ultimo'); u.textContent = '';
+    if (d.ultimo && d.ultimo.nombre) u.append(el('span', null, 'Último pedido: ' + d.ultimo.nombre + ' · ' + (d.ultimo.fecha || '') + ' · ' + euros(d.ultimo.importe) + (d.ultimo.estado ? ' · ' + d.ultimo.estado : '')));
+    else u.append(el('span', null, 'Todavía no hay pedidos.'));
+    if (d.nota) u.append(el('span', null, d.nota));
+    $('num-act').textContent = d.actualizado ? 'Actualizado ' + fechaCorta(d.actualizado) : '';
+  }
+  function pintarEstado(d) {
+    var box = $('estado'); box.textContent = '';
+    var items = (d && Array.isArray(d.items)) ? d.items : [];
+    items.forEach(function (it) {
+      var p = el('span', 'pill pill--' + (it.nivel || 'info'));
+      p.append(el('b', null, it.texto || ''));
+      if (it.detalle) p.append(document.createTextNode(' · ' + it.detalle));
+      box.append(p);
+    });
+  }
+
+  /* ---------- Tareas ---------- */
+  var tareas = [], verHechas = false, ocupado = {};
+  var PRIO = { 1: 'Antes de la Black Week', 2: 'Cuando puedas', 3: 'Opcional' };
+  function filaTarea(t) {
+    var li = el('li', 'task' + (t.hecha ? ' is-done' : ''));
+    li.id = 'tarea-' + t.id;
+    var cb = el('input', 'check'); cb.type = 'checkbox'; cb.id = 'cb-' + t.id; cb.checked = !!t.hecha; cb.disabled = !puedeEscribir || !!ocupado[t.id];
+    cb.setAttribute('aria-label', (t.hecha ? 'Marcar como pendiente: ' : 'Marcar como hecha: ') + (t.titulo || ''));
+    cb.addEventListener('change', function () { marcar(t, cb.checked); });
+    var body = el('div');
+    body.append(el('div', 'task__t', t.titulo || ''));
+    if (t.como) body.append(el('div', 'task__c', t.como));
+    var meta = el('div', 'task__meta');
+    if (t.hecha) meta.append(el('span', 'tag tag--hecha', 'Hecha'));
+    else if (t.prioridad && PRIO[t.prioridad]) meta.append(el('span', 'tag tag--' + t.prioridad, PRIO[t.prioridad]));
+    if (t.enlace && /^https:\/\//.test(t.enlace)) { var a = el('a', 'go', (t.enlace_txt || 'Abrir') + ' →'); a.href = t.enlace; a.target = '_blank'; a.rel = 'noopener'; meta.append(a); }
+    if (meta.childNodes.length) body.append(meta);
+    if (t.produccion) body.append(listaPaquetes());
+    if (Array.isArray(t.guia)) body.append(guiaTarea(t));
+    if (t.produccion || Array.isArray(t.guia)) { var lkA = el('a', 'go', 'Todo sobre anuncios: abrir el apartado Anuncios →'); lkA.href = '#anuncios'; var plA = el('div', 'task__meta'); plA.append(lkA); body.append(plA); }
+    li.append(cb, body);
+    if (t.autor === 'jon' && puedeEscribir) {
+      var del = el('button', 'del', 'Quitar'); del.type = 'button';
+      del.addEventListener('click', function () {
+        if (!del.classList.contains('is-armed')) { del.classList.add('is-armed'); del.textContent = '¿Seguro?'; setTimeout(function () { del.classList.remove('is-armed'); del.textContent = 'Quitar'; }, 3500); return; }
+        borrar(t);
+      });
+      li.append(del);
+    } else li.append(el('span'));
+    return li;
+  }
+  function pintarTareas() {
+    var todas = tareas.slice().sort(function (a, b) { return (a.prioridad || 9) - (b.prioridad || 9) || (a.orden || 999) - (b.orden || 999) || String(a.creada || '').localeCompare(String(b.creada || '')); });
+    var np = todas.filter(function (t) { return !t.hecha; }).length, nh = todas.length - np;
+    var ul = $('lista-tareas'); ul.textContent = '';
+    if (!todas.length) ul.append(el('li', 'empty', 'No tienes tareas apuntadas. Escribe una abajo.'));
+    todas.forEach(function (t) { ul.append(filaTarea(t)); });
+    var partes = [];
+    if (np) partes.push(np + (np === 1 ? ' pendiente' : ' pendientes'));
+    if (nh) partes.push(nh + (nh === 1 ? ' hecha' : ' hechas'));
+    $('tareas-n').textContent = partes.join(' · ');
+  }
+  function marcar(t, v) {
+    if (!db || ocupado[t.id]) return;
+    ocupado[t.id] = true;
+    var cambio = { hecha: v, hecha_en: v ? new Date().toISOString() : null };
+    db.doc('tareas/' + t.id).update(cambio).then(function () { decir(v ? 'Tarea marcada como hecha.' : 'Tarea vuelta a pendientes.'); })
+      .catch(function (e) { fallo(e); }).then(function () { ocupado[t.id] = false; pintarTareas(); });
+  }
+  function borrar(t) {
+    if (!db) return;
+    db.doc('tareas/' + t.id).delete().then(function () { decir('Tarea quitada.'); }).catch(fallo);
+  }
+  $('form-tarea').addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var inp = $('nueva-tarea'), txt = inp.value.trim();
+    if (!txt) { inp.focus(); return; }
+    if (!db) { decir('No se puede guardar ahora: la oficina no está conectada.', true); return; }
+    var b = $('btn-tarea'); b.disabled = true;
+    db.collection('tareas').add({ titulo: txt, autor: 'jon', prioridad: 2, hecha: false, creada: new Date().toISOString() })
+      .then(function () { inp.value = ''; decir('Tarea apuntada.'); })
+      .catch(fallo).then(function () { b.disabled = false; });
+  });
+
+  /* ---------- Ideas y recordatorios ---------- */
+  var recs = [], recFiltro = 'todas', recOcupado = {}, abiertos = {};
+  var CATS = [['todas', 'Todo'], ['ia', 'Fotos y vídeos'], ['redes', 'Redes'], ['anuncios', 'Anuncios'], ['tienda', 'Tienda']];
+  function copiar(texto, pre, aviso) {
+    var ok = function () { aviso.textContent = 'Copiado. Pégalo en la app.'; setTimeout(function () { aviso.textContent = ''; }, 3000); };
+    var manual = function () { try { var s = window.getSelection(), rg = document.createRange(); rg.selectNodeContents(pre); s.removeAllRanges(); s.addRange(rg); } catch (e) {} aviso.textContent = 'Texto seleccionado: cópialo tú.'; };
+    try { navigator.clipboard.writeText(texto).then(ok, manual); } catch (e) { manual(); }
+  }
+  function filaRec(r) {
+    var li = el('li', 'task' + (r.hecha ? ' is-done' : ''));
+    li.id = 'rec-' + r.id;
+    var cb = el('input', 'check'); cb.type = 'checkbox'; cb.id = 'rcb-' + r.id; cb.checked = !!r.hecha; cb.disabled = !puedeEscribir || !!recOcupado[r.id];
+    cb.setAttribute('aria-label', (r.hecha ? 'Marcar como pendiente: ' : 'Marcar como hecha: ') + (r.titulo || ''));
+    cb.addEventListener('change', function () { marcarRec(r, cb.checked); });
+    var body = el('div');
+    body.append(el('div', 'task__t', r.titulo || ''));
+    if (r.como) body.append(el('div', 'task__c', r.como));
+    var meta = el('div', 'task__meta');
+    if (r.hecha) meta.append(el('span', 'tag tag--hecha', 'Hecha'));
+    if (r.herramienta) meta.append(el('span', 'tag tool', r.herramienta));
+    var cuando = r.cuando || '';
+    if (r.fecha && !r.hecha) { var n = diasHasta(r.fecha); var rel = n < 0 ? 'ya pasó' : n === 0 ? 'hoy' : n === 1 ? 'mañana' : 'en ' + n + ' días'; cuando = cuando ? cuando + ' · ' + rel : rel; }
+    if (cuando) meta.append(el('span', 'when', cuando));
+    if (r.enlace && /^https:\/\//.test(r.enlace)) { var a = el('a', 'go', (r.enlace_txt || 'Abrir') + ' →'); a.href = r.enlace; a.target = '_blank'; a.rel = 'noopener'; meta.append(a); }
+    if (meta.childNodes.length) body.append(meta);
+    if (r.prompt) {
+      var det = el('details', 'prompt'); det.id = 'pr-' + r.id;
+      det.append(el('summary', null, 'Ver el prompt'));
+      var box = el('div', 'prompt__box');
+      if (r.prompt_nota) box.append(el('div', 'prompt__note', r.prompt_nota));
+      var pre = el('pre', 'prompt__text', r.prompt); box.append(pre);
+      var bar = el('div', 'prompt__bar'); var av = el('span', 'copied'); av.setAttribute('role', 'status');
+      var bc = el('button', 'btn btn--s', 'Copiar el prompt'); bc.type = 'button';
+      bc.addEventListener('click', function () { copiar(r.prompt, pre, av); });
+      bar.append(av, bc); box.append(bar); det.append(box);
+      if (abiertos[r.id]) det.open = true;
+      det.addEventListener('toggle', function () { abiertos[r.id] = det.open; });
+      body.append(det);
+    }
+    li.append(cb, body, el('span'));
+    return li;
+  }
+  function pintarRecs() {
+    var fl = $('rec-filtros'); fl.textContent = '';
+    CATS.forEach(function (c) {
+      var n = c[0] === 'todas' ? recs.length : recs.filter(function (r) { return r.categoria === c[0]; }).length;
+      if (!n && c[0] !== 'todas') return;
+      var b = el('button', 'chip', c[1]); b.type = 'button'; b.setAttribute('aria-pressed', recFiltro === c[0] ? 'true' : 'false');
+      b.append(el('b', null, String(n)));
+      b.addEventListener('click', function () { recFiltro = c[0]; pintarRecs(); });
+      fl.append(b);
+    });
+    var lista = recs.filter(function (r) { return recFiltro === 'todas' || r.categoria === recFiltro; })
+      .sort(function (a, b) { return String(a.fecha || '9999').localeCompare(String(b.fecha || '9999')) || (a.orden || 999) - (b.orden || 999); });
+    var ul = $('lista-rec'); ul.textContent = '';
+    if (!lista.length) ul.append(el('li', 'empty', 'No hay ideas ni recordatorios guardados.'));
+    lista.forEach(function (r) { ul.append(filaRec(r)); });
+    var np = recs.filter(function (r) { return !r.hecha; }).length, nh = recs.length - np;
+    var partes = []; if (np) partes.push(np + (np === 1 ? ' pendiente' : ' pendientes')); if (nh) partes.push(nh + (nh === 1 ? ' hecha' : ' hechas'));
+    $('rec-n').textContent = partes.join(' · ');
+  }
+  function marcarRec(r, v) {
+    if (!db || recOcupado[r.id]) return;
+    recOcupado[r.id] = true;
+    db.doc('recordatorios/' + r.id).update({ hecha: v, hecha_en: v ? new Date().toISOString() : null })
+      .then(function () { decir(v ? 'Marcado como hecho.' : 'Vuelto a pendiente.'); })
+      .catch(fallo).then(function () { recOcupado[r.id] = false; pintarRecs(); });
+  }
+
+  /* ---------- Anuncios que funcionan ---------- */
+  var ads = [], adOcupado = {};
+  function bloquePrompt(id, nombre, texto, nota) {
+    var det = el('details', 'prompt'); det.id = 'adp-' + id;
+    det.append(el('summary', null, nombre));
+    var box = el('div', 'prompt__box');
+    if (nota) box.append(el('div', 'prompt__note', nota));
+    var pre = el('pre', 'prompt__text', texto); box.append(pre);
+    var bar = el('div', 'prompt__bar'); var av = el('span', 'copied'); av.setAttribute('role', 'status');
+    var bc = el('button', 'btn btn--s', 'Copiar'); bc.type = 'button';
+    bc.addEventListener('click', function () { copiar(texto, pre, av); });
+    bar.append(av, bc); box.append(bar); det.append(box);
+    if (abiertos[det.id]) det.open = true;
+    det.addEventListener('toggle', function () { abiertos[det.id] = det.open; });
+    return det;
+  }
+  function tarjetaAd(a) {
+    var art = el('article', 'ad' + (a.hecha ? ' is-done' : '')); art.id = 'anuncio-' + a.id;
+    if (a.fotos && /^data:image\//.test(a.fotos)) { var fig = el('div', 'ad__img'); var im = el('img'); im.src = a.fotos; im.alt = 'Fotogramas del anuncio de ' + (a.marca || ''); im.loading = 'lazy'; fig.append(im); art.append(fig); }
+    var b = el('div', 'ad__body');
+    var top = el('div', 'ad__top');
+    if (a.fuente) top.append(el('span', 'tag tool', a.fuente));
+    if (a.formato) top.append(el('span', 'tag', a.formato));
+    if (a.producto && a.producto !== '—') top.append(el('span', 'tag tag--2', a.producto));
+    if (a.prod_orden) {
+      var lab = el('label', 'ad__done'); var cb = el('input', 'check'); cb.type = 'checkbox'; cb.id = 'adcb-' + a.id; cb.checked = !!a.hecha; cb.disabled = !puedeEscribir || !!adOcupado[a.id];
+      cb.addEventListener('change', function () { marcarAd(a, cb.checked); });
+      lab.append(cb, document.createTextNode(a.hecha ? 'Hecho' : 'Ya lo he hecho')); top.append(lab);
+    }
+    b.append(top);
+    b.append(el('h3', 'ad__name', a.marca || ''));
+    if (a.por_que) b.append(el('p', 'ad__why', a.por_que));
+    if (a.que_sale && a.que_sale.length) {
+      var d1 = el('details'); d1.id = 'ads-' + a.id; d1.append(el('summary', null, a.prod_orden ? 'Qué sale en el anuncio' : 'Ver cuáles son'));
+      var ul = el('ul'); a.que_sale.forEach(function (x) { ul.append(el('li', null, x)); }); d1.append(ul);
+      if (a.no_copiar) d1.append(el('p', 'warn', 'No lo copiamos: ' + a.no_copiar));
+      if (a.enlace && /^https:\/\//.test(a.enlace)) { var lk = el('a', 'go', 'Ver el original →'); lk.href = a.enlace; lk.target = '_blank'; lk.rel = 'noopener'; var pl = el('p'); pl.style.margin = '8px 0 0'; pl.style.fontSize = '13.5px'; pl.append(lk); d1.append(pl); }
+      if (abiertos[d1.id]) d1.open = true; d1.addEventListener('toggle', function () { abiertos[d1.id] = d1.open; });
+      b.append(d1);
+    }
+    if (a.prod_orden) b.append(el('div', 'ours__meta', 'Tu versión y todos los prompts: en la tarea «Producir los anuncios con IA», n.º ' + a.prod_orden + '.'));
+    var v = null;
+    if (v) {
+      var o = el('div', 'ours');
+      o.append(el('h4', null, 'Tu versión: ' + (v.titulo || '')));
+      var meta = [v.herramienta, v.adjuntar].filter(Boolean).join(' · ');
+      if (meta) o.append(el('div', 'ours__meta', meta));
+      (v.pasos || []).forEach(function (p, i) { o.append(bloquePrompt(a.id + '-' + i, 'Prompt · ' + (p.nombre || ('paso ' + (i + 1))), p.prompt || '', '')); });
+      if (v.textos && v.textos.length) o.append(bloquePrompt(a.id + '-t', 'Textos para poner encima', v.textos.join('\n'), 'Pónlos tú en CapCut o Canva: la IA escribe mal las letras.'));
+      if (v.montaje) o.append(el('div', 'ours__meta', v.montaje));
+      b.append(o);
+    }
+    art.append(b);
+    return art;
+  }
+  function pintarAds() {
+    var box = $('lista-ads'); box.textContent = '';
+    var lista = ads.slice().sort(function (x, y) { return (x.orden || 99) - (y.orden || 99); });
+    if (!lista.length) { box.append(el('div', 'panel empty', 'Todavía no hay anuncios guardados.')); return; }
+    lista.forEach(function (a) { box.append(tarjetaAd(a)); });
+  }
+  function marcarAd(a, val) {
+    if (!db || adOcupado[a.id]) return;
+    adOcupado[a.id] = true;
+    db.doc('anuncios/' + a.id).update({ hecha: val, hecha_en: val ? new Date().toISOString() : null })
+      .then(function () { decir(val ? 'Anuncio marcado como hecho.' : 'Anuncio vuelto a pendiente.'); })
+      .catch(fallo).then(function () { adOcupado[a.id] = false; pintarAds(); pintarTareas(); pintarHub(); });
+  }
+
+  /* ---------- Producción de anuncios (dentro de la tarea) ---------- */
+  function paquete(a, pre) {
+    pre = pre || '';
+    var row = el('div', 'pack' + (a.hecha ? ' is-done' : '')); row.id = pre + 'pack-' + a.id;
+    var cb = el('input', 'check'); cb.type = 'checkbox'; cb.id = pre + 'pkcb-' + a.id; cb.checked = !!a.hecha; cb.disabled = !puedeEscribir || !!adOcupado[a.id];
+    cb.setAttribute('aria-label', (a.hecha ? 'Marcar como pendiente: ' : 'Marcar como producido: ') + (a.titulo || ''));
+    cb.addEventListener('change', function () { marcarAd(a, cb.checked); });
+    var det = el('details'); det.id = pre + 'pk-' + a.id;
+    var sm = el('summary');
+    sm.append(el('div', 'pack__t', (a.prod_orden ? a.prod_orden + '. ' : '') + (a.titulo || '')));
+    var tags = el('div', 'task__meta');
+    if (a.hecha) tags.append(el('span', 'tag tag--hecha', 'Producido'));
+    if (a.fase) tags.append(el('span', 'tag ' + (a.fase === 'Black Week' ? 'tag--1' : 'tag--2'), a.fase === 'Black Week' ? 'Antes del 23 nov' : 'Cuando quieras'));
+    if (a.formato) tags.append(el('span', 'tag', a.formato));
+    if (a.producto) tags.append(el('span', 'tag tool', a.producto));
+    sm.append(tags); det.append(sm);
+    var body = el('div', 'pack__body');
+    if (a.basado_en) body.append(el('p', 'pack__from', 'Copiado de: ' + a.basado_en));
+    var meta = [a.herramienta, a.adjuntar].filter(Boolean).join(' · ');
+    if (meta) body.append(el('div', 'ours__meta', meta));
+    (a.planos || []).forEach(function (p, i) { body.append(bloquePrompt(pre + a.id + '-p' + i, (p.tipo === 'Foto' ? '📷 ' : '🎬 ') + (p.nombre || ''), p.prompt || '', '')); });
+    if (a.textos && a.textos.length) body.append(bloquePrompt(pre + a.id + '-tx', '✏️ Textos para poner encima', a.textos.join('\n'), 'Pónlos tú en CapCut o Canva: la IA escribe mal las letras.'));
+    if (a.voz) body.append(bloquePrompt(pre + a.id + '-vz', '🎙️ Guion para tu voz', a.voz, 'Léelo tú y grábalo con el móvil.'));
+    if (a.copy) body.append(bloquePrompt(pre + a.id + '-cp', '📣 Texto del anuncio para Meta', 'Texto principal:\n' + (a.copy.principal || '') + '\n\nTítulo: ' + (a.copy.titulo || '') + '\nBotón: ' + (a.copy.boton || ''), ''));
+    if (a.montaje) body.append(el('div', 'ours__meta', 'Montaje: ' + a.montaje));
+    det.append(body);
+    if (abiertos[det.id]) det.open = true;
+    det.addEventListener('toggle', function () { abiertos[det.id] = det.open; });
+    row.append(cb, det);
+    return row;
+  }
+  function listaPaquetes(pre) {
+    pre = pre || '';
+    var lista = ads.filter(function (a) { return a.prod_orden; }).sort(function (x, y) { return x.prod_orden - y.prod_orden; });
+    var wrap = el('details', 'packs-all'); wrap.id = pre + 'pk-todos';
+    var hechos = lista.filter(function (a) { return a.hecha; }).length;
+    wrap.append(el('summary', null, lista.length ? 'Ver los ' + lista.length + ' anuncios con sus prompts (' + hechos + ' producidos)' : 'Cargando los anuncios…'));
+    var box = el('div', 'packs');
+    box.append(el('p', 'pack__from', 'Cómo se hace: primero la foto con tus productos (adjuntando tus fotos de referencia) y después la animas con Veo o Kling usando esa foto. Así las etiquetas no se deforman.'));
+    lista.forEach(function (a) { box.append(paquete(a, pre)); });
+    wrap.append(box);
+    if (abiertos[wrap.id]) wrap.open = true;
+    wrap.addEventListener('toggle', function () { abiertos[wrap.id] = wrap.open; });
+    return wrap;
+  }
+
+  /* ---------- Guía paso a paso (dentro de una tarea) ---------- */
+  var pasoCola = {};
+  function marcarPaso(t, id, v) {
+    if (!db) return;
+    var go = function () { var upd = { guia_hechos: {} }; upd.guia_hechos[id] = v; return db.doc('tareas/' + t.id).update(upd).catch(fallo); };
+    pasoCola[t.id] = (pasoCola[t.id] || Promise.resolve()).then(go);
+  }
+  function guiaTarea(t, pre) {
+    pre = pre || '';
+    var H = t.guia_hechos || {}, total = 0, hechos = 0;
+    t.guia.forEach(function (s) { if (!s.info) (s.pasos || []).forEach(function (p) { total++; if (H[p.id]) hechos++; }); });
+    var wrap = el('details', 'packs-all'); wrap.id = pre + 'gu-' + t.id;
+    wrap.append(el('summary', null, 'Ver la guía paso a paso (' + hechos + ' de ' + total + ' hechos)'));
+    var box = el('div', 'packs');
+    t.guia.forEach(function (s) {
+      var sec = el('details', 'gsec'); sec.id = pre + 'gs-' + t.id + '-' + s.id;
+      sec.append(el('summary', null, s.titulo || ''));
+      var ul = el('ul', 'gsteps');
+      (s.pasos || []).forEach(function (p) {
+        var li = el('li', 'gstep' + (!s.info && H[p.id] ? ' is-done' : ''));
+        if (!s.info) {
+          var cb = el('input', 'check'); cb.type = 'checkbox'; cb.id = pre + 'g-' + t.id + '-' + p.id; cb.checked = !!H[p.id]; cb.disabled = !puedeEscribir;
+          cb.setAttribute('aria-label', p.txt || '');
+          cb.addEventListener('change', function () { marcarPaso(t, p.id, cb.checked); });
+          li.append(cb);
+        } else li.append(el('span', 'gdot'));
+        var tx = el('div'); tx.append(el('div', 'gstep__t', p.txt || ''));
+        if (p.det) tx.append(el('div', 'gstep__d', p.det));
+        if (p.enlace && /^https:\/\//.test(p.enlace)) { var a = el('a', 'go', (p.enlace_txt || 'Abrir') + ' →'); a.href = p.enlace; a.target = '_blank'; a.rel = 'noopener'; var dd = el('div', 'gstep__d'); dd.append(a); tx.append(dd); }
+        li.append(tx); ul.append(li);
+      });
+      sec.append(ul);
+      if (abiertos[sec.id]) sec.open = true;
+      sec.addEventListener('toggle', function () { abiertos[sec.id] = sec.open; });
+      box.append(sec);
+    });
+    wrap.append(box);
+    if (abiertos[wrap.id]) wrap.open = true;
+    wrap.addEventListener('toggle', function () { abiertos[wrap.id] = wrap.open; });
+    return wrap;
+  }
+
+  /* ---------- Apartado Anuncios ---------- */
+  var agendaDocs = [];
+  abiertos['hgu-t-lanzar'] = true; abiertos['hpk-todos'] = true;
+  var HUB_NAV = [['hub-resumen', 'Resumen'], ['hub-pasos', 'Paso a paso'], ['hub-crear', 'Crear con IA'], ['hub-prompts', 'Prompts'], ['hub-editar', 'Editar'], ['hub-presupuesto', 'Presupuesto'], ['hub-normas', 'Normas'], ['hub-conceptos', 'Conceptos'], ['hub-competencia', 'Competencia'], ['hub-dudas', 'Dudas']];
+  var HUB_CREAR = [
+    ['Elige el anuncio en «Los anuncios con sus prompts» y ábrelo.', 'Empieza por los que toquen: el 3 y el 4 para el finde y el 1 para el lunes 23.'],
+    ['Abre ChatGPT o Gemini en el ordenador y empieza un chat nuevo.', 'Un chat nuevo por anuncio, para que no mezcle cosas de antes.'],
+    ['Adjunta tus fotos de referencia.', 'Las que diga el anuncio (sérum, tarro verde, textura o aceite). Sin ellas la IA se inventa los botes.'],
+    ['Copia el prompt de la foto con el botón «Copiar», pégalo y envíalo.', ''],
+    ['Revisa la foto con lupa.', 'Las letras de las etiquetas tienen que salir perfectas, las manos con cinco dedos y la luz natural. Si algo falla, escribe: «Repite manteniendo las etiquetas exactamente igual que en las fotos adjuntas».'],
+    ['Pide 2 o 3 versiones y quédate con la mejor. Descárgala.', 'Si parece demasiado perfecta, pide: «Hazla más natural, como hecha con un móvil».'],
+    ['Si el anuncio es un vídeo, anima esa foto.', 'En Gemini (Veo) o en Kling, elige «imagen a vídeo», sube la foto que acabas de crear y pega el prompt del vídeo.'],
+    ['Descarga 2 o 3 versiones del vídeo y descarta las que deformen el bote.', 'Lo que más se nota: letras que cambian, dedos raros y caras de cerca.'],
+    ['Monta el anuncio en CapCut (vídeo) o en Canva (imagen).', 'Abajo tienes los pasos. Los textos para poner encima están en cada anuncio.'],
+    ['Exporta en vertical (1080 × 1920) y ponle un nombre claro.', 'Por ejemplo «03-estante-v1», para saber luego cuál funciona.'],
+    ['Súbelo al Administrador de anuncios con su texto.', 'El texto principal, el título y el botón están en «Texto del anuncio para Meta». Marca el anuncio como hecho.']
+  ];
+  var HUB_TOOLS = [
+    { n: 'ChatGPT', para: 'Crear las fotos con tus productos. Es la que mejor respeta las etiquetas.', precio: 'Gratis con límite', url: 'https://chatgpt.com', truco: 'adjunta siempre las fotos de referencia y pide varias versiones.' },
+    { n: 'Gemini', para: 'Fotos y, sobre todo, vídeos con Veo, que además genera el sonido.', precio: 'Vídeos con límite o de pago', url: 'https://gemini.google.com', truco: 'primero haz la foto y luego pide el vídeo a partir de ella.' },
+    { n: 'Kling', para: 'Animar una foto: una gota que cae, la cámara que se acerca, la llama de una vela.', precio: 'Créditos gratis al día', url: 'https://klingai.com', truco: 'usa «imagen a vídeo» y pide movimientos lentos y sencillos.' },
+    { n: 'CapCut', para: 'Montar los vídeos: unir clips, poner textos, música y subtítulos automáticos.', precio: 'Gratis', url: 'https://www.capcut.com', truco: 'los subtítulos automáticos en español te ahorran mucho tiempo.' },
+    { n: 'Canva', para: 'Poner textos y precios encima de las fotos (por ejemplo el círculo de 79,99 €).', precio: 'Gratis', url: 'https://www.canva.com', truco: 'nunca pidas los precios a la IA: se inventa los números.' },
+    { n: 'Administrador de anuncios', para: 'Donde se crean las campañas y se ven los números (gasto, clics, ventas).', precio: 'Gratis', url: 'https://adsmanager.facebook.com', truco: 'mira los resultados como mucho una vez al día y no toques nada los 3 primeros días.' },
+    { n: 'Meta Business Suite', para: 'Tu página de Facebook, tu Instagram, los mensajes y los ajustes del negocio.', precio: 'Gratis', url: 'https://business.facebook.com', truco: 'contesta los comentarios de los anuncios desde aquí, como Rizelune.' },
+    { n: 'Biblioteca de anuncios', para: 'Ver todos los anuncios activos de cualquier marca, para inspirarte en la competencia.', precio: 'Gratis', url: 'https://www.facebook.com/ads/library', truco: 'busca la marca, elige España y fíjate en los anuncios que llevan meses activos: son los que funcionan.' }
+  ];
+  var HUB_CAPCUT = [
+    ['Nuevo proyecto e importa tus clips en orden.', ''],
+    ['Formato vertical 9:16.', 'Botón «Relación de aspecto» o «Formato».'],
+    ['Recorta cada clip a lo que diga el anuncio.', 'Lo importante es que los 2 primeros segundos enganchen.'],
+    ['Texto → añade los textos del anuncio.', 'Letra grande, blanca o crema, con una sombra suave para que se lea sobre cualquier fondo.'],
+    ['Si lleva voz: Audio → Grabar, y lee el guion con el móvil cerca.', 'Después: Subtítulos → Automáticos → Español.'],
+    ['Audio → música suave a volumen bajo, o deja el sonido original del clip.', 'Nada de canciones famosas: en anuncios pueden quitarte el sonido o rechazarlo.'],
+    ['Deja libre la parte de arriba y la de abajo.', 'Instagram pone ahí botones y textos: no pongas nada importante en el 15 % de arriba ni en el 20 % de abajo.'],
+    ['Exportar: 1080p y 30 fps.', 'Guárdalo con un nombre claro, por ejemplo «07-tres-errores-v1».']
+  ];
+  var HUB_CANVA = [
+    ['Crear diseño → «Publicación de Instagram» (1080 × 1350) o «Historia» (1080 × 1920).', ''],
+    ['Sube la foto de la IA y ponla de fondo.', ''],
+    ['Añade los textos del anuncio.', 'Títulos con la letra Lora y textos con Jost, las mismas de tu web. Colores: verde #2F3B2E y crema #F5EFE6.'],
+    ['Si hay precio, ponlo en un círculo crema.', 'En Black Week: «79,99 €» grande y debajo, pequeño, «Por separado: 97,97 €» (sin tachar).'],
+    ['Descargar en PNG.', '']
+  ];
+  var HUB_PRESU = [
+    ['Presupuesto total: 97 €, del sábado 21 al lunes 30 de noviembre.', 'Con el 3 % de tasa que Meta cobra en España son unos 100 €. Nunca gastarás más.'],
+    ['Cómo se pone.', 'Al crear la campaña, en «Presupuesto» cambia «Diario» por «Total», escribe 97 y pon como fin el 30 de noviembre a las 23:59.'],
+    ['Meta reparte el dinero sola.', 'Gasta más los días en los que más se compra, como el Black Friday, y cuando se acaba la campaña se para sola.'],
+    ['Qué esperar con 100 €.', 'Unas 10.000–14.000 veces visto, 100–150 clics y, con suerte, de 1 a 4 ventas. Es una prueba para aprender qué anuncio funciona.'],
+    ['Cuándo te cobra Meta.', 'En tu tarjeta, cada vez que el gasto llega a tu límite de facturación o a final de mes.'],
+    ['Cómo pararlo cuando quieras.', 'En el Administrador de anuncios, apaga el interruptor de la campaña. Solo pagas lo gastado hasta ese momento.'],
+    ['Si funciona.', 'En diciembre seguiríamos con 10–15 € al día solo con el anuncio que más venda. Lo decidimos juntos el 1 de diciembre.']
+  ];
+  var HUB_NO = ['Que el pelo crece, frena la caída o gana densidad.', '«Resultados en X semanas».', 'Fotos de antes y después.', 'Preguntas que señalan a quien lo ve: «¿Se te cae el pelo?», «¿Tienes caspa?».', 'Médicos, batas o «recomendado por dermatólogos».', 'Opiniones o testimonios inventados.', 'Un precio tachado que no sea el más bajo de los últimos 30 días.', 'Canciones famosas con derechos de autor.'];
+  var HUB_SI = ['Cómo se usa: raya a raya, cuántas gotas, cada cuánto.', 'Los ingredientes: romero, menta, bakuchiol, rosa mosqueta.', 'Lo que se siente: el frescor de la menta, el olor, el ritual.', 'Que suaviza y da brillo, y limpia la raíz.', 'El precio por uso, los packs y el envío gratis.', '«Por separado: 97,97 €» en lugar de tachar el precio.', '«Escenas creadas con IA» en el texto cuando el anuncio esté hecho con IA.'];
+  var HUB_CHECK = ['Las etiquetas de los botes salen perfectas, letra a letra.', 'Manos y caras naturales: sin dedos raros ni caras de plástico.', 'Los 2 primeros segundos enganchan.', 'Los textos se leen bien en el móvil y no quedan tapados arriba ni abajo.', 'Si hay voz, lleva subtítulos.', 'El texto del anuncio lleva «Escenas creadas con IA».', 'El enlace lleva a la página correcta.', 'Nada de la columna de «No pongas nunca».', 'Has visto la vista previa en el móvil antes de publicar.'];
+  var HUB_GLOSS = [
+    ['Cuentas y montaje', [
+      ['Meta Business Suite', 'El panel desde el que gestionas tu página de Facebook, tu Instagram, los mensajes y los anuncios.', 'entra en business.facebook.com con tu perfil.'],
+      ['Portfolio empresarial', 'La «carpeta» de tu negocio en Meta (antes se llamaba Business Manager). Dentro están la página, el Instagram, la cuenta publicitaria y el píxel. Tu perfil personal solo te da acceso.', 'se llama Rizelune.'],
+      ['Página de Facebook', 'La cara pública de tu marca en Facebook. Los anuncios salen a su nombre, nunca al de tu perfil.', 'la página Rizelune.'],
+      ['Cuenta publicitaria', 'Donde se crean y se pagan los anuncios. La moneda y la zona horaria no se pueden cambiar después.', 'en euros y con hora de Madrid.'],
+      ['Administrador de anuncios', 'La herramienta donde creas las campañas y ves los resultados (en inglés, Ads Manager).', ''],
+      ['Umbral de facturación', 'El importe al que Meta te cobra en la tarjeta. Te cobra al llegar a él o a final de mes, lo que pase antes.', 'con presupuesto total nunca pagarás más de 97 € más la tasa.'],
+      ['Beneficiario y pagador', 'Dos datos obligatorios para anunciarse en la UE: quién se beneficia del anuncio y quién lo paga. Salen en la Biblioteca de anuncios, no en el anuncio.', 'pon «Rizelune» en los dos.'],
+      ['Verificación de dominio', 'Demostrar a Meta que la web es tuya. Da más control sobre los enlaces y más confianza.', 'rizelune.com: me mandas la etiqueta y la pongo yo.'],
+      ['Biblioteca de anuncios', 'Un buscador público con todos los anuncios activos de cualquier marca.', 'sirve para espiar lo que hace la competencia.']
+    ]],
+    ['Medir (el píxel)', [
+      ['Píxel', 'Un trocito de código en tu tienda que avisa a Meta de lo que hace cada persona que llega desde un anuncio: si ve un producto, si lo añade al carrito, si compra. Con eso Meta sabe qué anuncio vende y busca a más gente parecida a tus compradores.', 'se instala solo con el canal de Facebook e Instagram de Shopify; no tienes que tocar código.'],
+      ['API de conversiones', 'Lo mismo que el píxel, pero enviado desde Shopify y no desde el navegador del cliente, así que no lo bloquean los bloqueadores ni los iPhone.', 'por eso en Shopify eliges «Compartir datos: Máximo» (píxel + API).'],
+      ['Conjunto de datos', 'El nombre que Meta da ahora al píxel y a la API de conversiones juntos (en inglés, dataset).', ''],
+      ['Evento', 'Cada acción que se mide: Ver contenido, Añadir al carrito, Iniciar pago y Compra.', 'el que importa es «Compra».'],
+      ['Conversión', 'Cuando alguien hace lo que querías que hiciera.', 'para ti, comprar.'],
+      ['Administrador de eventos', 'Donde compruebas que los eventos llegan bien a Meta (con «Probar eventos»).', 'lo usamos con la compra de prueba.'],
+      ['Atribución', 'Cuántos días después de ver o pulsar un anuncio Meta se apunta una venta.', 'por defecto, 7 días después del clic o 1 día después de verlo. Déjalo así.']
+    ]],
+    ['Cómo se organiza una campaña', [
+      ['Campaña', 'El nivel de arriba: eliges el objetivo y, en tu caso, el presupuesto.', 'una sola: «Rizelune · Ventas · ES».'],
+      ['Conjunto de anuncios', 'A quién, dónde y cuándo se enseñan los anuncios (país, edad, ubicaciones, fechas).', 'uno solo: España sin Canarias, Ceuta ni Melilla.'],
+      ['Anuncio', 'Lo que la gente ve: la foto o el vídeo, el texto, el título y el botón.', 'empiezas con 2 y el lunes añades 1.'],
+      ['Objetivo', 'Lo que le pides a Meta. Con «Ventas», Meta busca a la gente con más probabilidad de comprar.', 'Ventas.'],
+      ['Advantage+', 'Las opciones automáticas de Meta: público, ubicaciones y campañas de ventas. Con poco presupuesto suelen funcionar mejor que elegirlo todo a mano.', 'campaña de ventas Advantage+.'],
+      ['Ubicaciones', 'Dónde sale el anuncio: feed de Instagram y Facebook, historias, reels…', 'automáticas: Meta elige.']
+    ]],
+    ['A quién se le enseña', [
+      ['Público o segmentación', 'A quién se enseña el anuncio. Hoy lo recomendado es dejarlo abierto (solo país y edad) y que el propio anuncio atraiga a la gente adecuada.', 'España, 18 años o más, sin intereses.'],
+      ['Intereses', 'Gustos que puedes elegir, como «cuidado del cabello». Con Advantage+ no hacen falta.', ''],
+      ['Público similar', 'Gente parecida a tus compradores (en inglés, lookalike). Necesita muchas ventas.', 'más adelante.'],
+      ['Retargeting', 'Volver a enseñar anuncios a quien visitó tu web y no compró.', 'cuando tengas más visitas.'],
+      ['Fase de aprendizaje', 'Los primeros días, Meta prueba a quién enseñar el anuncio y los resultados cambian mucho. Cada cambio grande la reinicia.', 'no toques nada los 3 primeros días.'],
+      ['Aprendizaje limitado', 'Aviso de que no llegas a unas 50 ventas por semana. No es un castigo.', 'con 100 € es lo normal: ignóralo.'],
+      ['Subasta', 'Cada vez que alguien abre Instagram, Meta elige qué anuncio enseñarle entre todos los que compiten por esa persona.', ''],
+      ['Puja', 'Cómo compite tu anuncio en la subasta.', 'déjala en automática («Volumen más alto»).']
+    ]],
+    ['Presupuesto', [
+      ['Presupuesto diario', 'Lo que Meta gasta de media cada día. Algunos días gasta un poco más y otros menos.', ''],
+      ['Presupuesto total', 'Lo máximo para toda la campaña entre dos fechas.', '97 € del 21 al 30 de noviembre.'],
+      ['Escalar', 'Subir el presupuesto a lo que funciona, poco a poco.', 'como mucho un 20 % cada 3 o 4 días.'],
+      ['Tasa por ubicación', 'Desde julio de 2026, Meta cobra un 3 % extra por los anuncios que se enseñan en España.', 'por eso pones 97 € y no 100 €.']
+    ]],
+    ['Los números', [
+      ['Impresiones', 'Las veces que se ha visto el anuncio (una persona puede verlo varias veces).', ''],
+      ['Alcance', 'Las personas distintas que lo han visto.', ''],
+      ['Frecuencia', 'Impresiones divididas entre alcance: cuántas veces lo ha visto cada persona de media.', 'si pasa de 3 o 4 en pocos días, la gente se cansa.'],
+      ['Importe gastado', 'Lo que llevas pagado.', ''],
+      ['CPM', 'Lo que cuesta que el anuncio se vea 1.000 veces.', 'en España suele rondar los 6–9 €; en Black Friday sube.'],
+      ['CPC', 'Lo que pagas por cada clic.', ''],
+      ['CTR', 'De cada 100 personas que ven el anuncio, cuántas hacen clic. Mira «CTR (porcentaje de clics en el enlace)».', 'bien: más del 1 %. Flojo: menos del 0,6 %.'],
+      ['Tasa de conversión', 'De cada 100 visitas a la web, cuántas compran.', 'en tiendas que empiezan suele ser del 1 al 2 %.'],
+      ['Coste por resultado', 'Lo que te cuesta cada venta en anuncios (también se llama CPA).', 'para no perder dinero tiene que bajar de unos 10–17 €.'],
+      ['Valor medio del pedido', 'Lo que gasta de media cada cliente.', 'con los packs, unos 64 €.'],
+      ['Margen', 'Lo que te queda de cada pedido después de pagar a Selfnamed, el envío, Shopify e impuestos.', 'de media, unos 10–17 € por pedido.'],
+      ['ROAS', 'Lo que vendes dividido entre lo que gastas en anuncios. Un ROAS de 3 es que por cada euro de anuncio vendes 3.', 'empiezas a ganar dinero a partir de un ROAS de 4 a 6.'],
+      ['Punto de equilibrio', 'El coste por venta máximo para no perder dinero.', 'tu margen: unos 10–17 € por venta.']
+    ]],
+    ['Los anuncios en sí', [
+      ['Creatividad', 'La foto o el vídeo del anuncio. Es lo que más influye en que funcione.', ''],
+      ['Gancho', 'Los 2 o 3 primeros segundos (en inglés, hook). Si no enganchan, la gente sigue bajando.', 'cada anuncio de tu lista ya trae su gancho.'],
+      ['Copy', 'El texto del anuncio: el texto principal (encima), el título (debajo, en negrita) y la descripción.', 'están en «Texto del anuncio para Meta».'],
+      ['Llamada a la acción', 'El botón del anuncio (en inglés, CTA): «Comprar», «Más información».', ''],
+      ['UGC', 'Contenido que parece hecho por una persona normal con el móvil. Suele funcionar mejor que lo de estudio.', 'por eso los prompts piden «como hecho con un iPhone».'],
+      ['Formatos', '9:16 es vertical (historias y reels), 4:5 es el del feed y 1:1 es cuadrado.', 'si solo haces uno, haz el 9:16.'],
+      ['Fatiga creativa', 'Cuando la gente ya ha visto mucho un anuncio y deja de funcionar.', 'se arregla cambiándolo por otro de tu lista.'],
+      ['Test A/B', 'Probar dos versiones para ver cuál funciona mejor.', 'lo haces sin querer al poner 2 anuncios distintos.'],
+      ['Anuncio rechazado', 'Meta no lo aprueba porque incumple alguna norma. Puedes corregirlo o pedir otra revisión.', 'mándame la captura y lo arreglamos.'],
+      ['Atributos personales', 'Norma de Meta: un anuncio no puede decir ni insinuar algo personal de quien lo ve («¿Se te cae el pelo?»).', 'habla del producto o en primera persona, nunca de la persona que lo ve.']
+    ]]
+  ];
+  var HUB_FAQ = [
+    ['¿Cuánto tarda en salir un anuncio?', 'Meta lo revisa antes de enseñarlo. Suele tardar de minutos a unas horas, como mucho 24.'],
+    ['¿Cuándo me cobra Meta?', 'En tu tarjeta, cuando el gasto llega a tu límite de facturación o a final de mes. Con presupuesto total, nunca más de lo que pongas.'],
+    ['¿Puedo pararlo cuando quiera?', 'Sí: apaga el interruptor de la campaña en el Administrador de anuncios y se para al momento. Solo pagas lo gastado.'],
+    ['¿Por qué me pueden rechazar un anuncio?', 'En cosmética, casi siempre por prometer resultados, poner un antes y después o hablarle a la persona de un problema suyo. Mándame la captura y lo corregimos.'],
+    ['¿Cuántos anuncios pongo?', 'Con 100 €, 2 o 3. Si pones más, el dinero se reparte tanto que no sabrás cuál funciona.'],
+    ['¿Y si no vendo nada?', 'Con 100 € puede pasar. Miramos si la gente hace clic (CTR) y si añade al carrito: así sabremos si falla el anuncio o la web.'],
+    ['¿Tengo que contestar los comentarios?', 'Sí, y siempre como Rizelune, no con tu perfil. Dan confianza a los demás. El spam, bórralo.'],
+    ['¿Instagram o Facebook?', 'Los dos. Con ubicaciones automáticas Meta reparte solo donde funcione mejor.'],
+    ['¿Puedo usar canciones famosas?', 'No en anuncios. Usa música sin derechos o el sonido original del vídeo.'],
+    ['¿Cuándo sé si un anuncio funciona?', 'Los 3 primeros días los números bailan mucho. Júzgalo cuando haya gastado unos 15 €.'],
+    ['¿Tengo que poner que está hecho con IA?', 'Sí. Pon «Escenas creadas con IA» en el texto. Ya viene en todos los textos de tus anuncios.']
+  ];
+  function fold(s) { var m = { 'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u', 'ü': 'u', 'ñ': 'n' }; return String(s || '').toLowerCase().split('').map(function (c) { return m[c] || c; }).join(''); }
+  function listaPasos(id, items) { var ol = $(id); ol.textContent = ''; items.forEach(function (it) { var li = el('li'); var d = el('div'); d.append(el('div', 'gstep__t', it[0])); if (it[1]) d.append(el('div', 'gstep__d', it[1])); li.append(d); ol.append(li); }); }
+  function renderHubStatic() {
+    var nav = $('hub-nav');
+    HUB_NAV.forEach(function (n) { var b = el('button', 'chip', n[1]); b.type = 'button'; b.addEventListener('click', function () { var s = $(n[0]); if (s) s.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' }); }); nav.append(b); });
+    listaPasos('hub-crear-list', HUB_CREAR); listaPasos('hub-capcut', HUB_CAPCUT); listaPasos('hub-canva', HUB_CANVA);
+    var tools = $('hub-tools');
+    HUB_TOOLS.forEach(function (t) { var c = el('article', 'panel tool-card'); var h = el('div', 'tool-card__h'); h.append(el('h3', null, t.n)); if (t.precio) h.append(el('span', 'tag', t.precio)); c.append(h); c.append(el('p', 'tool-card__p', t.para)); if (t.truco) c.append(el('p', 'gstep__d', 'Truco: ' + t.truco)); if (t.url) { var a = el('a', 'go', 'Abrir ' + t.n + ' →'); a.href = t.url; a.target = '_blank'; a.rel = 'noopener'; var pa = el('p', 'tool-card__p'); pa.append(a); c.append(pa); } tools.append(c); });
+    var ul = el('ul', 'gsteps hub-list'); HUB_PRESU.forEach(function (it) { var li = el('li', 'gstep'); li.append(el('span', 'gdot')); var d = el('div'); d.append(el('div', 'gstep__t', it[0])); if (it[1]) d.append(el('div', 'gstep__d', it[1])); li.append(d); ul.append(li); }); $('hub-presu').append(ul);
+    var nb = $('hub-normas-box');
+    [['No pongas nunca', HUB_NO, 'dd-no'], ['Sí puedes decir', HUB_SI, 'dd-si']].forEach(function (g) { var c = el('div', 'panel dd ' + g[2]); c.append(el('h3', null, g[0])); var u = el('ul'); g[1].forEach(function (x) { u.append(el('li', null, x)); }); c.append(u); nb.append(c); });
+    var ck = $('hub-check'); HUB_CHECK.forEach(function (x) { var li = el('li', 'gstep'); li.append(el('span', 'gdot')); li.append(el('div', 'gstep__t', x)); ck.append(li); });
+    var gl = $('hub-gloss');
+    HUB_GLOSS.forEach(function (g) { var sec = el('div', 'gloss-group'); sec.append(el('h3', null, g[0])); var dl = el('dl', 'panel gloss'); g[1].forEach(function (c) { var row = el('div', 'gl'); row.setAttribute('data-q', fold(c[0] + ' ' + c[1] + ' ' + (c[2] || ''))); row.append(el('dt', null, c[0])); var dd = el('dd'); dd.append(el('span', null, c[1])); if (c[2]) dd.append(el('span', 'gl__tu', 'En tu caso: ' + c[2])); row.append(dd); dl.append(row); }); sec.append(dl); gl.append(sec); });
+    var q = $('gloss-q'), vacio = $('gloss-vacio');
+    q.addEventListener('input', function () { var v = fold(q.value.trim()), n = 0; gl.querySelectorAll('.gl').forEach(function (r) { var ok = !v || r.getAttribute('data-q').indexOf(v) >= 0; r.hidden = !ok; if (ok) n++; }); gl.querySelectorAll('.gloss-group').forEach(function (s) { s.hidden = !s.querySelector('.gl:not([hidden])'); }); vacio.hidden = n > 0; });
+    var fq = $('hub-faq'); HUB_FAQ.forEach(function (f, i) { var d = el('details', 'faq__item'); d.id = 'faq-' + i; d.append(el('summary', null, f[0])); d.append(el('p', null, f[1])); fq.append(d); });
+  }
+  function pintarHub() {
+    var tl = tareas.filter(function (t) { return t.id === 't-lanzar'; })[0];
+    var H = (tl && tl.guia_hechos) || {}, total = 0, hechos = 0;
+    if (tl && Array.isArray(tl.guia)) tl.guia.forEach(function (s) { if (!s.info) (s.pasos || []).forEach(function (p) { total++; if (H[p.id]) hechos++; }); });
+    var lista = ads.filter(function (a) { return a.prod_orden; });
+    var prod = lista.filter(function (a) { return a.hecha; }).length;
+    var n = diasHasta('2026-11-21');
+    var dl = $('hub-kpis'); dl.textContent = '';
+    [['Presupuesto', '97 €', 'total, del 21 al 30 nov'], ['Anuncios hechos', prod + '/' + (lista.length || 12), 'para empezar: el 1, el 3 y el 4'], ['Guía', hechos + '/' + total, 'pasos hechos'], ['Lanzamiento', '21 nov', n > 1 ? 'en ' + n + ' días' : n === 1 ? 'mañana' : n === 0 ? 'hoy' : 'campaña en marcha']].forEach(function (x) { var s = el('div', 'stat'); var dd = el('dd', null, x[1]); dd.append(el('small', null, x[2])); s.append(el('dt', null, x[0]), dd); dl.append(s); });
+    var hoy = hoyISO();
+    var prox = agendaDocs.filter(function (a) { return String(a.id).indexOf('a-ads') === 0 && String(a.fecha) >= hoy; }).sort(function (a, b) { return String(a.fecha).localeCompare(String(b.fecha)); })[0];
+    $('hub-prox').textContent = prox ? 'Próximo paso: ' + String(prox.fecha).split('-').reverse().slice(0, 2).join('/') + ' · ' + (prox.titulo || '') : 'No hay pasos de anuncios programados.';
+    var g = $('hub-guia'); g.textContent = '';
+    if (tl && Array.isArray(tl.guia)) g.append(guiaTarea(tl, 'h')); else g.append(el('div', 'panel empty', 'Cargando la guía…'));
+    var pk = $('hub-packs'); pk.textContent = ''; pk.append(listaPaquetes('h'));
+  }
+  var VISTAS = null;
+  function montarVistas() {
+    if (VISTAS) return;
+    VISTAS = { hoy: ['hoy', 'tareas'], ideas: ['ideas-sec', 'recordatorios'], agenda: ['agenda'], tienda: ['ofertas', 'productos', 'enlaces'], apuntes: ['apuntes'] };
+    var main = $('vista-oficina'), grid = main.querySelector('.grid');
+    Object.keys(VISTAS).forEach(function (k) { var v = el('div', 'vista'); v.id = 'v-' + k; VISTAS[k].forEach(function (id) { var s = $(id); if (s) v.append(s); }); main.append(v); });
+    if (grid) grid.remove();
+  }
+  function vista() {
+    montarVistas();
+    var h = (location.hash || '').replace('#', '');
+    if (h === 'oficina' || !h) h = 'hoy';
+    if (h !== 'anuncios' && !VISTAS[h]) h = 'hoy';
+    var a = h === 'anuncios';
+    $('vista-oficina').hidden = a; $('vista-anuncios').hidden = !a;
+    Object.keys(VISTAS).forEach(function (k) { $('v-' + k).hidden = k !== h; });
+    document.querySelectorAll('.tabs .tab').forEach(function (t) { t.setAttribute('aria-current', t.getAttribute('href') === '#' + h ? 'page' : 'false'); });
+  }
+  window.addEventListener('hashchange', function () { vista(); window.scrollTo(0, 0); });
+  renderHubStatic(); vista();
+
+  /* ---------- Ideas ---------- */
+  var ideas = [], ideaCat = 'Todas', ideaVer = 'activas', ideaOcupado = {};
+  var IDEA_VER = [['activas', 'Pendientes'], ['me_gusta', 'Me gustan'], ['hecha', 'Hechas'], ['descartada', 'Descartadas']];
+  var IQUIEN = { tu: 'Te toca a ti', claude: 'Lo hago yo', juntos: 'Lo hacemos juntos' };
+  function estadoIdea(i) { return i.estado || 'nueva'; }
+  function pintarIdeas() {
+    var box = $('ideas-filtros'); box.textContent = '';
+    var r1 = el('div', 'row'), r2 = el('div', 'row');
+    IDEA_VER.forEach(function (v) {
+      var n = ideas.filter(function (i) { var e = estadoIdea(i); return v[0] === 'activas' ? (e === 'nueva' || e === 'me_gusta') : e === v[0]; }).length;
+      var b = el('button', 'chip', v[1]); b.type = 'button'; b.setAttribute('aria-pressed', ideaVer === v[0] ? 'true' : 'false'); b.append(el('b', null, String(n)));
+      b.addEventListener('click', function () { ideaVer = v[0]; pintarIdeas(); }); r1.append(b);
+    });
+    var cats = ['Todas'].concat(Array.from(new Set(ideas.map(function (i) { return i.categoria; }).filter(Boolean))).sort());
+    cats.forEach(function (c) { var b = el('button', 'chip', c); b.type = 'button'; b.setAttribute('aria-pressed', ideaCat === c ? 'true' : 'false'); b.addEventListener('click', function () { ideaCat = c; pintarIdeas(); }); r2.append(b); });
+    box.append(r1, r2);
+    var IMP = { Alto: 0, Medio: 1, Bajo: 2 };
+    var rank = function (x) { return x in IMP ? IMP[x] : 9; };
+    var lista = ideas.filter(function (i) { var e = estadoIdea(i); var okv = ideaVer === 'activas' ? (e === 'nueva' || e === 'me_gusta') : e === ideaVer; return okv && (ideaCat === 'Todas' || i.categoria === ideaCat); })
+      .sort(function (a, b) { return String(b.fecha || '').localeCompare(String(a.fecha || '')) || rank(a.impacto) - rank(b.impacto) || (a.orden || 999) - (b.orden || 999); });
+    var ul = $('lista-ideas'); ul.textContent = '';
+    if (!lista.length) ul.append(el('div', 'panel empty', ideas.length ? 'No hay ideas en este apartado.' : 'Todavía no hay ideas. Las iré añadiendo.'));
+    lista.forEach(function (i) { ul.append(tarjetaIdea(i)); });
+    var nuevas = ideas.filter(function (i) { return estadoIdea(i) === 'nueva'; }).length;
+    $('ideas-n').textContent = nuevas ? nuevas + (nuevas === 1 ? ' sin mirar' : ' sin mirar') : '';
+  }
+  function tarjetaIdea(i) {
+    var est = estadoIdea(i);
+    var c = el('article', 'panel idea' + (est === 'descartada' || est === 'hecha' ? ' is-off' : '')); c.id = 'idea-' + i.id;
+    var tags = el('div', 'task__meta');
+    if (est === 'nueva' && i.fecha && diasHasta(i.fecha) >= -2) tags.append(el('span', 'tag tag--nueva', 'Nueva'));
+    if (i.categoria) tags.append(el('span', 'tag tool', i.categoria));
+    if (i.impacto) tags.append(el('span', 'tag' + (i.impacto === 'Alto' ? ' tag--alto' : ''), 'Impacto ' + String(i.impacto).toLowerCase()));
+    if (i.esfuerzo) tags.append(el('span', 'tag', 'Esfuerzo ' + String(i.esfuerzo).toLowerCase()));
+    if (i.quien && IQUIEN[i.quien]) tags.append(el('span', 'when', IQUIEN[i.quien]));
+    c.append(tags);
+    c.append(el('h3', 'idea__t', i.titulo || ''));
+    if (i.detalle) c.append(el('p', 'idea__d', i.detalle));
+    if (i.por_que) c.append(el('p', 'idea__p', 'Por qué: ' + i.por_que));
+    if (i.fuente && String(i.fuente).indexOf('https://') === 0) { var a = el('a', 'go', 'Más información →'); a.href = i.fuente; a.target = '_blank'; a.rel = 'noopener'; var pf = el('p', 'idea__p'); pf.append(a); c.append(pf); }
+    var acts = el('div', 'idea__acts');
+    [['me_gusta', '👍 Me gusta'], ['hecha', '✓ Hecha'], ['descartada', '✕ Descartar']].forEach(function (b) {
+      var bt = el('button', 'idea__btn', b[1]); bt.type = 'button'; bt.setAttribute('aria-pressed', est === b[0] ? 'true' : 'false'); bt.disabled = !puedeEscribir || !!ideaOcupado[i.id];
+      bt.addEventListener('click', function () { marcarIdea(i, est === b[0] ? 'nueva' : b[0]); });
+      acts.append(bt);
+    });
+    c.append(acts);
+    return c;
+  }
+  function marcarIdea(i, estado) {
+    if (!db || ideaOcupado[i.id]) return;
+    ideaOcupado[i.id] = true;
+    db.doc('ideas/' + i.id).update({ estado: estado, estado_en: new Date().toISOString() })
+      .then(function () { decir(estado === 'me_gusta' ? 'Apuntado: te gusta esta idea. Cuando quieras, me dices y la hacemos.' : estado === 'hecha' ? 'Idea marcada como hecha.' : estado === 'descartada' ? 'Idea descartada.' : 'Idea vuelta a pendientes.'); })
+      .catch(fallo).then(function () { ideaOcupado[i.id] = false; pintarIdeas(); });
+  }
+
+  /* ---------- Agenda ---------- */
+  var QUIEN = { auto: 'Sale solo', claude: 'Lo hago yo', tu: 'Te toca a ti' };
+  function pintarAgenda(docs) {
+    var hoy = hoyISO();
+    var diarios = docs.filter(function (a) { return a.fecha === 'diario'; });
+    var futuros = docs.filter(function (a) { return a.fecha !== 'diario' && String(a.fecha) >= hoy; })
+      .sort(function (a, b) { return String(a.fecha + (a.hora || '')).localeCompare(String(b.fecha + (b.hora || ''))); });
+    var ul = $('lista-agenda'); ul.textContent = '';
+    if (!diarios.length && !futuros.length) ul.append(el('li', 'empty', 'No hay nada programado.'));
+    diarios.concat(futuros).forEach(function (a) {
+      var dd = a.fecha === 'diario' ? null : diasHasta(a.fecha);
+      var li = el('li', 'ag' + (dd !== null && dd <= 7 ? ' is-soon' : ''));
+      var d = el('div', 'date' + (dd === null ? ' date--daily' : ''));
+      if (dd === null) { d.append(el('b', null, 'Cada'), el('span', null, 'día')); }
+      else { var p = a.fecha.split('-'); d.append(el('b', null, String(Number(p[2]))), el('span', null, MES[Number(p[1]) - 1])); }
+      var body = el('div');
+      body.append(el('div', 'ag__t', a.titulo || ''));
+      if (a.detalle) body.append(el('div', 'ag__d', a.detalle));
+      var m = el('div', 'ag__m');
+      if (a.quien && QUIEN[a.quien]) m.append(el('span', 'who who--' + a.quien, QUIEN[a.quien]));
+      if (a.hora) m.append(el('span', null, a.hora + ' h'));
+      if (dd !== null) m.append(el('span', null, dd === 0 ? 'hoy' : dd === 1 ? 'mañana' : 'en ' + dd + ' días'));
+      body.append(m);
+      li.append(d, body); ul.append(li);
+    });
+    var prox = futuros.filter(function (a) { return a.destacado; })[0];
+    var box = $('proximo');
+    if (prox) {
+      var n = diasHasta(prox.fecha);
+      $('proximo-n').textContent = n <= 0 ? 'Hoy' : String(n);
+      $('proximo-t').textContent = n <= 0 ? (prox.titulo || '') : (n === 1 ? 'día' : 'días') + ' para ' + (prox.corto || prox.titulo || '');
+      var pf = String(prox.fecha).split('-').map(Number);
+      $('proximo-d').textContent = n <= 0 ? 'Desde hoy' : 'Empieza el ' + new Intl.DateTimeFormat('es-ES', { timeZone: 'UTC', weekday: 'long', day: 'numeric', month: 'long' }).format(new Date(Date.UTC(pf[0], pf[1] - 1, pf[2], 12)));
+      box.hidden = false;
+    } else box.hidden = true;
+  }
+
+  /* ---------- Ofertas ---------- */
+  var ESTADO = { activa: 'Activa', programada: 'Programada', pausada: 'Pausada' };
+  function pintarOfertas(docs) {
+    var ul = $('lista-ofertas'); ul.textContent = '';
+    docs = docs.slice().sort(function (a, b) { return (a.orden || 99) - (b.orden || 99); });
+    if (!docs.length) ul.append(el('li', 'empty', 'No hay ofertas guardadas.'));
+    docs.forEach(function (o) {
+      var li = el('li', 'offer');
+      var l = el('div');
+      l.append(el('div', 'offer__n', o.nombre || ''));
+      if (o.detalle) l.append(el('div', 'offer__d', o.detalle));
+      if (o.coste || o.beneficio) l.append(el('div', 'offer__c', [o.coste ? 'Te cuesta ' + o.coste : '', o.beneficio ? 'Te queda ' + o.beneficio : ''].filter(Boolean).join(' · ')));
+      if (o.estado) l.append(el('span', 'state state--' + o.estado, (ESTADO[o.estado] || o.estado) + (o.cuando ? ' · ' + o.cuando : '')));
+      var r = el('div', 'offer__p');
+      if (o.precio) r.append(el('b', null, o.precio));
+      if (o.antes) r.append(el('s', null, o.antes));
+      li.append(l, r); ul.append(li);
+    });
+  }
+
+  /* ---------- Productos ---------- */
+  function pintarProductos(docs) {
+    var ul = $('lista-productos'); ul.textContent = '';
+    docs = docs.slice().sort(function (a, b) { return (a.orden || 99) - (b.orden || 99); });
+    if (!docs.length) ul.append(el('li', 'empty', 'No hay productos guardados.'));
+    docs.forEach(function (p) {
+      var li = el('li', 'prod');
+      if (p.img && IMG[p.img]) { var im = el('img'); im.src = IMG[p.img]; im.alt = ''; im.width = 64; im.height = 64; li.append(im); } else li.append(el('div', 'ph'));
+      var b = el('div');
+      b.append(el('div', 'prod__n', p.nombre || ''));
+      var m = el('div', 'prod__m');
+      if (p.precio) m.append(el('b', null, p.precio));
+      if (p.galeria != null) {
+        var s = el('span'); var sl = el('span', 'slots'); sl.setAttribute('aria-hidden', 'true');
+        for (var i = 0; i < 6; i++) sl.append(el('i', i < p.galeria ? 'on' : ''));
+        s.append(sl, document.createTextNode(' ' + p.galeria + ' de 6 fotos/vídeos')); m.append(s);
+      }
+      if (p.coste || p.beneficio) m.append(el('span', 'offer__c', [p.coste ? 'Te cuesta ' + p.coste : '', p.beneficio ? 'Te queda ' + p.beneficio : ''].filter(Boolean).join(' · ')));
+      if (p.nota) m.append(el('span', null, p.nota));
+      b.append(m);
+      var lk = el('div', 'prod__l');
+      if (p.url) { var a = el('a', 'go', 'Ver en la tienda'); a.href = p.url; a.target = '_blank'; a.rel = 'noopener'; lk.append(a); }
+      if (p.admin) { var a2 = el('a', 'go', 'Editar'); a2.href = p.admin; a2.target = '_blank'; a2.rel = 'noopener'; lk.append(a2); }
+      b.append(lk);
+      li.append(b); ul.append(li);
+    });
+  }
+
+  /* ---------- Apuntes ---------- */
+  var notas = $('notas'), notasTimer = null, notasGuardando = false, notasPendiente = false, notasRemoto = null;
+  function guardarNotas() {
+    if (!db) return;
+    if (notasGuardando) { notasPendiente = true; return; }
+    notasGuardando = true; $('notas-estado').textContent = 'Guardando…';
+    var texto = notas.value;
+    db.doc('notas/jon').set({ texto: texto, actualizado: new Date().toISOString() })
+      .then(function () { notasRemoto = texto; $('notas-estado').textContent = 'Guardado.'; })
+      .catch(function (e) { $('notas-estado').textContent = 'No se pudo guardar.'; fallo(e); })
+      .then(function () { notasGuardando = false; if (notasPendiente) { notasPendiente = false; guardarNotas(); } });
+  }
+  notas.addEventListener('input', function () { $('notas-estado').textContent = 'Escribiendo…'; clearTimeout(notasTimer); notasTimer = setTimeout(guardarNotas, 1200); });
+  notas.addEventListener('blur', function () { if (notasTimer) { clearTimeout(notasTimer); notasTimer = null; if (notas.value !== notasRemoto) guardarNotas(); } });
+
+  function fallo(e) {
+    var c = e && e.code;
+    if (c === 'invalid_argument' || c === 'not_granted') { decir('Solo tú, como dueño de la oficina, puedes cambiar cosas aquí.', true); }
+    else if (c === 'quota_exceeded') decir('La oficina está llena. Quita alguna tarea hecha y vuelve a probar.', true);
+    else decir('No se pudo guardar el cambio. Prueba otra vez en unos segundos.', true);
+  }
+
+  function listado(snap) { return snap.docs.map(function (d) { var o = Object.assign({}, d.data()); o.id = d.id; return o; }); }
+
+  function arrancar() {
+    if (!window.claude || !window.claude.use) { decir('Abre esta página desde Claude para ver tus datos.', true); return; }
+    Promise.all([window.claude.use('db'), window.claude.use('user')]).then(function (r) {
+      db = r[0]; var user = r[1];
+      if (!db) { clearTimeout(timer); decir('No se puede conectar con los datos de la oficina en esta vista. Ábrela con tu cuenta de Claude.', true); return; }
+      var listo = function (k) { cargado[k] = true; if (cargado.tareas) { clearTimeout(timer); if (aviso.classList.contains('is-err')) decir(''); } };
+      if (user) user.can('data.write').then(function (v) { if (v === false) { puedeEscribir = false; notas.readOnly = true; $('form-tarea').hidden = true; pintarTareas(); pintarRecs(); pintarAds(); pintarIdeas(); } });
+      db.doc('panel/numeros').onSnapshot(function (s) { pintarNumeros(s.exists ? s.data() : null); listo('numeros'); }, function () {});
+      db.doc('panel/estado').onSnapshot(function (s) { pintarEstado(s.exists ? s.data() : null); }, function () {});
+      db.collection('tareas').onSnapshot(function (s) { tareas = listado(s); pintarTareas(); pintarHub(); if (!s.metadata.fromCache) listo('tareas'); }, function (e) { fallo(e); });
+      db.collection('agenda').onSnapshot(function (s) { agendaDocs = listado(s); pintarAgenda(agendaDocs); pintarHub(); }, function () {});
+      db.collection('recordatorios').onSnapshot(function (s) { recs = listado(s); pintarRecs(); }, function () {});
+      db.collection('anuncios').onSnapshot(function (s) { ads = listado(s); pintarAds(); pintarTareas(); pintarHub(); }, function () {});
+      db.collection('ideas').onSnapshot(function (s) { ideas = listado(s); pintarIdeas(); }, function () {});
+      db.collection('ofertas').onSnapshot(function (s) { pintarOfertas(listado(s)); }, function () {});
+      db.collection('productos').onSnapshot(function (s) { pintarProductos(listado(s)); }, function () {});
+      db.doc('notas/jon').onSnapshot(function (s) {
+        var d = s.exists ? s.data() : null;
+        if (d && document.activeElement !== notas && !notasTimer && !notasGuardando) { notas.value = d.texto || ''; notasRemoto = d.texto || ''; }
+        $('notas-fecha').textContent = d && d.actualizado ? fechaCorta(d.actualizado) : '';
+      }, function () {});
+    });
+  }
+  arrancar();
+})();
+</script>

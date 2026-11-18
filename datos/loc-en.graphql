@@ -1,0 +1,1 @@
+mutation L($locale: String!, $wp: [ID!]) { shopLocaleEnable(locale: $locale, marketWebPresenceIds: $wp) { shopLocale { locale name published } userErrors { field message } } }

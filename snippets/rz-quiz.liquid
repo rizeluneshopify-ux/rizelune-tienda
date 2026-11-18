@@ -1,0 +1,93 @@
+{%- comment -%}
+  Test «¿Cuántas gotas necesitas?»: 4 preguntas y resultado personalizado (gotas, dónde, cómo, tiempo y frecuencia).
+  Se abre con cualquier botón con data-rz-quiz-open: el de la guía de gotas y el botón flotante de la gota «¿Cómo usar el sérum?» (encima del de WhatsApp; no sale en las fichas de otros productos).
+  Activar/desactivar: Configuración del tema → Rizelune · Test de gotas.
+  Textos: archivos de idioma (rizelune.quiz_*). La lógica de las gotas está en assets/rz-scripts.js (initQuiz).
+{%- endcomment -%}
+{%- if settings.rz_quiz_activo -%}
+  {%- assign qp = settings.rz_pack_producto -%}
+  <div class="rz-quiz" data-rz-quiz hidden role="dialog" aria-modal="true" aria-label="{{ 'rizelune.quiz_cta_title' | t | escape }}">
+    <div class="rz-quiz__backdrop" data-rz-quiz-close></div>
+    <div class="rz-quiz__panel">
+      <div class="rz-quiz__top">
+        <button type="button" class="rz-quiz__back" data-rz-quiz-back hidden>&larr; {{ 'rizelune.quiz_back' | t }}</button>
+        <span class="rz-quiz__step" data-rz-quiz-step></span>
+        <button type="button" class="rz-quiz__x" data-rz-quiz-close aria-label="{{ 'rizelune.quiz_close' | t | escape }}">&times;</button>
+      </div>
+      <div class="rz-quiz__bar" aria-hidden="true"><span data-rz-quiz-bar></span></div>
+      <div class="rz-quiz__prod">
+        {%- if qp != blank and qp.featured_image -%}{{ qp.featured_image | image_url: width: 120 | image_tag: loading: 'lazy', alt: '' }}{%- endif -%}
+        <span>{{ 'rizelune.quiz_product' | t }}</span>
+      </div>
+
+      {%- for n in (1..4) -%}
+        {%- case n -%}
+          {%- when 1 -%}{%- assign opts = 'a,b,c,d,e' | split: ',' -%}
+          {%- when 4 -%}{%- assign opts = 'a,b,c,d' | split: ',' -%}
+          {%- else -%}{%- assign opts = 'a,b,c' | split: ',' -%}
+        {%- endcase -%}
+        {%- assign qkey = 'rizelune.quiz_q' | append: n -%}
+        <div class="rz-quiz__q" data-rz-quiz-q="{{ n }}" role="group" aria-labelledby="rz-quiz-q{{ n }}" hidden>
+          <p class="rz-quiz__title" id="rz-quiz-q{{ n }}">{{ qkey | t }}</p>
+          <div class="rz-quiz__opts">
+            {%- for o in opts -%}
+              {%- assign okey = qkey | append: '_' | append: o -%}
+              <button type="button" class="rz-quiz__opt" data-rz-quiz-opt="{{ o }}">{{ okey | t }}</button>
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endfor -%}
+
+      <div class="rz-quiz__result" data-rz-quiz-result hidden>
+        <p class="rz-quiz__eyebrow" tabindex="-1">{{ 'rizelune.quiz_r_eyebrow' | t }}</p>
+        <p class="rz-quiz__drops"><span class="rz-quiz__icons" data-rz-quiz-icons aria-hidden="true"></span><strong data-rz-quiz-drops></strong></p>
+        <dl class="rz-quiz__list">
+          <div><dt>{{ 'rizelune.quiz_r_where' | t }}</dt><dd data-rz-quiz-where></dd></div>
+          <div><dt>{{ 'rizelune.quiz_r_how' | t }}</dt><dd data-rz-quiz-how></dd></div>
+          <div><dt>{{ 'rizelune.quiz_r_time' | t }}</dt><dd data-rz-quiz-time></dd></div>
+          <div><dt>{{ 'rizelune.quiz_r_freq' | t }}</dt><dd data-rz-quiz-freq></dd></div>
+        </dl>
+        <p class="rz-quiz__tip">{{ 'rizelune.quiz_tip_wash' | t }}</p>
+        <p class="rz-quiz__tip rz-quiz__tip--warn" data-rz-quiz-sens hidden>{{ 'rizelune.quiz_tip_sensitive' | t }}</p>
+        <p class="rz-quiz__note">{{ 'rizelune.quiz_note' | t }}</p>
+        <div class="rz-quiz__actions">
+          {%- if qp != blank and qp.available -%}
+            {%- capture items -%}[{"id":{{ qp.selected_or_first_available_variant.id }},"quantity":1}]{%- endcapture -%}
+            <button type="button" class="rz-btn" data-rz-ritual data-items='{{ items }}'>{{ 'rizelune.quiz_buy' | t }}</button>
+          {%- endif -%}
+          <button type="button" class="rz-quiz__restart" data-rz-quiz-restart>{{ 'rizelune.quiz_restart' | t }}</button>
+        </div>
+        <p class="rz-quiz__err" data-rz-ritual-err hidden>{{ 'rizelune.ritual_error' | t }}</p>
+      </div>
+
+      <script type="application/json" data-rz-quiz-txt>
+        {
+          "step": {{ 'rizelune.quiz_step' | t | json }},
+          "drops": {{ 'rizelune.quiz_r_drops' | t | json }},
+          "where_a": {{ 'rizelune.quiz_where_a' | t | json }},
+          "where_b": {{ 'rizelune.quiz_where_b' | t | json }},
+          "where_c": {{ 'rizelune.quiz_where_c' | t | json }},
+          "where_all_4": {{ 'rizelune.quiz_where_all_4' | t | json }},
+          "where_all_6": {{ 'rizelune.quiz_where_all_6' | t | json }},
+          "where_all_8": {{ 'rizelune.quiz_where_all_8' | t | json }},
+          "where_all_10": {{ 'rizelune.quiz_where_all_10' | t | json }},
+          "how": {{ 'rizelune.quiz_how' | t | json }},
+          "how_curly": {{ 'rizelune.quiz_how_curly' | t | json }},
+          "how_fine": {{ 'rizelune.quiz_how_fine' | t | json }},
+          "time_dry": {{ 'rizelune.quiz_time_dry' | t | json }},
+          "time_normal": {{ 'rizelune.quiz_time_normal' | t | json }},
+          "time_oily": {{ 'rizelune.quiz_time_oily' | t | json }},
+          "time_sens": {{ 'rizelune.quiz_time_sens' | t | json }},
+          "freq_std": {{ 'rizelune.quiz_freq_std' | t | json }},
+          "freq_sens": {{ 'rizelune.quiz_freq_sens' | t | json }}
+        }
+      </script>
+    </div>
+  </div>
+  {%- assign quiz_fab_ok = true -%}
+  {%- if template.name == 'product' and qp != blank and product.id != qp.id -%}{%- assign quiz_fab_ok = false -%}{%- endif -%}
+  {%- if template.suffix == 'nosotros' -%}{%- assign quiz_fab_ok = false -%}{%- endif -%}
+  {%- if settings.rz_quiz_boton and template.name != 'password' and quiz_fab_ok -%}
+    <button type="button" class="rz-quiz-fab" data-rz-quiz-open aria-label="{{ 'rizelune.quiz_cta_title' | t | escape }}"><span class="rz-quiz-fab__emoji" aria-hidden="true">{% render 'rz-icon', name: 'gota' %}</span><span class="rz-quiz-fab__txt">{{ 'rizelune.quiz_fab' | t }}</span></button>
+  {%- endif -%}
+{%- endif -%}

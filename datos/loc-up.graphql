@@ -1,0 +1,1 @@
+mutation U($locale: String!) { shopLocaleUpdate(locale: $locale, shopLocale: { published: true }) { shopLocale { locale published } userErrors { field message } } }

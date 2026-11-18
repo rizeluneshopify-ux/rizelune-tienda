@@ -1,0 +1,49 @@
+{%- liquid
+  # Rizelune: con «Ocultar si no hay opiniones», no se muestra nada mientras el producto tenga 0 opiniones en Judge.me
+  assign rz_ocultar = false
+  if section.settings.rz_ocultar_sin_opiniones and product
+    assign rz_n_op = product.metafields.judgeme.review_widget_data.value.number_of_reviews | default: 0
+    if rz_n_op == 0
+      assign rz_ocultar = true
+    endif
+  endif
+-%}
+{%- unless rz_ocultar -%}
+<div class="{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+  {%- for block in section.blocks -%}
+    {% render block %}
+  {%- endfor -%}
+</div>
+{%- endunless -%}
+
+{% schema %}
+{
+  "name": "t:sections.apps.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "include_margins",
+      "default": true,
+      "label": "t:sections.apps.settings.include_margins.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "rz_ocultar_sin_opiniones",
+      "default": false,
+      "label": "Ocultar si el producto no tiene opiniones (Judge.me)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.apps.presets.name"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,44 @@
+{
+  "menu": {
+    "id": "gid://shopify/Menu/362958029130",
+    "title": "Menú principal",
+    "handle": "main-menu",
+    "items": [
+      {
+        "id": "gid://shopify/MenuItem/1078173663562",
+        "title": "Inicio",
+        "type": "FRONTPAGE",
+        "url": "/",
+        "resourceId": null
+      },
+      {
+        "id": "gid://shopify/MenuItem/1078173696330",
+        "title": "Rizelune",
+        "type": "PRODUCT",
+        "url": "/products/rizelune-antiguo-sin-selfnamed",
+        "resourceId": "gid://shopify/Product/16123855962442"
+      },
+      {
+        "id": "gid://shopify/MenuItem/1078173729098",
+        "title": "El ritual",
+        "type": "HTTP",
+        "url": "/#rz-ritual",
+        "resourceId": null
+      },
+      {
+        "id": "gid://shopify/MenuItem/1078173761866",
+        "title": "Preguntas frecuentes",
+        "type": "HTTP",
+        "url": "/#rz-faq",
+        "resourceId": null
+      },
+      {
+        "id": "gid://shopify/MenuItem/1078173794634",
+        "title": "Contacto",
+        "type": "PAGE",
+        "url": "/pages/contact",
+        "resourceId": "gid://shopify/Page/720462479690"
+      }
+    ]
+  }
+}

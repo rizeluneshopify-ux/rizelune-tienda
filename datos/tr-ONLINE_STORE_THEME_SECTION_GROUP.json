@@ -1,0 +1,70 @@
+{
+  "translatableResources": {
+    "nodes": [
+      {
+        "resourceId": "gid://shopify/OnlineStoreThemeSectionGroup/footer-group?theme_id=210244436298",
+        "translatableContent": [
+          {
+            "key": "section.sections/footer-group.json.footer_m9NzUG.group_H6VpwJ__text_LWt8Pz.text:11a6kwfibxsn8",
+            "value": "<h2>Join our email list</h2>",
+            "digest": "c7bb6593db424b62beed2c7b7aa483a5556877c183a5aa054242b755c56822dc",
+            "locale": "es"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer_m9NzUG.group_H6VpwJ__text_f9CFLH.text:ne10ekm1b2pz",
+            "value": "<p>Get exclusive deals and early access to new products.</p>",
+            "digest": "e4353b025f356bbf39133ead6d9f0ae8a03504d518e9492c5a34fd4e3db6f537",
+            "locale": "es"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer_m9NzUG.email_signup_crihX7.label:r7nsgb9ylyzk",
+            "value": "Sign up",
+            "digest": "5e2b8e96503d722e7ebf61b9bc3e9988e1ec7fd4eabcf25a52577f845125b31e",
+            "locale": "es"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer_utilities_jLGE8U.social_links_Ew63Kq.facebook_url:mb9k3oghtwqg",
+            "value": "https://www.facebook.com/",
+            "digest": "0b2df0f635584f42c895f1d7b9cd105d3106accd9804d30556da88ae1bb0d62c",
+            "locale": "es"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer_utilities_jLGE8U.social_links_Ew63Kq.instagram_url:3m6tnkaonfzxk",
+            "value": "https://www.instagram.com/",
+            "digest": "ea2ecfbfdb69126930973426de47de3cba013a6e4be9150463581f72015f8f01",
+            "locale": "es"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer_utilities_jLGE8U.social_links_Ew63Kq.youtube_url:87mto2fefvx1",
+            "value": "https://www.youtube.com/",
+            "digest": "dbae2d0204aa489e234eb2f903a0127b17c712386428cab12b86c5f68aa75867",
+            "locale": "es"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer_utilities_jLGE8U.social_links_Ew63Kq.tiktok_url:3jf8oti9ofhiu",
+            "value": "https://www.tiktok.com/",
+            "digest": "9362956c86b724ae05a38b00cf9d79b3061b40a70501aacf1b4e48c4230d0f96",
+            "locale": "es"
+          },
+          {
+            "key": "section.sections/footer-group.json.footer_utilities_jLGE8U.social_links_Ew63Kq.twitter_url:8nzeol02h31p",
+            "value": "https://x.com/",
+            "digest": "326a645050274b9b922a7eb20fdf980542877aedb1858f5f84d4e8d8574c6710",
+            "locale": "es"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/OnlineStoreThemeSectionGroup/header-group?theme_id=210244436298",
+        "translatableContent": [
+          {
+            "key": "section.sections/header-group.json.header_announcements_9jGBFp.announcement_BxgCk9.text:pmxvxwkljjsj",
+            "value": "Welcome to our store",
+            "digest": "5e26a5fac20ecd9904062cb62837b52ec94079c722b895a801501078031512e2",
+            "locale": "es"
+          }
+        ]
+      }
+    ]
+  }
+}

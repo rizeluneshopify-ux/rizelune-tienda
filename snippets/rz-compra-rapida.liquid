@@ -1,0 +1,19 @@
+{%- comment -%}
+  Barra «Comprar» fija abajo en las páginas que no son de producto ni carrito (tampoco en Sobre nosotros: esa página no vende).
+  Sale al bajar de la primera pantalla y se esconde mientras se ve una sección de compra o el pie.
+  Producto: Configuración del tema → Rizelune · Packs → «Producto con packs». Ajuste: «Mostrar barra de compra rápida».
+{%- endcomment -%}
+{%- assign qp = settings.rz_pack_producto -%}
+{%- if settings.rz_quick_activo and qp != blank and qp.available and template.name != 'product' and template.name != 'cart' and template.name != 'password' and template.suffix != 'nosotros' -%}
+  <div class="rz-sticky-buy rz-quick" data-rz-quick hidden>
+    <a class="rz-sticky-buy__info" href="{{ qp.url }}">
+      {%- if qp.featured_image -%}{{ qp.featured_image | image_url: width: 120 | image_tag: loading: 'lazy', alt: '' }}{%- endif -%}
+      <span>{{ qp.title }}</span>
+      <strong>{{ qp.price | money }}</strong>
+    </a>
+    <div class="rz-quick__actions">
+      <a class="rz-btn" href="{{ qp.url }}">{{ 'rizelune.quick_btn' | t }}</a>
+      <button type="button" class="rz-quick__close" data-rz-quick-close aria-label="{{ 'rizelune.quick_close' | t }}">×</button>
+    </div>
+  </div>
+{%- endif -%}

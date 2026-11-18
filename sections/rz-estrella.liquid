@@ -1,0 +1,53 @@
+{%- comment -%}
+  Producto estrella: tarjeta horizontal con foto, nombre, texto corto, precio y botón de compra (para «Nuestros productos»).
+  Textos: rizelune.estrella_* · El botón añade 1 unidad al carrito y abre el carrito.
+{%- endcomment -%}
+{%- assign p = section.settings.producto -%}
+{%- if p != blank and p.available -%}
+  {%- assign v = p.selected_or_first_available_variant -%}
+  {%- assign img = section.settings.imagen | default: p.featured_image -%}
+  <section class="rz-section rz-estrella">
+    <div class="rz-container">
+      <div class="rz-estrella__card rz-reveal">
+        <a class="rz-estrella__media" href="{{ p.url }}">
+          {%- if img -%}{{ img | image_url: width: 900 | image_tag: loading: 'lazy', alt: p.title, sizes: '(min-width: 750px) 380px, 100vw' }}{%- endif -%}
+        </a>
+        <div class="rz-estrella__body">
+          <span class="rz-eyebrow">{{ 'rizelune.estrella_eyebrow' | t }}</span>
+          <h2 class="rz-estrella__title"><a href="{{ p.url }}">{{ p.title }}</a></h2>
+          {%- assign rating = p.metafields.reviews.rating.value -%}
+          {%- if rating != blank -%}
+            <p class="rz-estrella__rating">
+              <span aria-hidden="true">{% for i in (1..5) %}{% if rating.rating >= i %}★{% else %}☆{% endif %}{% endfor %}</span>
+              <small>{{ rating.rating | round: 1 }} ({{ p.metafields.reviews.rating_count }})</small>
+            </p>
+          {%- endif -%}
+          <p class="rz-estrella__text">{{ 'rizelune.estrella_text' | t }}</p>
+          <p class="rz-estrella__price">{{ v.price | money }}</p>
+          <div class="rz-estrella__cta">
+            <button type="button" class="rz-btn" data-rz-ritual data-items='[{"id":{{ v.id }},"quantity":1}]'>{{ 'rizelune.estrella_btn' | t }}</button>
+            <a class="rz-estrella__more" href="{{ p.url }}">{{ 'rizelune.estrella_more' | t }} →</a>
+          </div>
+          <p class="rz-ritual__err" data-rz-ritual-err hidden>{{ 'rizelune.ritual_error' | t }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Rizelune · Estrella",
+  "tag": "div",
+  "class": "rz-estrella-section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Tarjeta destacada de un producto. Los textos se cambian en Tienda online → ⋯ → Editar contenido predeterminado del tema → buscar «estrella»."
+    },
+    { "type": "product", "id": "producto", "label": "Producto" },
+    { "type": "image_picker", "id": "imagen", "label": "Imagen (si no, la del producto)" }
+  ],
+  "presets": [ { "name": "Rizelune · Estrella" } ]
+}
+{% endschema %}

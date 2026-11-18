@@ -1,0 +1,27 @@
+{%- comment -%} Barra de envío gratis (carrito). Ajustes en Configuración del tema → Rizelune · Envío {%- endcomment -%}
+{%- if settings.rz_envio_activo and cart.item_count > 0 -%}
+  {%- assign es_local = false -%}
+  {%- if localization.country.iso_code == 'ES' -%}{%- assign es_local = true -%}{%- endif -%}
+  {%- if es_local -%}
+    {%- assign umbral = settings.rz_envio_umbral | default: '45' | replace: ',', '.' | strip | times: 100 | round -%}
+  {%- else -%}
+    {%- assign umbral = settings.rz_envio_umbral_int | default: '39,99' | replace: ',', '.' | strip | times: 100 | round -%}
+  {%- endif -%}
+  {%- assign total = cart.total_price -%}
+  {%- if total >= umbral -%}
+    {%- assign pct = 100 -%}
+    {%- if es_local -%}{%- assign msg = settings.rz_envio_ok -%}{%- assign msg_t = 'rizelune.ship_ok' | t -%}{%- else -%}{%- assign msg = settings.rz_envio_ok_int -%}{%- assign msg_t = 'rizelune.ship_ok_int' | t -%}{%- endif -%}
+    {%- unless request.locale.primary -%}{%- assign msg = msg_t -%}{%- endunless -%}
+  {%- else -%}
+    {%- assign pct = total | times: 100 | divided_by: umbral -%}
+    {%- assign falta = umbral | minus: total | money -%}
+    {%- if es_local -%}{%- assign msg = settings.rz_envio_falta -%}{%- assign msg_t = 'rizelune.ship_missing' | t -%}{%- else -%}{%- assign msg = settings.rz_envio_falta_int -%}{%- assign msg_t = 'rizelune.ship_missing_int' | t -%}{%- endif -%}
+    {%- unless request.locale.primary -%}{%- assign msg = msg_t -%}{%- endunless -%}
+    {%- capture falta_html %}<strong>{{ falta }}</strong>{% endcapture -%}
+    {%- assign msg = msg | replace: '[importe]', falta_html -%}
+  {%- endif -%}
+  <div class="rz-shipbar{% if pct >= 100 %} is-done{% endif %}">
+    <p class="rz-shipbar__msg">{% render 'rz-icon', name: 'camion' %}<span>{{ msg }}</span></p>
+    <div class="rz-shipbar__track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ pct }}"><span style="width: {{ pct }}%"></span></div>
+  </div>
+{%- endif -%}

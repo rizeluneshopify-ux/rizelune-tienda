@@ -1,0 +1,241 @@
+{
+  "translatableResources": {
+    "nodes": [
+      {
+        "resourceId": "gid://shopify/OnlineStoreThemeJsonTemplate/404?theme_id=210244436298",
+        "translatableContent": [
+          {
+            "key": "section.404.json.main.text_GqmVFf.text:2i368gao346xo",
+            "value": "<h1>Page not found</h1>",
+            "digest": "b93488eca6e606b6a169db2c12d968d2d973b6f2e7db9fbb3d077565131c3f40",
+            "locale": "es"
+          },
+          {
+            "key": "section.404.json.main.text_Ua9XAW.text:10io0lm5gwd3m",
+            "value": "<p>The link may be incorrect, or the page has been removed. </p>",
+            "digest": "7bd80c0e6b47cedca869c33808957de9636b15c2670d9eda0bfdb8fe028b878a",
+            "locale": "es"
+          },
+          {
+            "key": "section.404.json.main.button_PAQMwR.label:30ry970vkw0bt",
+            "value": "Continue shopping",
+            "digest": "264a224fd18a1bf56b080cb6e2087555c6144c482f7a2e3322662e90eaf1bbfe",
+            "locale": "es"
+          },
+          {
+            "key": "section.404.json.main.button_PAQMwR.link:ss0bdhvde5fz",
+            "value": "shopify://collections/all",
+            "digest": "ef8b060f54ca5d0ecf605131f265a26f24d7dea43ff882f891e1ff33456cc122",
+            "locale": "es"
+          },
+          {
+            "key": "section.404.json.product_list_iA96Tq.static-header__text_WJEa9Q.text:3gwqztskn9i3u",
+            "value": "<p>Discover something new</p>",
+            "digest": "1caf96190faf3e967a675afe76f4bbb422cc79ab95ba6d2e48d6a2e24e2e3317",
+            "locale": "es"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/OnlineStoreThemeJsonTemplate/article?theme_id=210244436298",
+        "translatableContent": [
+          {
+            "key": "section.article.json.section.blog-post-title.text:2qmlk8swrysm3",
+            "value": "<h1>{{ article.title }}</h1>",
+            "digest": "f97f1561b77386368b2c0789b183ae9a6855a0c598e87718b98f1c26753f32a7",
+            "locale": "es"
+          },
+          {
+            "key": "section.article.json.section.blog-post-image.image:207ntrkwivu2u",
+            "value": "",
+            "digest": "f68302ed0f2ed5d7dff0c39c80325c61f1efc615e510e0c2c5fb4fb04ea8bc28",
+            "locale": "es"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/OnlineStoreThemeJsonTemplate/blog?theme_id=210244436298",
+        "translatableContent": [
+          {
+            "key": "section.blog.json.main.title.text:3mkg0fvh31gw5",
+            "value": "<h1>{{ closest.blog.title }}</h1>",
+            "digest": "c0f42ea54955309714f9cd4eb74364c6351d1942c9b237f10800f14ff029a75b",
+            "locale": "es"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/OnlineStoreThemeJsonTemplate/cart?theme_id=210244436298",
+        "translatableContent": [
+          {
+            "key": "section.cart.json.cart-section.cart-page-title.title:ffson5e94pnq",
+            "value": "Cart",
+            "digest": "6d2d59aed44f1efab446c09e60a3da7794ed1e652cd88d0a67914e72d1f9eae8",
+            "locale": "es"
+          },
+          {
+            "key": "section.cart.json.product_list_NNFgcy.static-header__product_list_text_fifeh4.text:27h7qdg4ek6cv",
+            "value": "<h3>You may also like</h3>",
+            "digest": "f06c23f028d2f8d1191e3204ff744123adb40b8ae6139301abacefd59e0aa6c0",
+            "locale": "es"
+          },
+          {
+            "key": "section.cart.json.product_list_NNFgcy.static-header__product_list_button_eibbma.label:2bkjyggphdm8f",
+            "value": "View all",
+            "digest": "30a64216eaeac5d3a328c11bf5e3269d10a3ca0d50aa7a8b99337ab429b73cb2",
+            "locale": "es"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/OnlineStoreThemeJsonTemplate/collection?theme_id=210244436298",
+        "translatableContent": [
+          {
+            "key": "section.collection.json.section.text_tqQTNE.text:1vmb3k4ct6g4e",
+            "value": "<h1>{{ closest.collection.title }}</h1>",
+            "digest": "f8d028d79d514d0070e99e5163dbf935c025c48dfe0fd39f341d3248eef35b79",
+            "locale": "es"
+          },
+          {
+            "key": "section.collection.json.section.text_twGGkJ.text:b8a2nm6fwj13",
+            "value": "{{ closest.collection.description }}",
+            "digest": "e9cd73793dde35f825f0d07c0d8fc195a4f88abc20e04144774c625f7dff7eac",
+            "locale": "es"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210244436298",
+        "translatableContent": [
+          {
+            "key": "section.index.json.hero_jVaWmY.text_YLPk4p.text:3mfw1qkd1m4y7",
+            "value": "<p>Browse our latest products</p>",
+            "digest": "8b11ee1a81c1bf95c835c19866625c29a6c68b75709bdfe1462e8977843bb6ab",
+            "locale": "es"
+          },
+          {
+            "key": "section.index.json.hero_jVaWmY.button_H9gpTf.label:22syxefjpeqwx",
+            "value": "Shop all",
+            "digest": "f9975d69cc1b19352eacfbc77d4f09af8c3b32e8aded66d41b7691f1cece599c",
+            "locale": "es"
+          },
+          {
+            "key": "section.index.json.hero_jVaWmY.button_H9gpTf.link:108q9zlq8f36v",
+            "value": "shopify://collections/all",
+            "digest": "ef8b060f54ca5d0ecf605131f265a26f24d7dea43ff882f891e1ff33456cc122",
+            "locale": "es"
+          },
+          {
+            "key": "section.index.json.product_list_fa6P9H.static-header__product_list_text_YFtzcL.text:3swl12a07tofk",
+            "value": "<h3>{{ closest.collection.title }}</h3>",
+            "digest": "0ade53bfeb36c071edf91d1f49c760fa3b713159159ece47408924fcd2c5e88f",
+            "locale": "es"
+          },
+          {
+            "key": "section.index.json.product_list_fa6P9H.static-header__product_list_button_MWeP9V.label:11xltcn0p7x4u",
+            "value": "View all",
+            "digest": "30a64216eaeac5d3a328c11bf5e3269d10a3ca0d50aa7a8b99337ab429b73cb2",
+            "locale": "es"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/OnlineStoreThemeJsonTemplate/list-collections?theme_id=210244436298",
+        "translatableContent": [
+          {
+            "key": "section.list-collections.json.collection_list_Wfgh3m.group_4FtiAg__text_fRMQMR.text:1vvq2zaj6zyve",
+            "value": "<h1>Collections</h1>",
+            "digest": "883500fc3d16ebcd07ab4a930c5b655208eb188c20e5a49bad4c7b2a328c288c",
+            "locale": "es"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/OnlineStoreThemeJsonTemplate/page?theme_id=210244436298",
+        "translatableContent": [
+          {
+            "key": "section.page.json.main.heading.text:53ake9i3ihjs",
+            "value": "<h1>{{ closest.page.title }}</h1>",
+            "digest": "b6605e63e4e5b53834ede513d16f1ecba9e2c0fa0adf9112763e1730353f701c",
+            "locale": "es"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/OnlineStoreThemeJsonTemplate/page.contact?theme_id=210244436298",
+        "translatableContent": [
+          {
+            "key": "section.page.contact.json.main.title.text:1g0er5b0k3roe",
+            "value": "<h1>{{ closest.page.title }}</h1>",
+            "digest": "b6605e63e4e5b53834ede513d16f1ecba9e2c0fa0adf9112763e1730353f701c",
+            "locale": "es"
+          },
+          {
+            "key": "section.page.contact.json.main.content.text:69a0qmhvsct3",
+            "value": "{{ closest.page.content }}",
+            "digest": "928c0b35bdcea09ec9ea2daddc5ae6aa6083aa13087782d6213c7fea1a98b024",
+            "locale": "es"
+          },
+          {
+            "key": "section.page.contact.json.form.contact_form_UwiCkQ__submit-button.label:1691dx6kcaglv",
+            "value": "Submit",
+            "digest": "155f816c0407310c0dab222493370773e045ee7fe04e6c9a951b07f495531264",
+            "locale": "es"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/OnlineStoreThemeJsonTemplate/password?theme_id=210244436298",
+        "translatableContent": [
+          {
+            "key": "section.password.json.main.text.text:24k3p54lm9141",
+            "value": "<h1>Opening soon</h1>",
+            "digest": "c61a4dd3e94705dee937af3aaefe01a07e37a5825801a3405face6fb9099f8cd",
+            "locale": "es"
+          },
+          {
+            "key": "section.password.json.main.text-2.text:2z5rzsvzqixb2",
+            "value": "<p>Sign up for our newsletter to be the first to know when we launch.</p>",
+            "digest": "a54bebffd4293878f7e0155b24df7cb656ffabfd25fa287db0edd2087b680f51",
+            "locale": "es"
+          },
+          {
+            "key": "section.password.json.main.email-signup.label:2frgv6ufbt1g0",
+            "value": "Sign up",
+            "digest": "5e2b8e96503d722e7ebf61b9bc3e9988e1ec7fd4eabcf25a52577f845125b31e",
+            "locale": "es"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/OnlineStoreThemeJsonTemplate/product?theme_id=210244436298",
+        "translatableContent": [
+          {
+            "key": "section.product.json.main.disclosures_g9mWze.heading:167y68so16c79",
+            "value": "Disclosures",
+            "digest": "6fd148a14be1d00a1b0d91f099374f670a06f1dc964758d465a72d2ef3980457",
+            "locale": "es"
+          },
+          {
+            "key": "section.product.json.main.product-details__group_icgrde__text_xrnftG.text:3i8e8otiq02ld",
+            "value": "<h1>{{ closest.product.title }}</h1>",
+            "digest": "b9c3f340d12af8a458971d7e7d436859b618f4f979e16b1da1055d8e7cb64a74",
+            "locale": "es"
+          },
+          {
+            "key": "section.product.json.main.product-details__text_aEtTtq.text:vzk5prms675b",
+            "value": "{{ closest.product.description }}",
+            "digest": "1907d274f1d4ffa11eeb93c4da8cd72936a7139951e8f1eeef515d804f467abd",
+            "locale": "es"
+          },
+          {
+            "key": "section.product.json.product_recommendations_qggXJq.text_cbcgyb.text:26lmab1lb8sv0",
+            "value": "<h3>You may also like </h3>",
+            "digest": "b772ae16501374e8b55af2b23ab292910d52e761a5c6bf1ca23943679b01de7e",
+            "locale": "es"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+query { shop { email contactEmail } }

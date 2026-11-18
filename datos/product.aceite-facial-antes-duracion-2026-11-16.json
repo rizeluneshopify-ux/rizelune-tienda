@@ -1,0 +1,441 @@
+{
+  "sections": {
+    "principal": {
+      "type": "rz-producto",
+      "settings": {
+        "eyebrow": "Rizelune",
+        "subtitulo": "Bakuchiol Face Oil · para el rostro · 30 ml",
+        "etiqueta": "Oferta",
+        "nota_precio": "Impuestos incluidos.",
+        "intro": "Un aceite facial de noche con bakuchiol, el ingrediente vegetal que se usa como alternativa suave al retinol, y aceite de rosa mosqueta. Nutre la piel seca y la deja más suave, flexible y luminosa.",
+        "boton": "Añadir al carrito",
+        "envio_texto": "Envío gratis desde 39,99 €",
+        "garantia_1_texto": "Pago 100% seguro",
+        "garantia_2_texto": "Fórmula vegana",
+        "garantia_3_texto": "Fabricado en la UE",
+        "entrega_texto": "entrega en 5–10 días laborables",
+        "uso_texto": "Unos 0,25 € por noche · un frasco da para unos 5 meses",
+        "mostrar_bienvenida": false
+      },
+      "blocks": {
+        "k1": {
+          "type": "caracteristica",
+          "settings": {
+            "titulo": "Con bakuchiol",
+            "texto": "Alternativa vegetal y suave al retinol"
+          }
+        },
+        "k2": {
+          "type": "caracteristica",
+          "settings": {
+            "titulo": "Rosa mosqueta",
+            "texto": "Nutre la piel seca o apagada"
+          }
+        },
+        "k3": {
+          "type": "caracteristica",
+          "settings": {
+            "titulo": "Para cada noche",
+            "texto": "Piel más flexible y de aspecto más firme"
+          }
+        },
+        "k4": {
+          "type": "caracteristica",
+          "settings": {
+            "titulo": "De noche",
+            "texto": "3–4 gotas sobre la piel limpia"
+          }
+        },
+        "d1": {
+          "type": "desplegable",
+          "settings": {
+            "titulo": "Modo de uso",
+            "abierto": true,
+            "contenido": "<p>Por la noche, con la piel <strong>limpia y seca</strong>, pon <strong>3–4 gotas</strong> en las yemas de los dedos y extiéndelas por el rostro y el cuello con suaves toques, evitando el contorno de los ojos. Deja que la piel lo absorba; no hace falta aclarar. Puedes usarlo cada noche. Por la mañana, usa tu protector solar habitual.</p><p><a href=\"/pages/como-se-usa\"><strong>Cómo combinarlo con el sérum y el exfoliante →</strong></a></p>"
+          }
+        },
+        "d2": {
+          "type": "desplegable",
+          "settings": {
+            "titulo": "Ingredientes clave",
+            "contenido": "<ul><li><strong>Bakuchiol:</strong> ingrediente de origen vegetal que se usa como alternativa suave al retinol</li><li><strong>Aceite de rosa mosqueta</strong></li><li><strong>Aceites de jojoba y onagra</strong></li><li>Aceites de semillas de fresa y frambuesa, extracto de arándano y vitamina E</li></ul><p><strong>COSMOS ORGANIC</strong> certificado por ECOCERT Greenlife · 99 % de origen natural · 61 % ecológico · Vegano · Fabricado en la UE.</p><p><strong>INCI:</strong> Simmondsia Chinensis (Jojoba) Seed Oil*, Decyl Cocoate, Dicaprylyl Carbonate, Coco-Caprylate/Caprate, Oenothera Biennis (Evening Primrose) Oil*, Rosa Canina (Rosehip) Fruit Oil*, Bakuchiol, Tocopherol, Fragaria Ananassa (Strawberry) Seed Oil, Rubus Idaeus (Raspberry) Seed Oil*, Undecane, Parfum/Fragrance, Tridecane, Vaccinium Myrtillus (Blueberry) Fruit Extract*, Geraniol**, Citronellol**, Pelargonium Graveolens Flower Oil, Linalool**, Citral**.</p><p>*Ingredientes de agricultura ecológica. **Procedentes de aceites esenciales naturales.</p><p><strong>Precauciones:</strong> contiene componentes naturales de los aceites esenciales (geraniol, citronellol, linalool y citral) que pueden irritar las pieles sensibles. Haz una prueba en una pequeña zona de la piel 24 horas antes del primer uso, evita el contacto con los ojos y deja de usarlo si notas irritación. Si estás embarazada o en periodo de lactancia, consulta antes con tu médico. Solo para uso externo.</p>"
+          }
+        },
+        "d3": {
+          "type": "desplegable",
+          "settings": {
+            "titulo": "Qué incluye",
+            "contenido": "<p>1 frasco de vidrio de 30 ml con cuentagotas, en su caja.</p>"
+          }
+        },
+        "jm_stars": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "k1",
+        "k2",
+        "k3",
+        "k4",
+        "d1",
+        "d2",
+        "d3",
+        "jm_stars"
+      ]
+    },
+    "marquesina": {
+      "type": "rz-marquesina",
+      "settings": {
+        "items": "Romero y menta\nCuida desde la raíz\nFórmula vegana\nHecho en la UE\nRitual de 15 minutos"
+      },
+      "disabled": true
+    },
+    "ingredientes": {
+      "type": "rz-ingredientes",
+      "settings": {
+        "eyebrow": "Lo que lleva dentro",
+        "titulo": "Pocos ingredientes, <em>bien</em> elegidos",
+        "texto": "Una mezcla sencilla de aceites vegetales pensada para nutrir el cuero cabelludo."
+      },
+      "blocks": {
+        "i1": {
+          "type": "ingrediente",
+          "settings": {
+            "imagen": "shopify://shop_images/tienda.webp",
+            "titulo": "Aceite de romero",
+            "texto": "El protagonista del ritual: nutre el cuero cabelludo y le da su aroma fresco y herbal."
+          }
+        },
+        "i2": {
+          "type": "ingrediente",
+          "settings": {
+            "imagen": "shopify://shop_images/tienda3.webp",
+            "titulo": "Aceite de menta",
+            "texto": "Aporta esa sensación de frescor que notarás desde el primer masaje."
+          }
+        },
+        "i3": {
+          "type": "ingrediente",
+          "settings": {
+            "imagen": "shopify://shop_images/tienda4.webp",
+            "titulo": "Aceites vegetales",
+            "texto": "Una base ligera que cuida la raíz y deja el pelo suave y luminoso."
+          }
+        },
+        "i4": {
+          "type": "ingrediente",
+          "settings": {
+            "imagen": "shopify://shop_images/tienda2.webp",
+            "titulo": "Pelo suave y con brillo",
+            "texto": "Los aceites de almendras dulces y de argán suavizan el pelo seco o quebradizo y le dan un brillo natural."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "disabled": true
+    },
+    "pasos": {
+      "type": "rz-pasos",
+      "settings": {
+        "imagen": "shopify://shop_images/rizelune-aceite-facial-ritual-noche.jpg",
+        "ancla": "rz-ritual",
+        "boton": "",
+        "eyebrow": "Cómo se usa",
+        "titulo": "Tu ritual de <em>noche</em> en tres gestos",
+        "texto": "Un minuto antes de dormir."
+      },
+      "blocks": {
+        "p1": {
+          "type": "paso",
+          "settings": {
+            "titulo": "Limpia la piel",
+            "texto": "Por la noche, con la cara limpia y seca.",
+            "tiempo": "Cada noche"
+          }
+        },
+        "p2": {
+          "type": "paso",
+          "settings": {
+            "titulo": "Aplica 3–4 gotas",
+            "texto": "Extiéndelas por el rostro y el cuello con suaves toques, evitando el contorno de los ojos.",
+            "tiempo": "Sin frotar"
+          }
+        },
+        "p3": {
+          "type": "paso",
+          "settings": {
+            "titulo": "Deja que actúe",
+            "texto": "La piel lo absorbe mientras duermes. Por la mañana, no olvides tu protector solar.",
+            "tiempo": "No hace falta aclarar"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ]
+    },
+    "beneficios": {
+      "type": "rz-beneficios",
+      "settings": {
+        "eyebrow": "Por qué funciona",
+        "titulo": "Cuida la raíz, <em>disfruta</em> del ritual",
+        "texto": "Pensado para usarse en tu rutina de siempre."
+      },
+      "blocks": {
+        "b1": {
+          "type": "beneficio",
+          "settings": {
+            "icono": "raiz",
+            "titulo": "Nutre el cuero cabelludo",
+            "texto": "Su fórmula con aceites vegetales cuida la raíz y deja una sensación de frescor gracias a la menta."
+          }
+        },
+        "b2": {
+          "type": "beneficio",
+          "settings": {
+            "icono": "fuerza",
+            "titulo": "Suaviza el pelo seco",
+            "texto": "Los aceites vegetales cuidan el pelo seco o quebradizo y lo dejan más suave."
+          }
+        },
+        "b3": {
+          "type": "beneficio",
+          "settings": {
+            "icono": "brillo",
+            "titulo": "Aporta brillo",
+            "texto": "Tu pelo se ve más sano, suave y luminoso."
+          }
+        },
+        "b4": {
+          "type": "beneficio",
+          "settings": {
+            "icono": "hoja",
+            "titulo": "Natural y vegano",
+            "texto": "Fórmula vegana, fabricada en la UE con certificación de calidad."
+          }
+        },
+        "c1": {
+          "type": "cifra",
+          "settings": {
+            "numero": 15,
+            "sufijo": "min",
+            "etiqueta": "de ritual antes del lavado"
+          }
+        },
+        "c2": {
+          "type": "cifra",
+          "settings": {
+            "numero": 30,
+            "sufijo": "ml",
+            "etiqueta": "con cuentagotas dosificador"
+          }
+        },
+        "c3": {
+          "type": "cifra",
+          "settings": {
+            "numero": 2,
+            "sufijo": "",
+            "etiqueta": "aplicaciones a la semana (1–2)"
+          }
+        },
+        "c4": {
+          "type": "cifra",
+          "settings": {
+            "numero": 100,
+            "sufijo": "%",
+            "etiqueta": "fórmula vegana"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "disabled": true
+    },
+    "ritual": {
+      "type": "rz-imagen-texto",
+      "settings": {
+        "imagen": "shopify://shop_images/tienda2.webp",
+        "imagen_respaldo": "rz-antes-despues.jpg",
+        "invertir": true,
+        "oscuro": true,
+        "bg": "#1F2620",
+        "fg": "#F5EFE6",
+        "flotante_num": "1–2",
+        "flotante_texto": "veces por semana. La constancia es el secreto.",
+        "eyebrow": "Ritual de noche",
+        "titulo": "Un gesto pequeño que se convierte en <em>costumbre</em>",
+        "texto": "Enciende una vela, ponte cómoda y regálate quince minutos. Nuestro sérum convierte algo tan simple como tu lavado de pelo en un pequeño ritual de cuidado.",
+        "lista_titulo": "",
+        "lista": "Cuero cabelludo nutrido y con sensación de frescor\nPelo más suave y con aspecto más fuerte\nUn brillo natural",
+        "boton": "",
+        "boton_url": "/products/rizelune-serum-nocturno-de-romero-para-el-cuero-cabelludo",
+        "ancla": "rz-noche",
+        "proporcion": "4/5"
+      },
+      "disabled": true
+    },
+    "resenas": {
+      "type": "rz-resenas",
+      "settings": {
+        "eyebrow": "Opiniones",
+        "titulo": "Lo que dicen quienes ya tienen su <em>ritual</em>"
+      }
+    },
+    "faq": {
+      "type": "rz-faq",
+      "settings": {
+        "eyebrow": "Dudas",
+        "titulo": "Preguntas <em>frecuentes</em>",
+        "ancla": "rz-faq"
+      },
+      "blocks": {
+        "f1": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Qué es el bakuchiol?",
+            "respuesta": "<p>Es un ingrediente de origen vegetal que se obtiene de las semillas de la planta babchi. Se usa en cosmética como alternativa suave al retinol.</p>"
+          }
+        },
+        "f2": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Cuándo y cada cuánto se aplica?",
+            "respuesta": "<p>Por la noche, sobre la piel limpia y seca. Puedes usarlo cada noche: 3–4 gotas para el rostro y el cuello.</p>"
+          }
+        },
+        "f3": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Para qué tipo de piel es?",
+            "respuesta": "<p>Está pensado sobre todo para piel seca, apagada o madura. Si tu piel es grasa, empieza con 2 gotas.</p>"
+          }
+        },
+        "f4": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Es vegano?",
+            "respuesta": "<p>Sí. Es una fórmula vegana con certificado COSMOS ORGANIC por ECOCERT.</p>"
+          }
+        },
+        "f5": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Tengo que tener alguna precaución?",
+            "respuesta": "<p>Contiene aceites esenciales que pueden irritar las pieles sensibles. Haz una prueba en una pequeña zona 24 horas antes del primer uso y evita el contacto con los ojos. Si estás embarazada o en periodo de lactancia, consulta antes con tu médico.</p>"
+          }
+        },
+        "f7": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Cuánto cuesta el envío y cuánto tarda?",
+            "respuesta": "<p><strong>Plazo:</strong> normalmente lo recibes en una semana y, como muy tarde, en 10 días laborables.</p><p><strong>Envío gratis a partir de 39,99 €</strong> a toda la península y Baleares.</p><p>Si tu pedido es menor, el envío cuesta 3,99 €. Por ahora no enviamos a Canarias, Ceuta ni Melilla.</p><p>Recibirás un correo con el número de seguimiento. Más información en nuestra <a href=\"/policies/shipping-policy\">política de envío</a>.</p>"
+          }
+        },
+        "f8": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Puedo devolverlo?",
+            "respuesta": "<p>Sí, en los 14 días siguientes a recibirlo, siempre que el producto esté <strong>sin abrir y con su precinto</strong>: por higiene, un cosmético abierto no se puede devolver. Si te llega dañado o con un defecto, te enviamos otro o te devolvemos el dinero. Escríbenos antes de enviar nada y te explicamos cómo hacerlo. Más información en nuestra <a href=\"/policies/refund-policy\">política de devoluciones</a>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f7",
+        "f8"
+      ]
+    },
+    "garantias": {
+      "type": "rz-garantias",
+      "settings": {},
+      "blocks": {
+        "g1": {
+          "type": "garantia",
+          "settings": {
+            "icono": "candado",
+            "titulo": "Pago seguro",
+            "texto": "Tus datos siempre protegidos"
+          }
+        },
+        "g2": {
+          "type": "garantia",
+          "settings": {
+            "icono": "hoja",
+            "titulo": "Certificado ecológico",
+            "texto": "COSMOS ORGANIC por ECOCERT"
+          }
+        },
+        "g3": {
+          "type": "garantia",
+          "settings": {
+            "icono": "escudo",
+            "titulo": "Calidad comprobada",
+            "texto": "Fabricado en la UE con certificación"
+          }
+        },
+        "g4": {
+          "type": "garantia",
+          "settings": {
+            "icono": "camion",
+            "titulo": "Envío gratis",
+            "texto": "A partir de 39,99 €"
+          }
+        }
+      },
+      "block_order": [
+        "g1",
+        "g2",
+        "g3",
+        "g4"
+      ]
+    },
+    "opiniones": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true,
+        "rz_ocultar_sin_opiniones": true
+      },
+      "blocks": {
+        "jm_widget": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "jm_widget"
+      ]
+    }
+  },
+  "order": [
+    "principal",
+    "garantias",
+    "pasos",
+    "resenas",
+    "opiniones",
+    "faq",
+    "marquesina",
+    "beneficios",
+    "ingredientes",
+    "ritual"
+  ]
+}

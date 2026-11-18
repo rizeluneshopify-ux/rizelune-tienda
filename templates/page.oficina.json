@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "main": {
+      "type": "rz-oficina",
+      "settings": {
+        "eyebrow": "Solo para ti",
+        "titulo": "Tu oficina Rizelune",
+        "texto": "Al abrir esta página en un móvil u ordenador, ese dispositivo recuerda tu oficina y te enseña el botón «Mi oficina» en toda la tienda. Los clientes no lo ven, y aunque alguien llegara a esta página, la oficina solo se abre con tu cuenta de Claude.",
+        "enlace": "https://claude.ai/artifact/WoERmNaFCyXQNcZqY6faoE",
+        "bg": "#F5EFE6"
+      }
+    }
+  },
+  "order": ["main"]
+}

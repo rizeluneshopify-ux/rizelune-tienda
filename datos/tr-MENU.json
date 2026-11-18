@@ -1,0 +1,39 @@
+{
+  "translatableResources": {
+    "nodes": [
+      {
+        "resourceId": "gid://shopify/Menu/362958029130",
+        "translatableContent": [
+          {
+            "key": "title",
+            "value": "Menú principal",
+            "digest": "1e9c027c8f80a3946c3f06cdde80bacf295b1a8403a1847f9d8e5b99d02c488a",
+            "locale": "es"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/Menu/362958061898",
+        "translatableContent": [
+          {
+            "key": "title",
+            "value": "Menú de pie de página",
+            "digest": "3ce083111ce30c67bdfef869ed4b19951d449ff34ed53b811300cfcc96f84686",
+            "locale": "es"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/Menu/362958094666",
+        "translatableContent": [
+          {
+            "key": "title",
+            "value": "Menú principal de la cuenta de cliente",
+            "digest": "dc8078b7b2de61500ab5d8efb0652b0f43b47ed1c11132e45d76aac2435a8dca",
+            "locale": "es"
+          }
+        ]
+      }
+    ]
+  }
+}

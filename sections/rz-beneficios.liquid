@@ -1,0 +1,317 @@
+{{ 'rz-styles.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'rz-scripts.js' | asset_url }}" defer="defer"></script>
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg }};
+    color: {{ section.settings.fg }};
+  }
+  #shopify-section-{{ section.id }} .rz-h1,
+  #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size }}px; }
+  #shopify-section-{{ section.id }} .rz-body { font-size: {{ section.settings.body_size }}px; }
+  #shopify-section-{{ section.id }} .rz-head { text-align: {{ section.settings.text_align }}; }
+  #shopify-section-{{ section.id }} .rz-head .rz-eyebrow { justify-content: {% case section.settings.text_align %}{% when 'center' %}center{% when 'right' %}flex-end{% else %}flex-start{% endcase %}; }
+  @media (max-width: 749px) {
+    #shopify-section-{{ section.id }} { padding-top: {{ section.settings.padding_top | times: 0.65 | round }}px; padding-bottom: {{ section.settings.padding_bottom | times: 0.65 | round }}px; }
+    #shopify-section-{{ section.id }} .rz-h1,
+    #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size | times: 0.68 | round }}px; }
+  }
+  
+{%- endstyle -%}
+{%- assign cifras = section.blocks | where: 'type', 'cifra' -%}
+<section class="rz-section">
+  <div class="rz-container">
+    <div class="rz-head rz-reveal">
+      {%- if section.settings.eyebrow != blank -%}<span class="rz-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+      {%- if section.settings.titulo != blank -%}<h2 class="rz-h2">{{ section.settings.titulo }}</h2>{%- endif -%}
+      {%- if section.settings.texto != blank -%}<p class="rz-body">{{ section.settings.texto | newline_to_br }}</p>{%- endif -%}
+    </div>
+    <div class="rz-benefits" style="--rz-cols: {{ section.settings.columnas }}; --rz-icon: {{ section.settings.icono_tam }}px;">
+      {%- for block in section.blocks -%}{%- if block.type == 'beneficio' -%}
+        <div class="rz-benefit rz-reveal" style="--rz-delay: {{ forloop.index0 | times: 90 }}ms" {{ block.shopify_attributes }}>
+          <span class="rz-benefit__icon">{% render 'rz-icon', name: block.settings.icono %}</span>
+          <h3 class="rz-h3">{{ block.settings.titulo }}</h3>
+          <p>{{ block.settings.texto | newline_to_br }}</p>
+        </div>
+      {%- endif -%}{%- endfor -%}
+    </div>
+    {%- if cifras.size > 0 -%}
+      <div class="rz-stats">
+        {%- for block in cifras -%}
+          <div class="rz-stat rz-reveal" style="--rz-delay: {{ forloop.index0 | times: 90 }}ms" {{ block.shopify_attributes }}>
+            <div class="rz-stat__num"><b data-rz-count="{{ block.settings.numero }}" style="font-weight: 400">{{ block.settings.numero }}</b><span>{{ block.settings.sufijo }}</span></div>
+            <div class="rz-stat__label">{{ block.settings.etiqueta }}</div>
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Rizelune · Beneficios",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Encabezado"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo (texto pequeño)",
+      "default": "Por qué funciona"
+    },
+    {
+      "type": "text",
+      "id": "titulo",
+      "label": "Título",
+      "default": "Cuida la raíz, <em>luce</em> el resultado",
+      "info": "Pon una palabra entre <em> y </em> para destacarla en cursiva."
+    },
+    {
+      "type": "textarea",
+      "id": "texto",
+      "label": "Texto"
+    },
+    {
+      "type": "header",
+      "content": "Tarjetas"
+    },
+    {
+      "type": "range",
+      "id": "columnas",
+      "label": "Tarjetas por fila (ordenador)",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "icono_tam",
+      "label": "Tamaño de los iconos",
+      "min": 36,
+      "max": 90,
+      "step": 2,
+      "default": 56,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Colores"
+    },
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Color de fondo",
+      "default": "#F5EFE6"
+    },
+    {
+      "type": "color",
+      "id": "fg",
+      "label": "Color del texto",
+      "default": "#2F3B2E"
+    },
+    {
+      "type": "header",
+      "content": "Tipografía"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Alineación del encabezado",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Tamaño del título",
+      "min": 24,
+      "max": 88,
+      "step": 2,
+      "default": 48,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "Tamaño del texto",
+      "min": 13,
+      "max": 26,
+      "step": 1,
+      "default": 17,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Espaciado"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espacio superior",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 112,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espacio inferior",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 112,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "beneficio",
+      "name": "Beneficio",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icono",
+          "label": "Icono",
+          "options": [
+            {
+              "value": "hoja",
+              "label": "Hoja"
+            },
+            {
+              "value": "gota",
+              "label": "Gota"
+            },
+            {
+              "value": "raiz",
+              "label": "Raíz"
+            },
+            {
+              "value": "brillo",
+              "label": "Brillo"
+            },
+            {
+              "value": "fuerza",
+              "label": "Fuerza (cabello)"
+            },
+            {
+              "value": "luna",
+              "label": "Luna"
+            },
+            {
+              "value": "reloj",
+              "label": "Reloj"
+            },
+            {
+              "value": "escudo",
+              "label": "Escudo"
+            },
+            {
+              "value": "candado",
+              "label": "Candado"
+            },
+            {
+              "value": "caja",
+              "label": "Caja"
+            },
+            {
+              "value": "eu",
+              "label": "Unión Europea"
+            },
+            {
+              "value": "corazon",
+              "label": "Corazón"
+            },
+            {
+              "value": "mensaje",
+              "label": "Mensaje"
+            },
+            {
+              "value": "camion",
+              "label": "Camión"
+            },
+            {
+              "value": "check",
+              "label": "Check"
+            }
+          ],
+          "default": "hoja"
+        },
+        {
+          "type": "text",
+          "id": "titulo",
+          "label": "Título",
+          "default": "Beneficio"
+        },
+        {
+          "type": "textarea",
+          "id": "texto",
+          "label": "Texto",
+          "default": "Describe el beneficio."
+        }
+      ]
+    },
+    {
+      "type": "cifra",
+      "name": "Cifra animada",
+      "settings": [
+        {
+          "type": "number",
+          "id": "numero",
+          "label": "Número",
+          "default": 15
+        },
+        {
+          "type": "text",
+          "id": "sufijo",
+          "label": "Unidad (min, ml, %...)",
+          "default": "min"
+        },
+        {
+          "type": "text",
+          "id": "etiqueta",
+          "label": "Texto",
+          "default": "de ritual"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Rizelune · Beneficios",
+      "blocks": [
+        {
+          "type": "beneficio"
+        },
+        {
+          "type": "beneficio"
+        },
+        {
+          "type": "beneficio"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,288 @@
+{{ 'rz-styles.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'rz-scripts.js' | asset_url }}" defer="defer"></script>
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg }};
+    color: {{ section.settings.fg }};
+  }
+  #shopify-section-{{ section.id }} .rz-h1,
+  #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size }}px; }
+  #shopify-section-{{ section.id }} .rz-body { font-size: {{ section.settings.body_size }}px; }
+  #shopify-section-{{ section.id }} .rz-head { text-align: {{ section.settings.text_align }}; }
+  #shopify-section-{{ section.id }} .rz-head .rz-eyebrow { justify-content: {% case section.settings.text_align %}{% when 'center' %}center{% when 'right' %}flex-end{% else %}flex-start{% endcase %}; }
+  @media (max-width: 749px) {
+    #shopify-section-{{ section.id }} { padding-top: {{ section.settings.padding_top | times: 0.65 | round }}px; padding-bottom: {{ section.settings.padding_bottom | times: 0.65 | round }}px; }
+    #shopify-section-{{ section.id }} .rz-h1,
+    #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size | times: 0.68 | round }}px; }
+  }
+  
+{%- endstyle -%}
+<section class="rz-section{% if section.settings.oscuro %} rz-dark{% endif %}" id="{{ section.settings.ancla | default: section.id }}">
+  {%- if section.settings.oscuro -%}<span class="rz-glow" style="top: -120px; right: -120px;"></span>{%- endif -%}
+  <div class="rz-container">
+    <div class="rz-split{% if section.settings.invertir %} rz-split--reverse{% endif %}" style="--rz-ratio: {{ section.settings.proporcion }};">
+      <div class="rz-split__media rz-reveal">
+        {%- if section.settings.imagen != blank -%}
+          {{ section.settings.imagen | image_url: width: 1400 | image_tag: loading: 'lazy', widths: '600,900,1200,1400', sizes: '(min-width: 990px) 50vw, 100vw' }}
+        {%- else -%}
+          <img src="{{ section.settings.imagen_respaldo | default: 'rz-bodegon.jpg' | asset_url }}" alt="" loading="lazy">
+        {%- endif -%}
+        {%- if section.settings.flotante_num != blank -%}
+          <div class="rz-split__float{% if section.settings.flotante_pos == 'arriba' %} rz-split__float--top{% endif %} rz-reveal" style="--rz-delay: 300ms"><strong>{{ section.settings.flotante_num }}</strong>{{ section.settings.flotante_texto }}</div>
+        {%- endif -%}
+      </div>
+      <div class="rz-split__text">
+        <div class="rz-head rz-reveal">
+      {%- if section.settings.eyebrow != blank -%}<span class="rz-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+      {%- if section.settings.titulo != blank -%}<h2 class="rz-h2">{{ section.settings.titulo }}</h2>{%- endif -%}
+      {%- if section.settings.texto != blank -%}<p class="rz-body">{{ section.settings.texto | newline_to_br }}</p>{%- endif -%}
+    </div>
+        {%- if section.settings.lista_titulo != blank -%}<p class="rz-h3 rz-reveal" style="--rz-delay: 120ms">{{ section.settings.lista_titulo }}</p>{%- endif -%}
+        {%- if section.settings.lista != blank -%}
+          <ul class="rz-checklist">
+            {%- assign lines = section.settings.lista | newline_to_br | split: '<br />' -%}
+            {%- for l in lines -%}{%- assign t = l | strip -%}{%- if t != blank -%}
+              <li class="rz-reveal" style="--rz-delay: {{ forloop.index | times: 80 }}ms"><span class="rz-checklist__icon">{% render 'rz-icon', name: 'check' %}</span><span>{{ t }}</span></li>
+            {%- endif -%}{%- endfor -%}
+          </ul>
+        {%- endif -%}
+        {%- if section.settings.boton != blank -%}
+          <a class="rz-btn{% if section.settings.oscuro %} rz-btn--light{% endif %} rz-reveal" href="{{ section.settings.boton_url | default: routes.all_products_collection_url }}">{{ section.settings.boton }} {% render 'rz-icon', name: 'flecha' %}</a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Rizelune · Imagen y texto",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Imagen"
+    },
+    {
+      "type": "image_picker",
+      "id": "imagen",
+      "label": "Imagen"
+    },
+    {
+      "type": "text",
+      "id": "imagen_respaldo",
+      "label": "Imagen de reserva (uso interno)",
+      "default": "rz-bodegon.jpg",
+      "info": "Solo se usa si no eliges imagen arriba."
+    },
+    {
+      "type": "select",
+      "id": "proporcion",
+      "label": "Forma de la imagen",
+      "default": "4/5",
+      "options": [
+        {
+          "value": "4/5",
+          "label": "Vertical"
+        },
+        {
+          "value": "1/1",
+          "label": "Cuadrada"
+        },
+        {
+          "value": "3/2",
+          "label": "Horizontal"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "invertir",
+      "label": "Imagen a la derecha",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "flotante_num",
+      "label": "Tarjeta flotante: cifra",
+      "default": "15 min"
+    },
+    {
+      "type": "text",
+      "id": "flotante_texto",
+      "label": "Tarjeta flotante: texto",
+      "default": "es todo lo que necesita tu ritual"
+    },
+    {
+      "type": "select",
+      "id": "flotante_pos",
+      "label": "Tarjeta flotante: posición",
+      "options": [
+        { "value": "abajo", "label": "Abajo" },
+        { "value": "arriba", "label": "Arriba" }
+      ],
+      "default": "abajo"
+    },
+    {
+      "type": "header",
+      "content": "Encabezado"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo (texto pequeño)",
+      "default": "¿Te suena?"
+    },
+    {
+      "type": "text",
+      "id": "titulo",
+      "label": "Título",
+      "default": "Tu pelo no empieza en las puntas",
+      "info": "Pon una palabra entre <em> y </em> para destacarla en cursiva."
+    },
+    {
+      "type": "textarea",
+      "id": "texto",
+      "label": "Texto",
+      "default": "Planchas, tintes, secador, sol, estrés… Poco a poco el pelo se vuelve seco, quebradizo y apagado."
+    },
+    {
+      "type": "header",
+      "content": "Lista"
+    },
+    {
+      "type": "text",
+      "id": "lista_titulo",
+      "label": "Título de la lista",
+      "default": "Ideal para ti si…"
+    },
+    {
+      "type": "textarea",
+      "id": "lista",
+      "label": "Puntos (uno por línea)",
+      "default": "Tienes el pelo seco, apagado o quebradizo\nUsas a menudo plancha, secador o tintes"
+    },
+    {
+      "type": "header",
+      "content": "Botón"
+    },
+    {
+      "type": "text",
+      "id": "boton",
+      "label": "Texto del botón",
+      "default": "Descubre Rizelune"
+    },
+    {
+      "type": "url",
+      "id": "boton_url",
+      "label": "Enlace del botón"
+    },
+    {
+      "type": "header",
+      "content": "Estilo"
+    },
+    {
+      "type": "checkbox",
+      "id": "oscuro",
+      "label": "Estilo noche (fondo oscuro con brillo cálido)",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "ancla",
+      "label": "Nombre de ancla (para enlazar con #)"
+    },
+    {
+      "type": "header",
+      "content": "Colores"
+    },
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Color de fondo",
+      "default": "#F5EFE6"
+    },
+    {
+      "type": "color",
+      "id": "fg",
+      "label": "Color del texto",
+      "default": "#2F3B2E"
+    },
+    {
+      "type": "header",
+      "content": "Tipografía"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Alineación del encabezado",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Tamaño del título",
+      "min": 24,
+      "max": 88,
+      "step": 2,
+      "default": 48,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "Tamaño del texto",
+      "min": 13,
+      "max": 26,
+      "step": 1,
+      "default": 17,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Espaciado"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espacio superior",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 112,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espacio inferior",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 112,
+      "unit": "px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rizelune · Imagen y texto"
+    }
+  ]
+}
+{% endschema %}

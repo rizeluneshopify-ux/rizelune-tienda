@@ -1,0 +1,1682 @@
+[
+ {
+  "rid": "gid://shopify/ShopPolicy/69244420426",
+  "key": "body",
+  "digest": "6b82e2e692c4fdaa646650005542439cd912f4a6176283ae0cae741b26544403",
+  "value": "<h3>Preparación del pedido</h3>\n<p>Cada pedido de Rizelune se prepara con cuidado en un plazo de 1 a 2 días laborables desde la confirmación del pago. Los pedidos realizados en fin de semana o festivo se empiezan a preparar el siguiente día laborable.</p>\n<h3>Países a los que enviamos</h3>\n<p>Actualmente enviamos a <strong>España, Francia y Portugal</strong>.</p>\n<h3>Gastos de envío</h3>\n<ul>\n<li><strong>España:</strong> 6,99 €. <strong>Envío GRATIS</strong> en pedidos a partir de 39,99 €.</li>\n<li><strong>Francia y Portugal:</strong> 6,00 €. En pedidos a partir de 39,99 €, el envío cuesta solo <strong>2,99 €</strong>.</li>\n</ul>\n<p>El coste final del envío se muestra siempre en la página de pago, antes de que confirmes tu compra.</p>\n<h3>Plazos de entrega</h3>\n<p>Plazos habituales desde la confirmación del pedido, preparación incluida:</p>\n<ul>\n<li><strong>España peninsular:</strong> unos 10 días laborables.</li>\n<li><strong>Francia:</strong> unos 8 días laborables.</li>\n<li><strong>Portugal:</strong> unos 11 días laborables.</li>\n<li><strong>Islas Baleares:</strong> el plazo puede ser algo mayor.</li>\n<li><strong>Canarias, Ceuta y Melilla:</strong> el plazo puede ser mayor y el envío puede estar sujeto a trámites e impuestos aduaneros, que corren a cargo del destinatario.</li>\n</ul>\n<p>Estos plazos son orientativos y pueden alargarse en épocas de mucha demanda (Navidad, Black Friday…) o por incidencias de la empresa de transporte.</p>\n<h3>Seguimiento</h3>\n<p>Cuando tu pedido salga de nuestro almacén recibirás un correo electrónico con el número de seguimiento para que puedas consultar dónde está en todo momento.</p>\n<h3>Dirección de entrega</h3>\n<p>Revisa que tu dirección sea correcta antes de finalizar la compra. Si el pedido se devuelve porque la dirección es incorrecta o incompleta, o porque nadie lo recoge, los gastos de un nuevo envío correrán a cargo del cliente.</p>\n<h3>Paquete dañado o incompleto</h3>\n<p>Si tu pedido llega dañado o le falta algo, escríbenos a <a href=\"mailto:rizeluneshopify@gmail.com\">rizeluneshopify@gmail.com</a> en un plazo de 48 horas desde la entrega, con fotos del paquete y del producto, y te enviaremos uno nuevo o te devolveremos el importe.</p>\n<h3>¿Dudas?</h3>\n<p>Escríbenos a <a href=\"mailto:rizeluneshopify@gmail.com\">rizeluneshopify@gmail.com</a> o desde nuestra <a href=\"/pages/contact\">página de contacto</a> y te ayudaremos encantados.</p>",
+  "type": "HTML"
+ },
+ {
+  "rid": "gid://shopify/ShopPolicy/69245305162",
+  "key": "body",
+  "digest": "21b26c09b351932e0bdf22362d65ecc2f5c58806ea5518f723e70db46729d215",
+  "value": "<p>En cumplimiento de la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de los datos del titular de este sitio web:</p>\n<p>Titular: Jon Sarobe Mendo<br>NIF: 55303300F<br>Domicilio: Plaza Eihera, 5, 3ºB, 20305 Irun (Gipuzkoa)<br>Correo electrónico: rizeluneshopify@gmail.com<br>Objeto<br>Este sitio web tiene como finalidad la venta online de productos de cuidado capilar de la marca Rizelune. El acceso y uso del sitio atribuye la condición de usuario e implica la aceptación de este aviso legal.</p>\n<p>Propiedad intelectual e industrial<br>Los textos, imágenes, logotipos y demás contenidos de esta web son propiedad del titular o se utilizan con autorización, y no pueden reproducirse sin permiso expreso.</p>\n<p>Responsabilidad<br>El titular no se hace responsable del mal uso de los contenidos de la web ni de los daños derivados de interrupciones técnicas ajenas a su control. Los enlaces a sitios de terceros se ofrecen solo a título informativo.</p>\n<p>Protección de datos<br>El tratamiento de los datos personales se rige por nuestra Política de privacidad.</p>\n<p>Legislación aplicable<br>Este aviso legal se rige por la legislación española. Para cualquier controversia, las partes se someten a los juzgados y tribunales que correspondan conforme a la normativa de consumidores y usuarios.</p>\n<p>&nbsp;</p>",
+  "type": "HTML"
+ },
+ {
+  "rid": "gid://shopify/Menu/362958029130",
+  "key": "title",
+  "digest": "1e9c027c8f80a3946c3f06cdde80bacf295b1a8403a1847f9d8e5b99d02c488a",
+  "value": "Menú principal",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/Page/720462479690",
+  "key": "title",
+  "digest": "771b96b0812dd393ffeac789c2b8da1b78c20530a7365dd8181b1e3580db063f",
+  "value": "Contacto",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/Page/720476340554",
+  "key": "title",
+  "digest": "31477853657732c997c1ddc1d3482bd57bf24f0f96ec8b801e4d23d39217ce0f",
+  "value": "Política de cookies",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/Page/720476340554",
+  "key": "body_html",
+  "digest": "82bb8f8154f0c4e13392301dd09324c780b34d60a8b46f7ecda359f80cb22756",
+  "value": "<p>Esta web utiliza cookies propias y de terceros para que la tienda funcione, recordar tus preferencias y, si lo aceptas, analizar cómo se usa la web y mostrarte publicidad relevante.</p>\n<h3>¿Qué son las cookies?</h3>\n<p>Son pequeños archivos que se guardan en tu navegador cuando visitas una web y que permiten, por ejemplo, recordar los productos de tu carrito.</p>\n<h3>Tipos de cookies que usamos</h3>\n<ul>\n<li>\n<strong>Técnicas o necesarias:</strong> imprescindibles para que la tienda funcione (carrito, proceso de compra, seguridad). No requieren tu consentimiento.</li>\n<li>\n<strong>De preferencias:</strong> recuerdan opciones como el idioma o el país.</li>\n<li>\n<strong>Analíticas:</strong> nos ayudan a entender cómo se usa la web para mejorarla (por ejemplo, las estadísticas de Shopify).</li>\n<li>\n<strong>Publicitarias:</strong> permiten mostrarte anuncios relacionados con tus intereses, si utilizamos plataformas como Meta, TikTok o Google.</li>\n</ul>\n<p>Las cookies analíticas y publicitarias solo se instalan si das tu consentimiento en el aviso de cookies.</p>\n<h3>Proveedores</h3>\n<p>Nuestra tienda funciona con Shopify, que instala sus propias cookies técnicas y de estadísticas. Puedes consultar el detalle en la <a href=\"https://www.shopify.com/es/legal/cookies\" target=\"_blank\" rel=\"noopener\">política de cookies de Shopify</a>.</p>\n<h3>Cómo gestionar o retirar tu consentimiento</h3>\n<p>Puedes cambiar tus preferencias en cualquier momento desde el aviso de cookies o configurando tu navegador para bloquear o eliminar las cookies. Ten en cuenta que bloquear las cookies técnicas puede impedir que la tienda funcione correctamente.</p>\n<p>Para cualquier duda, escríbenos a <a href=\"mailto:rizeluneshopify@gmail.com\">rizeluneshopify@gmail.com</a>.</p>",
+  "type": "HTML"
+ },
+ {
+  "rid": "gid://shopify/Product/16123855962442",
+  "key": "title",
+  "digest": "6b4174cd1a2c54c2857d59fa099a28bf9a7b2aea955be307a6626855dedeb90b",
+  "value": "Rizelune · Aceite de Romero y Menta",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/Product/16123855962442",
+  "key": "body_html",
+  "digest": "b784aea9fe1501b14b02dd3f2f8843baab05c0e10893ada7f97823fc92eaeb64",
+  "value": "<h3>Un ritual de 15 minutos para un pelo más fuerte y con brillo</h3>\n\n<p><strong>¿Tu pelo se ve débil y sin brillo?</strong><br>\nPlanchas, tintes, secador, sol, estrés… Poco a poco el pelo se vuelve seco, quebradizo y apagado. Y aunque lo cuidamos de medios a puntas, casi siempre nos olvidamos de donde empieza todo: la raíz.</p>\n\n<p><strong>La solución: cuidarlo desde la raíz</strong><br>\nLa clave de Rizelune está en su mezcla de aceite de romero y aceite de menta. Aplícalo en el cuero cabelludo antes de lavarte el pelo, masajea suavemente y déjalo actuar al menos 15 minutos. Tu cuero cabelludo queda nutrido y tu pelo recupera fuerza y brillo desde la raíz.</p>\n\n<p>Esto convierte un gesto tan simple como tu lavado de pelo en un pequeño ritual de cuidado.</p>\n\n<p><strong>Ideal para ti si…</strong></p>\n<ul>\n<li>Tienes el pelo <strong>seco, apagado o quebradizo</strong>.</li>\n<li>Usas a menudo <strong>plancha, secador o tintes</strong>.</li>\n<li>Sientes que tu pelo ha perdido <strong>fuerza y brillo</strong>.</li>\n<li>Quieres empezar a <strong>cuidar tu cuero cabelludo</strong>, no solo las puntas.</li>\n<li>Buscas un <strong>momento de autocuidado</strong> sencillo en tu rutina.</li>\n</ul>\n\n<p><strong>Pensado para usarse en tu rutina de siempre</strong></p>\n<ul>\n<li>\n<strong>Nutre el cuero cabelludo:</strong> su fórmula con aceites vegetales cuida la raíz y deja una sensación de frescor gracias a la menta.</li>\n<li>\n<strong>Fortalece el cabello:</strong> ayuda a mejorar la resistencia del pelo seco o quebradizo.</li>\n<li>\n<strong>Devuelve el brillo:</strong> tu pelo se ve más sano, suave y luminoso.</li>\n<li>\n<strong>Fácil de aplicar:</strong> frasco con cuentagotas de 30 ml para dosificar justo lo que necesitas, sin derrochar.</li>\n<li>\n<strong>Fórmula natural y vegana</strong>, fabricada en la UE con certificación de calidad.</li>\n</ul>\n\n<p><strong>Modo de uso:</strong> aplica unas gotas sobre el cuero cabelludo y el cabello, masajea con las yemas de los dedos y deja actuar al menos 15 minutos. Después lava tu pelo como de costumbre. Úsalo 1–2 veces por semana.</p>\n",
+  "type": "HTML"
+ },
+ {
+  "rid": "gid://shopify/Product/16123855962442",
+  "key": "product_type",
+  "digest": "bd82764634062888f914a68ae46c6e511f4612ac75b7047ddc0abf1fafeb53d1",
+  "value": "Aceites capilares.",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/Product/16123855962442",
+  "key": "meta_title",
+  "digest": "cd2c14a3c0aa4ef946ffa93d3a579cd4b00afbb0dfcd61553bd2c9a9c76a3c01",
+  "value": "Rizelune – Aceite de Romero y Menta para el Cuero Cabelludo y el Cabello",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/Product/16123855962442",
+  "key": "meta_description",
+  "digest": "3d8fcfa85d6200ebed5a9e74d6760220f7f24a2378b20592429c0d8e3db101a1",
+  "value": "Aceite capilar de romero y menta en frasco cuentagotas de 30 ml. Nutre el cuero cabelludo, fortalece el pelo seco y devuelve el brillo. Vegano y fabricado en la UE.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeSectionGroup/footer-group?theme_id=210260099402",
+  "key": "section.sections/footer-group.json.footer.logo_texto:3fdiq8pvx9ohf",
+  "digest": "8a3bcd09d7dce4588255c5801d5494a86798d19187a80973bfd86017a7c415cf",
+  "value": "rizelune",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeSectionGroup/footer-group?theme_id=210260099402",
+  "key": "section.sections/footer-group.json.footer.tagline:1sy4y8hcwyoix",
+  "digest": "15c34f244b32869ec8fc2f2f9df06c318c103b79776b128f85fe4cd7e29e9c4f",
+  "value": "Rituales capilares sencillos, con ingredientes naturales, para cuidar tu pelo desde la raíz.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeSectionGroup/footer-group?theme_id=210260099402",
+  "key": "section.sections/footer-group.json.footer.c1_titulo:2kyqedqv99b9j",
+  "digest": "49c081725b0b36b158d2ce90c612b05ea894c63ac252f70e90b9c46917a78ee4",
+  "value": "Tienda",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeSectionGroup/footer-group?theme_id=210260099402",
+  "key": "section.sections/footer-group.json.footer.c1_l1:1lghinpejiphh",
+  "digest": "616fcc34daad235c6b640c3d15f8d1caf9fd9a1c93b486feb331df6eb7488acb",
+  "value": "Aceite de romero y menta",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeSectionGroup/footer-group?theme_id=210260099402",
+  "key": "section.sections/footer-group.json.footer.c1_l2:1lghinpejin46",
+  "digest": "353d8e5f5feb41d0062bd2701f486d365454b931e3805486bc87469df7222f12",
+  "value": "Cómo se usa",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeSectionGroup/footer-group?theme_id=210260099402",
+  "key": "section.sections/footer-group.json.footer.c1_l3:1lghinpejinwn",
+  "digest": "83a40ebcee30ab189c5843f950cc585cf9308fb6ed307cdbcf35ddadaabe3e74",
+  "value": "Ver productos",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeSectionGroup/footer-group?theme_id=210260099402",
+  "key": "section.sections/footer-group.json.footer.c2_titulo:2kypwwiexpv6s",
+  "digest": "7263ec8c2d08c2c0911277d71a91c27a0e80b51e6d4d0e8d49e6d348f266face",
+  "value": "Información",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeSectionGroup/footer-group?theme_id=210260099402",
+  "key": "section.sections/footer-group.json.footer.c2_l1:1lghinpduum06",
+  "digest": "771b96b0812dd393ffeac789c2b8da1b78c20530a7365dd8181b1e3580db063f",
+  "value": "Contacto",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeSectionGroup/footer-group?theme_id=210260099402",
+  "key": "section.sections/footer-group.json.footer.c2_l2:1lghinpduul45",
+  "digest": "1849e83ff4e0fa620bc075fce8e1ba190c4a5065e221512178387e9b9573b0cf",
+  "value": "Envíos",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeSectionGroup/footer-group?theme_id=210260099402",
+  "key": "section.sections/footer-group.json.footer.c2_l3:1lghinpduunl0",
+  "digest": "f006810f40ee81a4107f61276a2a8842209728e3b337fa6c9a6889a7bfca885c",
+  "value": "Devoluciones",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeSectionGroup/footer-group?theme_id=210260099402",
+  "key": "section.sections/footer-group.json.footer.c2_l4:1lghinpduumw3",
+  "digest": "52233e2c4d6b2e9aa75c5558247b5931aa80d9135623e251acb340229b2a4cdd",
+  "value": "Privacidad",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeSectionGroup/footer-group?theme_id=210260099402",
+  "key": "section.sections/footer-group.json.footer.c2_l5:1lghinpduupcy",
+  "digest": "79e539a703dbcb93b5edab76fee0201eeaf39b11582b9fe214c63df6ee2623bf",
+  "value": "Aviso legal",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeSectionGroup/footer-group?theme_id=210260099402",
+  "key": "section.sections/footer-group.json.footer.contacto_titulo:uz29frf7wp5m",
+  "digest": "22e3797aeb7018cea53e581c8526dfd49cd50318434689b359dad72e25f74a91",
+  "value": "Atención al cliente",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeSectionGroup/footer-group?theme_id=210260099402",
+  "key": "section.sections/footer-group.json.footer.contacto_texto:3suaedia0bwpj",
+  "digest": "2a49a1f1f4510ceab3533b3767ec050b3562eb62a89e9b3696953689a6aead45",
+  "value": "¿Tienes dudas? Escríbenos y te ayudamos.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeSectionGroup/footer-group?theme_id=210260099402",
+  "key": "section.sections/footer-group.json.footer.contacto_boton:3suaedlux63jx",
+  "digest": "8473faee0f8e3879e319fcad08212999fa2b24a5d0d08b6d849bbc199bc9dc6a",
+  "value": "Formulario de contacto",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeSectionGroup/footer-group?theme_id=210260099402",
+  "key": "section.sections/footer-group.json.footer.copyright:2kzcb9ocuepo0",
+  "digest": "35af6ab0adbd6420303eab846907e5d4ecff364372f8854e3348202822193f08",
+  "value": "Rizelune",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeSectionGroup/footer-group?theme_id=210260099402",
+  "key": "section.sections/footer-group.json.footer.nota:2ixdtl118tom9",
+  "digest": "b7c1b1bb0f2b935996d8759a29cf384ea9e35bd495b1c50884b7229b419d4279",
+  "value": "Todos los precios incluyen IVA.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeSectionGroup/header-group?theme_id=210260099402",
+  "key": "section.sections/header-group.json.announcement-bar.a1.text:347n6lgdb73c1",
+  "digest": "b3f22fa89b147081ba5486cce49f783a70e0ead8dda7655908a466f55d0ecf8c",
+  "value": "🚚 Envío GRATIS en España a partir de 39,99 €",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeSectionGroup/header-group?theme_id=210260099402",
+  "key": "section.sections/header-group.json.announcement-bar.a2.text:3vota34o25qhu",
+  "digest": "362db3cd2280b14634c4519d29392938efc47af0ef5e154ca3e2bb28293fb86c",
+  "value": "Francia y Portugal: envío a solo 2,99 € desde 39,99 €",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeSectionGroup/header-group?theme_id=210260099402",
+  "key": "section.sections/header-group.json.announcement-bar.a3.text:3paho6ziu7mar",
+  "digest": "e0f8f4b99be75ef84aa36b427ab0a841917c20aade0e8174f7d69fbc7d730713",
+  "value": "🌿 Fórmula vegana · Fabricado en la UE · Pago 100% seguro",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeSectionGroup/header-group?theme_id=210260099402",
+  "key": "section.sections/header-group.json.header.logo_texto:2fhpdbl4uwhdf",
+  "digest": "8a3bcd09d7dce4588255c5801d5494a86798d19187a80973bfd86017a7c415cf",
+  "value": "rizelune",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.hero.eyebrow:1xz6u7cdc61v5",
+  "digest": "2dd11820eea0464069bc91c131567dfca040eefd0cf1c3f22fd4b128f967d3fe",
+  "value": "Ritual capilar de romero",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.hero.titulo:ev0dywi5fpq7",
+  "digest": "6f38b12613b656eff4ce00eafdc2750d60f001e2ab646a91dd49438f15c7774f",
+  "value": "Un ritual de 15 minutos para un pelo más <em>fuerte</em> y con brillo",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.hero.texto:hfrw6n9wzec2",
+  "digest": "d624b7683028aace4dc2616e627b378bd89b2b8fc2197c5a39f5e5909f44dc7d",
+  "value": "Aceite de romero y menta que cuida tu pelo desde donde empieza todo: la raíz.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.hero.badges:ev0e6p8mb9w6",
+  "digest": "f982864702e27499c00746829674d590e6c75ec8d8c09a7cef80f1f4cffdaabc",
+  "value": "Fórmula vegana\nFabricado en la UE\nEnvío gratis en España desde 39,99 €",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.hero.etiqueta:1uv1emj4ehbd8",
+  "digest": "9f58c1c48be968bf6454c0ec64531db4879e753e099279a8f76df36b077a36e8",
+  "value": "Ahorra",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.hero.boton1:ev0e6guuxv3d",
+  "digest": "311d349be4362b0cce5a1bfaaa179a6abb4d8b24915f3d7bc220c46fa60731bc",
+  "value": "Quiero mi ritual",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.hero.boton2:ev0e6guuxvze",
+  "digest": "353d8e5f5feb41d0062bd2701f486d365454b931e3805486bc87469df7222f12",
+  "value": "Cómo se usa",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.marquesina.items:1se8tw2zvzykc",
+  "digest": "e5b357ce6b3eb5c30b8922659f4d5afe0be5ee7d3289289864f97cd4074d875a",
+  "value": "Romero y menta\nCuida desde la raíz\nFórmula vegana\nHecho en la UE\nRitual de 15 minutos",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.problema.eyebrow:2nnu3lh4pj9ij",
+  "digest": "53b341d6863524a0f2f0fedd15b8cd88a3014fb381948ef932f9bc846aff1bdf",
+  "value": "¿Te suena?",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.problema.titulo:2k327j3brqjdx",
+  "digest": "6f9750db6a969ee63d06b03b72526e981d9cc3191e7680ebfe3b65649e6ce578",
+  "value": "Tu pelo no se apaga de un día para <em>otro</em>",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.problema.texto:2sgfi14e4eh4",
+  "digest": "c06f0326bef26d102abb48f09be58bc4a3a6c144bd0960942b4f54b509e58a87",
+  "value": "Planchas, tintes, secador, sol, estrés… Poco a poco el pelo se vuelve seco, quebradizo y apagado. Y aunque lo cuidamos de medios a puntas, casi siempre nos olvidamos de donde empieza todo: la raíz.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.problema.lista_titulo:122xkrufhfw49",
+  "digest": "8aaaad0c03aa5f15af8cc8c89406c09d07d012ae51681fb10683890d861efeba",
+  "value": "Rizelune es para ti si…",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.problema.lista:2sgfhw6b6qqh",
+  "digest": "fa1f1fabfbe825edef44e96536e375153f1a3fbccfbc6ad4ec99602c01b57022",
+  "value": "Tienes el pelo seco, apagado o quebradizo\nUsas a menudo plancha, secador o tintes\nSientes que tu pelo ha perdido fuerza y brillo\nQuieres empezar a cuidar tu cuero cabelludo, no solo las puntas\nBuscas un momento de autocuidado sencillo en tu rutina",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.problema.boton:2sgfhxegj3mq",
+  "digest": "25001357b2c5929f6de0c6baa5a6ba5f920c714a780e9cbce9f6d524d768f7b0",
+  "value": "Cuidarlo desde la raíz",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.ingredientes.eyebrow:s4lgfm87ytbm",
+  "digest": "5afb3e034021b8e0692f5f80222e256df180ac47dce522e2f43936be4ffc7a53",
+  "value": "Lo que lleva dentro",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.ingredientes.titulo:1ob5i62ccollo",
+  "digest": "628543325f5df782c6ddfa6c0b08a24a2e9ae0049995738ba2fe751b8aecf2be",
+  "value": "Pocos ingredientes, <em>bien</em> elegidos",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.ingredientes.texto:2erlrctyj4ihd",
+  "digest": "fcd5d3a624f39453a6f3978ead5375020f81e9fbb881e49bc0a8b34dea7ce217",
+  "value": "Una mezcla sencilla de aceites vegetales pensada para nutrir el cuero cabelludo.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.ingredientes.i1.titulo:236p87zjg1nrz",
+  "digest": "d3a78e760d5f84b79ccbb7c6e6ac48da014dfad416c2fe0672ceabe09626485c",
+  "value": "Aceite de romero",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.ingredientes.i1.texto:2jgq1ztxubmsy",
+  "digest": "00bceaa10dbe72376d5e423af9fc8e39e61ca502f0d6bd5ba9929df20ac7f904",
+  "value": "El protagonista del ritual: nutre el cuero cabelludo y ayuda a que tu pelo recupere fuerza.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.ingredientes.i2.titulo:2ai7gdnxxffto",
+  "digest": "ffcf847e341b924a455a8a1eb81bcc882b0ef9145bb6150843059cf17c143f7c",
+  "value": "Aceite de menta",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.ingredientes.i2.texto:2s6hn15pxa3gx",
+  "digest": "8179733b2ae5f937607a4332d37a9bea49a53bdf1ac0677caf860eb113ae0400",
+  "value": "Aporta esa sensación de frescor que notarás desde el primer masaje.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.ingredientes.i3.titulo:2azd4c9xksgil",
+  "digest": "61609b393d4a9503cdc6d4e049c58a8f98799cada507f96c44f762a20fb71fd1",
+  "value": "Aceites vegetales",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.ingredientes.i3.texto:10hnfnjky1blc",
+  "digest": "c4fe3c584bd725c92be41f060ee9f3c7279faac86937a5ea525721f9e71b8f46",
+  "value": "Una base ligera que cuida la raíz y deja el pelo suave y luminoso.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.ingredientes.i4.titulo:2ka5dz5353d96",
+  "digest": "e4d94e563c16a17901c1c78912595384eb854b6e407903b3b2cf5a433c7ab8b6",
+  "value": "Tu pelo, más fuerte",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.ingredientes.i4.texto:1ui132n111t5j",
+  "digest": "beacdbda171ff96f2e0bb955bedfbfbd8ae8ad2b7db7c29ecd9edd7166223fab",
+  "value": "Más resistencia para el pelo seco o quebradizo, y un brillo que se nota.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.pasos.eyebrow:ade850ql34sf",
+  "digest": "df2545f263513816fd46ca53e1848114b1d78fc27df5936a7de2be4dc5bdf139",
+  "value": "Tu ritual",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.pasos.titulo:1b140cbke8m5t",
+  "digest": "7b801aae241d96657451e0ab5836e8691ecfdfd42b5f2884647247f56dbc6505",
+  "value": "Tres gestos, <em>quince</em> minutos",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.pasos.texto:iev9ybba9nbw",
+  "digest": "8d37311ffbab3011ef66d7f53a7c6e0ccb88dfd90ef8d5cb9f45735a647bad2a",
+  "value": "Conviértelo en tu pequeño momento de autocuidado antes del lavado.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.pasos.boton:iev9ym2x35ti",
+  "digest": "3da36b337f81cc11fc2aa4fb16959d293075a24d3718c706b7827d3335f6aac4",
+  "value": "Empezar mi ritual",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.pasos.p1.titulo:27jj5tnunioej",
+  "digest": "360916496b8de32704d791aa905d7be66e65b27170d62c6ff43065a33089073e",
+  "value": "Aplica unas gotas",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.pasos.p1.texto:f5g1czwd01t2",
+  "digest": "b587e50db4ce02c0bb4a957bb83360ae4ca199fcb2f2d4ca2b9c32ae5344a0d8",
+  "value": "Con el cuentagotas, reparte unas gotas sobre el cuero cabelludo y el cabello, antes de lavarte el pelo.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.pasos.p1.tiempo:27jj5to9ak326",
+  "digest": "2c4763e629f52231f60cdd6e65fd0fc1c1d2739b2e4d7019baff284de31cfaef",
+  "value": "Sin derrochar: frasco de 30 ml",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.pasos.p2.titulo:2ev1dzc94wgg8",
+  "digest": "38824d6dbb1af81b85cd9bf1e47d75d66a5ebb45aa46e77faab56584d4e9f559",
+  "value": "Masajea suavemente",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.pasos.p2.texto:nv7mebofyih1",
+  "digest": "5f4bc39246d8905c3f61c401f5582e85494230b6a86632cef8d173041cd323d9",
+  "value": "Con las yemas de los dedos, con movimientos circulares. Notarás el frescor de la menta.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.pasos.p2.tiempo:2ev1dzck1pa7x",
+  "digest": "3945fc917656c33aea864ec5594d5cc0a42ea24815c4c3402c9d6e9a62207136",
+  "value": "Tu momento de autocuidado",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.pasos.p3.titulo:2fc71xy8s9h55",
+  "digest": "b5818bf712d182bade54aadb459cccd24f03d5cdf2ffc5e011cb1a10c006ab33",
+  "value": "Deja actuar y lava",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.pasos.p3.texto:2sbrg1rpli7dw",
+  "digest": "b56456f2a738eb0d2f313b525007bf0bb23b29957ea72fdd78c8904e26d31252",
+  "value": "Déjalo al menos 15 minutos y después lávate el pelo como de costumbre. Repite 1–2 veces por semana.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.pasos.p3.tiempo:2fc71xyn9tp4s",
+  "digest": "91348f2f140f93c808401fe274f3e4fc2383686518e8b4a92199629db4911dfd",
+  "value": "Mínimo 15 minutos",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.beneficios.eyebrow:144cri2q31ous",
+  "digest": "b6cec23df74c03ba873dfb438573af5ef3c3e93e9fa0ce66fa80361f7704e53d",
+  "value": "Por qué funciona",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.beneficios.titulo:i7bwdgdg14ai",
+  "digest": "a89e707a5f6f74f06c2afd8dcd17360d1a43103cea6149275f3fcfc966ce0fdb",
+  "value": "Cuida la raíz, <em>luce</em> el resultado",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.beneficios.texto:1wi3w0x95vyrb",
+  "digest": "cf964cc87e24d01ba31baab98275aa682bf685aaee33a6e394df826cf551383f",
+  "value": "Pensado para usarse en tu rutina de siempre.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.beneficios.b1.titulo:10plijxasxuxe",
+  "digest": "a4696f5fae7c71519edb78de4184b6f0337ba9d9bfeacb41c5b449be4f315b4e",
+  "value": "Nutre el cuero cabelludo",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.beneficios.b1.texto:1stenxt24mokf",
+  "digest": "184be6417c9a359b8912f390daab5f0b3e0db640b4349a68c0ac10779e071d44",
+  "value": "Su fórmula con aceites vegetales cuida la raíz y deja una sensación de frescor gracias a la menta.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.beneficios.b2.titulo:aw7qa28ggvbl",
+  "digest": "addd9329f75184588d278377ff5ad669c569a34ea5172c6d8155a2e8e67b3b6e",
+  "value": "Fortalece el cabello",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.beneficios.b2.texto:8tnzrmwdbjb0",
+  "digest": "c6970f07bb61c0ad9463dca273c29e37207efcf242f6d62436e0c388625a2161",
+  "value": "Ayuda a mejorar la resistencia del pelo seco o quebradizo.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.beneficios.b3.titulo:af22bg8t3umo",
+  "digest": "655af15e97b33d3f970f1985eef747f04277df4c937298850c9876e143b158a0",
+  "value": "Devuelve el brillo",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.beneficios.b3.texto:20ii7591ckb6l",
+  "digest": "14c62241c2452e08873b1dae1f4362d0143669e53fc2de25455956f914cd55ed",
+  "value": "Tu pelo se ve más sano, suave y luminoso.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.beneficios.b4.titulo:jm5csrr3w5g7",
+  "digest": "20e525991c69ac8f07e6af2742d909480ad1d5f229bb5ae2085bec13908993e6",
+  "value": "Natural y vegano",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.beneficios.b4.texto:2hs3muzyxwi7u",
+  "digest": "9db4b54f6a8862eb878c60754b947e2999ca8f5b49e945b348f1d9d8fc8774db",
+  "value": "Fórmula vegana, fabricada en la UE con certificación de calidad.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.beneficios.c1.sufijo:2m79su07c1sxs",
+  "digest": "1f6fa6f69d185e6086d04e7330361bf9001a3b8d0ce511171055dc34eb90c1c5",
+  "value": "min",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.beneficios.c1.etiqueta:3sju21qjoznls",
+  "digest": "a037572dbe6180aa46c19caf429431851264d6bffa64e231de23c4f262c7f92e",
+  "value": "de ritual antes del lavado",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.beneficios.c2.sufijo:2qxev9hnvknnn",
+  "digest": "5d58d41913d9fea4e42cecd7a5d1b692aa6d0d792977ad7c6d6bb1507e8f3dbd",
+  "value": "ml",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.beneficios.c2.etiqueta:2prnnlu0hlhkz",
+  "digest": "241c5d9db6ce190f0ca23247bbebfeee94967171691621d3e479d3e0703d47b6",
+  "value": "con cuentagotas dosificador",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.beneficios.c3.etiqueta:3ql1wy0g8ys76",
+  "digest": "41e4d7eb5f46069d2dfdb72a2cfb9a77489ef319ef47728b7c7281bf9ecb02d8",
+  "value": "aplicaciones a la semana (1–2)",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.beneficios.c4.sufijo:2wi9ll3kbfu4l",
+  "digest": "bbf3f11cb5b43e700273a78d12de55e4a7eab741ed2abf13787a4d2dc832b8ec",
+  "value": "%",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.beneficios.c4.etiqueta:7031gfegrhhh",
+  "digest": "598d207c15421b37437ac71b9e82500563aea3aaeaedcc6099fafe738b9254c5",
+  "value": "fórmula vegana",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.ritual.flotante_num:3de462l1ptp7l",
+  "digest": "d1552596b1c462764a3f0be84cbfd5a6e42cca1b19e6f1764f1faf5dde83a8bb",
+  "value": "1–2",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.ritual.flotante_texto:ytmpf9chuxyd",
+  "digest": "24f932870db764057e45ae98537e0a58337f6c226d7ff78a9de32e31956c02ae",
+  "value": "veces por semana. La constancia es el secreto.",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.ritual.eyebrow:xlrymj2siigm",
+  "digest": "d7705ad1891bc532aedb40b37cf36beb543c4f75f04fbc3208ae19508dd0d39d",
+  "value": "Ritual de noche",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.ritual.titulo:3bxlgz367q3mg",
+  "digest": "c7dfd6ac36aeeb76f0d608a86269229fa832d1e1fddf12df390ea20d9ae2e444",
+  "value": "Un gesto pequeño que se convierte en <em>costumbre</em>",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.ritual.texto:1ecms4ow0juz9",
+  "digest": "0ac43e63979e299c6dba6b0a2f5d298647d3b187e7daabdac4a101eef1ecc9f2",
+  "value": "Enciende una vela, ponte cómoda y regálate quince minutos. Rizelune convierte algo tan simple como tu lavado de pelo en un pequeño ritual de cuidado.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.ritual.lista:1ecms4tu6b3lw",
+  "digest": "12e1dc84a35e5e6809f6d44c13058253c571b9a67179fcf9524ca9503ae20464",
+  "value": "Cuero cabelludo nutrido y con sensación de frescor\nPelo con más fuerza desde la raíz\nUn brillo sano que se nota",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.ritual.boton:1ecms4uwsne7z",
+  "digest": "3da36b337f81cc11fc2aa4fb16959d293075a24d3718c706b7827d3335f6aac4",
+  "value": "Empezar mi ritual",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.resenas.eyebrow:1r1kmj6tbabjw",
+  "digest": "55922468babb8b370310870a838a54734b14ac439b211573aa5b3396fa5c9274",
+  "value": "Opiniones",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.resenas.titulo:vn0bgzy0m6mq",
+  "digest": "fa1d06afd7577a699637f2d02fd2531a309334d9ab1632e9aecfe86233265508",
+  "value": "Lo que dicen quienes ya tienen su <em>ritual</em>",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.faq.eyebrow:1qok4ayf6xpef",
+  "digest": "4b9a4c9ba82557a102268f75382ce489e0115d8313326923a51485c16bac82d4",
+  "value": "Dudas",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.faq.titulo:38kfcpzcwq02h",
+  "digest": "4c87fb056a7cb3c40a13c9239295eef5895d0baa245836af3866f9a7154f5a72",
+  "value": "Preguntas <em>frecuentes</em>",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.faq.f1.pregunta:glwoapxqjiuc",
+  "digest": "58a5a1a49092bfe90870d621b89aedfe457be7f5c959e031a82512c564445523",
+  "value": "¿Cómo se usa Rizelune?",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.faq.f1.respuesta:3jlos18517vxk",
+  "digest": "c0f3c2e81bca4aba76b81335ddcc6bbcdb95e4d8ff9c02f9a9a49c57ad6e746d",
+  "value": "<p>Aplica unas gotas sobre el cuero cabelludo y el cabello, masajea con las yemas de los dedos y deja actuar al menos 15 minutos. Después lava tu pelo como de costumbre.</p>",
+  "type": "RICH_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.faq.f2.pregunta:3dwlyd6uboe3r",
+  "digest": "1a2b83d96cdc0cb0b17222e406ba71e4119fcdba775192cd763e40a91db69aa9",
+  "value": "¿Cada cuánto debo aplicarlo?",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.faq.f2.respuesta:2qpth5gahm1zf",
+  "digest": "a6870d37fb9260d6506aea21d9f01d3f95cb537bce7d607d07aebcacd9f8c520",
+  "value": "<p>Recomendamos usarlo 1–2 veces por semana. La constancia es lo que marca la diferencia.</p>",
+  "type": "RICH_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.faq.f3.pregunta:ikov9tjwo27a",
+  "digest": "87b83cb6a3cbd70c5efa2b67ef517da4f63187bcfba4ba60998f8cc542d7a414",
+  "value": "¿Me dejará el pelo graso?",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.faq.f3.respuesta:1gaipft1pkj3e",
+  "digest": "3fe6571811042e2efb1dcfc420dd448bb865c1c7bd16c4e9196bb44b9669b5f2",
+  "value": "<p>No, porque se aplica <strong>antes</strong> del lavado. Tras dejarlo actuar, lavas tu pelo como siempre y se retira.</p>",
+  "type": "RICH_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.faq.f4.pregunta:20ioy3x9wq9gh",
+  "digest": "3be62f76245aa20574f3d452de14364c9a8c1b6065b9e400f7b74e23b1aa348e",
+  "value": "¿Es vegano?",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.faq.f4.respuesta:ankjgkhivuml",
+  "digest": "4aec1c6e188fe1d90698ffc30316fce480b4d44eeed63e7bdef153154eed2e1c",
+  "value": "<p>Sí. Su fórmula es natural y vegana, fabricada en la UE con certificación de calidad.</p>",
+  "type": "RICH_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.faq.f5.pregunta:31c5w1m5miecg",
+  "digest": "9218e0a8350704b610dfe486d54a5b4bc35def5e526102a3a37983dc22fc6331",
+  "value": "¿Qué tamaño tiene el frasco?",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.faq.f5.respuesta:2wdnsrzevmsj0",
+  "digest": "8adcbade9d406c868ce772e46f82056620c4a046e1f468f0113de1e64fd6a6c2",
+  "value": "<p>30 ml, con cuentagotas para que dosifiques justo lo que necesitas, sin derrochar.</p>",
+  "type": "RICH_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.faq.f6.pregunta:22hh530w2ustf",
+  "digest": "b0681211024033207afa0f45d9d920ba9448f04adc631143205d9ca9da430b1e",
+  "value": "¿A qué huele?",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.faq.f6.respuesta:23hshw7kc0ykv",
+  "digest": "d4952b60ee498b6ade478e7c38ef9428e13f6d466f9bd08522c7b17fb802de22",
+  "value": "<p>A romero y menta: un aroma herbal y fresco, con un toque de frescor en el cuero cabelludo gracias a la menta.</p>",
+  "type": "RICH_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.faq.f7.pregunta:33ay30prsmxpe",
+  "digest": "57069fcbf1a723a7ecb430d326df3942dbf097c8f9e3eaea360c8da76afe32c4",
+  "value": "¿Cuánto cuesta el envío y cuánto tarda?",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.faq.f7.respuesta:t2hq6kbjzfou",
+  "digest": "c032682077894683fb524ed9f5c5589c095e9fe2623c3c29c50ae1dd2c029c3f",
+  "value": "<p><strong>España:</strong> envío <strong>gratis</strong> a partir de 39,99 € (si no, 6,99 €). Llega en unos 10 días laborables.</p><p><strong>Francia y Portugal:</strong> 6 € (o solo 2,99 € a partir de 39,99 €). Llega en unos 8 días laborables a Francia y 11 a Portugal.</p><p>Recibirás un correo con el número de seguimiento. Más información en nuestra <a href=\"/policies/shipping-policy\">política de envío</a>.</p>",
+  "type": "RICH_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.faq.f8.pregunta:1hh5hsrflebn1",
+  "digest": "122be472b5deda3ddbdaf661eca8ce2b508245a28cad5f5260cfdcdbc1326aa3",
+  "value": "¿Puedo devolverlo?",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.faq.f8.respuesta:2azl6mz1oussh",
+  "digest": "ce7809b9773fcc8740f2e2ba28601780dc8fd4d0d8560122f4462b70f9def585",
+  "value": "<p>Sí. Tienes 14 días desde que lo recibes para solicitar la devolución. Consulta todas las condiciones en nuestra <a href=\"/policies/refund-policy\">política de devoluciones</a>.</p>",
+  "type": "RICH_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.compra.eyebrow:bwp9ip6pdnz7",
+  "digest": "5ff0ba1b0d34a25611b66e5611c5d329756a7fe3c09d081d1e238eefb7c3ce5e",
+  "value": "Empieza hoy",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.compra.titulo:1fbof6g7z5cz1",
+  "digest": "14f43e7e1e920f13d8d3f5a11a66d83c5b7453fcd075c768dfa5e7873c7e407a",
+  "value": "Tu ritual empieza esta noche",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.compra.texto:zj452n1matq8",
+  "digest": "6af586a962300f01c14486c8ed7d0e4cd606c82704fea58ebdce77e1e189c439",
+  "value": "Nutre, fortalece e ilumina tu pelo desde la raíz con un ritual de solo 15 minutos.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.compra.etiqueta:34odufkad72zi",
+  "digest": "92cfc962436fab38d2eea4fa91bef6fb4b31959a0f5282b5c95ace8640d14fb4",
+  "value": "¡Oferta!",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.compra.lista:zj4528wbgyvl",
+  "digest": "bd85b26cd89a076ad84cb617b1409da1db26b950a24f5d9bb532ff386308754a",
+  "value": "Frasco cuentagotas de 30 ml\nAceite de romero y menta\nFórmula natural y vegana, fabricada en la UE\nEnvío gratis en España desde 39,99 €",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.compra.boton:zj452eku44bu",
+  "digest": "983bb7f281a14c3ef453756cb1ab29fd3d23cac67b8679fb8e1d0c88684cd704",
+  "value": "Añadir al carrito",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.compra.ver_mas:bwpjsu21wb03",
+  "digest": "d8e94bf9ecd14a455b53e5a8d351869d41f954ab278821c084256779d754ccbb",
+  "value": "Ver todos los detalles",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.garantias.g1.titulo:2qr88n3eqw3fa",
+  "digest": "1e412eca43f5141d1783f468f757fc158f8a0b4fc6c32022582aef00c9d5f853",
+  "value": "Pago seguro",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.garantias.g1.texto:1up3cq9qwldqz",
+  "digest": "ec45d91f5d58cf242e5486c30074a8115059dedb73a9d9dd44033fa4f6012bc7",
+  "value": "Tus datos siempre protegidos",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.garantias.g2.titulo:20xugd8cef3th",
+  "digest": "1c2865a13ada5e626dcef76f9fd80759a566ac94bebb102d1260f9ee9c137b7b",
+  "value": "Cosmética natural",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.garantias.g2.texto:apcok3l5a8hk",
+  "digest": "dccf8a9e465ac258749e23797cd4996cf972d61891fda340fcc85b04fcf53aa5",
+  "value": "Fórmula vegana con aceites vegetales",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.garantias.g3.titulo:20gosemcr234k",
+  "digest": "b0e8f5ee24ec5d3f1d7ea625dd753fd9afbce69686ebc31d49968d9ff18b0984",
+  "value": "Calidad comprobada",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.garantias.g3.texto:22e6vxpq4j0d5",
+  "digest": "449a74ad585bccd958c936a58c98b0a93f8c9262d250c57d921b07226740c3b5",
+  "value": "Fabricado en la UE con certificación",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.garantias.g4.titulo:1cml1ly1hi87n",
+  "digest": "3da76cfdf5ea788f710962e06df7f51b21650bb1d0580d8a65341b554251cf17",
+  "value": "Envío gratis",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/index?theme_id=210260099402",
+  "key": "section.index.json.garantias.g4.texto:13p2a5b8d9vzy",
+  "digest": "c873ff66cb85de9e351b3db1b3c63bc88029b339e85d0117bd7c4032680b5263",
+  "value": "En España a partir de 39,99 €",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/list-collections?theme_id=210260099402",
+  "key": "section.list-collections.json.main.title:1d0ti1c25d6dr",
+  "digest": "9f9feade761d22f340a4de9c586f222aa74658351faadc8365335bc3c548ba71",
+  "value": "Collections",
+  "type": "INLINE_RICH_TEXT"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/password?theme_id=210260099402",
+  "key": "section.password.json.main.heading.heading:3jfchdkhhlz4x",
+  "digest": "3e99a1b1b8250ce9d00de645e69e666f5706da1f2bab3d34402edb6600f29d19",
+  "value": "Muy pronto: tu ritual capilar",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/password?theme_id=210260099402",
+  "key": "section.password.json.main.paragraph.text:3dpbi4yl0bkb6",
+  "digest": "d2d09d166aae7cb81fb25fe2c7e99a1b0f14eb8c512441d2b876c17e944efdea",
+  "value": "<p>Estamos preparando algo especial para tu pelo. Déjanos tu correo y te avisaremos del lanzamiento.</p>",
+  "type": "RICH_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.eyebrow:qrodqzv75wjk",
+  "digest": "2dd11820eea0464069bc91c131567dfca040eefd0cf1c3f22fd4b128f967d3fe",
+  "value": "Ritual capilar de romero",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.subtitulo:9254qcjx14a",
+  "digest": "cea40e594f1293899c3ce90fbe4db41adc3925fcbdc949171410d2fb9ff44390",
+  "value": "Para el cuero cabelludo y el cabello · 30 ml",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.etiqueta:16h0kxb96v3q5",
+  "digest": "7b2696be239b90627af8250cd15d5b5175ad163c6912b583aa20416dff800b4e",
+  "value": "Oferta",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.nota_precio:2d782hjtk3k6w",
+  "digest": "3363f6e615da9bebfe54e94857afc6701adc16ebabf1c3c9f9151c5fb71f0f42",
+  "value": "Impuestos incluidos.",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.intro:3a1e1swusvun3",
+  "digest": "20c715f96cf2e9c2bd4de6a8440ea9b5bebebfd8adb943f8a385ac766b04f22e",
+  "value": "Una mezcla de aceite de romero y aceite de menta que nutre el cuero cabelludo y devuelve fuerza y brillo a tu pelo desde la raíz. Aplícalo antes del lavado y déjalo actuar 15 minutos.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.boton:3a1e1syksfebt",
+  "digest": "983bb7f281a14c3ef453756cb1ab29fd3d23cac67b8679fb8e1d0c88684cd704",
+  "value": "Añadir al carrito",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.envio_texto:2qq0v0ewnvu9z",
+  "digest": "89b75ac1f4bdbbb60d0584c79e32d70258e9eb5117cabfc9ed5ea66486eb3e22",
+  "value": "Envío GRATIS en España desde 39,99 € · ¡con 2 frascos ya lo tienes!",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.garantia_1_texto:gwj69pifx9at",
+  "digest": "5c5c67289691eccb39f82f94ba070456198687f9aedbc20a8661a26acb911ffe",
+  "value": "Pago 100% seguro",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.garantia_2_texto:gwj4v5qstw5y",
+  "digest": "dcb2d701d0540d9af3da522e90b1ac810b8ba799a34343eabb52e42c345f7aa8",
+  "value": "Fórmula vegana",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.garantia_3_texto:gwj79o07udhz",
+  "digest": "d0c39ffd6ba87b04669cd76b4c976366be4657cca1bfd083652118a76406a2d7",
+  "value": "Fabricado en la UE",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.k1.titulo:16shrsfrqktr",
+  "digest": "173c20d6c70963c611120567f12bac91b4e3f1aa34734c20fc3f7103dc40eb65",
+  "value": "Nutre",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.k1.texto:36pccafxr6h4y",
+  "digest": "424282860ccda53c7a70de2c2f3812d618ae9db9f8ae6221abc46b0b98fac521",
+  "value": "Cuida la raíz con aceites vegetales",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.k2.titulo:5wxk1u96aoq4",
+  "digest": "c3717f4a1d5e3f5afca62717fe68e0d22274a6a22780738dfaf16a4e6a3a46ae",
+  "value": "Fortalece",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.k2.texto:28vdgh1a8yv4x",
+  "digest": "8d039f57d0312303ef96a5ec1a942aae994fa5ade3b403003c4f622705cfe6f4",
+  "value": "Más resistencia para el pelo seco",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.k3.titulo:c4ja53hm7rhp",
+  "digest": "32e8fde914f6f25c09fe01905107af4c3848ad99c9303dc16d3822052a035489",
+  "value": "Ilumina",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.k3.texto:20kd9kccb7r40",
+  "digest": "9dc7494a8b202511114fe344a2abd32f3595e630669cb8203d3a71efcd99683a",
+  "value": "Un pelo más sano, suave y luminoso",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.k4.titulo:3alza2lgofvze",
+  "digest": "a45dd58f2f941b39198ae887b10559a97b2d3389af0699dacbae134e01eaa85f",
+  "value": "Refresca",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.k4.texto:2p0zig260mxgn",
+  "digest": "f54cd8ed818ffb276e149325485459344c350a6f8f70dab91e9cf9dde4ccd693",
+  "value": "Sensación de frescor gracias a la menta",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.d1.titulo:13x6gllm971c0",
+  "digest": "056c4d4e7a2029e0d819da316987de5123a77603bd745dce484e1d011d46538d",
+  "value": "Modo de uso",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.d1.contenido:2jrpcpng5b8xs",
+  "digest": "09be2179d320255ab76d246ac9171428a1bfe1816a2cdf6a689769b9a9473b39",
+  "value": "<p>Aplica unas gotas sobre el cuero cabelludo y el cabello, masajea con las yemas de los dedos y deja actuar al menos <strong>15 minutos</strong>. Después lava tu pelo como de costumbre. Úsalo 1–2 veces por semana.</p>",
+  "type": "RICH_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.d2.titulo:2zpvvm7wo8keb",
+  "digest": "40875021b4911356c5eb028757f53dad1c2673463c1a68058c1cdb708afcfeef",
+  "value": "Ingredientes clave",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.d2.contenido:noop9mzx3ndv",
+  "digest": "4ade5ddca80d07d412dbb1e240567898bb205d861ef241e323369047b169679d",
+  "value": "<ul><li><strong>Aceite de romero</strong></li><li><strong>Aceite de menta</strong></li><li>Aceites vegetales</li></ul><p>Fórmula natural y vegana, fabricada en la UE con certificación de calidad.</p>",
+  "type": "RICH_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.d3.titulo:w4ikhb84g8le",
+  "digest": "34842893a7ee5d1b78d8b7b14082b33275eb5a2667d8ed9efb163ddc15fee00d",
+  "value": "Qué incluye",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.d3.contenido:26ho1minilc8y",
+  "digest": "0ee67bad32276d94efe3c012fbf65d33a64d114f19c1fae63295800a43e40e77",
+  "value": "<p>1 frasco de vidrio de 30 ml con cuentagotas dosificador.</p>",
+  "type": "RICH_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.d4.titulo:2pxxy0qrgkmyt",
+  "digest": "34fbdabb8338add6945d2ce3a9691dc31c2f0fa0fa6a7ccd8340ae4bd0e1a6cb",
+  "value": "Descripción completa",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.principal.d4.contenido:1ggn5t9zrm2jp",
+  "digest": "9437b68b9f6a0d7e6fb75bfdd5467094bb7488a68a199199601e3c2aff5ddaf3",
+  "value": "<p>Escribe aquí el contenido.</p>",
+  "type": "RICH_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.marquesina.items:2v1acz35mr69b",
+  "digest": "e5b357ce6b3eb5c30b8922659f4d5afe0be5ee7d3289289864f97cd4074d875a",
+  "value": "Romero y menta\nCuida desde la raíz\nFórmula vegana\nHecho en la UE\nRitual de 15 minutos",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.beneficios.eyebrow:2ubi7g4nhfqpz",
+  "digest": "b6cec23df74c03ba873dfb438573af5ef3c3e93e9fa0ce66fa80361f7704e53d",
+  "value": "Por qué funciona",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.beneficios.titulo:1i2b43d9qj91l",
+  "digest": "a89e707a5f6f74f06c2afd8dcd17360d1a43103cea6149275f3fcfc966ce0fdb",
+  "value": "Cuida la raíz, <em>luce</em> el resultado",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.beneficios.texto:3pal5gdf42hr8",
+  "digest": "cf964cc87e24d01ba31baab98275aa682bf685aaee33a6e394df826cf551383f",
+  "value": "Pensado para usarse en tu rutina de siempre.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.beneficios.b1.titulo:5z6exd83xin5",
+  "digest": "a4696f5fae7c71519edb78de4184b6f0337ba9d9bfeacb41c5b449be4f315b4e",
+  "value": "Nutre el cuero cabelludo",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.beneficios.b1.texto:20dns96ridz9o",
+  "digest": "184be6417c9a359b8912f390daab5f0b3e0db640b4349a68c0ac10779e071d44",
+  "value": "Su fórmula con aceites vegetales cuida la raíz y deja una sensación de frescor gracias a la menta.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.beneficios.b2.titulo:3rbumajilmq1u",
+  "digest": "addd9329f75184588d278377ff5ad669c569a34ea5172c6d8155a2e8e67b3b6e",
+  "value": "Fortalece el cabello",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.beneficios.b2.texto:8cit2izrgpwv",
+  "digest": "c6970f07bb61c0ad9463dca273c29e37207efcf242f6d62436e0c388625a2161",
+  "value": "Ayuda a mejorar la resistencia del pelo seco o quebradizo.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.beneficios.b3.titulo:zesreuxthwv7",
+  "digest": "655af15e97b33d3f970f1985eef747f04277df4c937298850c9876e143b158a0",
+  "value": "Devuelve el brillo",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.beneficios.b3.texto:25insnxjqrxu6",
+  "digest": "14c62241c2452e08873b1dae1f4362d0143669e53fc2de25455956f914cd55ed",
+  "value": "Tu pelo se ve más sano, suave y luminoso.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.beneficios.b4.titulo:3eetsg1po8ep0",
+  "digest": "20e525991c69ac8f07e6af2742d909480ad1d5f229bb5ae2085bec13908993e6",
+  "value": "Natural y vegano",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.beneficios.b4.texto:t6vteux7df1l",
+  "digest": "9db4b54f6a8862eb878c60754b947e2999ca8f5b49e945b348f1d9d8fc8774db",
+  "value": "Fórmula vegana, fabricada en la UE con certificación de calidad.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.beneficios.c1.sufijo:3s77h6n0hsj7",
+  "digest": "1f6fa6f69d185e6086d04e7330361bf9001a3b8d0ce511171055dc34eb90c1c5",
+  "value": "min",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.beneficios.c1.etiqueta:1jpm5xckjlnhv",
+  "digest": "a037572dbe6180aa46c19caf429431851264d6bffa64e231de23c4f262c7f92e",
+  "value": "de ritual antes del lavado",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.beneficios.c2.sufijo:1zkwmchvzf8s0",
+  "digest": "5d58d41913d9fea4e42cecd7a5d1b692aa6d0d792977ad7c6d6bb1507e8f3dbd",
+  "value": "ml",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.beneficios.c2.etiqueta:s61nigmwcptc",
+  "digest": "241c5d9db6ce190f0ca23247bbebfeee94967171691621d3e479d3e0703d47b6",
+  "value": "con cuentagotas dosificador",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.beneficios.c3.etiqueta:36rnaznhanx9t",
+  "digest": "41e4d7eb5f46069d2dfdb72a2cfb9a77489ef319ef47728b7c7281bf9ecb02d8",
+  "value": "aplicaciones a la semana (1–2)",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.beneficios.c4.sufijo:1psyoxjh4reeu",
+  "digest": "bbf3f11cb5b43e700273a78d12de55e4a7eab741ed2abf13787a4d2dc832b8ec",
+  "value": "%",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.beneficios.c4.etiqueta:xa6myrhqug1i",
+  "digest": "598d207c15421b37437ac71b9e82500563aea3aaeaedcc6099fafe738b9254c5",
+  "value": "fórmula vegana",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.ingredientes.eyebrow:9iulru8wz735",
+  "digest": "5afb3e034021b8e0692f5f80222e256df180ac47dce522e2f43936be4ffc7a53",
+  "value": "Lo que lleva dentro",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.ingredientes.titulo:3s6vzoyrec75b",
+  "digest": "628543325f5df782c6ddfa6c0b08a24a2e9ae0049995738ba2fe751b8aecf2be",
+  "value": "Pocos ingredientes, <em>bien</em> elegidos",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.ingredientes.texto:1euda5h9b72te",
+  "digest": "fcd5d3a624f39453a6f3978ead5375020f81e9fbb881e49bc0a8b34dea7ce217",
+  "value": "Una mezcla sencilla de aceites vegetales pensada para nutrir el cuero cabelludo.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.ingredientes.i1.titulo:2528hxjhwsbjg",
+  "digest": "d3a78e760d5f84b79ccbb7c6e6ac48da014dfad416c2fe0672ceabe09626485c",
+  "value": "Aceite de romero",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.ingredientes.i1.texto:rtet3eaa895t",
+  "digest": "00bceaa10dbe72376d5e423af9fc8e39e61ca502f0d6bd5ba9929df20ac7f904",
+  "value": "El protagonista del ritual: nutre el cuero cabelludo y ayuda a que tu pelo recupere fuerza.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.ingredientes.i2.titulo:6kszjcmu7wkv",
+  "digest": "ffcf847e341b924a455a8a1eb81bcc882b0ef9145bb6150843059cf17c143f7c",
+  "value": "Aceite de menta",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.ingredientes.i2.texto:2u4jt3jmhxfnm",
+  "digest": "8179733b2ae5f937607a4332d37a9bea49a53bdf1ac0677caf860eb113ae0400",
+  "value": "Aporta esa sensación de frescor que notarás desde el primer masaje.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.ingredientes.i3.titulo:2yhuuf17mcpri",
+  "digest": "61609b393d4a9503cdc6d4e049c58a8f98799cada507f96c44f762a20fb71fd1",
+  "value": "Aceites vegetales",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.ingredientes.i3.texto:wyeti52im7qb",
+  "digest": "c4fe3c584bd725c92be41f060ee9f3c7279faac86937a5ea525721f9e71b8f46",
+  "value": "Una base ligera que cuida la raíz y deja el pelo suave y luminoso.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.ingredientes.i4.titulo:2srz5fx6h9wa1",
+  "digest": "e4d94e563c16a17901c1c78912595384eb854b6e407903b3b2cf5a433c7ab8b6",
+  "value": "Tu pelo, más fuerte",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.ingredientes.i4.texto:1z06rxq4l8tdw",
+  "digest": "beacdbda171ff96f2e0bb955bedfbfbd8ae8ad2b7db7c29ecd9edd7166223fab",
+  "value": "Más resistencia para el pelo seco o quebradizo, y un brillo que se nota.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.pasos.eyebrow:sbuqrw54zuks",
+  "digest": "df2545f263513816fd46ca53e1848114b1d78fc27df5936a7de2be4dc5bdf139",
+  "value": "Tu ritual",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.pasos.titulo:37iy8g2ubelia",
+  "digest": "7b801aae241d96657451e0ab5836e8691ecfdfd42b5f2884647247f56dbc6505",
+  "value": "Tres gestos, <em>quince</em> minutos",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.pasos.texto:g8p7zhj19gz3",
+  "digest": "8d37311ffbab3011ef66d7f53a7c6e0ccb88dfd90ef8d5cb9f45735a647bad2a",
+  "value": "Conviértelo en tu pequeño momento de autocuidado antes del lavado.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.pasos.p1.titulo:3w2ux0iv4aazc",
+  "digest": "360916496b8de32704d791aa905d7be66e65b27170d62c6ff43065a33089073e",
+  "value": "Aplica unas gotas",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.pasos.p1.texto:xz1qb5gr545x",
+  "digest": "b587e50db4ce02c0bb4a957bb83360ae4ca199fcb2f2d4ca2b9c32ae5344a0d8",
+  "value": "Con el cuentagotas, reparte unas gotas sobre el cuero cabelludo y el cabello, antes de lavarte el pelo.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.pasos.p1.tiempo:3w2ux0ilta5d9",
+  "digest": "2c4763e629f52231f60cdd6e65fd0fc1c1d2739b2e4d7019baff284de31cfaef",
+  "value": "Sin derrochar: frasco de 30 ml",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.pasos.p2.titulo:1vq6b02zejd97",
+  "digest": "38824d6dbb1af81b85cd9bf1e47d75d66a5ebb45aa46e77faab56584d4e9f559",
+  "value": "Masajea suavemente",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.pasos.p2.texto:j1g2n1iibr7a",
+  "digest": "5f4bc39246d8905c3f61c401f5582e85494230b6a86632cef8d173041cd323d9",
+  "value": "Con las yemas de los dedos, con movimientos circulares. Notarás el frescor de la menta.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.pasos.p2.tiempo:1vq6b02osup7y",
+  "digest": "3945fc917656c33aea864ec5594d5cc0a42ea24815c4c3402c9d6e9a62207136",
+  "value": "Tu momento de autocuidado",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.pasos.p3.titulo:3oa70w8gzji8q",
+  "digest": "b5818bf712d182bade54aadb459cccd24f03d5cdf2ffc5e011cb1a10c006ab33",
+  "value": "Deja actuar y lava",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.pasos.p3.texto:2gy4cnftnffdj",
+  "digest": "b56456f2a738eb0d2f313b525007bf0bb23b29957ea72fdd78c8904e26d31252",
+  "value": "Déjalo al menos 15 minutos y después lávate el pelo como de costumbre. Repite 1–2 veces por semana.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.pasos.p3.tiempo:3oa70w87u0jan",
+  "digest": "91348f2f140f93c808401fe274f3e4fc2383686518e8b4a92199629db4911dfd",
+  "value": "Mínimo 15 minutos",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.ritual.flotante_num:lajmyvq9vavm",
+  "digest": "d1552596b1c462764a3f0be84cbfd5a6e42cca1b19e6f1764f1faf5dde83a8bb",
+  "value": "1–2",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.ritual.flotante_texto:1rar3aupm47km",
+  "digest": "24f932870db764057e45ae98537e0a58337f6c226d7ff78a9de32e31956c02ae",
+  "value": "veces por semana. La constancia es el secreto.",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.ritual.eyebrow:g0dvhrg6lehx",
+  "digest": "d7705ad1891bc532aedb40b37cf36beb543c4f75f04fbc3208ae19508dd0d39d",
+  "value": "Ritual de noche",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.ritual.titulo:3jw6mu1tkwp7v",
+  "digest": "c7dfd6ac36aeeb76f0d608a86269229fa832d1e1fddf12df390ea20d9ae2e444",
+  "value": "Un gesto pequeño que se convierte en <em>costumbre</em>",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.ritual.texto:1n33jn5cd44jq",
+  "digest": "0ac43e63979e299c6dba6b0a2f5d298647d3b187e7daabdac4a101eef1ecc9f2",
+  "value": "Enciende una vela, ponte cómoda y regálate quince minutos. Rizelune convierte algo tan simple como tu lavado de pelo en un pequeño ritual de cuidado.",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.ritual.lista:1n33jmrcb0713",
+  "digest": "12e1dc84a35e5e6809f6d44c13058253c571b9a67179fcf9524ca9503ae20464",
+  "value": "Cuero cabelludo nutrido y con sensación de frescor\nPelo con más fuerza desde la raíz\nUn brillo sano que se nota",
+  "type": "MULTI_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.resenas.eyebrow:ajs4bx2b6wzz",
+  "digest": "55922468babb8b370310870a838a54734b14ac439b211573aa5b3396fa5c9274",
+  "value": "Opiniones",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.resenas.titulo:3b8g1849vmarl",
+  "digest": "fa1d06afd7577a699637f2d02fd2531a309334d9ab1632e9aecfe86233265508",
+  "value": "Lo que dicen quienes ya tienen su <em>ritual</em>",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.faq.eyebrow:1u80yinqsnq90",
+  "digest": "4b9a4c9ba82557a102268f75382ce489e0115d8313326923a51485c16bac82d4",
+  "value": "Dudas",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.faq.titulo:1xyhqvxqmlsui",
+  "digest": "4c87fb056a7cb3c40a13c9239295eef5895d0baa245836af3866f9a7154f5a72",
+  "value": "Preguntas <em>frecuentes</em>",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.faq.f1.pregunta:3v70crvswyxrr",
+  "digest": "58a5a1a49092bfe90870d621b89aedfe457be7f5c959e031a82512c564445523",
+  "value": "¿Cómo se usa Rizelune?",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.faq.f1.respuesta:30nurg9dt1tp7",
+  "digest": "c0f3c2e81bca4aba76b81335ddcc6bbcdb95e4d8ff9c02f9a9a49c57ad6e746d",
+  "value": "<p>Aplica unas gotas sobre el cuero cabelludo y el cabello, masajea con las yemas de los dedos y deja actuar al menos 15 minutos. Después lava tu pelo como de costumbre.</p>",
+  "type": "RICH_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.faq.f2.pregunta:xwb2pewbu2ic",
+  "digest": "1a2b83d96cdc0cb0b17222e406ba71e4119fcdba775192cd763e40a91db69aa9",
+  "value": "¿Cada cuánto debo aplicarlo?",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.faq.f2.respuesta:3tjq2c18cnnnc",
+  "digest": "a6870d37fb9260d6506aea21d9f01d3f95cb537bce7d607d07aebcacd9f8c520",
+  "value": "<p>Recomendamos usarlo 1–2 veces por semana. La constancia es lo que marca la diferencia.</p>",
+  "type": "RICH_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.faq.f3.pregunta:3t885ss6queet",
+  "digest": "87b83cb6a3cbd70c5efa2b67ef517da4f63187bcfba4ba60998f8cc542d7a414",
+  "value": "¿Me dejará el pelo graso?",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.faq.f3.respuesta:17tmt0mazwpqx",
+  "digest": "3fe6571811042e2efb1dcfc420dd448bb865c1c7bd16c4e9196bb44b9669b5f2",
+  "value": "<p>No, porque se aplica <strong>antes</strong> del lavado. Tras dejarlo actuar, lavas tu pelo como siempre y se retira.</p>",
+  "type": "RICH_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.faq.f4.pregunta:3klchfeqdxhde",
+  "digest": "3be62f76245aa20574f3d452de14364c9a8c1b6065b9e400f7b74e23b1aa348e",
+  "value": "¿Es vegano?",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.faq.f4.respuesta:130j0hdevf7em",
+  "digest": "4aec1c6e188fe1d90698ffc30316fce480b4d44eeed63e7bdef153154eed2e1c",
+  "value": "<p>Sí. Su fórmula es natural y vegana, fabricada en la UE con certificación de calidad.</p>",
+  "type": "RICH_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.faq.f5.pregunta:2jrvjhpuo5chf",
+  "digest": "9218e0a8350704b610dfe486d54a5b4bc35def5e526102a3a37983dc22fc6331",
+  "value": "¿Qué tamaño tiene el frasco?",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.faq.f5.respuesta:2dfts70nngqan",
+  "digest": "8adcbade9d406c868ce772e46f82056620c4a046e1f468f0113de1e64fd6a6c2",
+  "value": "<p>30 ml, con cuentagotas para que dosifiques justo lo que necesitas, sin derrochar.</p>",
+  "type": "RICH_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.faq.f6.pregunta:3imkagb47sy0g",
+  "digest": "b0681211024033207afa0f45d9d920ba9448f04adc631143205d9ca9da430b1e",
+  "value": "¿A qué huele?",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.faq.f6.respuesta:36bp32si72k8s",
+  "digest": "d4952b60ee498b6ade478e7c38ef9428e13f6d466f9bd08522c7b17fb802de22",
+  "value": "<p>A romero y menta: un aroma herbal y fresco, con un toque de frescor en el cuero cabelludo gracias a la menta.</p>",
+  "type": "RICH_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.faq.f7.pregunta:2ht3cim8i0t4h",
+  "digest": "57069fcbf1a723a7ecb430d326df3942dbf097c8f9e3eaea360c8da76afe32c4",
+  "value": "¿Cuánto cuesta el envío y cuánto tarda?",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.faq.f7.respuesta:klltrdkubmcd",
+  "digest": "c032682077894683fb524ed9f5c5589c095e9fe2623c3c29c50ae1dd2c029c3f",
+  "value": "<p><strong>España:</strong> envío <strong>gratis</strong> a partir de 39,99 € (si no, 6,99 €). Llega en unos 10 días laborables.</p><p><strong>Francia y Portugal:</strong> 6 € (o solo 2,99 € a partir de 39,99 €). Llega en unos 8 días laborables a Francia y 11 a Portugal.</p><p>Recibirás un correo con el número de seguimiento. Más información en nuestra <a href=\"/policies/shipping-policy\">política de envío</a>.</p>",
+  "type": "RICH_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.faq.f8.pregunta:31jt148w2ljjy",
+  "digest": "122be472b5deda3ddbdaf661eca8ce2b508245a28cad5f5260cfdcdbc1326aa3",
+  "value": "¿Puedo devolverlo?",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.faq.f8.respuesta:33cjnnrz1e5ki",
+  "digest": "ce7809b9773fcc8740f2e2ba28601780dc8fd4d0d8560122f4462b70f9def585",
+  "value": "<p>Sí. Tienes 14 días desde que lo recibes para solicitar la devolución. Consulta todas las condiciones en nuestra <a href=\"/policies/refund-policy\">política de devoluciones</a>.</p>",
+  "type": "RICH_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.garantias.g1.titulo:1sphby1w0hv0l",
+  "digest": "1e412eca43f5141d1783f468f757fc158f8a0b4fc6c32022582aef00c9d5f853",
+  "value": "Pago seguro",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.garantias.g1.texto:1xwu8hwocchew",
+  "digest": "ec45d91f5d58cf242e5486c30074a8115059dedb73a9d9dd44033fa4f6012bc7",
+  "value": "Tus datos siempre protegidos",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.garantias.g2.titulo:fenh1m9gjjie",
+  "digest": "1c2865a13ada5e626dcef76f9fd80759a566ac94bebb102d1260f9ee9c137b7b",
+  "value": "Cosmética natural",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.garantias.g2.texto:3o4ezav09iiyz",
+  "digest": "dccf8a9e465ac258749e23797cd4996cf972d61891fda340fcc85b04fcf53aa5",
+  "value": "Fórmula vegana con aceites vegetales",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.garantias.g3.titulo:2j00s6iy0bvbb",
+  "digest": "b0e8f5ee24ec5d3f1d7ea625dd753fd9afbce69686ebc31d49968d9ff18b0984",
+  "value": "Calidad comprobada",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.garantias.g3.texto:1q7qpagp4eusq",
+  "digest": "449a74ad585bccd958c936a58c98b0a93f8c9262d250c57d921b07226740c3b5",
+  "value": "Fabricado en la UE con certificación",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.garantias.g4.titulo:6opuiwqt49ds",
+  "digest": "3da76cfdf5ea788f710962e06df7f51b21650bb1d0580d8a65341b554251cf17",
+  "value": "Envío gratis",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/OnlineStoreThemeJsonTemplate/product.rz?theme_id=210260099402",
+  "key": "section.product.rz.json.garantias.g4.texto:1f5zc7hxoxk25",
+  "digest": "c873ff66cb85de9e351b3db1b3c63bc88029b339e85d0117bd7c4032680b5263",
+  "value": "En España a partir de 39,99 €",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/Link/1078173663562",
+  "key": "title",
+  "digest": "58fcc9468fe1f60716a71caef50fce70a6d2d46f7a2c0d0f45f1f76dc7779625",
+  "value": "Inicio",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/Link/1078173696330",
+  "key": "title",
+  "digest": "35af6ab0adbd6420303eab846907e5d4ecff364372f8854e3348202822193f08",
+  "value": "Rizelune",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/Link/1078173729098",
+  "key": "title",
+  "digest": "cf401cffd81c8b148b19b215455ecdad84944923447447e934a1a0993d1eda42",
+  "value": "El ritual",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/Link/1078173761866",
+  "key": "title",
+  "digest": "a3f351ce05807683563d43891b3e9d1d0c8ca20b647ad50ade5240f8d458b1c6",
+  "value": "Preguntas frecuentes",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ },
+ {
+  "rid": "gid://shopify/Link/1078173794634",
+  "key": "title",
+  "digest": "771b96b0812dd393ffeac789c2b8da1b78c20530a7365dd8181b1e3580db063f",
+  "value": "Contacto",
+  "type": "SINGLE_LINE_TEXT_FIELD"
+ }
+]

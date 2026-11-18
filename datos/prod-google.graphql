@@ -1,0 +1,1 @@
+mutation U($product: ProductUpdateInput!) { productUpdate(product: $product) { product { id vendor category { fullName } } userErrors { field message } } }

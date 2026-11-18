@@ -1,0 +1,49 @@
+{
+  "stagedUploadsCreate": {
+    "stagedTargets": [
+      {
+        "url": "https://shopify-staged-uploads.storage.googleapis.com/",
+        "resourceUrl": "https://shopify-staged-uploads.storage.googleapis.com/tmp/109083230538/files/f82e6d4e-9854-4496-ad7c-ac0f05dc0ed3/rizelune-antes-despues-ilustrativa.jpg",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "value": "image/jpeg"
+          },
+          {
+            "name": "success_action_status",
+            "value": "201"
+          },
+          {
+            "name": "acl",
+            "value": "private"
+          },
+          {
+            "name": "key",
+            "value": "tmp/109083230538/files/f82e6d4e-9854-4496-ad7c-ac0f05dc0ed3/rizelune-antes-despues-ilustrativa.jpg"
+          },
+          {
+            "name": "x-goog-date",
+            "value": "20261021T175333Z"
+          },
+          {
+            "name": "x-goog-credential",
+            "value": "merchant-assets@shopify-tiers.iam.gserviceaccount.com/20261021/auto/storage/goog4_request"
+          },
+          {
+            "name": "x-goog-algorithm",
+            "value": "GOOG4-RSA-SHA256"
+          },
+          {
+            "name": "x-goog-signature",
+            "value": "a7a453e2bed7e2a6a1273cffe43defa4af768f12ccd1b9ec34ca17e9dee42ab514d4b180bced6d63d23d11242d6cfd942c5a0d6d4c8c1d60be7a9783ba2823f63cfaef1dc427d13cdf5954d8cc4215fcfc6b62d0d204132a93b75afd77e99efbf712873ff34d2e4928d1d0d0680529e4c88513ea09a2e0c829a9abceeb130a1d0b2e1436e1ea854ff43e642621459ddaa1333669d1c22ffbb739125e19d59333e1f1d7db04b936d7853bb1526e8e4c1ae6da4fe815c2596682dc4c71b884f0cffb191ef790a39a06fd2e41e3f3d3e3c81479dd2079459dc6cd43e65045ba0725c58ef4fe142c41f698904bb23f062a68b9ab9ef3d8d9be48db564c6fdc6b72c7"
+          },
+          {
+            "name": "policy",
+            "value": "eyJjb25kaXRpb25zIjpbeyJDb250ZW50LVR5cGUiOiJpbWFnZVwvanBlZyJ9LHsic3VjY2Vzc19hY3Rpb25fc3RhdHVzIjoiMjAxIn0seyJhY2wiOiJwcml2YXRlIn0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMSwyMDk3MTUyMF0seyJidWNrZXQiOiJzaG9waWZ5LXN0YWdlZC11cGxvYWRzIn0seyJrZXkiOiJ0bXBcLzEwOTA4MzIzMDUzOFwvZmlsZXNcL2Y4MmU2ZDRlLTk4NTQtNDQ5Ni1hZDdjLWFjMGYwNWRjMGVkM1wvcml6ZWx1bmUtYW50ZXMtZGVzcHVlcy1pbHVzdHJhdGl2YS5qcGcifSx7IngtZ29vZy1kYXRlIjoiMjAyNjEwMjFUMTc1MzMzWiJ9LHsieC1nb29nLWNyZWRlbnRpYWwiOiJtZXJjaGFudC1hc3NldHNAc2hvcGlmeS10aWVycy5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbVwvMjAyNjEwMjFcL2F1dG9cL3N0b3JhZ2VcL2dvb2c0X3JlcXVlc3QifSx7IngtZ29vZy1hbGdvcml0aG0iOiJHT09HNC1SU0EtU0hBMjU2In1dLCJleHBpcmF0aW9uIjoiMjAyNi0xMC0yMlQxNzo1MzozM1oifQ=="
+          }
+        ]
+      }
+    ],
+    "userErrors": []
+  }
+}

@@ -1,0 +1,417 @@
+<claude-code-hint v="1" type="plugin" value="shopify-ai-toolkit@claude-plugins-official" />
+Loading stored store auth ...
+[2K[1A[2K[G
+Executing GraphQL operation ...
+[2K[1A[2K[G
+╭─ success ────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  Operation succeeded.                                                        │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+{
+  "r": {
+    "translations": [
+      {
+        "key": "section.index.json.hero.eyebrow:1xz6u7cdc61v5",
+        "value": "Ritual capilar de alecrim"
+      },
+      {
+        "key": "section.index.json.hero.titulo:ev0dywi5fpq7",
+        "value": "Um ritual de 15 minutos para um cabelo mais <em>forte</em> e com brilho"
+      },
+      {
+        "key": "section.index.json.hero.texto:hfrw6n9wzec2",
+        "value": "Sérum de óleo de alecrim e hortelã-pimenta que cuida do seu cabelo onde tudo começa: a raiz."
+      },
+      {
+        "key": "section.index.json.hero.badges:ev0e6p8mb9w6",
+        "value": "Fórmula vegana\nFabricado na UE\nEnvio a 2,99 € a partir de 39,99 €"
+      },
+      {
+        "key": "section.index.json.hero.etiqueta:1uv1emj4ehbd8",
+        "value": "Poupe"
+      },
+      {
+        "key": "section.index.json.hero.boton1:ev0e6guuxv3d",
+        "value": "Quero o meu ritual"
+      },
+      {
+        "key": "section.index.json.hero.boton2:ev0e6guuxvze",
+        "value": "Como se usa"
+      },
+      {
+        "key": "section.index.json.marquesina.items:1se8tw2zvzykc",
+        "value": "Alecrim e hortelã-pimenta\nCuida desde a raiz\nFórmula vegana\nFabricado na UE\nRitual de 15 minutos"
+      },
+      {
+        "key": "section.index.json.problema.eyebrow:2nnu3lh4pj9ij",
+        "value": "Identifica-se?"
+      },
+      {
+        "key": "section.index.json.problema.titulo:2k327j3brqjdx",
+        "value": "O seu cabelo não perde o brilho de um dia para o <em>outro</em>"
+      },
+      {
+        "key": "section.index.json.problema.texto:2sgfi14e4eh4",
+        "value": "Pranchas, pintura, secador, sol, stress… Pouco a pouco o cabelo fica seco, quebradiço e sem brilho. E embora cuidemos dele do comprimento às pontas, quase sempre nos esquecemos de onde tudo começa: a raiz."
+      },
+      {
+        "key": "section.index.json.problema.lista_titulo:122xkrufhfw49",
+        "value": "O nosso sérum é para si se…"
+      },
+      {
+        "key": "section.index.json.problema.lista:2sgfhw6b6qqh",
+        "value": "Tem o cabelo seco, sem brilho ou quebradiço\nUsa com frequência prancha, secador ou pintura\nSente que o seu cabelo perdeu força e brilho\nQuer começar a cuidar do couro cabeludo, não só das pontas\nProcura um momento de autocuidado simples na sua rotina"
+      },
+      {
+        "key": "section.index.json.problema.boton:2sgfhxegj3mq",
+        "value": "Cuidar desde a raiz"
+      },
+      {
+        "key": "section.index.json.ingredientes.eyebrow:s4lgfm87ytbm",
+        "value": "O que tem dentro"
+      },
+      {
+        "key": "section.index.json.ingredientes.titulo:1ob5i62ccollo",
+        "value": "Poucos ingredientes, <em>bem</em> escolhidos"
+      },
+      {
+        "key": "section.index.json.ingredientes.texto:2erlrctyj4ihd",
+        "value": "Uma mistura simples de óleos vegetais pensada para nutrir o couro cabeludo."
+      },
+      {
+        "key": "section.index.json.ingredientes.i1.titulo:236p87zjg1nrz",
+        "value": "Óleo de alecrim"
+      },
+      {
+        "key": "section.index.json.ingredientes.i1.texto:2jgq1ztxubmsy",
+        "value": "O protagonista do ritual: nutre o couro cabeludo e ajuda o cabelo a recuperar a força."
+      },
+      {
+        "key": "section.index.json.ingredientes.i2.titulo:2ai7gdnxxffto",
+        "value": "Óleo de hortelã-pimenta"
+      },
+      {
+        "key": "section.index.json.ingredientes.i2.texto:2s6hn15pxa3gx",
+        "value": "Traz aquela sensação de frescura que vai notar desde a primeira massagem."
+      },
+      {
+        "key": "section.index.json.ingredientes.i3.titulo:2azd4c9xksgil",
+        "value": "Óleos vegetais"
+      },
+      {
+        "key": "section.index.json.ingredientes.i3.texto:10hnfnjky1blc",
+        "value": "Uma base leve que cuida da raiz e deixa o cabelo suave e luminoso."
+      },
+      {
+        "key": "section.index.json.ingredientes.i4.titulo:2ka5dz5353d96",
+        "value": "Cabelo mais forte"
+      },
+      {
+        "key": "section.index.json.ingredientes.i4.texto:1ui132n111t5j",
+        "value": "Mais resistência para o cabelo seco ou quebradiço, e um brilho que se nota."
+      },
+      {
+        "key": "section.index.json.pasos.eyebrow:ade850ql34sf",
+        "value": "O seu ritual"
+      },
+      {
+        "key": "section.index.json.pasos.titulo:1b140cbke8m5t",
+        "value": "Três gestos, <em>quinze</em> minutos"
+      },
+      {
+        "key": "section.index.json.pasos.texto:iev9ybba9nbw",
+        "value": "Transforme-o no seu pequeno momento de autocuidado antes da lavagem."
+      },
+      {
+        "key": "section.index.json.pasos.boton:iev9ym2x35ti",
+        "value": "Começar o meu ritual"
+      },
+      {
+        "key": "section.index.json.pasos.p1.titulo:27jj5tnunioej",
+        "value": "Aplique umas gotas"
+      },
+      {
+        "key": "section.index.json.pasos.p1.texto:f5g1czwd01t2",
+        "value": "Com o conta-gotas, distribua o sérum pelo couro cabeludo e pelo cabelo antes de o lavar."
+      },
+      {
+        "key": "section.index.json.pasos.p1.tiempo:27jj5to9ak326",
+        "value": "Sem desperdício: frasco de 30 ml"
+      },
+      {
+        "key": "section.index.json.pasos.p2.titulo:2ev1dzc94wgg8",
+        "value": "Massaje suavemente"
+      },
+      {
+        "key": "section.index.json.pasos.p2.texto:nv7mebofyih1",
+        "value": "Com as pontas dos dedos, em movimentos circulares. Vai notar a frescura da hortelã-pimenta."
+      },
+      {
+        "key": "section.index.json.pasos.p2.tiempo:2ev1dzck1pa7x",
+        "value": "O seu momento de autocuidado"
+      },
+      {
+        "key": "section.index.json.pasos.p3.titulo:2fc71xy8s9h55",
+        "value": "Deixe atuar e lave"
+      },
+      {
+        "key": "section.index.json.pasos.p3.texto:2sbrg1rpli7dw",
+        "value": "Deixe atuar pelo menos 15 minutos e depois lave o cabelo como de costume. Repita 1–2 vezes por semana."
+      },
+      {
+        "key": "section.index.json.pasos.p3.tiempo:2fc71xyn9tp4s",
+        "value": "Mínimo 15 minutos"
+      },
+      {
+        "key": "section.index.json.beneficios.eyebrow:144cri2q31ous",
+        "value": "Porque funciona"
+      },
+      {
+        "key": "section.index.json.beneficios.titulo:i7bwdgdg14ai",
+        "value": "Cuide da raiz, <em>exiba</em> o resultado"
+      },
+      {
+        "key": "section.index.json.beneficios.texto:1wi3w0x95vyrb",
+        "value": "Pensado para a sua rotina de sempre."
+      },
+      {
+        "key": "section.index.json.beneficios.b1.titulo:10plijxasxuxe",
+        "value": "Nutre o couro cabeludo"
+      },
+      {
+        "key": "section.index.json.beneficios.b1.texto:1stenxt24mokf",
+        "value": "A sua fórmula com óleos vegetais cuida da raiz e deixa uma sensação de frescura graças à hortelã-pimenta."
+      },
+      {
+        "key": "section.index.json.beneficios.b2.titulo:aw7qa28ggvbl",
+        "value": "Fortalece o cabelo"
+      },
+      {
+        "key": "section.index.json.beneficios.b2.texto:8tnzrmwdbjb0",
+        "value": "Ajuda a melhorar a resistência do cabelo seco ou quebradiço."
+      },
+      {
+        "key": "section.index.json.beneficios.b3.titulo:af22bg8t3umo",
+        "value": "Devolve o brilho"
+      },
+      {
+        "key": "section.index.json.beneficios.b3.texto:20ii7591ckb6l",
+        "value": "O seu cabelo parece mais saudável, suave e luminoso."
+      },
+      {
+        "key": "section.index.json.beneficios.b4.titulo:jm5csrr3w5g7",
+        "value": "Natural e vegano"
+      },
+      {
+        "key": "section.index.json.beneficios.b4.texto:2hs3muzyxwi7u",
+        "value": "Fórmula vegana, fabricada na UE com certificação de qualidade."
+      },
+      {
+        "key": "section.index.json.beneficios.c1.sufijo:2m79su07c1sxs",
+        "value": "min"
+      },
+      {
+        "key": "section.index.json.beneficios.c1.etiqueta:3sju21qjoznls",
+        "value": "de ritual antes da lavagem"
+      },
+      {
+        "key": "section.index.json.beneficios.c2.sufijo:2qxev9hnvknnn",
+        "value": "ml"
+      },
+      {
+        "key": "section.index.json.beneficios.c2.etiqueta:2prnnlu0hlhkz",
+        "value": "com conta-gotas doseador"
+      },
+      {
+        "key": "section.index.json.beneficios.c3.etiqueta:3ql1wy0g8ys76",
+        "value": "aplicações por semana (1–2)"
+      },
+      {
+        "key": "section.index.json.beneficios.c4.sufijo:2wi9ll3kbfu4l",
+        "value": "%"
+      },
+      {
+        "key": "section.index.json.beneficios.c4.etiqueta:7031gfegrhhh",
+        "value": "fórmula vegana"
+      },
+      {
+        "key": "section.index.json.ritual.flotante_num:3de462l1ptp7l",
+        "value": "1–2"
+      },
+      {
+        "key": "section.index.json.ritual.flotante_texto:ytmpf9chuxyd",
+        "value": "vezes por semana. A constância é o segredo."
+      },
+      {
+        "key": "section.index.json.ritual.eyebrow:xlrymj2siigm",
+        "value": "Ritual da noite"
+      },
+      {
+        "key": "section.index.json.ritual.titulo:3bxlgz367q3mg",
+        "value": "Um pequeno gesto que se torna um <em>hábito</em>"
+      },
+      {
+        "key": "section.index.json.ritual.texto:1ecms4ow0juz9",
+        "value": "Acenda uma vela, fique confortável e ofereça a si mesma quinze minutos. O nosso sérum transforma algo tão simples como lavar o cabelo num pequeno ritual de cuidado."
+      },
+      {
+        "key": "section.index.json.ritual.lista:1ecms4tu6b3lw",
+        "value": "Couro cabeludo nutrido e com sensação de frescura\nCabelo com mais força desde a raiz\nUm brilho saudável que se nota"
+      },
+      {
+        "key": "section.index.json.ritual.boton:1ecms4uwsne7z",
+        "value": "Começar o meu ritual"
+      },
+      {
+        "key": "section.index.json.resenas.eyebrow:1r1kmj6tbabjw",
+        "value": "Opiniões"
+      },
+      {
+        "key": "section.index.json.resenas.titulo:vn0bgzy0m6mq",
+        "value": "O que dizem as clientes que já têm o seu <em>ritual</em>"
+      },
+      {
+        "key": "section.index.json.faq.eyebrow:1qok4ayf6xpef",
+        "value": "Dúvidas"
+      },
+      {
+        "key": "section.index.json.faq.titulo:38kfcpzcwq02h",
+        "value": "Perguntas <em>frequentes</em>"
+      },
+      {
+        "key": "section.index.json.faq.f1.pregunta:glwoapxqjiuc",
+        "value": "Como se usa o sérum?"
+      },
+      {
+        "key": "section.index.json.faq.f1.respuesta:3jlos18517vxk",
+        "value": "<p>Antes de lavar o cabelo, distribua o sérum pelo couro cabeludo e pelo cabelo: <strong>6–8 gotas</strong> se tiver o cabelo curto, <strong>8–12</strong> se for pelos ombros, <strong>12–16</strong> se for comprido e <strong>16–20</strong> se for muito comprido ou grosso. Massaje com as pontas dos dedos, deixe atuar pelo menos 15 minutos e lave o cabelo como de costume.</p>"
+      },
+      {
+        "key": "section.index.json.faq.f2.pregunta:3dwlyd6uboe3r",
+        "value": "Com que frequência devo aplicar?"
+      },
+      {
+        "key": "section.index.json.faq.f2.respuesta:2qpth5gahm1zf",
+        "value": "<p>Recomendamos usá-lo 1–2 vezes por semana. A constância é o que faz a diferença.</p>"
+      },
+      {
+        "key": "section.index.json.faq.f3.pregunta:ikov9tjwo27a",
+        "value": "Vai deixar o cabelo oleoso?"
+      },
+      {
+        "key": "section.index.json.faq.f3.respuesta:1gaipft1pkj3e",
+        "value": "<p>Não, porque se aplica <strong>antes</strong> da lavagem. Depois de o deixar atuar, lava o cabelo como sempre e sai.</p>"
+      },
+      {
+        "key": "section.index.json.faq.f4.pregunta:20ioy3x9wq9gh",
+        "value": "É vegano?"
+      },
+      {
+        "key": "section.index.json.faq.f4.respuesta:ankjgkhivuml",
+        "value": "<p>Sim. A sua fórmula é natural e vegana, fabricada na UE com certificação de qualidade.</p>"
+      },
+      {
+        "key": "section.index.json.faq.f5.pregunta:31c5w1m5miecg",
+        "value": "Qual é o tamanho do frasco?"
+      },
+      {
+        "key": "section.index.json.faq.f5.respuesta:2wdnsrzevmsj0",
+        "value": "<p>30 ml, com conta-gotas para dosear apenas o que precisa, sem desperdício.</p>"
+      },
+      {
+        "key": "section.index.json.faq.f6.pregunta:22hh530w2ustf",
+        "value": "A que cheira?"
+      },
+      {
+        "key": "section.index.json.faq.f6.respuesta:23hshw7kc0ykv",
+        "value": "<p>Cheira a alecrim e hortelã-pimenta: um aroma herbal e fresco, com um toque de frescura no couro cabeludo graças à hortelã-pimenta.</p>"
+      },
+      {
+        "key": "section.index.json.faq.f7.pregunta:33ay30prsmxpe",
+        "value": "Quanto custa o envio e quanto tempo demora?"
+      },
+      {
+        "key": "section.index.json.faq.f7.respuesta:t2hq6kbjzfou",
+        "value": "<p><strong>Portugal e França:</strong> 4,99 € (ou apenas 2,99 € a partir de 39,99 €). Chega em cerca de 11 dias úteis a Portugal e 8 a França.</p><p><strong>Espanha:</strong> envio <strong>grátis</strong> a partir de 45 € (caso contrário, 3,99 €), em cerca de 10 dias úteis.</p><p>Receberá um e-mail com o número de seguimento. Mais informações na nossa <a href=\"/policies/shipping-policy\">política de envio</a>.</p>"
+      },
+      {
+        "key": "section.index.json.faq.f8.pregunta:1hh5hsrflebn1",
+        "value": "Posso devolvê-lo?"
+      },
+      {
+        "key": "section.index.json.faq.f8.respuesta:2azl6mz1oussh",
+        "value": "<p>Sim. Tem 14 dias desde que o recebe para solicitar a devolução. Consulte todas as condições na nossa <a href=\"/policies/refund-policy\">política de devoluções</a>.</p>"
+      },
+      {
+        "key": "section.index.json.compra.eyebrow:bwp9ip6pdnz7",
+        "value": "Comece hoje"
+      },
+      {
+        "key": "section.index.json.compra.titulo:1fbof6g7z5cz1",
+        "value": "O seu ritual começa esta noite"
+      },
+      {
+        "key": "section.index.json.compra.texto:zj452n1matq8",
+        "value": "Nutre, fortalece e ilumina o seu cabelo desde a raiz com um ritual de apenas 15 minutos."
+      },
+      {
+        "key": "section.index.json.compra.etiqueta:34odufkad72zi",
+        "value": "Promoção!"
+      },
+      {
+        "key": "section.index.json.compra.lista:zj4528wbgyvl",
+        "value": "Frasco conta-gotas de 30 ml\nSérum de óleo de alecrim e hortelã-pimenta\nFórmula natural e vegana, fabricada na UE\n🚚 Envio a 2,99 € a partir de 2 frascos"
+      },
+      {
+        "key": "section.index.json.compra.boton:zj452eku44bu",
+        "value": "Adicionar ao carrinho"
+      },
+      {
+        "key": "section.index.json.compra.ver_mas:bwpjsu21wb03",
+        "value": "Ver todos os detalhes"
+      },
+      {
+        "key": "section.index.json.garantias.g1.titulo:2qr88n3eqw3fa",
+        "value": "Pagamento seguro"
+      },
+      {
+        "key": "section.index.json.garantias.g1.texto:1up3cq9qwldqz",
+        "value": "Os seus dados sempre protegidos"
+      },
+      {
+        "key": "section.index.json.garantias.g2.titulo:20xugd8cef3th",
+        "value": "Certificado biológico"
+      },
+      {
+        "key": "section.index.json.garantias.g2.texto:apcok3l5a8hk",
+        "value": "COSMOS ORGANIC pela ECOCERT"
+      },
+      {
+        "key": "section.index.json.garantias.g3.titulo:20gosemcr234k",
+        "value": "Qualidade comprovada"
+      },
+      {
+        "key": "section.index.json.garantias.g3.texto:22e6vxpq4j0d5",
+        "value": "Fabricado na UE com certificação"
+      },
+      {
+        "key": "section.index.json.garantias.g4.titulo:1cml1ly1hi87n",
+        "value": "Envio reduzido"
+      },
+      {
+        "key": "section.index.json.garantias.g4.texto:13p2a5b8d9vzy",
+        "value": "2,99 € a partir de 39,99 €"
+      },
+      {
+        "key": "section.index.json.faq.f9.pregunta:2iamfqgbb6gj0",
+        "value": "Há desconto se comprar mais de um?"
+      },
+      {
+        "key": "section.index.json.faq.f9.respuesta:10kaexbswt9wg",
+        "value": "<p>Sim! Com os nossos packs poupa: <strong>2 frascos por 47,99 €</strong> (poupa 7,99 €) ou <strong>3 frascos por 64,99 €</strong> (21,66 € cada, poupa 18,98 €). Para Portugal e França, o envio dos packs custa apenas 2,99 € (e é grátis em Espanha). Escolha o seu pack na página do produto: o desconto aplica-se automaticamente no carrinho.</p>"
+      }
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+query { c: translatableResource(resourceId: "gid://shopify/OnlineStoreThemeJsonTemplate/collection?theme_id=210260099402") { resourceId translatableContent { key value digest } fr: translations(locale: "fr") { key } }
+ h: translatableResource(resourceId: "gid://shopify/OnlineStoreThemeSectionGroup/header-group?theme_id=210260099402") { resourceId translatableContent { key value digest } fr: translations(locale: "fr") { key } } }

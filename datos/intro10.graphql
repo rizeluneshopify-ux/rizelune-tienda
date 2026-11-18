@@ -1,0 +1,2 @@
+query { a: __type(name: "DeliveryOptionDefinitionUpdateInput") { inputFields { name type { name kind ofType { name kind } } } }
+ b: __type(name: "DeliveryFlatRateOptionDefinitionUpdateInput") { inputFields { name type { name kind ofType { name kind } } } } }

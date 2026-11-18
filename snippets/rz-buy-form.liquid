@@ -1,0 +1,85 @@
+{%- comment -%}
+  Formulario de compra Rizelune (usa el carrito de Dawn).
+  Parámetros: product, label, show_qty (true/false), packs (true = selector de 1/2/3 frascos), section_id, main (true = formulario principal de la página)
+  Packs: precios en Configuración del tema → Rizelune · Packs. El descuento real lo aplican los descuentos automáticos "Pack Ritual".
+{%- endcomment -%}
+{%- assign v = product.selected_or_first_available_variant -%}
+{%- assign con_packs = false -%}
+{%- if packs and settings.rz_packs_activo and product.has_only_default_variant -%}
+  {%- if settings.rz_pack_producto == blank or settings.rz_pack_producto.id == product.id -%}{%- assign con_packs = true -%}{%- endif -%}
+{%- endif -%}
+{%- assign pack_def = 1 -%}
+<product-form class="rz-form" data-section-id="{{ section_id }}" data-hide-errors="false">
+  <div class="product-form__error-message-wrapper" role="alert" hidden>
+    <span class="product-form__error-message"></span>
+  </div>
+  {%- if con_packs -%}
+    {%- assign unidad = v.price -%}
+    {%- assign p2 = settings.rz_pack2_precio | default: '49,99' | replace: ',', '.' | strip | times: 100 | round -%}
+    {%- assign p3 = settings.rz_pack3_precio | default: '66,99' | replace: ',', '.' | strip | times: 100 | round -%}
+    {%- assign pack_def = settings.rz_pack_defecto | default: '2' | plus: 0 -%}
+    {%- assign es_local = false -%}
+    {%- if localization.country.iso_code == 'ES' -%}{%- assign es_local = true -%}{%- endif -%}
+    <fieldset class="rz-packs" data-rz-packs>
+      <legend class="rz-packs__title">{{ 'rizelune.pack_title' | t }}</legend>
+      {%- for n in (1..3) -%}
+        {%- if n == 1 -%}{%- assign total = unidad -%}{%- elsif n == 2 -%}{%- assign total = p2 -%}{%- else -%}{%- assign total = p3 -%}{%- endif -%}
+        {%- assign completo = unidad | times: n -%}
+        {%- assign ahorro = completo | minus: total -%}
+        {%- assign por_frasco = total | times: 1.0 | divided_by: n | round -%}
+        <label class="rz-pack{% if n == pack_def %} is-active{% endif %}">
+          <input type="radio" name="rz-pack-{{ section_id }}" value="{{ n }}" data-price="{{ total | money | escape }}" {% if n == pack_def %}checked{% endif %}>
+          <span class="rz-pack__dot" aria-hidden="true"></span>
+          <span class="rz-pack__info">
+            <strong>
+              {%- if n == 1 -%}{{ 'rizelune.pack_one' | t }}{%- else -%}{{ 'rizelune.pack_many' | t: n: n }}{%- endif -%}
+              {%- if n == 3 -%}<em class="rz-pack__badge">{{ 'rizelune.pack_best' | t }}</em>{%- endif -%}
+            </strong>
+            {%- if n == 1 -%}
+              <small>{{ 'rizelune.pack_try' | t }}</small>
+            {%- else -%}
+              {%- assign por_frasco_m = por_frasco | money -%}
+              {%- assign ahorro_m = ahorro | money -%}
+              <small>{{ 'rizelune.pack_unit' | t: amount: por_frasco_m }}{% if ahorro > 0 %} · {{ 'rizelune.pack_save' | t: amount: ahorro_m }}{% endif %}</small>
+              <small class="rz-pack__ship">{% if es_local %}{{ 'rizelune.pack_ship_free' | t }}{% else %}{{ 'rizelune.pack_ship_int' | t }}{% endif %}</small>
+            {%- endif -%}
+          </span>
+          <span class="rz-pack__price"><b>{{ total | money }}</b>{%- if ahorro > 0 -%}<s>{{ completo | money }}</s>{%- endif -%}</span>
+        </label>
+      {%- endfor -%}
+    </fieldset>
+  {%- endif -%}
+  {%- form 'product', product, novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+    <input type="hidden" name="id" value="{{ v.id }}" data-rz-variant-id>
+    {%- if main -%}<div data-rz-main-form>{%- endif -%}
+    {%- if con_packs -%}
+      <input type="hidden" name="quantity" value="{{ pack_def }}" data-rz-pack-qty>
+    {%- elsif show_qty -%}
+      <div class="rz-qty-row">
+        <div class="rz-qty" data-rz-qty>
+          <button type="button" data-step="down" aria-label="{{ 'rizelune.qty_minus' | t }}">−</button>
+          <input type="number" name="quantity" value="1" min="1" aria-label="{{ 'rizelune.qty' | t }}">
+          <button type="button" data-step="up" aria-label="{{ 'rizelune.qty_plus' | t }}">+</button>
+        </div>
+    {%- endif -%}
+    <button
+      type="submit"
+      name="add"
+      class="rz-btn rz-btn--full"
+      data-rz-add
+      data-add="{{ label | escape }}"
+      data-soldout="{{ 'rizelune.sold_out' | t }}"
+      data-unavailable="{{ 'rizelune.unavailable' | t }}"
+      {% unless v.available %}disabled{% endunless %}
+    >
+      <span data-rz-label>{% if v.available %}{{ label }}{% else %}{{ 'rizelune.sold_out' | t }}{% endif %}</span>
+      {%- if con_packs and v.available -%}
+        {%- if pack_def == 2 -%}{%- assign total = p2 -%}{%- elsif pack_def == 3 -%}{%- assign total = p3 -%}{%- else -%}{%- assign total = unidad -%}{%- endif -%}
+        <span class="rz-btn__total" data-rz-pack-total>· {{ total | money }}</span>
+      {%- endif -%}
+      <span class="loading__spinner hidden"></span>
+    </button>
+    {%- if show_qty and con_packs == false -%}</div>{%- endif -%}
+    {%- if main -%}</div>{%- endif -%}
+  {%- endform -%}
+</product-form>

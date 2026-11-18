@@ -1,0 +1,20 @@
+{%- comment -%}
+  Tarjeta «Próximamente» dentro de la rejilla de productos (junto a los productos reales).
+  Parámetros: block (bloque rz_proximo de main-collection-product-grid), ratio (proporción de la foto), destino (enlace del aviso)
+{%- endcomment -%}
+<a class="rz-soon-card" href="{{ destino | default: '#rz-proximamente' }}">
+  <span class="rz-soon-card__media" style="aspect-ratio: {{ ratio | default: 0.75 }};">
+    {%- if block.settings.imagen != blank -%}
+      {{ block.settings.imagen | image_url: width: 700 | image_tag: loading: 'lazy', class: 'rz-soon__art', alt: '' }}
+    {%- else -%}
+      {% render 'rz-soon-art', forma: block.settings.forma, color: block.settings.color_tapa, uid: block.id %}
+    {%- endif -%}
+    <span class="rz-soon-card__shine" aria-hidden="true"></span>
+    {%- if block.settings.etiqueta != blank -%}<span class="rz-soon-card__badge">{% render 'rz-icon', name: 'luna' %}{{ block.settings.etiqueta }}</span>{%- endif -%}
+  </span>
+  <span class="rz-soon-card__info">
+    <span class="rz-soon-card__title">{{ block.settings.titulo }}</span>
+    {%- if block.settings.texto != blank -%}<span class="rz-soon-card__text">{{ block.settings.texto }}</span>{%- endif -%}
+    {%- if block.settings.aviso != blank -%}<span class="rz-soon-card__cta">{{ block.settings.aviso }} <span aria-hidden="true">→</span></span>{%- endif -%}
+  </span>
+</a>

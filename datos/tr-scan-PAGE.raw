@@ -1,0 +1,79 @@
+<claude-code-hint v="1" type="plugin" value="shopify-ai-toolkit@claude-plugins-official" />
+Loading stored store auth ...
+[2K[1A[2K[G
+Executing GraphQL operation ...
+[2K[1A[2K[G
+╭─ success ────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  Operation succeeded.                                                        │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+{
+  "translatableResources": {
+    "nodes": [
+      {
+        "resourceId": "gid://shopify/Page/720462479690",
+        "translatableContent": [
+          {
+            "key": "title",
+            "value": "Contacto"
+          },
+          {
+            "key": "handle",
+            "value": "contact"
+          }
+        ],
+        "fr": [
+          {
+            "key": "title",
+            "value": "Contact"
+          }
+        ],
+        "pt": [
+          {
+            "key": "title",
+            "value": "Contacto"
+          }
+        ]
+      },
+      {
+        "resourceId": "gid://shopify/Page/720476340554",
+        "translatableContent": [
+          {
+            "key": "title",
+            "value": "Política de cookies"
+          },
+          {
+            "key": "body_html",
+            "value": "<p>Esta web utiliza cookies propias y de terceros para que la tienda funcione, recordar tus preferencias y, si lo aceptas, analizar cómo se usa la web y mostrarte publicidad relevante.</p>\n<h3>¿Qué son las cookies?</h3>\n<p>Son pequeños archivos que se guardan en tu navegador cuando visitas una web y que permiten, por ejemplo, recordar los productos de tu carrito.</p>\n<h3>Tipos de cookies que usamos</h3>\n<ul>\n<li>\n<strong>Técnicas o necesarias:</strong> imprescindibles para que la tienda funcione (carrito, proceso de compra, seguridad). No requieren tu consentimiento.</li>\n<li>\n<strong>De preferencias:</strong> recuerdan opciones como el idioma o el país.</li>\n<li>\n<strong>Analíticas:</strong> nos ayudan a entender cómo se usa la web para mejorarla (por ejemplo, las estadísticas de Shopify).</li>\n<li>\n<strong>Publicitarias:</strong> permiten mostrarte anuncios relacionados con tus intereses, si utilizamos plataformas como Meta, TikTok o Google.</li>\n</ul>\n<p>Las cookies analíticas y publicitarias solo se instalan si das tu consentimiento en el aviso de cookies.</p>\n<h3>Proveedores</h3>\n<p>Nuestra tienda funciona con Shopify, que instala sus propias cookies técnicas y de estadísticas. Puedes consultar el detalle en la <a href=\"https://www.shopify.com/es/legal/cookies\" target=\"_blank\" rel=\"noopener\">política de cookies de Shopify</a>.</p>\n<h3>Cómo gestionar o retirar tu consentimiento</h3>\n<p>Puedes cambiar tus preferencias en cualquier momento desde el aviso de cookies o configurando tu navegador para bloquear o eliminar las cookies. Ten en cuenta que bloquear las cookies técnicas puede impedir que la tienda funcione correctamente.</p>\n<p>Para cualquier duda, escríbenos a <a href=\"mailto:rizeluneshopify@gmail.com\">rizeluneshopify@gmail.com</a>.</p>"
+          },
+          {
+            "key": "handle",
+            "value": "politica-de-cookies"
+          }
+        ],
+        "fr": [
+          {
+            "key": "title",
+            "value": "Politique de cookies"
+          },
+          {
+            "key": "body_html",
+            "value": "<p>Ce site utilise des cookies propres et tiers pour assurer le fonctionnement de la boutique, mémoriser vos préférences et, si vous l'acceptez, analyser l'utilisation du site et vous montrer des publicités pertinentes.</p>\n<h3>Qu'est-ce qu'un cookie ?</h3>\n<p>Ce sont de petits fichiers enregistrés dans votre navigateur lorsque vous visitez un site, qui permettent par exemple de mémoriser les produits de votre panier.</p>\n<h3>Types de cookies utilisés</h3>\n<ul>\n<li><strong>Techniques ou nécessaires :</strong> indispensables au fonctionnement de la boutique (panier, commande, sécurité). Ils ne nécessitent pas votre consentement.</li>\n<li><strong>De préférences :</strong> ils mémorisent des choix comme la langue ou le pays.</li>\n<li><strong>Analytiques :</strong> ils nous aident à comprendre l'utilisation du site pour l'améliorer (par exemple, les statistiques de Shopify).</li>\n<li><strong>Publicitaires :</strong> ils permettent d'afficher des publicités liées à vos centres d'intérêt, si nous utilisons des plateformes comme Meta, TikTok ou Google.</li>\n</ul>\n<p>Les cookies analytiques et publicitaires ne sont installés qu'avec votre consentement via le bandeau cookies.</p>\n<h3>Prestataires</h3>\n<p>Notre boutique fonctionne avec Shopify, qui installe ses propres cookies techniques et statistiques. Vous pouvez consulter le détail dans la <a href=\"https://www.shopify.com/fr/legal/cookies\" target=\"_blank\" rel=\"noopener\">politique de cookies de Shopify</a>.</p>\n<h3>Gérer ou retirer votre consentement</h3>\n<p>Vous pouvez modifier vos préférences à tout moment depuis le bandeau cookies ou en configurant votre navigateur pour bloquer ou supprimer les cookies. Bloquer les cookies techniques peut empêcher la boutique de fonctionner correctement.</p>\n<p>Pour toute question, écrivez-nous à <a href=\"mailto:rizeluneshopify@gmail.com\">rizeluneshopify@gmail.com</a>.</p>"
+          }
+        ],
+        "pt": [
+          {
+            "key": "title",
+            "value": "Política de cookies"
+          },
+          {
+            "key": "body_html",
+            "value": "<p>Este site utiliza cookies próprios e de terceiros para que a loja funcione, para memorizar as suas preferências e, se aceitar, para analisar a utilização do site e mostrar-lhe publicidade relevante.</p>\n<h3>O que são cookies?</h3>\n<p>São pequenos ficheiros guardados no seu navegador quando visita um site e que permitem, por exemplo, memorizar os produtos do seu carrinho.</p>\n<h3>Tipos de cookies que utilizamos</h3>\n<ul>\n<li><strong>Técnicos ou necessários:</strong> imprescindíveis para o funcionamento da loja (carrinho, processo de compra, segurança). Não requerem o seu consentimento.</li>\n<li><strong>De preferências:</strong> memorizam opções como o idioma ou o país.</li>\n<li><strong>Analíticos:</strong> ajudam-nos a perceber como o site é utilizado para o melhorar (por exemplo, as estatísticas da Shopify).</li>\n<li><strong>Publicitários:</strong> permitem mostrar-lhe anúncios relacionados com os seus interesses, se utilizarmos plataformas como Meta, TikTok ou Google.</li>\n</ul>\n<p>Os cookies analíticos e publicitários só são instalados se der o seu consentimento no aviso de cookies.</p>\n<h3>Fornecedores</h3>\n<p>A nossa loja funciona com a Shopify, que instala os seus próprios cookies técnicos e de estatísticas. Pode consultar o detalhe na <a href=\"https://www.shopify.com/pt/legal/cookies\" target=\"_blank\" rel=\"noopener\">política de cookies da Shopify</a>.</p>\n<h3>Como gerir ou retirar o seu consentimento</h3>\n<p>Pode alterar as suas preferências a qualquer momento no aviso de cookies ou configurando o seu navegador para bloquear ou eliminar cookies. Tenha em conta que bloquear os cookies técnicos pode impedir o bom funcionamento da loja.</p>\n<p>Para qualquer dúvida, escreva-nos para <a href=\"mailto:rizeluneshopify@gmail.com\">rizeluneshopify@gmail.com</a>.</p>"
+          }
+        ]
+      }
+    ]
+  }
+}

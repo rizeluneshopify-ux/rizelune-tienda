@@ -1,0 +1,1 @@
+query { menu(id: "gid://shopify/Menu/362958029130") { id title handle items { id title type url resourceId } } }

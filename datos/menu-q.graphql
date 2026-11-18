@@ -1,0 +1,1 @@
+query { menus(first: 10) { nodes { id handle title items { id title url type resourceId items { id title } } } } shop { name email contactEmail } }

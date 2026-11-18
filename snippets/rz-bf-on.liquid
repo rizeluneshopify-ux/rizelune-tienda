@@ -1,0 +1,10 @@
+{%- comment -%}
+  Devuelve «1» si hoy (hora de la tienda) está dentro de la Black Week. Uso: {% capture bf_on %}{% render 'rz-bf-on' %}{% endcapture %}
+  Fechas: Configuración del tema → Rizelune · Black Week (AAAA-MM-DD, ambos días incluidos).
+{%- endcomment -%}
+{%- if settings.rz_bf_activo and settings.rz_bf_inicio != blank and settings.rz_bf_fin != blank -%}
+  {%- assign bf_hoy = 'now' | date: '%Y%m%d' | plus: 0 -%}
+  {%- assign bf_ini = settings.rz_bf_inicio | remove: '-' | strip | plus: 0 -%}
+  {%- assign bf_fin = settings.rz_bf_fin | remove: '-' | strip | plus: 0 -%}
+  {%- if bf_hoy >= bf_ini and bf_hoy <= bf_fin -%}1{%- endif -%}
+{%- endif -%}

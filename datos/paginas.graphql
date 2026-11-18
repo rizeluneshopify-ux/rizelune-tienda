@@ -1,0 +1,1 @@
+mutation Crear($page: PageCreateInput!) { pageCreate(page: $page) { page { id handle title } userErrors { field message } } }

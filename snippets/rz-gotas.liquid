@@ -1,0 +1,36 @@
+{%- comment -%}
+  Guía de gotas. Si el test está activado (Configuración del tema → Rizelune · Test de gotas) sale el botón del test (snippets/rz-quiz.liquid);
+  si no, la tabla según el largo del pelo.
+  Cantidades y fotos: Configuración del tema → Rizelune · Guía de gotas. Textos: archivos de idioma (rizelune.drops_*).
+{%- endcomment -%}
+{%- if settings.rz_quiz_activo -%}
+<div class="rz-drops rz-drops--quiz">
+  <p class="rz-drops__title">{% render 'rz-icon', name: 'gota' %}<span>{{ 'rizelune.quiz_cta_title' | t }}</span></p>
+  <p class="rz-drops__text">{{ 'rizelune.quiz_cta_text' | t }}</p>
+  <button type="button" class="rz-btn rz-drops__btn" data-rz-quiz-open>{{ 'rizelune.quiz_cta_btn' | t }}</button>
+</div>
+{%- else -%}
+<div class="rz-drops">
+  <p class="rz-drops__title">{% render 'rz-icon', name: 'gota' %}<span>{{ 'rizelune.drops_title' | t }}</span></p>
+  <ul class="rz-drops__grid">
+    {%- for i in (1..4) -%}
+      {%- case i -%}
+        {%- when 1 -%}{%- assign cant = settings.rz_gotas_1 | default: '6–8' -%}{%- assign nombre = 'rizelune.drops_short' | t -%}{%- assign foto = settings.rz_gotas_img_1 -%}
+        {%- when 2 -%}{%- assign cant = settings.rz_gotas_2 | default: '8–12' -%}{%- assign nombre = 'rizelune.drops_medium' | t -%}{%- assign foto = settings.rz_gotas_img_2 -%}
+        {%- when 3 -%}{%- assign cant = settings.rz_gotas_3 | default: '12–16' -%}{%- assign nombre = 'rizelune.drops_long' | t -%}{%- assign foto = settings.rz_gotas_img_3 -%}
+        {%- else -%}{%- assign cant = settings.rz_gotas_4 | default: '16–20' -%}{%- assign nombre = 'rizelune.drops_xl' | t -%}{%- assign foto = settings.rz_gotas_img_4 -%}
+      {%- endcase -%}
+      <li class="rz-drops__item{% if foto != blank %} rz-drops__item--foto{% endif %}">
+        {%- if foto != blank -%}
+          <span class="rz-drops__img">{{ foto | image_url: width: 400 | image_tag: loading: 'lazy', alt: nombre, widths: '160, 240, 320, 400', sizes: '(max-width: 749px) 42vw, 130px' }}</span>
+        {%- endif -%}
+        <span class="rz-drops__icons" aria-hidden="true">{%- for d in (1..i) -%}<svg viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg>{%- endfor -%}</span>
+        <span class="rz-drops__qty">{{ cant }}</span>
+        <span class="rz-drops__unit">{{ 'rizelune.drops_unit' | t }}</span>
+        <span class="rz-drops__name">{{ nombre }}</span>
+      </li>
+    {%- endfor -%}
+  </ul>
+  <p class="rz-drops__note">{{ 'rizelune.drops_note' | t }}</p>
+</div>
+{%- endif -%}

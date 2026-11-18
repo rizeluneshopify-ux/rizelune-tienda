@@ -1,0 +1,1 @@
+mutation F($files: [FileUpdateInput!]!) { fileUpdate(files: $files) { files { id fileStatus } userErrors { field message code } } }

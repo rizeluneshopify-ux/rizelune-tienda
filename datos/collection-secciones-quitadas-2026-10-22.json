@@ -1,0 +1,88 @@
+{
+  "product-grid": {
+    "type": "main-collection-product-grid",
+    "blocks": {
+      "p1": {
+        "type": "rz_proximo",
+        "settings": {
+          "titulo": "Exfoliante capilar de romero y menta",
+          "texto": "Limpieza profunda para un cuero cabelludo fresco y sin residuos.",
+          "etiqueta": "Próximamente",
+          "aviso": "Avísame cuando llegue",
+          "forma": "tarro",
+          "color_tapa": "#2F3B2E"
+        }
+      },
+      "p2": {
+        "type": "rz_proximo",
+        "settings": {
+          "titulo": "Champú y acondicionador de keratina",
+          "texto": "Para un pelo con más cuerpo, suave y con brillo.",
+          "etiqueta": "Próximamente",
+          "aviso": "Avísame cuando llegue",
+          "forma": "bote",
+          "color_tapa": "#4A5A47"
+        }
+      },
+      "p3": {
+        "type": "rz_proximo",
+        "settings": {
+          "titulo": "Mascarilla reparadora de keratina",
+          "texto": "Nutrición intensa para el pelo seco y dañado.",
+          "etiqueta": "Próximamente",
+          "aviso": "Avísame cuando llegue",
+          "forma": "tarro",
+          "color_tapa": "#C8975A"
+        }
+      }
+    },
+    "block_order": [
+      "p1",
+      "p2",
+      "p3"
+    ],
+    "settings": {
+      "products_per_page": 16,
+      "columns_desktop": 4,
+      "columns_mobile": "2",
+      "color_scheme": "scheme-1",
+      "image_ratio": "adapt",
+      "image_shape": "default",
+      "show_secondary_image": false,
+      "show_vendor": false,
+      "show_rating": true,
+      "quick_add": "none",
+      "enable_filtering": true,
+      "filter_type": "horizontal",
+      "enable_sorting": true,
+      "padding_top": 36,
+      "padding_bottom": 36,
+      "rz_destino": "#rz-proximamente"
+    }
+  },
+  "proximamente": {
+    "type": "rz-proximamente",
+    "settings": {
+      "eyebrow": "Próximamente",
+      "titulo": "Nuevos rituales <em>en camino</em>",
+      "texto": "Estamos preparando nuevos productos para cuidar tu pelo. Muy pronto podrás encontrarlos aquí.",
+      "columnas": 3,
+      "difuminado": 6,
+      "aviso_activo": true,
+      "aviso_titulo": "¿Quieres enterarte antes que nadie?",
+      "aviso_texto": "Déjanos tu email y te avisaremos en cuanto lleguen.",
+      "aviso_placeholder": "Tu email",
+      "aviso_boton": "Avísame",
+      "aviso_ok": "¡Hecho! Te avisaremos en cuanto estén disponibles.",
+      "aviso_legal": "Solo te escribiremos para contarte novedades. Puedes darte de baja cuando quieras.",
+      "aviso_etiqueta": "proximamente",
+      "bg": "#F5EFE6",
+      "fg": "#2F3B2E",
+      "text_align": "center",
+      "heading_size": 40,
+      "body_size": 16,
+      "padding_top": 56,
+      "padding_bottom": 88
+    }
+  }
+}

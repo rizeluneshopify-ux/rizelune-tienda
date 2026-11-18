@@ -1,0 +1,158 @@
+{%- comment -%}
+  Sección «Packs» (ofertas destacadas): packs de rutina (sérum + otro producto) y packs de 2 y 3 sérums.
+  Los packs de rutina sin su segundo producto salen como «Muy pronto», con formulario «Avísame» (clientes con etiqueta «proximamente, packs»).
+  Textos: rizelune.packs_* · Precios y productos: Configuración del tema → Rizelune · Packs y Rizelune · Packs de rutina.
+{%- endcomment -%}
+{%- assign hay_pronto = false -%}
+{%- for block in section.blocks -%}
+  {%- if block.type == 'ritual' -%}
+    {%- capture pre %}rz_ritual{{ block.settings.pack }}_{% endcapture -%}
+    {%- assign k_on = pre | append: 'activo' -%}
+    {%- assign k_b = pre | append: 'b' -%}
+    {%- assign k_c = pre | append: 'c' -%}
+    {%- assign k_fc = pre | append: 'forma_c' -%}
+    {%- assign pbx = settings[k_b] -%}
+    {%- assign pcx = settings[k_c] -%}
+    {%- if settings[k_on] -%}
+      {%- if pbx == blank or pbx.available == false -%}{%- assign hay_pronto = true -%}{%- endif -%}
+      {%- if pcx == blank and settings[k_fc] != 'ninguno' -%}{%- assign hay_pronto = true -%}{%- endif -%}
+      {%- if pcx != blank and pcx.available == false -%}{%- assign hay_pronto = true -%}{%- endif -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign cols = section.blocks.size -%}
+{%- if cols > 4 -%}{%- assign cols = 3 -%}{%- endif -%}
+{%- if cols < 1 -%}{%- assign cols = 1 -%}{%- endif -%}
+{%- assign max_ahorro = 0 -%}
+{%- if settings.rz_pack_producto != blank -%}
+  {%- assign p3 = settings.rz_pack3_precio | default: '66,99' | replace: ',', '.' | strip | times: 100 | round -%}
+  {%- assign max_ahorro = settings.rz_pack_producto.price | times: 3 | minus: p3 -%}
+{%- endif -%}
+<section id="rz-packs" class="rz-section rz-ofertas rz-ofertas--{{ section.settings.fondo }}">
+  <div class="rz-container">
+    <header class="rz-ofertas__head rz-reveal">
+      <span class="rz-eyebrow">{{ 'rizelune.packs_eyebrow' | t }}</span>
+      <h2 class="rz-h2">{{ 'rizelune.packs_title' | t }}</h2>
+      {%- if max_ahorro > 0 -%}
+        {%- assign max_m = max_ahorro | money -%}
+        <p class="rz-ofertas__lead">{{ 'rizelune.packs_text' | t: amount: max_m }}</p>
+      {%- endif -%}
+    </header>
+    {%- if section.settings.formulario -%}{%- assign aviso = '#rz-packs-form' -%}{%- else -%}{%- assign aviso = '#rz-proximamente' -%}{%- endif -%}
+    <div class="rz-ofertas__grid" style="--rz-pack-cols: {{ cols }};">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'ritual' -%}
+          {%- assign n = block.settings.pack | plus: 0 -%}
+          {% render 'rz-pack-card', tipo: 'ritual', n: n, uid: block.id, aviso: aviso %}
+        {%- else -%}
+          {%- assign n = block.settings.frascos | plus: 0 -%}
+          {% render 'rz-pack-card', tipo: 'cantidad', n: n, uid: block.id %}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.formulario and hay_pronto or section.settings.formulario and section.settings.lista_espera -%}
+      <div class="rz-ofertas__notify" id="rz-packs-form">
+        {%- form 'customer', id: 'rz-packs-notify', class: 'rz-ofertas__form' -%}
+          <div class="rz-ofertas__notify-txt">
+            <strong>{{ 'rizelune.packs_form_title' | t }}</strong>
+            <span>{{ 'rizelune.packs_form_text' | t }}</span>
+          </div>
+          {%- if form.posted_successfully? -%}
+            <p class="rz-ofertas__ok" role="status">{{ 'rizelune.packs_form_ok' | t }}</p>
+          {%- else -%}
+            <input type="hidden" name="contact[tags]" value="proximamente, packs">
+            <label class="visually-hidden" for="rz-packs-email">{{ 'rizelune.packs_email' | t }}</label>
+            <input id="rz-packs-email" type="email" name="contact[email]" required autocomplete="email" placeholder="{{ 'rizelune.packs_email' | t | escape }}">
+            <button type="submit" class="rz-btn">{{ 'rizelune.packs_form_btn' | t }}</button>
+          {%- endif -%}
+        {%- endform -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Rizelune · Packs",
+  "tag": "div",
+  "class": "rz-packs-section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Ofertas destacadas. Los textos se cambian en Tienda online → ⋯ → Editar contenido predeterminado del tema → buscar «packs». Precios y productos: Configuración del tema → Rizelune · Packs y Rizelune · Packs de rutina."
+    },
+    {
+      "type": "select",
+      "id": "fondo",
+      "label": "Fondo",
+      "options": [
+        { "value": "crema", "label": "Crema" },
+        { "value": "salvia", "label": "Verde salvia" },
+        { "value": "noche", "label": "Oscuro" }
+      ],
+      "default": "noche"
+    },
+    {
+      "type": "checkbox",
+      "id": "formulario",
+      "label": "Formulario «Avísame» si hay packs que aún no están a la venta",
+      "info": "Desactívalo si en la misma página ya está la sección «Próximamente»: el botón «Avísame» llevará a su formulario.",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "lista_espera",
+      "label": "Mostrar siempre la lista de espera «Avísame»",
+      "info": "Aunque no haya ningún pack «Muy pronto» a la vista.",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ritual",
+      "name": "Pack de rutina",
+      "settings": [
+        {
+          "type": "select",
+          "id": "pack",
+          "label": "Pack",
+          "options": [
+            { "value": "1", "label": "Pack 1 (Ritual Raíz)" },
+            { "value": "2", "label": "Pack 2 (Pelo y Piel)" },
+            { "value": "3", "label": "Pack 3 (Ritual Completo)" }
+          ],
+          "default": "1"
+        }
+      ]
+    },
+    {
+      "type": "cantidad",
+      "name": "Pack de sérums",
+      "settings": [
+        {
+          "type": "select",
+          "id": "frascos",
+          "label": "Frascos",
+          "options": [
+            { "value": "2", "label": "2 frascos" },
+            { "value": "3", "label": "3 frascos" }
+          ],
+          "default": "2"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rizelune · Packs",
+      "blocks": [
+        { "type": "ritual", "settings": { "pack": "1" } },
+        { "type": "ritual", "settings": { "pack": "2" } },
+        { "type": "ritual", "settings": { "pack": "3" } },
+        { "type": "cantidad", "settings": { "frascos": "3" } },
+        { "type": "cantidad", "settings": { "frascos": "2" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

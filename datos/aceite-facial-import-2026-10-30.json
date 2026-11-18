@@ -1,0 +1,34 @@
+{
+ "id": "gid://shopify/Product/16152368742730",
+ "descriptionHtml": "Introducing our exclusive Natural Retinol Alternative Oil Serum – the ultimate solution for radiant, rejuvenated skin. The product will be perfect addition to any skincare product line or to be incorporated in skincare procedures or sold after the procedures.\r\n\r\n\r\n\r\nProduct description: This Natural Retinol Alternative Oil Serum is an essential part of any anti-age skincare routine to help the skin maintain its elasticity and firmness. The skin feels rejuvenated and velvety to the touch.\r\n\r\nSpecially formulated to address the unique concerns of mature, uneven, dull, dry skin, this serum is a luxurious elixir designed to elevate any skincare routine. Bakuchiol, renowned as the gentle retinol alternative, works harmoniously with Rosehip Seed Oil to diminish fine lines and reignite your skin's youthful glow. \r\nBakuchiol, Rosehip Oil, Jojoba Oil, Strawberry Oil, Evening Primrose Oil, Raspberry Oil, Blueberry Oil\r\n",
+ "tags": [
+  "All skin types (Skin type)",
+  "Anti-age (Concern)",
+  "Beauty salon (Business type)",
+  "Blemishes (Concern)",
+  "Booster (Type)",
+  "Clinic / Med spa (Business type)",
+  "Dark spots (Concern)",
+  "Dehydrated skin (Concern)",
+  "Ecommerce (Business type)",
+  "face-care",
+  "Facial oil (Type)",
+  "Gluten Free (Claims)",
+  "Helps to even out skin tone",
+  "Mild to skin",
+  "Nut Free (Claims)",
+  "Promotes skin's self-renewal",
+  "Reduces appearance of fine lines",
+  "Retinol Alternative (Active ingredients)",
+  "Serum (Type)",
+  "Vegan (Claims)"
+ ],
+ "variants": {
+  "nodes": [
+   {
+    "id": "gid://shopify/ProductVariant/64156980052298",
+    "price": "36.90"
+   }
+  ]
+ }
+}

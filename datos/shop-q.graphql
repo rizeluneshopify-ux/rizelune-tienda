@@ -1,0 +1,4 @@
+query { shop { name email contactEmail plan { displayName partnerDevelopment shopifyPlus } primaryDomain { host url } currencyCode
+  paymentSettings { supportedDigitalWallets } checkoutApiSupported setupRequired }
+  shopLocales { locale published }
+  product(id: "gid://shopify/Product/16123855962442") { status totalInventory tracksInventory variants(first: 1) { nodes { inventoryPolicy availableForSale inventoryItem { tracked } } } } }

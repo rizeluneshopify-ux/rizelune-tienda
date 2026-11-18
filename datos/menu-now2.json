@@ -1,0 +1,55 @@
+{
+  "menu": {
+    "items": [
+      {
+        "id": "gid://shopify/MenuItem/1078173663562",
+        "title": "Inicio",
+        "type": "FRONTPAGE",
+        "url": "/",
+        "resourceId": null
+      },
+      {
+        "id": "gid://shopify/MenuItem/1078173696330",
+        "title": "Nuestros productos",
+        "type": "CATALOG",
+        "url": "/collections/all",
+        "resourceId": null
+      },
+      {
+        "id": "gid://shopify/MenuItem/1078173729098",
+        "title": "El ritual",
+        "type": "HTTP",
+        "url": "/#rz-ritual",
+        "resourceId": null
+      },
+      {
+        "id": "gid://shopify/MenuItem/1078173761866",
+        "title": "Preguntas frecuentes",
+        "type": "HTTP",
+        "url": "/#rz-faq",
+        "resourceId": null
+      },
+      {
+        "id": "gid://shopify/MenuItem/1080112906570",
+        "title": "Consejos",
+        "type": "BLOG",
+        "url": "/blogs/consejos",
+        "resourceId": "gid://shopify/Blog/134916604234"
+      },
+      {
+        "id": "gid://shopify/MenuItem/1078662365514",
+        "title": "Sobre nosotros",
+        "type": "PAGE",
+        "url": "/pages/sobre-nosotros",
+        "resourceId": "gid://shopify/Page/720496099658"
+      },
+      {
+        "id": "gid://shopify/MenuItem/1078173794634",
+        "title": "Contacto",
+        "type": "PAGE",
+        "url": "/pages/contact",
+        "resourceId": "gid://shopify/Page/720462479690"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+query { translatableResources(first: 50, resourceType: LINK) { nodes { resourceId translatableContent { key value digest locale type } } } }

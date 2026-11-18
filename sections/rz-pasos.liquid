@@ -1,0 +1,288 @@
+{{ 'rz-styles.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'rz-scripts.js' | asset_url }}" defer="defer"></script>
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg }};
+    color: {{ section.settings.fg }};
+  }
+  #shopify-section-{{ section.id }} .rz-h1,
+  #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size }}px; }
+  #shopify-section-{{ section.id }} .rz-body { font-size: {{ section.settings.body_size }}px; }
+  #shopify-section-{{ section.id }} .rz-head { text-align: {{ section.settings.text_align }}; }
+  #shopify-section-{{ section.id }} .rz-head .rz-eyebrow { justify-content: {% case section.settings.text_align %}{% when 'center' %}center{% when 'right' %}flex-end{% else %}flex-start{% endcase %}; }
+  @media (max-width: 749px) {
+    #shopify-section-{{ section.id }} { padding-top: {{ section.settings.padding_top | times: 0.65 | round }}px; padding-bottom: {{ section.settings.padding_bottom | times: 0.65 | round }}px; }
+    #shopify-section-{{ section.id }} .rz-h1,
+    #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size | times: 0.68 | round }}px; }
+  }
+  
+{%- endstyle -%}
+<section class="rz-section" id="{{ section.settings.ancla | default: section.id }}">
+  <div class="rz-container">
+    <div class="rz-steps">
+      <div class="rz-steps__media rz-reveal" style="--rz-ratio: {{ section.settings.proporcion }};">
+        {%- if section.settings.imagen != blank -%}
+          {{ section.settings.imagen | image_url: width: 1400 | image_tag: loading: 'lazy', widths: '600,900,1200,1400', sizes: '(min-width: 990px) 50vw, 100vw' }}
+        {%- else -%}
+          <img src="{{ 'rz-bodegon.jpg' | asset_url }}" alt="Aceite Rizelune junto a una vela" loading="lazy">
+        {%- endif -%}
+      </div>
+      <div>
+        <div class="rz-head rz-reveal">
+      {%- if section.settings.eyebrow != blank -%}<span class="rz-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+      {%- if section.settings.titulo != blank -%}<h2 class="rz-h2">{{ section.settings.titulo }}</h2>{%- endif -%}
+      {%- if section.settings.texto != blank -%}<p class="rz-body">{{ section.settings.texto | newline_to_br }}</p>{%- endif -%}
+    </div>
+        <ol class="rz-steps__list">
+          {%- for block in section.blocks -%}
+            <li class="rz-step rz-reveal" style="--rz-delay: {{ forloop.index0 | times: 120 }}ms" {{ block.shopify_attributes }}>
+              <span class="rz-step__num">{{ forloop.index }}</span>
+              <div>
+                <h3 class="rz-h3">{{ block.settings.titulo }}</h3>
+                <p>{{ block.settings.texto | newline_to_br }}</p>
+                {%- if block.settings.guia_gotas -%}{% render 'rz-gotas' %}{%- endif -%}
+                {%- if block.settings.tiempo != blank -%}<span class="rz-step__time">{{ block.settings.tiempo }}</span>{%- endif -%}
+              </div>
+            </li>
+          {%- endfor -%}
+        </ol>
+        {%- if section.settings.imagen_resultado != blank -%}
+          <figure class="rz-steps__result rz-reveal">
+            {%- if section.settings.resultado_titulo != blank -%}<figcaption class="rz-steps__result-title">{{ section.settings.resultado_titulo }}</figcaption>{%- endif -%}
+            {{ section.settings.imagen_resultado | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '500,750,1000', sizes: '(min-width: 990px) 460px, 100vw' }}
+            {%- if section.settings.resultado_nota != blank -%}<p class="rz-steps__result-note">{{ section.settings.resultado_nota }}</p>{%- endif -%}
+          </figure>
+        {%- endif -%}
+        {%- if section.settings.boton != blank -%}
+          <p style="margin-top: 34px;"><a class="rz-btn" href="{{ section.settings.boton_url | default: routes.all_products_collection_url }}">{{ section.settings.boton }} {% render 'rz-icon', name: 'flecha' %}</a></p>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Rizelune · Pasos de uso",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "imagen",
+      "label": "Imagen (se queda fija al bajar)"
+    },
+    {
+      "type": "image_picker",
+      "id": "imagen_resultado",
+      "label": "Imagen al final de los pasos",
+      "info": "Por ejemplo, el antes y después. Se muestra debajo del último paso."
+    },
+    {
+      "type": "text",
+      "id": "resultado_titulo",
+      "label": "Título de esa imagen"
+    },
+    {
+      "type": "text",
+      "id": "resultado_nota",
+      "label": "Aviso bajo la imagen",
+      "default": "Imagen ilustrativa. Los resultados pueden variar en cada persona."
+    },
+    {
+      "type": "select",
+      "id": "proporcion",
+      "label": "Forma de la imagen",
+      "default": "4/5",
+      "options": [
+        {
+          "value": "4/5",
+          "label": "Vertical"
+        },
+        {
+          "value": "1/1",
+          "label": "Cuadrada"
+        },
+        {
+          "value": "3/2",
+          "label": "Horizontal"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "ancla",
+      "label": "Nombre de ancla (para enlazar con #)",
+      "default": "rz-ritual"
+    },
+    {
+      "type": "header",
+      "content": "Encabezado"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo (texto pequeño)",
+      "default": "Tu ritual"
+    },
+    {
+      "type": "text",
+      "id": "titulo",
+      "label": "Título",
+      "default": "Tres gestos, <em>quince</em> minutos",
+      "info": "Pon una palabra entre <em> y </em> para destacarla en cursiva."
+    },
+    {
+      "type": "textarea",
+      "id": "texto",
+      "label": "Texto",
+      "default": "Conviértelo en tu pequeño momento de autocuidado antes del lavado."
+    },
+    {
+      "type": "text",
+      "id": "boton",
+      "label": "Texto del botón",
+      "default": "Empezar mi ritual"
+    },
+    {
+      "type": "url",
+      "id": "boton_url",
+      "label": "Enlace del botón"
+    },
+    {
+      "type": "header",
+      "content": "Colores"
+    },
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Color de fondo",
+      "default": "#EDE4D6"
+    },
+    {
+      "type": "color",
+      "id": "fg",
+      "label": "Color del texto",
+      "default": "#2F3B2E"
+    },
+    {
+      "type": "header",
+      "content": "Tipografía"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Alineación del encabezado",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Tamaño del título",
+      "min": 24,
+      "max": 88,
+      "step": 2,
+      "default": 48,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "Tamaño del texto",
+      "min": 13,
+      "max": 26,
+      "step": 1,
+      "default": 17,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Espaciado"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espacio superior",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 112,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espacio inferior",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 112,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paso",
+      "name": "Paso",
+      "settings": [
+        {
+          "type": "text",
+          "id": "titulo",
+          "label": "Título",
+          "default": "Aplica"
+        },
+        {
+          "type": "textarea",
+          "id": "texto",
+          "label": "Texto",
+          "default": "Explica el paso."
+        },
+        {
+          "type": "text",
+          "id": "tiempo",
+          "label": "Dato destacado"
+        },
+        {
+          "type": "checkbox",
+          "id": "guia_gotas",
+          "label": "Mostrar guía de gotas",
+          "default": false,
+          "info": "Las cantidades se cambian en Configuración del tema → Rizelune · Guía de gotas."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Rizelune · Pasos de uso",
+      "blocks": [
+        {
+          "type": "paso"
+        },
+        {
+          "type": "paso"
+        },
+        {
+          "type": "paso"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

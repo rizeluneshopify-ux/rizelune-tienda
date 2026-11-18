@@ -1,0 +1,397 @@
+{{ 'rz-styles.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'rz-scripts.js' | asset_url }}" defer="defer"></script>
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg }};
+    color: {{ section.settings.fg }};
+  }
+  #shopify-section-{{ section.id }} .rz-h1,
+  #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size }}px; }
+  #shopify-section-{{ section.id }} .rz-body { font-size: {{ section.settings.body_size }}px; }
+  #shopify-section-{{ section.id }} .rz-head { text-align: {{ section.settings.text_align }}; }
+  #shopify-section-{{ section.id }} .rz-head .rz-eyebrow { justify-content: {% case section.settings.text_align %}{% when 'center' %}center{% when 'right' %}flex-end{% else %}flex-start{% endcase %}; }
+  @media (max-width: 749px) {
+    #shopify-section-{{ section.id }} { padding-top: {{ section.settings.padding_top | times: 0.65 | round }}px; padding-bottom: {{ section.settings.padding_bottom | times: 0.65 | round }}px; }
+    #shopify-section-{{ section.id }} .rz-h1,
+    #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size | times: 0.68 | round }}px; }
+  }
+  
+{%- endstyle -%}
+<footer class="rz-section rz-footer">
+  <div class="rz-container">
+    <div class="rz-footer__grid">
+      <div>
+        <a href="{{ routes.root_url }}" style="opacity:1">
+          {%- if section.settings.logo != blank -%}
+            {{ section.settings.logo | image_url: width: 600 | image_tag: width: section.settings.logo_ancho, loading: 'lazy', style: 'height:auto;' }}
+          {%- else -%}
+            <span class="rz-logo-text" style="--rz-logo-size: 32px">{{ section.settings.logo_texto | default: shop.name }}{% render 'rz-icon', name: 'luna-logo' %}</span>
+          {%- endif -%}
+        </a>
+        {%- if section.settings.tagline != blank -%}<p class="rz-footer__tagline">{{ section.settings.tagline | newline_to_br }}</p>{%- endif -%}
+        <div class="rz-footer__social">
+          {%- if settings.social_instagram_link != blank -%}<a href="{{ settings.social_instagram_link }}" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM12 2.5c-2.6 0-2.9 0-3.9.1-3.5.2-5.4 2.1-5.6 5.6-.1 1-.1 1.3-.1 3.8s0 2.9.1 3.9c.2 3.5 2.1 5.4 5.6 5.6 1 .1 1.3.1 3.9.1s2.9 0 3.9-.1c3.5-.2 5.4-2.1 5.6-5.6.1-1 .1-1.3.1-3.9s0-2.8-.1-3.8c-.2-3.5-2.1-5.4-5.6-5.6-1-.1-1.3-.1-3.9-.1zm0 1.7c2.5 0 2.8 0 3.8.1 2.6.1 3.8 1.3 3.9 3.9.1 1 .1 1.3.1 3.8s0 2.8-.1 3.8c-.1 2.6-1.3 3.8-3.9 3.9-1 .1-1.3.1-3.8.1s-2.8 0-3.8-.1c-2.6-.1-3.8-1.3-3.9-3.9-.1-1-.1-1.3-.1-3.8s0-2.8.1-3.8c.1-2.6 1.3-3.8 3.9-3.9 1-.1 1.3-.1 3.8-.1z"/></svg></a>{%- endif -%}
+          {%- if settings.social_tiktok_link != blank -%}<a href="{{ settings.social_tiktok_link }}" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M16.6 3c.4 2.3 1.9 3.9 4.4 4.1v3.1c-1.6.1-3-.4-4.4-1.2v5.7c0 7.2-7.9 9.5-11.1 4.3-2-3.3-.8-9.2 5.7-9.4v3.3c-.5.1-1 .2-1.5.4-1.4.5-2.2 1.4-2 3 .4 3 6 3.9 5.5-1.9V3h3.4z"/></svg></a>{%- endif -%}
+          {%- if settings.social_facebook_link != blank -%}<a href="{{ settings.social_facebook_link }}" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M14 8V6.2c0-.8.2-1.2 1.4-1.2H17V2h-2.6C11.3 2 10 3.5 10 6v2H8v3h2v11h4V11h2.7l.3-3z"/></svg></a>{%- endif -%}
+        </div>
+      </div>
+      {%- for c in (1..2) -%}
+        {%- capture kt %}c{{ c }}_titulo{% endcapture -%}
+        <div>
+          <p class="rz-footer__title">{{ section.settings[kt] }}</p>
+          <ul>
+            {%- for i in (1..5) -%}
+              {%- capture kl %}c{{ c }}_l{{ i }}{% endcapture -%}{%- capture ku %}c{{ c }}_u{{ i }}{% endcapture -%}
+              {%- if section.settings[kl] != blank -%}<li><a href="{{ section.settings[ku] | default: '#' }}">{{ section.settings[kl] }}</a></li>{%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endfor -%}
+      <div>
+        <p class="rz-footer__title">{{ section.settings.contacto_titulo }}</p>
+        <ul>
+          {%- if section.settings.contacto_texto != blank -%}<li style="opacity:.8; line-height:1.6">{{ section.settings.contacto_texto | newline_to_br }}</li>{%- endif -%}
+          {%- if section.settings.email != blank -%}<li><a href="mailto:{{ section.settings.email }}">{{ section.settings.email }}</a></li>{%- endif -%}
+          {%- if section.settings.telefono != blank -%}<li><a href="tel:{{ section.settings.telefono | remove: ' ' }}">{{ section.settings.telefono }}</a></li>{%- endif -%}
+          <li><a href="{{ section.settings.contacto_url | default: '/pages/contact' }}">{{ section.settings.contacto_boton }}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rz-footer__bottom">
+      <span>© {{ 'now' | date: '%Y' }} {{ section.settings.copyright | default: shop.name }}</span>
+      <nav class="rz-footer__legal" aria-label="Legal">
+        <a href="{{ routes.root_url | append: '/policies/' | replace: '//', '/' }}privacy-policy">{{ 'rizelune.privacy' | t }}</a>
+        <a href="{{ routes.root_url | append: '/policies/' | replace: '//', '/' }}terms-of-service">{{ 'rizelune.terms' | t }}</a>
+        <a href="{{ routes.root_url | append: '/policies/' | replace: '//', '/' }}refund-policy">{{ 'rizelune.refunds' | t }}</a>
+        <a href="{{ routes.root_url | append: '/policies/' | replace: '//', '/' }}shipping-policy">{{ 'rizelune.shipping' | t }}</a>
+        {%- if section.settings.cookies_url != blank -%}<a href="{{ section.settings.cookies_url }}">{{ 'rizelune.cookies' | t }}</a>{%- endif -%}
+        {%- if section.settings.aviso_url != blank -%}<a href="{{ section.settings.aviso_url }}">{{ 'rizelune.legal' | t }}</a>{%- endif -%}
+      </nav>
+      {%- if section.settings.pagos -%}
+        <ul class="rz-footer__pay" aria-label="{{ 'rizelune.payments' | t }}">
+          {%- for type in shop.enabled_payment_types -%}{%- if type == 'klarna' or type == 'shopify_pay' or type == 'mbway' -%}{%- continue -%}{%- endif -%}<li>{{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>{%- endfor -%}
+        </ul>
+      {%- endif -%}
+      {%- if section.settings.nota != blank -%}<p class="rz-footer__note">{{ section.settings.nota | newline_to_br }}</p>{%- endif -%}
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Pie de página Rizelune",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Marca"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo (si no, se usa el texto)"
+    },
+    {
+      "type": "range",
+      "id": "logo_ancho",
+      "label": "Ancho del logo",
+      "min": 60,
+      "max": 300,
+      "step": 4,
+      "default": 140,
+      "unit": "px"
+    },
+    {
+      "type": "text",
+      "id": "logo_texto",
+      "label": "Texto del logo",
+      "default": "rizelune"
+    },
+    {
+      "type": "textarea",
+      "id": "tagline",
+      "label": "Frase de marca",
+      "default": "Rituales capilares sencillos, con ingredientes naturales, para cuidar tu pelo desde la raíz."
+    },
+    {
+      "type": "paragraph",
+      "content": "Las redes sociales se configuran en Configuración del tema → Redes sociales."
+    },
+    {
+      "type": "header",
+      "content": "Columna 1: enlaces"
+    },
+    {
+      "type": "text",
+      "id": "c1_titulo",
+      "label": "Título de la columna",
+      "default": "Tienda"
+    },
+    {
+      "type": "text",
+      "id": "c1_l1",
+      "label": "Enlace 1: texto"
+    },
+    {
+      "type": "url",
+      "id": "c1_u1",
+      "label": "Enlace 1: dirección"
+    },
+    {
+      "type": "text",
+      "id": "c1_l2",
+      "label": "Enlace 2: texto"
+    },
+    {
+      "type": "url",
+      "id": "c1_u2",
+      "label": "Enlace 2: dirección"
+    },
+    {
+      "type": "text",
+      "id": "c1_l3",
+      "label": "Enlace 3: texto"
+    },
+    {
+      "type": "url",
+      "id": "c1_u3",
+      "label": "Enlace 3: dirección"
+    },
+    {
+      "type": "text",
+      "id": "c1_l4",
+      "label": "Enlace 4: texto"
+    },
+    {
+      "type": "url",
+      "id": "c1_u4",
+      "label": "Enlace 4: dirección"
+    },
+    {
+      "type": "text",
+      "id": "c1_l5",
+      "label": "Enlace 5: texto"
+    },
+    {
+      "type": "url",
+      "id": "c1_u5",
+      "label": "Enlace 5: dirección"
+    },
+    {
+      "type": "header",
+      "content": "Columna 2: enlaces"
+    },
+    {
+      "type": "text",
+      "id": "c2_titulo",
+      "label": "Título de la columna",
+      "default": "Información"
+    },
+    {
+      "type": "text",
+      "id": "c2_l1",
+      "label": "Enlace 1: texto"
+    },
+    {
+      "type": "url",
+      "id": "c2_u1",
+      "label": "Enlace 1: dirección"
+    },
+    {
+      "type": "text",
+      "id": "c2_l2",
+      "label": "Enlace 2: texto"
+    },
+    {
+      "type": "url",
+      "id": "c2_u2",
+      "label": "Enlace 2: dirección"
+    },
+    {
+      "type": "text",
+      "id": "c2_l3",
+      "label": "Enlace 3: texto"
+    },
+    {
+      "type": "url",
+      "id": "c2_u3",
+      "label": "Enlace 3: dirección"
+    },
+    {
+      "type": "text",
+      "id": "c2_l4",
+      "label": "Enlace 4: texto"
+    },
+    {
+      "type": "url",
+      "id": "c2_u4",
+      "label": "Enlace 4: dirección"
+    },
+    {
+      "type": "text",
+      "id": "c2_l5",
+      "label": "Enlace 5: texto"
+    },
+    {
+      "type": "url",
+      "id": "c2_u5",
+      "label": "Enlace 5: dirección"
+    },
+    {
+      "type": "header",
+      "content": "Atención al cliente"
+    },
+    {
+      "type": "text",
+      "id": "contacto_titulo",
+      "label": "Título",
+      "default": "Atención al cliente"
+    },
+    {
+      "type": "textarea",
+      "id": "contacto_texto",
+      "label": "Texto",
+      "default": "¿Tienes dudas? Escríbenos y te ayudamos."
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Correo de contacto"
+    },
+    {
+      "type": "text",
+      "id": "telefono",
+      "label": "Teléfono (opcional)"
+    },
+    {
+      "type": "text",
+      "id": "contacto_boton",
+      "label": "Texto del enlace",
+      "default": "Formulario de contacto"
+    },
+    {
+      "type": "url",
+      "id": "contacto_url",
+      "label": "Enlace de contacto"
+    },
+    {
+      "type": "header",
+      "content": "Barra inferior"
+    },
+    {
+      "type": "text",
+      "id": "copyright",
+      "label": "Nombre en el copyright",
+      "default": "Rizelune"
+    },
+    {
+      "type": "url",
+      "id": "cookies_url",
+      "label": "Página de cookies"
+    },
+    {
+      "type": "url",
+      "id": "aviso_url",
+      "label": "Página de aviso legal"
+    },
+    {
+      "type": "checkbox",
+      "id": "pagos",
+      "label": "Mostrar métodos de pago",
+      "default": true
+    },
+    {
+      "type": "textarea",
+      "id": "nota",
+      "label": "Nota final",
+      "default": "Todos los precios incluyen IVA."
+    },
+    {
+      "type": "header",
+      "content": "Colores"
+    },
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Color de fondo",
+      "default": "#1F2620"
+    },
+    {
+      "type": "color",
+      "id": "fg",
+      "label": "Color del texto",
+      "default": "#F5EFE6"
+    },
+    {
+      "type": "header",
+      "content": "Tipografía"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Alineación del encabezado",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Tamaño del título",
+      "min": 24,
+      "max": 88,
+      "step": 2,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "Tamaño del texto",
+      "min": 13,
+      "max": 26,
+      "step": 1,
+      "default": 15,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Espaciado"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espacio superior",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 80,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espacio inferior",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40,
+      "unit": "px"
+    }
+  ]
+}
+{% endschema %}

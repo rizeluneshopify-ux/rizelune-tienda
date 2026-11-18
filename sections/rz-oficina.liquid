@@ -1,0 +1,58 @@
+{%- comment -%}
+  Página secreta de acceso a la oficina del dueño (plantilla page.oficina). Al abrirla guarda en este navegador el enlace
+  de la oficina y desde entonces sale el botón «Mi oficina» en toda la tienda (snippets/rz-oficina-boton.liquid).
+  La página no está en menús, ni en el buscador de la tienda, ni en Google (noindex en layout/theme.liquid + seo.hidden).
+{%- endcomment -%}
+{{ 'rz-styles.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  #shopify-section-{{ section.id }} { background: {{ section.settings.bg }}; color: var(--rz-romero); }
+  #shopify-section-{{ section.id }} .rz-ofi { padding: 72px 0 96px; text-align: center; }
+  #shopify-section-{{ section.id }} .rz-ofi__box { max-width: 620px; margin: 0 auto; }
+  #shopify-section-{{ section.id }} .rz-eyebrow { justify-content: center; }
+  #shopify-section-{{ section.id }} .rz-ofi__acts { margin-top: 28px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  #shopify-section-{{ section.id }} .rz-ofi__state { margin-top: 22px; font-size: 14px; color: var(--rz-texto-suave); min-height: 1.4em; }
+{%- endstyle -%}
+<section class="rz-ofi">
+  <div class="rz-container rz-ofi__box">
+    <span class="rz-eyebrow">{{ section.settings.eyebrow }}</span>
+    <h1 class="rz-h2">{{ section.settings.titulo }}</h1>
+    {%- if section.settings.texto != blank -%}<p class="rz-body">{{ section.settings.texto }}</p>{%- endif -%}
+    <div class="rz-ofi__acts">
+      {%- if section.settings.enlace != blank -%}<a class="rz-btn" href="{{ section.settings.enlace }}" target="_blank" rel="noopener">Abrir mi oficina</a>{%- endif -%}
+      <button type="button" class="rz-btn rz-btn--ghost" data-rz-ofi-off>Quitar el botón de este dispositivo</button>
+    </div>
+    <p class="rz-ofi__state" data-rz-ofi-state role="status"></p>
+  </div>
+</section>
+<script>
+  (function () {
+    var U = {{ section.settings.enlace | json }};
+    var st = document.querySelector('[data-rz-ofi-state]');
+    try {
+      if (U && U.indexOf('https://claude.ai/') === 0) {
+        localStorage.setItem('rz_oficina', U);
+        st.textContent = 'Listo: en este dispositivo verás el botón «Mi oficina» abajo a la izquierda en toda la tienda. Los clientes no lo ven.';
+      }
+    } catch (e) { st.textContent = 'Este navegador no deja guardar el botón (por ejemplo, en modo incógnito). Usa el botón de arriba.'; }
+    document.querySelector('[data-rz-ofi-off]').addEventListener('click', function () {
+      try { localStorage.removeItem('rz_oficina'); } catch (e) {}
+      var b = document.querySelector('.rz-ofi-btn'); if (b) b.remove();
+      st.textContent = 'Botón quitado de este dispositivo. Vuelve a abrir esta página si quieres ponerlo otra vez.';
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Rizelune · Acceso oficina",
+  "tag": "div",
+  "class": "rz-oficina-section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Antetítulo", "default": "Solo para ti" },
+    { "type": "text", "id": "titulo", "label": "Título", "default": "Tu oficina Rizelune" },
+    { "type": "textarea", "id": "texto", "label": "Texto" },
+    { "type": "url", "id": "enlace", "label": "Enlace de la oficina (claude.ai)" },
+    { "type": "color", "id": "bg", "label": "Fondo", "default": "#F5EFE6" }
+  ]
+}
+{% endschema %}

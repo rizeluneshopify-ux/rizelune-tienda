@@ -1,0 +1,3 @@
+query { a: __type(name: "MarketDeliveryConfigurations") { fields { name type { name kind ofType { name } } } }
+ b: __type(name: "DeliveryOptionDefinition") { possibleTypes { name } fields { name } }
+ c: __type(name: "DeliveryOptionDefinitionCreateInput") { inputFields { name type { name kind ofType { name kind ofType { name } } } } } }

@@ -1,0 +1,214 @@
+{{ 'rz-styles.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'rz-scripts.js' | asset_url }}" defer="defer"></script>
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg }};
+    color: {{ section.settings.fg }};
+  }
+  #shopify-section-{{ section.id }} .rz-h1,
+  #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size }}px; }
+  #shopify-section-{{ section.id }} .rz-body { font-size: {{ section.settings.body_size }}px; }
+  #shopify-section-{{ section.id }} .rz-head { text-align: {{ section.settings.text_align }}; }
+  #shopify-section-{{ section.id }} .rz-head .rz-eyebrow { justify-content: {% case section.settings.text_align %}{% when 'center' %}center{% when 'right' %}flex-end{% else %}flex-start{% endcase %}; }
+  @media (max-width: 749px) {
+    #shopify-section-{{ section.id }} { padding-top: {{ section.settings.padding_top | times: 0.65 | round }}px; padding-bottom: {{ section.settings.padding_bottom | times: 0.65 | round }}px; }
+    #shopify-section-{{ section.id }} .rz-h1,
+    #shopify-section-{{ section.id }} .rz-h2 { font-size: {{ section.settings.heading_size | times: 0.68 | round }}px; }
+  }
+  
+{%- endstyle -%}
+{%- assign p = section.settings.producto -%}
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<section class="rz-section">
+  <div class="rz-container">
+    <div class="rz-buy rz-reveal">
+      <div class="rz-buy__media">
+        {%- if section.settings.imagen != blank -%}
+          {{ section.settings.imagen | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '600,900,1200', sizes: '(min-width: 990px) 50vw, 100vw' }}
+        {%- elsif p.featured_image -%}
+          {{ p.featured_image | image_url: width: 1200 | image_tag: loading: 'lazy' }}
+        {%- else -%}
+          <img src="{{ 'rz-packshot-salvia.jpg' | asset_url }}" alt="" loading="lazy">
+        {%- endif -%}
+      </div>
+      <div class="rz-head" style="text-align: left">
+        {%- if section.settings.eyebrow != blank -%}<span class="rz-eyebrow" style="justify-content: flex-start">{{ section.settings.eyebrow }}</span>{%- endif -%}
+        <h2 class="rz-h2">{{ section.settings.titulo | default: p.title }}</h2>
+        {%- if section.settings.texto != blank -%}<p class="rz-body">{{ section.settings.texto | newline_to_br }}</p>{%- endif -%}
+        {%- if p != blank -%}
+          {%- assign v = p.selected_or_first_available_variant -%}
+          <div class="rz-price">
+            <span class="rz-price__now">{{ v.price | money }}</span>
+            {%- if v.compare_at_price > v.price -%}
+              <s class="rz-price__old">{{ v.compare_at_price | money }}</s>
+              {%- if section.settings.etiqueta != blank -%}<span class="rz-tag">{{ section.settings.etiqueta }}</span>{%- endif -%}
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+        {%- if section.settings.lista != blank -%}
+          <ul class="rz-mini-list">
+            {%- assign lines = section.settings.lista | newline_to_br | split: '<br />' -%}
+            {%- for l in lines -%}{%- assign t = l | strip -%}{%- if t != blank -%}<li>{{ t }}</li>{%- endif -%}{%- endfor -%}
+          </ul>
+        {%- endif -%}
+        {%- if p != blank -%}
+          {% render 'rz-buy-form', product: p, label: section.settings.boton, show_qty: false, packs: true, section_id: section.id, main: false %}
+          {%- if section.settings.ver_mas != blank -%}<p style="margin: 16px 0 0; text-align: center; font-size: 14px;"><a href="{{ p.url }}" style="color: inherit;">{{ section.settings.ver_mas }}</a></p>{%- endif -%}
+        {%- else -%}
+          <p class="rz-empty">Elige tu producto en el panel de la izquierda.</p>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Rizelune · Comprar",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "product",
+      "id": "producto",
+      "label": "Producto"
+    },
+    {
+      "type": "image_picker",
+      "id": "imagen",
+      "label": "Imagen (si no, la del producto)"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Antetítulo",
+      "default": "Empieza hoy"
+    },
+    {
+      "type": "text",
+      "id": "titulo",
+      "label": "Título (si no, el del producto)",
+      "default": "Tu ritual empieza esta noche"
+    },
+    {
+      "type": "textarea",
+      "id": "texto",
+      "label": "Texto"
+    },
+    {
+      "type": "text",
+      "id": "etiqueta",
+      "label": "Etiqueta si hay precio rebajado",
+      "default": "¡Oferta!"
+    },
+    {
+      "type": "textarea",
+      "id": "lista",
+      "label": "Lo que incluye (una línea por punto)",
+      "default": "Frasco cuentagotas de 30 ml\nFórmula vegana, fabricada en la UE"
+    },
+    {
+      "type": "text",
+      "id": "boton",
+      "label": "Texto del botón",
+      "default": "Añadir al carrito"
+    },
+    {
+      "type": "text",
+      "id": "ver_mas",
+      "label": "Enlace a ver más detalles",
+      "default": "Ver todos los detalles"
+    },
+    {
+      "type": "header",
+      "content": "Colores"
+    },
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Color de fondo",
+      "default": "#F5EFE6"
+    },
+    {
+      "type": "color",
+      "id": "fg",
+      "label": "Color del texto",
+      "default": "#2F3B2E"
+    },
+    {
+      "type": "header",
+      "content": "Tipografía"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Alineación del encabezado",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Tamaño del título",
+      "min": 24,
+      "max": 88,
+      "step": 2,
+      "default": 44,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "Tamaño del texto",
+      "min": 13,
+      "max": 26,
+      "step": 1,
+      "default": 17,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Espaciado"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espacio superior",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 100,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espacio inferior",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 100,
+      "unit": "px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rizelune · Comprar"
+    }
+  ]
+}
+{% endschema %}
