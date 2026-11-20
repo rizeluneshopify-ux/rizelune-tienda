@@ -38,7 +38,8 @@
               <h2 class="rz-catalogo__star-title"><a href="{{ p.url }}">{{ p.title }}</a></h2>
               {%- assign rating = p.metafields.reviews.rating.value -%}
               {%- if rating != blank -%}
-                <p class="rz-estrella__rating"><span aria-hidden="true">{% for i in (1..5) %}{% if rating.rating >= i %}★{% else %}☆{% endif %}{% endfor %}</span><small>{{ rating.rating | round: 1 }} ({{ p.metafields.reviews.rating_count }})</small></p>
+                {%- assign rating_num = rating.rating | times: 1.0 -%}
+                <p class="rz-estrella__rating"><span aria-hidden="true">{% for i in (1..5) %}{% if rating_num >= i %}★{% else %}☆{% endif %}{% endfor %}</span><small>{{ rating.rating | round: 1 }} ({{ p.metafields.reviews.rating_count }})</small></p>
               {%- endif -%}
               <p class="rz-catalogo__star-text">{{ 'rizelune.estrella_text' | t }}</p>
             </div>
